@@ -384,11 +384,11 @@ footer{border-top:1px solid var(--fio);padding-block:30px;font-size:14px;color:v
    Preencha abaixo o código afid de cada produto (na conta Kiwify da editora: Produtos > Minhas afiliações > Ver links;
    é o que vem depois de "afid=" no link). Enquanto um código estiver vazio, aquele botão leva ao checkout normal, sem comissão. */
 var AFILIADO_EDITORA = {
-  "YK88Rgx": "",  /* Kit Trio, preço de fundador (R$ 139) */
-  "xSsNHcf": "",  /* Kit Trio, preço regular (R$ 179), a partir de 08/11 */
-  "BD0fOgB": "",  /* Caligrafia cursiva (R$ 69) */
-  "xC9i17r": "",  /* Tabuada (R$ 69) */
-  "6rBavjT": ""   /* Leitura e interpretação (R$ 79) */
+  "YK88Rgx": "W1JkIer7",  /* Kit Trio, preço de fundador (R$ 139) */
+  "xSsNHcf": "W1JkIer7",  /* Kit Trio, preço regular (R$ 179), a partir de 08/11 */
+  "BD0fOgB": "w1AbKxAx",  /* Caligrafia cursiva (R$ 69) */
+  "xC9i17r": "5Ns6ATrP",  /* Tabuada (R$ 69) */
+  "6rBavjT": "HLmSzdHV"   /* Leitura e interpretação (R$ 79) */
 };
 document.querySelectorAll('a[href^="https://pay.kiwify.com.br/"]').forEach(function (a) {
   var u = new URL(a.href), afid = AFILIADO_EDITORA[u.pathname.slice(1)];
