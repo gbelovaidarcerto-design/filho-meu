@@ -86,6 +86,20 @@ section{padding-block:72px;border-top:1px solid var(--fio)}
 .amostra{margin-top:44px;background:var(--areia);border-radius:16px;padding:30px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
 .amostra h3{font-size:26px}
 .amostra p{color:var(--suave);max-width:560px;margin-top:6px}
+.cad{flex:1 1 380px;display:grid;grid-template-columns:1fr 1fr;gap:12px 14px;max-width:560px}
+.cad label{display:flex;flex-direction:column;gap:4px;font-size:14px;font-weight:600;color:var(--tinta)}
+.cad label.full,.cad .full{grid-column:1 / -1}
+.cad input[type=text],.cad input[type=email],.cad input[type=tel]{font:inherit;font-size:16px;font-weight:400;padding:11px 14px;border:1.5px solid var(--areia2);border-radius:10px;background:var(--branco);color:var(--tinta)}
+.cad input:focus-visible{outline:3px solid var(--ocre);outline-offset:1px}
+.cad .op{font-weight:400;color:var(--suave)}
+.cad .ok{flex-direction:row;align-items:flex-start;gap:10px;font-weight:400;font-size:13.5px;color:var(--suave);line-height:1.45}
+.cad .ok input{width:18px;height:18px;margin-top:1px;flex:none;accent-color:var(--mar)}
+.cad .btn{justify-self:start}
+.cad .msg{font-size:14.5px;color:var(--terra);margin:0}
+.cad-fim{flex:1 1 380px;max-width:560px}
+.cad-fim b{font-family:var(--serif);font-size:22px;display:block}
+.cad-fim p{margin-top:6px}
+@media (max-width:560px){.cad{grid-template-columns:1fr}}
 /* método e fé */
 .metodo{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;margin-top:36px}
 .metodo div b{display:block;font-family:var(--serif);font-size:21px;margin-bottom:6px}
@@ -229,8 +243,17 @@ footer{border-top:1px solid var(--fio);padding-block:30px;font-size:14px;color:v
       <figure><img src="../img/leitura-p12.webp" alt="Texto do nível Árvore na leitura" loading="lazy"><figcaption>Leitura · Árvore</figcaption></figure>
     </div>
     <div class="amostra">
-      <div><h3>Baixe grátis a Semana 1 completa</h3><p>A lição 1 (Provérbios 1.8) dos três livros, nos três níveis. Imprima, use com seus filhos e decida com calma.</p></div>
-      <a class="btn" href="../amostra/filho-meu-amostra-gratis.pdf" download>Baixar a Semana 1 (PDF)</a>
+      <div><h3>Baixe grátis a Semana 1 completa</h3><p>A lição 1 (Provérbios 1.8) dos três livros, nos três níveis. Imprima, use com seus filhos e decida com calma. Deixe seu nome e e-mail, e o PDF baixa na hora.</p></div>
+      <form class="cad" id="cadastro" novalidate>
+        <label>Seu nome<input type="text" name="nome" autocomplete="name" required></label>
+        <label>Seu e-mail<input type="email" name="email" autocomplete="email" inputmode="email" required></label>
+        <label><span>WhatsApp <span class="op">(opcional)</span></span><input type="tel" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="(DDD) 9 0000-0000"></label>
+        <label><span>Idades das crianças <span class="op">(opcional)</span></span><input type="text" name="idades" placeholder="ex.: 4 e 7 anos"></label>
+        <label class="ok full"><input type="checkbox" name="aceite" required><span>Aceito receber a Semana 1 e mensagens sobre a coleção "Filho meu". Posso sair da lista quando quiser. <a href="../privacidade/">Política de privacidade</a>.</span></label>
+        <p class="msg full" role="alert" hidden></p>
+        <button class="btn full" type="submit">Baixar a Semana 1 (PDF)</button>
+      </form>
+      <div class="cad-fim" id="cadastro-fim" hidden><b>Pronto! O download começou.</b><p>Se não abrir, <a href="../amostra/filho-meu-amostra-gratis.pdf" download>clique aqui para baixar a Semana 1</a>. Comece na segunda-feira, com a abertura em família.</p></div>
     </div>
   </section>
 
@@ -335,6 +358,45 @@ document.querySelectorAll('a[href^="https://pay.kiwify.com.br/"]').forEach(funct
   u.searchParams.set("src", "editora");
   a.href = u.toString();
 });
+</script>
+<script>
+/* Cadastro da amostra grátis: cada pedido vira uma linha na planilha
+   "Filho meu: cadastros da Semana 1 grátis (respostas)" no Google Drive do Gullit,
+   por meio do Formulário Google de mesmo nome. Depois do cadastro, o PDF baixa. */
+(function () {
+  var FORM = 'https://docs.google.com/forms/d/e/1FAIpQLSfH9DAaxE7QUQSgorxqGzl8G7BP3mnam1joI8TIOpOgDwP6Gg/formResponse';
+  var CAMPO = { nome: 'entry.38804056', email: 'entry.1545047068', whatsapp: 'entry.1891983561',
+                idades: 'entry.82013426', origem: 'entry.219645187', consentimento: 'entry.1350168687' };
+  var f = document.getElementById('cadastro'), fim = document.getElementById('cadastro-fim');
+  if (!f) return;
+  var msg = f.querySelector('.msg'), pdf = fim.querySelector('a').href;
+  function origem() {
+    var q = new URLSearchParams(location.search), partes = [location.pathname.indexOf('/editora/') >= 0 ? 'página da editora' : 'página principal'];
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'src'].forEach(function (k) { if (q.get(k)) partes.push(k + '=' + q.get(k)); });
+    if (document.referrer && document.referrer.indexOf(location.host) < 0) partes.push('veio de ' + document.referrer.split('?')[0]);
+    return partes.join(' · ');
+  }
+  function erro(t) { msg.textContent = t; msg.hidden = false; }
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var nome = f.nome.value.trim(), email = f.email.value.trim();
+    if (nome.length < 2) return erro('Escreva o seu nome.'), f.nome.focus();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return erro('Confira o e-mail: é por ele que vamos mandar as próximas mensagens.'), f.email.focus();
+    if (!f.aceite.checked) return erro('Para baixar, marque que aceita receber a Semana 1 e as mensagens.'), f.aceite.focus();
+    msg.hidden = true;
+    var b = f.querySelector('button'); b.disabled = true; b.textContent = 'Enviando…';
+    var d = new URLSearchParams();
+    d.append(CAMPO.nome, nome); d.append(CAMPO.email, email.toLowerCase());
+    d.append(CAMPO.whatsapp, f.whatsapp.value.trim()); d.append(CAMPO.idades, f.idades.value.trim());
+    d.append(CAMPO.origem, origem());
+    d.append(CAMPO.consentimento, 'Sim, marcado em ' + new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }));
+    function liberar() {
+      f.hidden = true; fim.hidden = false;
+      var a = document.createElement('a'); a.href = pdf; a.download = ''; document.body.appendChild(a); a.click(); a.remove();
+    }
+    fetch(FORM, { method: 'POST', mode: 'no-cors', body: d }).then(liberar, liberar);
+  });
+})();
 </script>
 </body>
 </html>
