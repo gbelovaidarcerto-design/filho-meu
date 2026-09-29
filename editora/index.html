@@ -148,6 +148,33 @@ footer{border-top:1px solid var(--fio);padding-block:30px;font-size:14px;color:v
 }
 @media (prefers-reduced-motion:no-preference){.btn{transition:background .15s}}
 </style>
+<!-- Filho meu: Pixel da Meta + repasse de UTM para a Kiwify.
+     Colar logo antes de </head> em index.html. Trocar 2146801305916148 pelo número do Pixel (Gerenciador de Eventos). -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2146801305916148');
+fbq('track','PageView');
+document.addEventListener('DOMContentLoaded',function(){
+  // Repassa utm_* e src da página para os botões da Kiwify, para a venda aparecer com a origem certa.
+  var q=new URLSearchParams(location.search),keep=new URLSearchParams();
+  q.forEach(function(v,k){if(/^utm_|^src$/.test(k))keep.set(k,v)});
+  document.querySelectorAll('a[href*="pay.kiwify.com.br"]').forEach(function(a){
+    var u=new URL(a.href);keep.forEach(function(v,k){u.searchParams.set(k,v)});a.href=u.toString();
+    a.addEventListener('click',function(){fbq('track','InitiateCheckout')});
+  });
+  // Conta como cadastro (Lead) quando o formulário da Semana 1 é concluído
+  // (o aviso "Pronto! O download começou." aparece só depois de um envio válido).
+  var fim=document.getElementById('cadastro-fim');
+  if(fim){var contou=false;new MutationObserver(function(){
+    if(!fim.hidden&&!contou){contou=true;fbq('track','Lead',{content_name:'Semana 1'})}
+  }).observe(fim,{attributes:true,attributeFilter:['hidden']});}
+});
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=2146801305916148&ev=PageView&noscript=1"></noscript>
 </head>
 <body>
 
