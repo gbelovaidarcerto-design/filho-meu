@@ -378,7 +378,7 @@ document.addEventListener('DOMContentLoaded',function(){
   if (!f) return;
   var msg = f.querySelector('.msg'), pdf = fim.querySelector('a').href;
   function origem() {
-    var q = new URLSearchParams(location.search), partes = [location.pathname.indexOf('/editora/') >= 0 ? 'página da editora' : 'página principal'];
+    var q = new URLSearchParams(location.search), partes = [window.ORIGEM_PAGINA || 'página principal'];
     ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'src'].forEach(function (k) { if (q.get(k)) partes.push(k + '=' + q.get(k)); });
     if (document.referrer && document.referrer.indexOf(location.host) < 0) partes.push('veio de ' + document.referrer.split('?')[0]);
     return partes.join(' · ');

@@ -407,21 +407,21 @@ document.addEventListener('DOMContentLoaded',function(){
 })();
 </script>
 <script>
-/* Página da Editora Nadere Reformatie: a mesma página de vendas, com os links de afiliado da editora.
-   Preencha abaixo o código afid de cada produto (na conta Kiwify da editora: Produtos > Minhas afiliações > Ver links;
+/* Página de afiliado: a mesma página de vendas, com os links de afiliado de Marie.
+   Preencha abaixo o código afid de cada produto (na conta Kiwify do afiliado: Produtos > Minhas afiliações > Ver links;
    é o que vem depois de "afid=" no link). Enquanto um código estiver vazio, aquele botão leva ao checkout normal, sem comissão. */
-var ORIGEM_PAGINA = "página da editora";
+var ORIGEM_PAGINA = "página da Marie";
 var AFILIADO_EDITORA = {
-  "YK88Rgx": "W1JkIer7",  /* Kit Trio, preço de fundador (R$ 139) */
-  "xSsNHcf": "W1JkIer7",  /* Kit Trio, preço regular (R$ 179), a partir de 08/11 */
-  "BD0fOgB": "w1AbKxAx",  /* Caligrafia cursiva (R$ 69) */
-  "xC9i17r": "5Ns6ATrP",  /* Tabuada (R$ 69) */
-  "6rBavjT": "HLmSzdHV"   /* Leitura e interpretação (R$ 79) */
+  "YK88Rgx": "",  /* Kit Trio, preço de fundador (R$ 139) */
+  "xSsNHcf": "",  /* Kit Trio, preço regular (R$ 179), a partir de 08/11 (mesmo código do Kit) */
+  "BD0fOgB": "",  /* Caligrafia cursiva (R$ 69) */
+  "xC9i17r": "",  /* Tabuada (R$ 69) */
+  "6rBavjT": ""   /* Leitura e interpretação (R$ 79) */
 };
 document.querySelectorAll('a[href^="https://pay.kiwify.com.br/"]').forEach(function (a) {
   var u = new URL(a.href), afid = AFILIADO_EDITORA[u.pathname.slice(1)];
   if (afid) u.searchParams.set("afid", afid);
-  u.searchParams.set("src", "editora");
+  u.searchParams.set("src", "marie");
   a.href = u.toString();
 });
 </script>
