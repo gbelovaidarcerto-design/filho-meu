@@ -147,6 +147,7 @@ footer{border-top:1px solid var(--fio);padding-block:30px;font-size:14px;color:v
   section{padding-block:52px}
 }
 @media (prefers-reduced-motion:no-preference){.btn{transition:background .15s}}
+.bonus{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:24px}.bonus .bn{background:var(--branco);border:1px solid var(--fio);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px}.bonus .bn img{width:100%;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.12);display:block}.bonus .bn p{font-size:15px;color:var(--suave);margin:0}.bonus .pg{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}@media (max-width:820px){.bonus{grid-template-columns:1fr}.bonus .bn img{max-width:280px}}
 </style>
 <!-- Filho meu: Pixel da Meta + repasse de UTM para a Kiwify.
      Colar logo antes de </head> em index.html. Trocar 2146801305916148 pelo número do Pixel (Gerenciador de Eventos). -->
@@ -300,6 +301,17 @@ document.addEventListener('DOMContentLoaded',function(){
     <div><h3>Sobre a editora</h3><p>A <b style="color:var(--tinta)">Editora Nadere Reformatie</b> publica obras de fé reformada. O nome remete à Reforma Posterior holandesa, que buscou levar a doutrina da Reforma para a vida diária, a família e a piedade. “Filho meu” abre a Coleção Peregrininhos, dedicada à educação das crianças.</p><p style="margin-top:10px">@editoranaderereformatie · www.editoranaderereformatie.com.br</p></div>
   </section>
 
+  <section id="bonus">
+    <span class="eyebrow">Bônus do Kit Trio · incluídos sem custo</span>
+    <h2 class="sec-t" style="margin-top:10px">Três bônus para a família aproveitar ainda mais.</h2>
+    <p class="lead">Quem leva o Kit Trio recebe também, na mesma área de membros, três materiais feitos para o dia a dia de quem usa a coleção.</p>
+    <div class="bonus">
+      <div class="bn"><img src="../img/bonus-1.webp" alt="Capa do bônus Planner do ano" loading="lazy"><span class="pg" style="color:var(--mar)">Bônus 1 · 16 páginas</span><h3>Planner do ano</h3><p>Quatro jeitos de usar o kit (ensino em casa, depois da escola, reforço e tempo das virtudes), o calendário das 40 semanas, as páginas exatas que cada filho imprime em cada semana e o material da Tabuada.</p></div>
+      <div class="bn"><img src="../img/bonus-2.webp" alt="Cartões do bônus Os 40 versículos" loading="lazy"><span class="pg" style="color:var(--verde)">Bônus 2 · 12 páginas</span><h3>Os 40 versículos</h3><p>Quarenta cartões com a cena de cada lição e a caixa de memória para revisar os versículos o ano todo, com divisórias, pôster e o quadro “Já sei de cor”.</p></div>
+      <div class="bn"><img src="../img/bonus-3.webp" alt="Capa do bônus Guia dos pais" loading="lazy"><span class="pg" style="color:var(--terra)">Bônus 3 · 9 páginas</span><h3>Guia dos pais</h3><p>Como ensinar Provérbios aos filhos: o que é um provérbio, Cristo como a sabedoria de Deus, a correção com graça, o exemplo dos pais e o culto doméstico.</p></div>
+    </div>
+  </section>
+
   <section id="oferta">
     <span class="eyebrow">Escolha sua opção · PDF para imprimir em casa</span>
     <h2 class="sec-t" style="margin-top:10px">Um ano inteiro de escrita, matemática e leitura.</h2>
@@ -308,7 +320,7 @@ document.addEventListener('DOMContentLoaded',function(){
         <span class="tag">Preço de fundador até 07/11</span>
         <h3 style="margin-top:12px">Kit Trio “Filho meu”</h3>
         <p style="color:var(--suave)">Os três livros, 821 páginas, 40 semanas.</p>
-        <ul><li>Caligrafia cursiva com Provérbios</li><li>Tabuada com Provérbios</li><li>Leitura e interpretação com Provérbios</li><li>Cartões de tabuada, certificados, pautas extras, gabarito e respostas</li></ul>
+        <ul><li>Caligrafia cursiva com Provérbios</li><li>Tabuada com Provérbios</li><li>Leitura e interpretação com Provérbios</li><li>Cartões de tabuada, certificados, pautas extras, gabarito e respostas</li><li><b>3 bônus:</b> Planner do ano, Os 40 versículos e Guia dos pais</li></ul>
         <div class="preco"><s>R$ 217 avulsos</s><strong>R$ 139</strong><span style="color:var(--suave)">depois, R$ 179</span></div>
         <a class="btn" href="https://pay.kiwify.com.br/YK88Rgx" style="width:100%">Quero o Kit Trio</a>
       </div>
