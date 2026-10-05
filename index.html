@@ -147,6 +147,7 @@ footer{border-top:1px solid var(--fio);padding-block:30px;font-size:14px;color:v
 }
 @media (prefers-reduced-motion:no-preference){.btn{transition:background .15s}}
 .bonus{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:24px}.bonus .bn{background:var(--branco);border:1px solid var(--fio);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px}.bonus .bn img{width:100%;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.12);display:block}.bonus .bn p{font-size:15px;color:var(--suave);margin:0}.bonus .pg{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}@media (max-width:820px){.bonus{grid-template-columns:1fr}.bonus .bn img{max-width:280px}}
+.prox{display:flex;flex-wrap:wrap;gap:22px;align-items:center;justify-content:space-between;background:var(--branco);border:1px solid var(--fio);border-radius:16px;padding:24px 28px}.prox h3{font-size:24px}.prox p{color:var(--suave);max-width:640px;margin-top:6px;font-size:15.5px}.prox .capas{display:flex}.prox .capas img{width:74px;height:auto;border-radius:6px;box-shadow:0 6px 16px rgba(0,0,0,.14);margin-left:-18px;background:#fff}.prox .capas img:first-child{margin-left:0}
 </style>
 <!-- Filho meu: Pixel da Meta + repasse de UTM para a Kiwify.
      Colar logo antes de </head> em index.html. Trocar 2146801305916148 pelo número do Pixel (Gerenciador de Eventos). -->
@@ -352,6 +353,14 @@ document.addEventListener('DOMContentLoaded',function(){
         <button class="btn full" type="submit">Baixar a Semana 1 (PDF)</button>
       </form>
       <div class="cad-fim" id="cadastro-fim" hidden><b>Pronto! O download começou.</b><p>Se não abrir, <a href="amostra/filho-meu-amostra-gratis.pdf" download>clique aqui para baixar a Semana 1</a>. Comece na segunda-feira, com a abertura em família.</p></div>
+    </div>
+  </section>
+
+  <section id="proximos" style="padding-block:44px">
+    <div class="prox">
+      <div class="capas"><img src="img/colecao/gramatica.webp" alt="" width="600" height="500" loading="lazy"><img src="img/colecao/ciencias.webp" alt="" width="600" height="500" loading="lazy"><img src="img/colecao/carater.webp" alt="" width="600" height="500" loading="lazy"><img src="img/colecao/saude.webp" alt="" width="600" height="500" loading="lazy"></div>
+      <div style="flex:1 1 320px"><span class="eyebrow">Próximos lançamentos</span><h3 style="margin-top:6px">Mais nove livros “Filho meu” estão chegando</h3><p>Gramática, escrita, palavras, ciências, medidas, lógica, caráter, saúde e finanças, com o mesmo versículo da semana. Conheça antes de todo mundo, com 20% de desconto no lançamento antecipado.</p></div>
+      <a class="link" href="colecao/">Conhecer os próximos títulos →</a>
     </div>
   </section>
 
