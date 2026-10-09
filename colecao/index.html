@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded',function(){
   q.forEach(function(v,k){if(/^utm_|^src$/.test(k))keep.set(k,v)});
   document.querySelectorAll('a[href*="pay.kiwify.com.br"]').forEach(function(a){
     var u=new URL(a.href);keep.forEach(function(v,k){u.searchParams.set(k,v)});a.href=u.toString();
-    a.addEventListener('click',function(){fbq('track','InitiateCheckout')});
+    a.addEventListener('click',function(){fbq('trackCustom','CliqueComprar')});
   });
   // Conta como cadastro (Lead) quando o formulário da Semana 1 é concluído
   // (o aviso "Pronto! O download começou." aparece só depois de um envio válido).

@@ -131,6 +131,8 @@
 .final{padding-block:72px 10px;max-width:660px}
 .final h2{font-size:clamp(30px,6.6vw,44px);line-height:1.1;color:var(--mar)}
 .final p{color:var(--lapis);margin:14px 0 0}
+.seguro{font-size:14px;color:var(--lapis);margin:10px 0 0;max-width:46ch}
+.abre-preco{margin:16px 0 0;font-weight:500}
 .rodape{padding-block:40px;font-size:15px;color:var(--lapis);display:flex;flex-wrap:wrap;gap:8px 22px}
 @media (min-width:900px){
   .abre{grid-template-columns:1fr 1fr;align-items:end;gap:56px;padding-top:44px}
@@ -166,7 +168,7 @@ document.addEventListener('DOMContentLoaded',function(){
   q.forEach(function(v,k){if(/^utm_|^src$/.test(k))keep.set(k,v)});
   document.querySelectorAll('a[href*="pay.kiwify.com.br"]').forEach(function(a){
     var u=new URL(a.href);keep.forEach(function(v,k){u.searchParams.set(k,v)});a.href=u.toString();
-    a.addEventListener('click',function(){fbq('track','InitiateCheckout')});
+    a.addEventListener('click',function(){fbq('trackCustom','CliqueComprar')});
   });
   // Conta como cadastro (Lead) quando o formulário da Semana 1 é concluído
   // (o aviso de download aparece só depois de um envio válido).
@@ -193,11 +195,12 @@ document.addEventListener('DOMContentLoaded',function(){
       <h1>Filho meu</h1>
       <p class="sub">Caligrafia, tabuada e leitura com Provérbios, para a família inteira aprender junta.</p>
       <p class="txt">Três livros ilustrados, 40 semanas planejadas, um versículo por semana. O pai abre a Bíblia uma vez, e o filho de 4 anos traça, o de 6 copia palavras e o de 9 escreve o versículo de memória.</p>
+      <p class="abre-preco">Os três livros por <mark>R$ 139</mark> até 7 de novembro (depois, R$ 179), com a Semana 1 grátis para experimentar.</p>
       <div class="acoes"><a class="btn" href="#oferta">Ver o Kit Trio</a><a class="link" href="#amostra">Baixar a Semana 1 grátis</a></div>
       <div class="pauta"><span class="cur">Filho meu, ouve a instrução de teu pai; e não abandones a doutrina de tua mãe.</span><small>Provérbios 1.8, Bíblia Livre</small></div>
     </div>
     <div class="trio">
-      <img src="img/mock-caligrafia.webp" width="700" height="933" alt="Livro Caligrafia cursiva com Provérbios">
+      <img src="img/mock-caligrafia.webp" width="700" height="933" alt="Livro Caligrafia cursiva com Provérbios" fetchpriority="high">
       <img src="img/mock-tabuada.webp" width="700" height="933" alt="Livro Tabuada com Provérbios">
       <img src="img/mock-leitura.webp" width="700" height="933" alt="Livro Leitura e interpretação com Provérbios">
     </div>
@@ -325,6 +328,7 @@ document.addEventListener('DOMContentLoaded',function(){
         <ul><li>Caligrafia cursiva com Provérbios</li><li>Tabuada com Provérbios</li><li>Leitura e interpretação com Provérbios</li><li>Cartões de tabuada, certificados, pautas extras, gabarito e respostas</li><li><b>3 bônus:</b> Planner do ano, Os 40 versículos e Guia dos pais</li></ul>
         <div class="valor"><s>R$ 217 avulsos</s><strong><mark>R$ 139</mark></strong><span>depois, R$ 179</span></div>
         <a class="btn" href="https://pay.kiwify.com.br/YK88Rgx">Comprar o Kit Trio por R$ 139</a>
+        <p class="seguro">Pagamento pela Kiwify, em PDF, com acesso por e-mail logo após a confirmação.</p>
       </div>
       <div>
         <h3 style="font-size:21px;margin-bottom:10px">Ou um livro por vez</h3>
