@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Filho Patriota · A Bandeira e o Brasil em 5 dias</title>
+<meta name="description" content="Material da coleção Filho meu em quatro cadernos por idade: a Bandeira do Brasil, as 27 estrelas, estados e capitais, regiões, biomas, os presidentes e como o Brasil se governa.">
+<meta property="og:title" content="Filho Patriota · A Bandeira e o Brasil em 5 dias">
+<meta property="og:description" content="Quatro cadernos, um para cada idade (3 a 12 anos). Grátis até 25 de outubro.">
+<meta property="og:image" content="https://gbelovaidarcerto-design.github.io/filho-meu/patriota/img/og.jpg">
+<meta property="og:url" content="https://gbelovaidarcerto-design.github.io/filho-meu/patriota/">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/bandeira.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;600;700&family=Fraunces:opsz,wght,SOFT@9..144,500..700,0..100&display=swap">
+<style>
+:root{--verde:#009440;--vd:#00703A;--vdd:#04512B;--amarelo:#FFCB00;--at:#FFF6D6;--azul:#302681;--zt:#ECEBF7;--vt:#E6F3EA;--tinta:#16222C;--tx:#3D4954;--papel:#FFFDF6;--borda:#E6DFCF}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;overflow-x:hidden;font-family:"Atkinson Hyperlegible Next",system-ui,sans-serif;color:var(--tinta);background:var(--papel);line-height:1.55;font-size:17px}
+.f{font-family:Fraunces,Georgia,serif;font-variation-settings:"SOFT" 60}
+a{color:var(--vd)}
+.faixa{height:8px;background:linear-gradient(90deg,var(--verde) 0 55%,var(--amarelo) 55% 80%,var(--azul) 80%)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--vd);font-weight:700}
+header.top a{text-decoration:none;color:var(--tx);letter-spacing:.06em;text-transform:none;font-weight:600;font-size:15px}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;padding:40px 0 64px}
+.selo{display:inline-flex;align-items:center;gap:8px;background:var(--at);border:1.5px solid var(--amarelo);color:var(--vdd);font-weight:700;border-radius:999px;padding:6px 16px;font-size:14px}
+h1{font-size:clamp(48px,7vw,88px);line-height:.95;margin:18px 0 10px;color:var(--vd);font-weight:650;letter-spacing:-.015em}
+h1 span{display:block;color:var(--azul);font-size:.42em;font-weight:550;letter-spacing:0;margin-top:14px;line-height:1.15}
+.lead{font-size:19px;color:var(--tx);max-width:540px;margin:0 0 26px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--verde);color:#fff;text-decoration:none;font-weight:700;font-size:18px;padding:16px 28px;border-radius:14px;border:0;cursor:pointer;box-shadow:0 6px 0 var(--vdd);transition:transform .08s,box-shadow .08s}
+.btn:hover{transform:translateY(2px);box-shadow:0 4px 0 var(--vdd)}
+.btn.am{background:var(--amarelo);color:var(--vdd);box-shadow:0 6px 0 #C79E00}
+.mini{font-size:14px;color:var(--tx);margin-top:14px}
+.bandeira{position:relative}
+.bandeira img{width:100%;border-radius:10px;box-shadow:0 24px 50px rgba(0,60,30,.22);transform:rotate(-2deg)}
+.bandeira .tag{position:absolute;right:-6px;bottom:-22px;background:#fff;border:1.5px solid var(--borda);border-radius:14px;padding:10px 16px;font-size:14px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+.bandeira .tag b{color:var(--azul)}
+section{padding:72px 0}
+.sec-alt{background:#fff;border-top:1px solid var(--borda);border-bottom:1px solid var(--borda)}
+.kick{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--vd)}
+h2{font-size:clamp(32px,4vw,46px);line-height:1.08;margin:8px 0 14px;color:var(--tinta);font-weight:620}
+.sub{color:var(--tx);max-width:720px;margin:0 0 34px;font-size:18px}
+.dias{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.dia{background:var(--papel);border:1.5px solid var(--borda);border-radius:18px;padding:20px 18px;display:flex;flex-direction:column;gap:8px;position:relative;overflow:hidden}
+.dia::before{content:"";position:absolute;left:0;top:0;right:0;height:5px;background:var(--c)}
+.dia .n{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--tx)}
+.dia h3{margin:0;font-size:21px;line-height:1.15}
+.dia p{margin:0;font-size:15px;color:var(--tx)}
+.dia svg{width:38px;height:38px}
+.faixas{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.cad{background:#fff;border:1.5px solid var(--borda);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.cad img{width:100%;aspect-ratio:210/297;object-fit:cover;object-position:top;border-bottom:1.5px solid var(--borda);background:#f4f1e8}
+.cad .in{padding:16px 18px 20px;display:flex;flex-direction:column;gap:6px}
+.cad .chip{align-self:flex-start;font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--c);padding:4px 12px;border-radius:999px}
+.cad h3{margin:4px 0 0;font-size:24px}
+.cad p{margin:0;font-size:15px;color:var(--tx)}
+.paginas{display:flex;gap:16px;overflow-x:auto;padding:6px 2px 18px;scroll-snap-type:x mandatory}
+.paginas img{height:420px;width:297px;flex-shrink:0;object-fit:cover;border-radius:10px;border:1px solid var(--borda);box-shadow:0 10px 24px rgba(0,0,0,.08);scroll-snap-align:start;background:#fff}
+.confia{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.confia div{border-left:4px solid var(--amarelo);padding:4px 0 4px 16px}
+.confia b{display:block;font-size:18px;margin-bottom:4px}
+.confia span{font-size:15.5px;color:var(--tx)}
+.form-box{background:linear-gradient(160deg,var(--vd),var(--vdd));color:#fff;border-radius:28px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;position:relative;overflow:hidden}
+.form-box::after{content:"";position:absolute;right:-80px;top:-80px;width:280px;height:280px;border-radius:50%;background:var(--amarelo);opacity:.16}
+.form-box h2{color:#fff}
+.form-box .sub{color:#DCEFE3}
+.form-box ul{margin:0;padding-left:20px;color:#EAF6EE}
+form{background:#fff;color:var(--tinta);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;position:relative;z-index:1}
+label{font-size:14px;font-weight:700;color:var(--tx);display:flex;flex-direction:column;gap:6px}
+input[type=text],input[type=email],input[type=tel]{font:inherit;font-size:17px;padding:13px 14px;border:1.5px solid #CFC7B6;border-radius:12px;background:#fff}
+input:focus{outline:3px solid rgba(0,148,64,.25);border-color:var(--verde)}
+.ok{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:13.5px;line-height:1.45}
+.ok input{margin-top:3px;width:18px;height:18px;accent-color:var(--verde)}
+.erro{color:#B42318;font-size:14px;min-height:18px}
+.downloads{display:none;flex-direction:column;gap:10px;background:#fff;color:var(--tinta);border-radius:20px;padding:26px;position:relative;z-index:1}
+.downloads h3{margin:0 0 4px;font-size:24px;color:var(--vd)}
+.dl{display:flex;justify-content:space-between;align-items:center;gap:12px;border:1.5px solid var(--borda);border-radius:14px;padding:12px 16px;text-decoration:none;color:var(--tinta);font-weight:700}
+.dl:hover{border-color:var(--verde);background:var(--vt)}
+.dl small{display:block;font-weight:400;color:var(--tx)}
+.dl span.b{background:var(--verde);color:#fff;border-radius:10px;padding:8px 14px;font-size:14px;white-space:nowrap}
+.pago{display:none}
+footer{padding:40px 0 60px;color:var(--tx);font-size:14.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media (max-width:960px){.hero,.form-box{grid-template-columns:1fr}.dias{grid-template-columns:1fr 1fr}.faixas{grid-template-columns:1fr 1fr}.confia{grid-template-columns:1fr}.form-box{padding:26px}}
+@media (max-width:560px){.dias,.faixas{grid-template-columns:1fr}.paginas img{height:320px;width:226px}.bandeira .tag{right:0;left:auto;max-width:86%}.bandeira img{transform:none}body{font-size:16px}}
+</style>
+</head>
+<body>
+<div class="faixa"></div>
+<div class="wrap"><header class="top"><span>Coleção Peregrininhos · Filho meu</span><a href="../">Conheça a coleção →</a></header></div>
+
+<main>
+<div class="wrap hero">
+<div>
+<span class="selo" id="selo">★ Grátis até 25 de outubro</span>
+<h1 class="f">Filho Patriota<span>A Bandeira e o Brasil, em cinco dias</span></h1>
+<p class="lead">Quatro cadernos, um para cada idade, para conhecer a Bandeira e suas 27 estrelas, os estados e as capitais, as regiões, os biomas, os presidentes e como o Brasil se governa. Tudo conferido nas fontes oficiais, com um versículo de Provérbios por dia.</p>
+<a class="btn" href="#receber" id="cta1">Quero os 4 cadernos grátis</a>
+<p class="mini" id="mini1">Preencha nome, e-mail e WhatsApp e baixe na hora. Depois de 25/10, o material passa a custar R$ 29,90.</p>
+</div>
+<div class="bandeira"><img src="img/bandeira.svg" alt="Bandeira do Brasil"><div class="tag"><b>27 estrelas</b>, uma para cada estado e o Distrito Federal</div></div>
+</div>
+
+<section class="sec-alt"><div class="wrap">
+<span class="kick">O que a criança vai aprender</span>
+<h2 class="f">Cinco dias, cinco descobertas</h2>
+<p class="sub">Cada dia leva cerca de 20 a 30 minutos. As quatro versões seguem o mesmo roteiro, com profundidade de acordo com a idade.</p>
+<div class="dias">
+<div class="dia" style="--c:var(--verde)"><svg viewBox="0 0 24 24" fill="none" stroke="#00703A" stroke-width="1.8" stroke-linejoin="round"><path d="M5 21V4"/><path d="M5 5h12l-2 4 2 4H5"/></svg><span class="n">Dia 1</span><h3 class="f">A Bandeira</h3><p>Partes, cores, lema, história e como respeitar a Bandeira.</p></div>
+<div class="dia" style="--c:var(--azul)"><svg viewBox="0 0 24 24" fill="none" stroke="#302681" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6L3.3 9.2l6.1-.6z"/></svg><span class="n">Dia 2</span><h3 class="f">O céu da Bandeira</h3><p>As constelações e a estrela de cada estado.</p></div>
+<div class="dia" style="--c:var(--amarelo)"><svg viewBox="0 0 24 24" fill="none" stroke="#04512B" stroke-width="1.8" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg><span class="n">Dia 3</span><h3 class="f">O Brasil no mapa</h3><p>Estados, capitais, regiões e países vizinhos.</p></div>
+<div class="dia" style="--c:var(--verde)"><svg viewBox="0 0 24 24" fill="none" stroke="#00703A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 6-14 15-14 0 9-6 15-14 15z"/><path d="M5 19l8-8"/></svg><span class="n">Dia 4</span><h3 class="f">Biomas</h3><p>Amazônia, Cerrado, Mata Atlântica, Caatinga, Pampa e Pantanal.</p></div>
+<div class="dia" style="--c:var(--azul)"><svg viewBox="0 0 24 24" fill="none" stroke="#302681" stroke-width="1.8" stroke-linejoin="round"><path d="M3 9l9-5 9 5"/><path d="M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20h18"/></svg><span class="n">Dia 5</span><h3 class="f">Como o Brasil se governa</h3><p>República, federação, os três Poderes, a Constituição e os presidentes.</p></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<span class="kick">Quatro cadernos</span>
+<h2 class="f">Um caderno para cada idade</h2>
+<p class="sub">Os irmãos estudam juntos o mesmo tema, cada um no seu nível. Para os pequenos, pintar, contar e ligar; para os maiores, tabelas, mapas e o básico da Constituição.</p>
+<div class="faixas">
+<div class="cad" style="--c:#2B6A5C"><img src="img/capa-semente.jpg" alt="Capa do Caderno Semente" loading="lazy"><div class="in"><span class="chip">Semente</span><h3 class="f">3 a 5 anos</h3><p>Cores e formas da Bandeira, contar estrelas, pintar o mapa e conhecer os bichos de cada bioma.</p></div></div>
+<div class="cad" style="--c:#8C6212"><img src="img/capa-broto.jpg" alt="Capa do Caderno Broto" loading="lazy"><div class="in"><span class="chip">Broto</span><h3 class="f">5 a 7 anos</h3><p>Os símbolos nacionais, as regiões, as capitais e os três Poderes em frases curtas.</p></div></div>
+<div class="cad" style="--c:#1F4E6E"><img src="img/capa-arvore.jpg" alt="Capa do Caderno Árvore" loading="lazy"><div class="in"><span class="chip">Árvore</span><h3 class="f">7 a 9 anos</h3><p>Tabelas de estados e estrelas, fronteiras, biomas e a linha do tempo dos presidentes.</p></div></div>
+<div class="cad" style="--c:#A94A28"><img src="img/capa-fruto.jpg" alt="Capa do Caderno Fruto" loading="lazy"><div class="in"><span class="chip">Fruto</span><h3 class="f">10 a 12 anos</h3><p>Desenho oficial da Bandeira, forma de Estado, sistema de governo e os artigos da Constituição.</p></div></div>
+</div>
+</div></section>
+
+<section class="sec-alt"><div class="wrap">
+<span class="kick">Por dentro</span>
+<h2 class="f">Algumas páginas</h2>
+<div class="paginas" id="paginas"></div>
+<div class="confia" style="margin-top:34px">
+<div><b>Fontes oficiais</b><span>Constituição de 1988, Lei nº 5.700/1971 (símbolos nacionais), IBGE, Itamaraty e Biblioteca da Presidência.</span></div>
+<div><b>As 27 estrelas certas</b><span>A estrela de cada estado segue a tabela oficial do anexo da Lei nº 8.421/1992.</span></div>
+<div><b>Palavra de Deus</b><span>Um versículo de Provérbios por dia, da Bíblia Livre, para conversar em família.</span></div>
+</div>
+</div></section>
+
+<section id="receber"><div class="wrap">
+<div class="form-box">
+<div>
+<span class="kick" style="color:var(--amarelo)" id="kick-form">Grátis até 25 de outubro</span>
+<h2 class="f" id="titulo-form">Receba os quatro cadernos agora</h2>
+<p class="sub" id="sub-form">Preencha os dados e os links para baixar aparecem na hora. Imprima o caderno de cada filho e comece quando quiser.</p>
+<ul><li>4 cadernos em PDF (Semente, Broto, Árvore e Fruto)</li><li>5 dias de atividades em cada um, com respostas</li><li>Certificado "Filho Patriota" no fim</li></ul>
+</div>
+<div>
+<form id="cadastro" novalidate>
+<label>Nome<input type="text" name="nome" autocomplete="name" required></label>
+<label>E-mail<input type="email" name="email" autocomplete="email" required></label>
+<label>WhatsApp com DDD<input type="tel" name="whats" autocomplete="tel" placeholder="(00) 00000-0000" required></label>
+<label class="ok"><input type="checkbox" name="aceite" required><span>Aceito receber o material e novidades da coleção Filho meu por e-mail e WhatsApp. Posso pedir para sair quando quiser. Veja a <a href="../privacidade/" target="_blank">política de privacidade</a>.</span></label>
+<div class="erro" id="erro"></div>
+<button class="btn" type="submit" id="enviar">Receber os 4 cadernos</button>
+</form>
+<div class="downloads" id="downloads">
+<h3 class="f">Pronto! Bom proveito.</h3>
+<p style="margin:0 0 6px;color:var(--tx);font-size:15px">Toque em cada caderno para baixar. Guarde esta página: os links ficam disponíveis até 25 de outubro.</p>
+<a class="dl" href="pdf/Filho-Patriota-Semente.pdf" download><span>Caderno Semente<small>3 a 5 anos</small></span><span class="b">Baixar PDF</span></a>
+<a class="dl" href="pdf/Filho-Patriota-Broto.pdf" download><span>Caderno Broto<small>5 a 7 anos</small></span><span class="b">Baixar PDF</span></a>
+<a class="dl" href="pdf/Filho-Patriota-Arvore.pdf" download><span>Caderno Árvore<small>7 a 9 anos</small></span><span class="b">Baixar PDF</span></a>
+<a class="dl" href="pdf/Filho-Patriota-Fruto.pdf" download><span>Caderno Fruto<small>10 a 12 anos</small></span><span class="b">Baixar PDF</span></a>
+<a class="btn am" href="../" style="justify-content:center;margin-top:6px">Conheça a coleção Filho meu</a>
+</div>
+<div class="downloads pago" id="pago" style="display:none">
+<h3 class="f">Os quatro cadernos por R$ 29,90</h3>
+<p style="margin:0 0 6px;color:var(--tx);font-size:15px">O período gratuito terminou em 25 de outubro. Você recebe os quatro cadernos na área de membros da Kiwify, logo depois da compra.</p>
+<a class="btn" href="https://pay.kiwify.com.br/bl4iMQq" style="justify-content:center">Comprar por R$ 29,90</a>
+</div>
+</div>
+</div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>Filho Patriota · Coleção Peregrininhos · Filho meu · Gullit Belo e Gislaine Belo</span><span><a href="../">Página da coleção</a> · <a href="../privacidade/">Privacidade</a></span></div></footer>
+<div class="faixa"></div>
+
+<script>
+(function(){
+  var FORM = 'https://docs.google.com/forms/d/e/1FAIpQLSdlzipmaq97tpCssNvEkZ-iXfbbXIpOzLLtjz64hCWRRCJaTg/formResponse';
+  var CAMPOS = {nome:'entry.1866942176', email:'entry.890924642', whats:'entry.1467574719'};
+  var FIM = new Date('2026-10-26T00:00:00-03:00');
+  var pags = ['semente/p03','broto/p06','arvore/p08','fruto/p10','broto/p12','arvore/p14','fruto/p20'];
+  var box = document.getElementById('paginas');
+  pags.forEach(function(p){ var i = document.createElement('img'); i.alt = 'Página do caderno'; i.src = 'img/pag-' + p.replace('/', '-') + '.jpg'; i.onerror = function(){ i.remove(); }; box.appendChild(i); });
+  var pago = new Date() >= FIM || /[?&]pago=1/.test(location.search);
+  if (pago) {
+    document.getElementById('cadastro').style.display = 'none';
+    document.getElementById('pago').style.display = 'flex';
+    document.getElementById('selo').textContent = '★ 4 cadernos por R$ 29,90';
+    document.getElementById('kick-form').textContent = 'Os quatro cadernos';
+    document.getElementById('titulo-form').textContent = 'Leve os quatro cadernos';
+    document.getElementById('sub-form').textContent = 'Compra segura pela Kiwify. Imprima o caderno de cada filho e comece quando quiser.';
+    document.getElementById('cta1').textContent = 'Quero os 4 cadernos';
+    document.getElementById('mini1').textContent = 'R$ 29,90 pelos quatro cadernos, com acesso imediato.';
+    return;
+  }
+  if (localStorage && (function(){ try { return localStorage.getItem('fp_ok') === '1'; } catch(e){ return false; } })()) mostrar();
+  function mostrar(){ document.getElementById('cadastro').style.display = 'none'; document.getElementById('downloads').style.display = 'flex'; }
+  document.getElementById('cadastro').addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var f = ev.target, erro = document.getElementById('erro');
+    var nome = f.nome.value.trim(), email = f.email.value.trim(), whats = f.whats.value.replace(/\D/g, '');
+    if (nome.length < 2) { erro.textContent = 'Escreva o seu nome.'; return; }
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { erro.textContent = 'Confira o e-mail.'; return; }
+    if (whats.length < 10 || whats.length > 13) { erro.textContent = 'Escreva o WhatsApp com DDD.'; return; }
+    if (!f.aceite.checked) { erro.textContent = 'Marque o aceite para receber o material.'; return; }
+    erro.textContent = '';
+    var b = document.getElementById('enviar'); b.disabled = true; b.textContent = 'Enviando...';
+    var dados = new FormData(); dados.append(CAMPOS.nome, nome); dados.append(CAMPOS.email, email); dados.append(CAMPOS.whats, whats);
+    fetch(FORM, {method:'POST', mode:'no-cors', body:dados}).catch(function(){}).then(function(){
+      try { localStorage.setItem('fp_ok', '1'); } catch(e){}
+      mostrar();
+    });
+  });
+})();
+</script>
+</body>
+</html>
