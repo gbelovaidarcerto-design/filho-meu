@@ -63,6 +63,7 @@ h2{font-size:clamp(32px,4vw,46px);line-height:1.08;margin:8px 0 14px;color:var(-
 .cad .chip{align-self:flex-start;font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--c);padding:4px 12px;border-radius:999px}
 .cad h3{margin:4px 0 0;font-size:24px}
 .cad p{margin:0;font-size:15px;color:var(--tx)}
+.cad .in{flex:1}.pegar{margin-top:auto;padding-top:10px;font-weight:700;color:var(--vd);text-decoration:none}.pegar:hover{text-decoration:underline}
 .paginas{display:flex;gap:16px;overflow-x:auto;padding:6px 2px 18px;scroll-snap-type:x mandatory}
 .paginas img{height:420px;width:297px;flex-shrink:0;object-fit:cover;border-radius:10px;border:1px solid var(--borda);box-shadow:0 10px 24px rgba(0,0,0,.08);scroll-snap-align:start;background:#fff}
 .confia{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -80,6 +81,13 @@ input[type=text],input[type=email],input[type=tel]{font:inherit;font-size:17px;p
 input:focus{outline:3px solid rgba(0,148,64,.25);border-color:var(--verde)}
 .ok{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:13.5px;line-height:1.45}
 .ok input{margin-top:1px;width:22px;height:22px;flex-shrink:0;accent-color:var(--verde)}
+.escolha{border:0;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.escolha legend{font-size:14px;font-weight:700;color:var(--tx);margin-bottom:6px;padding:0}
+.escolha label{flex-direction:row;align-items:center;gap:10px;border:1.5px solid #CFC7B6;border-radius:12px;padding:10px 12px;cursor:pointer;font-size:15px;color:var(--tinta);line-height:1.2;transition:border-color .15s,background .15s}
+.escolha label small{display:block;font-weight:400;color:var(--tx);font-size:13px}
+.escolha input{width:20px;height:20px;flex-shrink:0;accent-color:var(--verde);margin:0}
+.escolha label:has(input:checked){border-color:var(--verde);background:var(--vt)}
+.outro{background:none;border:0;padding:4px 0;font:inherit;font-size:14.5px;color:var(--vd);text-decoration:underline;cursor:pointer;align-self:center}
 .erro{color:#B42318;font-size:14px;min-height:18px}
 .downloads{display:none;flex-direction:column;gap:10px;background:#fff;color:var(--tinta);border-radius:20px;padding:26px;position:relative;z-index:1}
 .downloads h3{margin:0 0 4px;font-size:24px;color:var(--vd)}
@@ -121,8 +129,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <span class="selo" id="selo">★ Gratuito · 4 cadernos para imprimir</span>
 <h1 class="f">Filho Patriota<span>A Bandeira e o Brasil, em cinco dias</span></h1>
 <p class="lead">Quatro cadernos, de 3 a 12 anos, para conhecer a Bandeira e suas 27 estrelas, os estados, os biomas e como o Brasil se governa, em cinco dias de 20 a 30 minutos. Conteúdo conferido nas fontes oficiais, com um versículo de Provérbios por dia.</p>
-<a class="btn" href="#receber" id="cta1">Quero os 4 cadernos grátis</a>
-<p class="mini" id="mini1">Preencha nome, e-mail e WhatsApp e baixe na hora, sem custo.</p>
+<a class="btn" href="#receber" id="cta1">Escolher o caderno do meu filho</a>
+<p class="mini" id="mini1">Escolha o caderno pela idade, preencha nome, e-mail e WhatsApp e baixe na hora, sem custo.</p>
 </div>
 <div class="bandeira"><img src="img/bandeira.svg" alt="Bandeira do Brasil"><div class="tag"><b>27 estrelas</b>, uma para cada estado e o Distrito Federal</div></div>
 </div>
@@ -145,10 +153,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <h2 class="f">Um caderno para cada idade</h2>
 <p class="sub">Os irmãos estudam juntos o mesmo tema, cada um no seu nível. Para os pequenos, pintar, contar e ligar; para os maiores, tabelas, mapas e o básico da Constituição.</p>
 <div class="faixas">
-<div class="cad" style="--c:#2B6A5C"><img src="img/capa-semente.jpg" alt="Capa do Caderno Semente" loading="lazy"><div class="in"><span class="chip">Semente</span><h3 class="f">3 a 5 anos</h3><p>Cores e formas da Bandeira, contar estrelas, pintar o mapa e conhecer os bichos de cada bioma.</p></div></div>
-<div class="cad" style="--c:#8C6212"><img src="img/capa-broto.jpg" alt="Capa do Caderno Broto" loading="lazy"><div class="in"><span class="chip">Broto</span><h3 class="f">5 a 7 anos</h3><p>Os símbolos nacionais, as regiões, as capitais e os três Poderes em frases curtas.</p></div></div>
-<div class="cad" style="--c:#1F4E6E"><img src="img/capa-arvore.jpg" alt="Capa do Caderno Árvore" loading="lazy"><div class="in"><span class="chip">Árvore</span><h3 class="f">7 a 9 anos</h3><p>Tabelas de estados e estrelas, fronteiras, biomas e a linha do tempo dos presidentes.</p></div></div>
-<div class="cad" style="--c:#A94A28"><img src="img/capa-fruto.jpg" alt="Capa do Caderno Fruto" loading="lazy"><div class="in"><span class="chip">Fruto</span><h3 class="f">10 a 12 anos</h3><p>Desenho oficial da Bandeira, forma de Estado, sistema de governo e os artigos da Constituição.</p></div></div>
+<div class="cad" style="--c:#2B6A5C"><img src="img/capa-semente.jpg" alt="Capa do Caderno Semente" loading="lazy"><div class="in"><span class="chip">Semente</span><h3 class="f">3 a 5 anos</h3><p>Cores e formas da Bandeira, contar estrelas, pintar o mapa e conhecer os bichos de cada bioma.</p><a class="pegar" href="#receber" data-cad="Semente">Quero este caderno →</a></div></div>
+<div class="cad" style="--c:#8C6212"><img src="img/capa-broto.jpg" alt="Capa do Caderno Broto" loading="lazy"><div class="in"><span class="chip">Broto</span><h3 class="f">5 a 7 anos</h3><p>Os símbolos nacionais, as regiões, as capitais e os três Poderes em frases curtas.</p><a class="pegar" href="#receber" data-cad="Broto">Quero este caderno →</a></div></div>
+<div class="cad" style="--c:#1F4E6E"><img src="img/capa-arvore.jpg" alt="Capa do Caderno Árvore" loading="lazy"><div class="in"><span class="chip">Árvore</span><h3 class="f">7 a 9 anos</h3><p>Tabelas de estados e estrelas, fronteiras, biomas e a linha do tempo dos presidentes.</p><a class="pegar" href="#receber" data-cad="Arvore">Quero este caderno →</a></div></div>
+<div class="cad" style="--c:#A94A28"><img src="img/capa-fruto.jpg" alt="Capa do Caderno Fruto" loading="lazy"><div class="in"><span class="chip">Fruto</span><h3 class="f">10 a 12 anos</h3><p>Desenho oficial da Bandeira, forma de Estado, sistema de governo e os artigos da Constituição.</p><a class="pegar" href="#receber" data-cad="Fruto">Quero este caderno →</a></div></div>
 </div>
 </div></section>
 
@@ -167,28 +175,35 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <div class="form-box">
 <div>
 <span class="kick" style="color:var(--amarelo)" id="kick-form">Gratuito</span>
-<h2 class="f" id="titulo-form">Receba os quatro cadernos agora</h2>
-<p class="sub" id="sub-form">Preencha os dados e os links para baixar aparecem na hora. Imprima o caderno de cada filho e comece quando quiser.</p>
-<ul><li>4 cadernos em PDF (Semente, Broto, Árvore e Fruto)</li><li>5 dias de atividades em cada um, com respostas</li><li>Certificado "Filho Patriota" no fim</li></ul>
+<h2 class="f" id="titulo-form">Escolha o caderno de cada filho</h2>
+<p class="sub" id="sub-form">Marque a idade de cada filho, preencha os dados e o link para baixar aparece na hora. Imprima e comece quando quiser.</p>
+<ul><li>Um caderno em PDF para cada idade: Semente, Broto, Árvore e Fruto</li><li>Tem filhos de idades diferentes? Marque mais de um</li><li>5 dias de atividades em cada um, com respostas</li><li>Certificado "Filho Patriota" no fim</li></ul>
 </div>
 <div>
 <p style="position:relative;z-index:1;margin:0 0 12px;font-size:14.5px;color:#DCEFE3">Feito por Gullit e Gislaine Belo, autores da coleção Filho meu, com conteúdo conferido na Constituição, no IBGE e na Lei dos Símbolos Nacionais.</p>
 <form id="cadastro" method="post" novalidate>
+<fieldset class="escolha"><legend>Qual caderno você quer? (pode marcar mais de um)</legend>
+<label><input type="checkbox" name="cad" value="Semente"><span>Semente<small>3 a 5 anos</small></span></label>
+<label><input type="checkbox" name="cad" value="Broto"><span>Broto<small>5 a 7 anos</small></span></label>
+<label><input type="checkbox" name="cad" value="Arvore"><span>Árvore<small>7 a 9 anos</small></span></label>
+<label><input type="checkbox" name="cad" value="Fruto"><span>Fruto<small>10 a 12 anos</small></span></label>
+</fieldset>
 <label>Nome<input type="text" name="nome" autocomplete="name" required></label>
 <label>E-mail<input type="email" name="email" autocomplete="email" required></label>
 <label>WhatsApp com DDD<input type="tel" name="whats" autocomplete="tel" placeholder="(00) 00000-0000" required></label>
-<label class="ok"><input type="checkbox" name="aceite" required><span>Quero receber os cadernos gratuitos em troca destes dados e li a <a href="../privacidade/" target="_blank">política de privacidade</a>.</span></label>
+<label class="ok"><input type="checkbox" name="aceite" required><span>Quero receber os cadernos escolhidos em troca destes dados e li a <a href="../privacidade/" target="_blank">política de privacidade</a>.</span></label>
 <label class="ok"><input type="checkbox" name="novidades"><span>Também aceito receber novidades da coleção Filho meu por e-mail e WhatsApp. Posso sair quando quiser. (Opcional)</span></label>
 <div class="erro" id="erro" role="alert" aria-live="polite"></div>
-<button class="btn" type="submit" id="enviar">Receber os 4 cadernos grátis</button>
+<button class="btn" type="submit" id="enviar">Receber grátis</button>
 </form>
 <div class="downloads" id="downloads">
 <h3 class="f">Pronto! Bom proveito.</h3>
-<p style="margin:0 0 6px;color:var(--tx);font-size:15px">Toque em cada caderno para baixar. Baixe agora os quatro arquivos e guarde no seu celular ou computador.</p>
-<a class="dl" href="pdf/Filho-Patriota-Semente.pdf" download><span>Caderno Semente<small>3 a 5 anos</small></span><span class="b">Baixar PDF</span></a>
-<a class="dl" href="pdf/Filho-Patriota-Broto.pdf" download><span>Caderno Broto<small>5 a 7 anos</small></span><span class="b">Baixar PDF</span></a>
-<a class="dl" href="pdf/Filho-Patriota-Arvore.pdf" download><span>Caderno Árvore<small>7 a 9 anos</small></span><span class="b">Baixar PDF</span></a>
-<a class="dl" href="pdf/Filho-Patriota-Fruto.pdf" download><span>Caderno Fruto<small>10 a 12 anos</small></span><span class="b">Baixar PDF</span></a>
+<p style="margin:0 0 6px;color:var(--tx);font-size:15px">Toque no caderno para baixar e guarde o arquivo no seu celular ou computador.</p>
+<a class="dl" data-cad="Semente" href="pdf/Filho-Patriota-Semente.pdf" download><span>Caderno Semente<small>3 a 5 anos</small></span><span class="b">Baixar PDF</span></a>
+<a class="dl" data-cad="Broto" href="pdf/Filho-Patriota-Broto.pdf" download><span>Caderno Broto<small>5 a 7 anos</small></span><span class="b">Baixar PDF</span></a>
+<a class="dl" data-cad="Arvore" href="pdf/Filho-Patriota-Arvore.pdf" download><span>Caderno Árvore<small>7 a 9 anos</small></span><span class="b">Baixar PDF</span></a>
+<a class="dl" data-cad="Fruto" href="pdf/Filho-Patriota-Fruto.pdf" download><span>Caderno Fruto<small>10 a 12 anos</small></span><span class="b">Baixar PDF</span></a>
+<button type="button" class="outro" id="outro">Precisa do caderno de outra idade? Escolher outro</button>
 <a class="btn" id="compartilhar" href="#" target="_blank" rel="noopener" style="justify-content:center;margin-top:6px">Enviar para outra família pelo WhatsApp</a>
 <a class="btn am" href="../" style="justify-content:center">Conheça a coleção Filho meu</a>
 </div>
@@ -199,8 +214,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <section class="sec-alt" style="padding:64px 0"><div class="wrap faq rev">
 <span class="kick">Perguntas frequentes</span>
 <h2 class="f">Antes de baixar</h2>
-<details><summary>É gratuito mesmo?</summary><p>Sim. Você preenche nome, e-mail e WhatsApp e os links dos quatro cadernos aparecem na mesma hora, sem pagamento.</p></details>
-<details><summary>Qual caderno é o do meu filho?</summary><p>Semente para 3 a 5 anos, Broto para 5 a 7, Árvore para 7 a 9 e Fruto para 10 a 12. Você recebe os quatro, então os irmãos estudam o mesmo tema juntos, cada um no seu nível. Se a criança estiver entre duas faixas, comece pela menor.</p></details>
+<details><summary>É gratuito mesmo?</summary><p>Sim. Você preenche nome, e-mail e WhatsApp e o link do caderno escolhido aparece na mesma hora, sem pagamento.</p></details>
+<details><summary>Qual caderno é o do meu filho?</summary><p>Semente para 3 a 5 anos, Broto para 5 a 7, Árvore para 7 a 9 e Fruto para 10 a 12. Se tiver filhos de idades diferentes, marque mais de um: os irmãos estudam o mesmo tema juntos, cada um no seu nível. Se a criança estiver entre duas faixas, comece pela menor.</p></details>
 <details><summary>Como uso o material?</summary><p>Imprima o caderno em folha A4 e faça um dia por vez, de 20 a 30 minutos. Cada dia traz a leitura, as atividades e um versículo de Provérbios para conversar em família. As respostas ficam no fim, para os pais.</p></details>
 <details><summary>O material fala de política?</summary><p>Não. Ele apresenta os símbolos nacionais, o mapa do Brasil e as instituições como estão na Constituição e nas leis, sem partidos e sem candidatos.</p></details>
 <details><summary>De onde vem o conteúdo?</summary><p>Da Constituição de 1988, da Lei nº 5.700/1971 (símbolos nacionais), da Lei nº 8.421/1992 (as estrelas de cada estado), do IBGE, do Itamaraty e da Biblioteca da Presidência da República.</p></details>
@@ -213,7 +228,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 </div>
 </div></section>
 </main>
-<div class="barra" id="barra"><a class="btn" href="#receber">Quero os 4 cadernos grátis</a></div>
+<div class="barra" id="barra"><a class="btn" href="#receber">Escolher o caderno grátis</a></div>
 
 <footer><div class="wrap"><span>Filho Patriota · Coleção Peregrininhos · Filho meu · Gullit Belo e Gislaine Belo</span><span><a href="../">Página da coleção</a> · <a href="../privacidade/">Privacidade</a></span></div></footer>
 <div class="faixa"></div>
@@ -235,23 +250,36 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     var rv = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('vis'); rv.unobserve(e.target); } }); }, {threshold:.12});
     document.querySelectorAll('.rev').forEach(function(el){ rv.observe(el); });
   } else document.querySelectorAll('.rev').forEach(function(el){ el.classList.add('vis'); });
-  if ((function(){ try { return localStorage.getItem('fp_ok') === '1'; } catch(e){ return false; } })()) mostrar();
-  function mostrar(){ document.getElementById('cadastro').style.display = 'none'; document.getElementById('downloads').style.display = 'flex'; }
+  var salvos = (function(){ try { return JSON.parse(localStorage.getItem('fp_cad') || '[]'); } catch(e){ return []; } })();
+  if (salvos.length) mostrar(salvos);
+  function mostrar(lista){
+    document.querySelectorAll('.dl').forEach(function(a){ a.style.display = lista.indexOf(a.getAttribute('data-cad')) >= 0 ? 'flex' : 'none'; });
+    document.getElementById('cadastro').style.display = 'none'; document.getElementById('downloads').style.display = 'flex';
+  }
+  document.querySelectorAll('.pegar').forEach(function(a){ a.addEventListener('click', function(){ var c = document.querySelector('[name=cad][value=' + a.getAttribute('data-cad') + ']'); if (c) c.checked = true; }); });
+  document.getElementById('outro').addEventListener('click', function(){
+    var f = document.getElementById('cadastro'); f.querySelectorAll('[name=cad]').forEach(function(c){ c.checked = false; }); f.aceite.checked = false;
+    var b = document.getElementById('enviar'); b.disabled = false; b.textContent = 'Receber grátis';
+    document.getElementById('downloads').style.display = 'none'; f.style.display = 'flex'; f.scrollIntoView({block:'center'});
+  });
   document.getElementById('cadastro').addEventListener('submit', function(ev){
     ev.preventDefault();
     var f = ev.target, erro = document.getElementById('erro');
     var nome = f.nome.value.trim(), email = f.email.value.trim(), whats = f.whats.value.replace(/\D/g, '');
     var falha = function(msg, campo){ erro.textContent = msg; if (campo) campo.focus(); };
+    var cads = [].slice.call(f.querySelectorAll('[name=cad]:checked')).map(function(c){ return c.value; });
+    if (!cads.length) return falha('Marque pelo menos um caderno.', f.querySelector('[name=cad]'));
     if (nome.length < 2) return falha('Escreva o seu nome.', f.nome);
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return falha('Confira o e-mail.', f.email);
     if (whats.length < 10 || whats.length > 13) return falha('Escreva o WhatsApp com DDD.', f.whats);
     if (!f.aceite.checked) return falha('Marque a primeira caixa para receber os cadernos.', f.aceite);
     erro.textContent = '';
     var b = document.getElementById('enviar'); b.disabled = true; b.textContent = 'Enviando...';
-    var dados = new FormData(); dados.append(CAMPOS.nome, nome); dados.append(CAMPOS.email, email); dados.append(CAMPOS.whats, whats); dados.append(CAMPOS.novidades, f.novidades.checked ? 'sim' : 'não'); dados.append(CAMPOS.origem, ORIGEM);
+    var dados = new FormData(); dados.append(CAMPOS.nome, nome); dados.append(CAMPOS.email, email); dados.append(CAMPOS.whats, whats); dados.append(CAMPOS.novidades, f.novidades.checked ? 'sim' : 'não'); dados.append(CAMPOS.origem, ORIGEM + ' | cadernos: ' + cads.join(', '));
     fetch(FORM, {method:'POST', mode:'no-cors', body:dados}).catch(function(){}).then(function(){
-      try { localStorage.setItem('fp_ok', '1'); } catch(e){}
-      mostrar();
+      var todos = salvos.concat(cads).filter(function(v, i, a){ return a.indexOf(v) === i; }); salvos = todos;
+      try { localStorage.setItem('fp_cad', JSON.stringify(todos)); } catch(e){}
+      mostrar(todos);
     });
   });
 })();
