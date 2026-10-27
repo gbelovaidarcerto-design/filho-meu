@@ -286,7 +286,9 @@ document.addEventListener('DOMContentLoaded',function(){
   .vip-acoes a{display:inline-block;text-decoration:none;font-weight:700;font-size:16px;padding:13px 20px;border-radius:12px;background:#E2C27A;color:#0F1F35}
   .vip-acoes a+a{background:transparent;color:#E2C27A;border:1.5px solid #C9A35A}
   </style>
-  <script>if(new Date()>new Date('2026-11-28T00:00:00-03:00'))document.getElementById('lista-vip').remove();</script>
+  <script>(function(){ if(new Date()<new Date('2026-11-28T00:00:00-03:00')) return; var v=document.getElementById('lista-vip'); if(!v) return;
+    v.querySelector('.vip-chip').textContent='★ Lista VIP Filho meu ★';
+    v.querySelector('.vip-txt span:last-child').textContent='Quem está na lista recebe primeiro os descontos, os presentes e as novidades da coleção, no WhatsApp. Para entrar, pegue um dos materiais grátis:'; })();</script>
   <div class="abre">
     <div>
       <p class="selo">Coleção Peregrininhos, de Gullit e Gislaine Belo</p>
