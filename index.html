@@ -272,6 +272,21 @@ document.addEventListener('DOMContentLoaded',function(){
 </header>
 
 <main class="w">
+  <aside class="vip" id="lista-vip" aria-label="Lista VIP da Black Friday">
+    <div class="vip-txt"><span class="vip-chip">★ Black Friday Filho meu ★</span><strong>Entre na Lista VIP</strong><span>Quem estiver na lista recebe as condições especiais da Black Friday em primeira mão, no WhatsApp. Para entrar, pegue um dos materiais grátis:</span></div>
+    <div class="vip-acoes"><a href="#amostra">Amostra da Semana 1</a><a href="patriota/?utm_source=instagram&amp;utm_campaign=lista-vip">Filho Patriota</a></div>
+  </aside>
+  <style>
+  .vip{display:flex;gap:22px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:8px 0 26px;padding:22px 26px;border-radius:20px;background:radial-gradient(120% 140% at 20% 0%,#1C3557 0%,#0F1F35 70%);color:#FBF8F1;box-shadow:0 10px 30px rgba(15,31,53,.18)}
+  .vip-txt{display:flex;flex-direction:column;gap:6px;flex:1 1 380px}
+  .vip-chip{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#E2C27A;border:1.5px solid #C9A35A;border-radius:999px;padding:5px 14px}
+  .vip-txt strong{font-family:Literata,Georgia,serif;font-size:clamp(24px,4.6vw,32px);color:#E2C27A;line-height:1.1}
+  .vip-txt span:last-child{font-size:15.5px;line-height:1.5;color:#D5DEE8}
+  .vip-acoes{display:flex;gap:10px;flex-wrap:wrap}
+  .vip-acoes a{display:inline-block;text-decoration:none;font-weight:700;font-size:16px;padding:13px 20px;border-radius:12px;background:#E2C27A;color:#0F1F35}
+  .vip-acoes a+a{background:transparent;color:#E2C27A;border:1.5px solid #C9A35A}
+  </style>
+  <script>if(new Date()>new Date('2026-11-28T00:00:00-03:00'))document.getElementById('lista-vip').remove();</script>
   <div class="abre">
     <div>
       <p class="selo">Coleção Peregrininhos, de Gullit e Gislaine Belo</p>
