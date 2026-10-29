@@ -334,6 +334,102 @@ document.addEventListener('DOMContentLoaded',function(){
     </div>
   </section>
 
+
+
+
+<!-- interacao:inicio -->
+<style>
+/* Descubra por onde começar */
+.qz{margin-top:26px;background:#fff;border:1px solid var(--pauta);border-radius:18px;padding:22px 20px 24px;box-shadow:0 18px 40px -28px rgba(31,58,95,.45)}
+.qz-topo{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px;color:var(--lapis)}
+.qz-barra{flex:1;height:6px;border-radius:9px;background:var(--pauta);overflow:hidden;max-width:220px}
+.qz-barra i{display:block;height:100%;width:0;background:var(--mar);border-radius:9px;transition:width .35s ease}
+.qz-passo{display:none;animation:qzEntra .35s ease both}.qz-passo.on{display:block}
+@keyframes qzEntra{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.qz h3{font-size:clamp(21px,4.4vw,26px);margin:14px 0 4px}
+.qz .dica{font-size:15px;color:var(--lapis);margin:0 0 14px}
+.qz-ops{display:grid;gap:10px}
+@media (min-width:640px){.qz-ops.duas{grid-template-columns:1fr 1fr}.qz-ops.tres{grid-template-columns:repeat(3,1fr)}}
+.qz-op{appearance:none;text-align:left;font:inherit;cursor:pointer;background:#FBF8F1;border:1.5px solid var(--pauta);border-radius:12px;padding:13px 14px;color:var(--grafite);display:flex;gap:10px;align-items:flex-start;transition:border-color .2s,background .2s,transform .15s}
+.qz-op:hover{border-color:var(--mar);transform:translateY(-1px)}
+.qz-op:focus-visible{outline:3px solid var(--caneta);outline-offset:2px}
+.qz-op[aria-pressed=true]{border-color:var(--k,var(--mar));background:#fff;box-shadow:inset 0 0 0 1.5px var(--k,var(--mar))}
+.qz-op b{display:block;font-weight:600}.qz-op small{display:block;color:var(--lapis);font-size:13.5px;margin-top:2px}
+.qz-op .ck{flex:none;width:20px;height:20px;border-radius:6px;border:1.5px solid var(--pauta);margin-top:1px;display:grid;place-items:center;font-size:13px;color:#fff}
+.qz-op[aria-pressed=true] .ck{background:var(--k,var(--mar));border-color:var(--k,var(--mar))}
+.qz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;gap:12px}
+.qz-nav .btn[disabled]{opacity:.45;pointer-events:none}
+.qz-volta{background:none;border:0;font:inherit;font-weight:600;color:var(--caneta);cursor:pointer;padding:6px 0}
+.qz-res h3{margin-top:6px}
+.qz-nivel{display:inline-block;font-size:14px;font-weight:600;padding:5px 12px;border-radius:999px;background:#EEF2F8;color:var(--mar);margin-top:6px}
+.qz-livros{display:grid;gap:12px;margin-top:16px}
+.qz-livro{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;padding:12px;border:1px solid var(--pauta);border-left:5px solid var(--k);border-radius:12px;background:#fff}
+.qz-livro img{width:64px;height:auto;border-radius:2px 4px 4px 2px;box-shadow:0 8px 12px -8px rgba(0,0,0,.45)}
+.qz-livro .dor{font-size:13.5px;color:var(--lapis)}
+.qz-livro h4{font:650 17px/1.25 var(--serif);margin:2px 0 4px}
+.qz-livro p{font-size:15px;margin:0;color:var(--grafite)}
+.qz-livro .lk{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:8px;font-size:14.5px}
+.qz-livro .lk a{font-weight:600;color:var(--caneta)}
+.qz-kit{margin-top:16px;padding:16px;border-radius:14px;background:var(--k);color:#FBF8F1}
+.qz-kit b{font:650 20px/1.2 var(--serif)}.qz-kit p{margin:6px 0 12px;color:#F2EDE2;font-size:15px}
+.qz-kit .btn{background:#FBF8F1;color:var(--grafite)}
+.qz-acoes{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;margin-top:18px;font-size:15px}
+.qz-acoes button{background:none;border:0;font:inherit;font-weight:600;color:var(--caneta);cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:3px}
+/* Montador de pedido */
+.mt{margin-top:34px;border:1px solid var(--pauta);border-radius:18px;padding:20px;background:#fff}
+.mt h3{font-size:21px}
+.mt-grupos{display:grid;gap:16px;margin-top:14px}
+@media (min-width:760px){.mt-grupos{grid-template-columns:1fr 1fr}}
+.mt-g{border-top:5px solid var(--k);padding-top:8px}
+.mt-g>b{font:650 16px var(--serif);color:var(--k)}
+.mt-l{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--pauta);cursor:pointer;font-size:15.5px}
+.mt-l input{width:19px;height:19px;accent-color:var(--k)}
+.mt-l span{flex:1}.mt-l em{font-style:normal;color:var(--lapis);font-size:14px}
+.mt-res{margin:16px -20px -20px;padding:14px 20px;background:#FBF8F1;border-top:1px solid var(--pauta);border-radius:0 0 18px 18px;display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:space-between}
+.mt-tot{font:650 26px var(--serif)}.mt-tot small{display:block;font:500 13.5px var(--sans,inherit);color:var(--verde)}
+.mt-btns{display:flex;flex-wrap:wrap;gap:8px}
+.mt-btns a{font-size:14.5px;font-weight:600;padding:9px 14px;border-radius:10px;background:var(--k,var(--mar));color:#fff;text-decoration:none}
+.mt-vazio{color:var(--lapis);font-size:15px}
+.mt-dica{flex-basis:100%;margin:0 0 4px;font-size:14.5px;color:var(--verde);font-weight:600}
+/* entrada suave das seções */
+.js-rev .rev{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.js-rev .rev.vis{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js-rev .rev{opacity:1;transform:none;transition:none}.qz-passo{animation:none}}
+</style>
+  <section class="bloco" id="comecar" aria-labelledby="t-comecar">
+    <h2 id="t-comecar">Descubra por onde começar</h2>
+    <p class="lead">Três perguntas rápidas. No fim, você vê o nível do seu filho, os livros que respondem ao que mais preocupa hoje e a lição 1 grátis de cada um.</p>
+    <div class="qz" id="qz">
+      <div class="qz-topo"><span class="qz-cont" aria-live="polite">Pergunta 1 de 3</span><span class="qz-barra" aria-hidden="true"><i></i></span></div>
+      <div class="qz-passo on" data-p="1">
+        <h3>Quantos anos tem a criança?</h3>
+        <p class="dica">Se forem vários filhos, escolha o que você quer ajudar primeiro.</p>
+        <div class="qz-ops tres" role="group" aria-label="Idade">
+          <button type="button" class="qz-op" data-v="semente" aria-pressed="false"><span class="ck">✓</span><span><b>3 a 5 anos</b><small>Nível Semente</small></span></button>
+          <button type="button" class="qz-op" data-v="broto" aria-pressed="false"><span class="ck">✓</span><span><b>5 a 7 anos</b><small>Nível Broto</small></span></button>
+          <button type="button" class="qz-op" data-v="arvore" aria-pressed="false"><span class="ck">✓</span><span><b>7 anos ou mais</b><small>Nível Árvore</small></span></button>
+        </div>
+      </div>
+      <div class="qz-passo" data-p="2">
+        <h3>O que mais preocupa você hoje?</h3>
+        <p class="dica">Marque até três.</p>
+        <div class="qz-ops duas" role="group" aria-label="O que preocupa" id="qz-dores"></div>
+      </div>
+      <div class="qz-passo" data-p="3">
+        <h3>Como vocês pretendem usar?</h3>
+        <p class="dica">Os livros servem aos três jeitos.</p>
+        <div class="qz-ops tres" role="group" aria-label="Uso">
+          <button type="button" class="qz-op" data-v="casa" aria-pressed="false"><span class="ck">✓</span><span><b>Como base do estudo em casa</b><small>40 semanas já planejadas</small></span></button>
+          <button type="button" class="qz-op" data-v="reforco" aria-pressed="false"><span class="ck">✓</span><span><b>Como reforço depois da escola</b><small>15 a 30 minutos por dia</small></span></button>
+          <button type="button" class="qz-op" data-v="virtudes" aria-pressed="false"><span class="ck">✓</span><span><b>Num tempo de virtudes em família</b><small>Com a Bíblia aberta</small></span></button>
+        </div>
+      </div>
+      <div class="qz-passo qz-res" data-p="4" aria-live="polite"></div>
+      <div class="qz-nav"><button type="button" class="qz-volta" hidden>‹ Voltar</button><button type="button" class="btn qz-seg" disabled>Continuar</button></div>
+    </div>
+  </section>
+<!-- interacao:fim -->
+
   <section class="bloco" aria-labelledby="t-quem">
     <h2 id="t-quem">Para quem é</h2>
     <ul class="lista">
@@ -675,6 +771,14 @@ document.addEventListener('DOMContentLoaded',function(){
       <h3 style="font-size:21px;margin-bottom:10px">Ou um livro por vez</h3>
       <ul class="avulsos"><li><a href="https://pay.kiwify.com.br/BD0fOgB"><b>Caligrafia cursiva com Provérbios</b><span>R$ 69</span></a></li><li><a href="https://pay.kiwify.com.br/xC9i17r"><b>Tabuada com Provérbios</b><span>R$ 69</span></a></li><li><a href="https://pay.kiwify.com.br/6rBavjT"><b>Leitura e interpretação com Provérbios</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/3faJbim"><b>Gramática com Provérbios</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/uKHyoRU"><b>Escrita e redação com Provérbios</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/DHGddzP"><b>Palavras que edificam</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/UgvtUZl"><b>Pequenos e sábios: ciências da natureza</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/daNQgME"><b>Contas, medidas e pesos justos</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/K72EuTq"><b>Pensar bem</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/BAO9yDK"><b>Caráter e domínio próprio</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/nblvRkL"><b>Corpo, saúde e alegria</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/VREdqQ6"><b>Dinheiro, trabalho e generosidade</b><span>R$ 79</span></a></li></ul>
     </div>
+<!-- montador:inicio -->
+    <div class="mt" id="montador">
+      <h3>Monte o seu pedido</h3>
+      <p class="mt-vazio" style="margin:6px 0 0">Marque os livros que quer levar. Quando os três de um kit estão marcados, o preço do kit entra sozinho.</p>
+      <div class="mt-grupos"></div>
+      <div class="mt-res"><div class="mt-tot" aria-live="polite">R$ 0</div><div class="mt-btns"></div></div>
+    </div>
+<!-- montador:fim -->
     <p class="miudo">A família compradora pode imprimir as páginas de atividade para os próprios filhos, quantas vezes precisar, inclusive para os mais novos nos anos seguintes.</p>
     <p class="miudo"><b>Quer o livro impresso?</b> Mande uma mensagem no Instagram <a class="link" href="https://www.instagram.com/mentoriagb/">@mentoriagb</a>; se houver procura, abrimos uma pré-venda.</p>
     <p class="miudo"><b>Escolas e igrejas:</b> há licença institucional. Fale conosco pelo mesmo Instagram.</p>
@@ -738,7 +842,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
   <footer class="rodape"><span>Coleção Peregrininhos, de Gullit e Gislaine Belo, 1ª edição, 2026</span><span>Kit Trio em parceria com a Editora Nadere Reformatie, @editoranaderereformatie</span><a href="https://gbelovaidarcerto-design.github.io/">Todos os materiais</a><a href="privacidade/">Privacidade</a></footer>
   <div class="barra" id="barra" aria-hidden="true">
-    <div class="w"><p><b>Kit Trio</b> por <mark>R$ 139</mark> até 7/11</p><a class="btn" href="https://pay.kiwify.com.br/YK88Rgx" tabindex="-1">Comprar</a></div>
+    <div class="w"><p><b>12 livros, 4 kits</b>, a partir de R$ 69</p><a class="btn" href="#comecar" tabindex="-1">Por onde começar?</a></div>
   </div>
   <dialog class="lupa" id="lupa" aria-label="Página ampliada">
     <div class="lupa-topo"><p class="lupa-leg"></p><button type="button" class="lupa-x" aria-label="Fechar">×</button></div>
@@ -914,7 +1018,7 @@ document.addEventListener('DOMContentLoaded',function(){
   // Barra de compra fixa: aparece depois da abertura e some perto da oferta, do cadastro e do fim da página.
   var barra = document.getElementById('barra');
   if (barra && 'IntersectionObserver' in window) {
-    var vis = {}, alvos = ['.abre', '#oferta', '#amostra', '.final', '.n12 .of', '.mesa-fim'];
+    var vis = {}, alvos = ['.abre', '#comecar', '#oferta', '#amostra', '.final', '.n12 .of', '.mesa-fim'];
     var io = new IntersectionObserver(function (es) {
       es.forEach(function (x) { vis[x.target.dataset.alvo] = x.isIntersecting; });
       var ver = !Object.keys(vis).some(function (k) { return vis[k]; }) && window.scrollY > 300;
@@ -1164,5 +1268,89 @@ document.addEventListener('DOMContentLoaded',function(){
   var m = location.hash.match(/^#conteudos-([a-z]+)/); if (m) abre('cb-' + m[1]);
 })();
 </script><!-- conteudos:fim -->
+<script id="interacao-js">
+(function(){
+var D={"livros": {"caligrafia": {"kit": "trio", "nome": "Caligrafia cursiva com Provérbios", "compra": "https://pay.kiwify.com.br/BD0fOgB", "preco": 69, "amostra": "#amostra"}, "tabuada": {"kit": "trio", "nome": "Tabuada com Provérbios", "compra": "https://pay.kiwify.com.br/xC9i17r", "preco": 69, "amostra": "#amostra"}, "leitura": {"kit": "trio", "nome": "Leitura e interpretação com Provérbios", "compra": "https://pay.kiwify.com.br/6rBavjT", "preco": 79, "amostra": "#amostra"}, "gramatica": {"kit": "kit-linguagem", "nome": "Gramática com Provérbios", "compra": "https://pay.kiwify.com.br/3faJbim", "preco": 79, "amostra": "amostra/titulos/filho-meu-gramatica-amostra.pdf"}, "escrita": {"kit": "kit-linguagem", "nome": "Escrita e redação com Provérbios", "compra": "https://pay.kiwify.com.br/uKHyoRU", "preco": 79, "amostra": "amostra/titulos/filho-meu-escrita-amostra.pdf"}, "palavras": {"kit": "kit-linguagem", "nome": "Palavras que edificam", "compra": "https://pay.kiwify.com.br/DHGddzP", "preco": 79, "amostra": "amostra/titulos/filho-meu-palavras-amostra.pdf"}, "ciencias": {"kit": "kit-mundo", "nome": "Pequenos e sábios: ciências da natureza", "compra": "https://pay.kiwify.com.br/UgvtUZl", "preco": 79, "amostra": "amostra/titulos/filho-meu-ciencias-amostra.pdf"}, "medidas": {"kit": "kit-mundo", "nome": "Contas, medidas e pesos justos", "compra": "https://pay.kiwify.com.br/daNQgME", "preco": 79, "amostra": "amostra/titulos/filho-meu-medidas-amostra.pdf"}, "logica": {"kit": "kit-mundo", "nome": "Pensar bem", "compra": "https://pay.kiwify.com.br/K72EuTq", "preco": 79, "amostra": "amostra/titulos/filho-meu-logica-amostra.pdf"}, "carater": {"kit": "kit-vida", "nome": "Caráter e domínio próprio", "compra": "https://pay.kiwify.com.br/BAO9yDK", "preco": 79, "amostra": "amostra/titulos/filho-meu-carater-amostra.pdf"}, "saude": {"kit": "kit-vida", "nome": "Corpo, saúde e alegria", "compra": "https://pay.kiwify.com.br/nblvRkL", "preco": 79, "amostra": "amostra/titulos/filho-meu-saude-amostra.pdf"}, "financas": {"kit": "kit-vida", "nome": "Dinheiro, trabalho e generosidade", "compra": "https://pay.kiwify.com.br/VREdqQ6", "preco": 79, "amostra": "amostra/titulos/filho-meu-financas-amostra.pdf"}}, "kits": {"trio": {"nome": "Kit Trio", "cor": "var(--mar)", "link": "https://pay.kiwify.com.br/YK88Rgx", "preco": 179, "fundador": 139, "extra": "com os três bônus (Planner do ano, Os 40 versículos e Guia dos pais)"}, "kit-linguagem": {"nome": "Kit Linguagem", "cor": "var(--terra)", "link": "https://pay.kiwify.com.br/ZsjOC7U", "preco": 179}, "kit-mundo": {"nome": "Kit Mundo", "cor": "var(--verde)", "link": "https://pay.kiwify.com.br/TVlx6tL", "preco": 179}, "kit-vida": {"nome": "Kit Vida", "cor": "var(--ocre)", "link": "https://pay.kiwify.com.br/m7llBqF", "preco": 179}}, "nec": [{"t": "caligrafia", "dor": "A letra ainda não sai legível", "ajuda": "Do primeiro traço à carta escrita à mão, com o versículo da semana como modelo."}, {"t": "tabuada", "dor": "Decora a tabuada e logo esquece", "ajuda": "Multiplicação e divisão entendidas antes de decoradas: objeto, desenho e só então número, com revisão espaçada."}, {"t": "leitura", "dor": "Lê, mas não entende o que leu", "ajuda": "Oitenta textos para ler, reler e entender, com perguntas de três tipos e registro de fluência."}, {"t": "gramatica", "dor": "Erra pontuação, acento e concordância", "ajuda": "A gramática estudada no próprio versículo: classes de palavras, frase, pontuação, concordância e acentuação."}, {"t": "escrita", "dor": "Trava na hora de escrever um texto", "ajuda": "Planejar, escrever o rascunho, revisar e ler para alguém, um gênero por semana."}, {"t": "palavras", "dor": "Responde mal ou briga com os irmãos", "ajuda": "Ouvir antes de responder, responder com brandura, falar a verdade, pedir e dar perdão."}, {"t": "ciencias", "dor": "Pergunta o porquê de tudo", "ajuda": "Um experimento por semana com coisas da casa: observar, dar um palpite, testar, registrar e agradecer."}, {"t": "medidas", "dor": "Não vê a matemática no dia a dia", "ajuda": "Medidas, frações, geometria e dados com a xícara, a balança, o canteiro e o relógio."}, {"t": "logica", "dor": "Tem dificuldade de organizar o raciocínio", "ajuda": "Observar, comparar, classificar, achar padrões, ligar causa e consequência e dar razões."}, {"t": "carater", "dor": "Precisa crescer em obediência e domínio próprio", "ajuda": "Dez virtudes no ano, com uma história da casa, um retrato bíblico e uma prática por semana."}, {"t": "saude", "dor": "Sono, comida e brincadeira andam bagunçados", "ajuda": "Dormir, comer, beber água, brincar lá fora e se proteger, cada recomendação com a fonte oficial."}, {"t": "financas", "dor": "Ainda não entende o valor do dinheiro", "ajuda": "Trabalhar, poupar, gastar com sabedoria e dar com alegria, com três potes de verdade."}]};
+var fund=new Date()<new Date('2026-11-08T00:00:00-03:00');
+function precoKit(k){return (k==='trio'&&fund)?D.kits.trio.fundador:D.kits[k].preco}
+function rs(v){return 'R$ '+v}
+function capa(t){return 'img/capas/'+t+'.webp'}
+var ordem=['trio','kit-linguagem','kit-mundo','kit-vida'];
+/* ---------- teste ---------- */
+var qz=document.getElementById('qz');
+if(qz){
+  var st={p:1,idade:null,dores:[],uso:null};
+  var caixa=document.getElementById('qz-dores');
+  D.nec.forEach(function(n){var L=D.livros[n.t];var b=document.createElement('button');b.type='button';b.className='qz-op';b.dataset.v=n.t;b.setAttribute('aria-pressed','false');
+    b.style.setProperty('--k',D.kits[L.kit].cor);b.innerHTML='<span class="ck">✓</span><span><b>'+n.dor+'</b><small>'+L.nome+'</small></span>';caixa.appendChild(b)});
+  var seg=qz.querySelector('.qz-seg'),volta=qz.querySelector('.qz-volta'),cont=qz.querySelector('.qz-cont'),barra=qz.querySelector('.qz-barra i');
+  function pode(){return st.p===1?!!st.idade:st.p===2?st.dores.length>0:st.p===3?!!st.uso:true}
+  function mostra(){qz.querySelectorAll('.qz-passo').forEach(function(e){e.classList.toggle('on',+e.dataset.p===st.p)});
+    cont.textContent=st.p<4?'Pergunta '+st.p+' de 3':'Sua sugestão';barra.style.width=(Math.min(st.p,4)-1)/3*100+'%';
+    volta.hidden=st.p===1;seg.style.display=st.p===4?'none':'';seg.disabled=!pode();seg.textContent=st.p===3?'Ver a sugestão':'Continuar';
+    if(st.p===4)resultado()}
+  qz.addEventListener('click',function(e){var b=e.target.closest('.qz-op');if(!b)return;var p=+b.closest('.qz-passo').dataset.p,v=b.dataset.v;
+    if(p===2){var i=st.dores.indexOf(v);if(i>=0)st.dores.splice(i,1);else{if(st.dores.length>=3)return;st.dores.push(v)}
+      b.setAttribute('aria-pressed',i<0)}
+    else{b.parentNode.querySelectorAll('.qz-op').forEach(function(x){x.setAttribute('aria-pressed',x===b)});if(p===1)st.idade=v;else st.uso=v;
+      setTimeout(function(){if(st.p===p){st.p++;mostra()}},250)}
+    seg.disabled=!pode()});
+  seg.addEventListener('click',function(){if(pode()){st.p++;mostra();qz.scrollIntoView({behavior:'smooth',block:'start'})}});
+  volta.addEventListener('click',function(){st.p--;mostra()});
+  var NIV={semente:'Semente (3 a 5 anos)',broto:'Broto (5 a 7 anos)',arvore:'Árvore (7 anos em diante)'};
+  var USO={casa:'Como base do estudo em casa, cada livro traz as 40 semanas já planejadas: é abrir na lição da semana.',
+           reforco:'Como reforço, as lições são curtas: de 15 a 30 minutos por dia, somando os livros, sem seguir um ano escolar.',
+           virtudes:'Para o tempo em família, a segunda-feira abre com o versículo, a conversa e a oração, todos juntos.'};
+  function resultado(){
+    var conta={};st.dores.forEach(function(t){var k=D.livros[t].kit;conta[k]=(conta[k]||0)+1});
+    var kit=null;ordem.forEach(function(k){if((conta[k]||0)>=2&&(!kit||conta[k]>conta[kit]))kit=k});
+    var html='<h3>Para o seu filho, sugerimos começar assim</h3><span class="qz-nivel">Nível '+NIV[st.idade]+'</span><div class="qz-livros">';
+    st.dores.forEach(function(t){var L=D.livros[t],n=D.nec.filter(function(x){return x.t===t})[0];
+      var am=L.amostra==='#amostra'?'<a href="#amostra">Baixar a Semana 1 grátis</a>':'<a href="'+L.amostra+'" target="_blank" rel="noopener">Ver a lição 1 grátis</a>';
+      html+='<div class="qz-livro" style="--k:'+D.kits[L.kit].cor+'"><img src="'+capa(t)+'" alt="" width="64" height="91"><div><span class="dor">'+n.dor+'</span><h4>'+L.nome+'</h4><p>'+n.ajuda+'</p><div class="lk">'+am+'<a href="'+L.compra+'">Comprar por '+rs(L.preco)+'</a></div></div></div>'});
+    html+='</div>';
+    if(kit){var K=D.kits[kit],sep=0;Object.keys(D.livros).forEach(function(t){if(D.livros[t].kit===kit)sep+=D.livros[t].preco});
+      var nomes=Object.keys(D.livros).filter(function(t){return D.livros[t].kit===kit}).map(function(t){return D.livros[t].nome});
+      html+='<div class="qz-kit" style="--k:'+K.cor+'"><b>O '+K.nome+' reúne '+nomes[0]+', '+nomes[1]+' e '+nomes[2]+(K.extra?', '+K.extra:'')+'.</b><p>'+rs(precoKit(kit))+' pelos três, '+rs(sep-precoKit(kit))+' a menos do que comprando separados'+(kit==='trio'&&fund?' (preço de fundador até 7/11)':'')+'.</p><a class="btn" href="'+K.link+'">Comprar o '+K.nome+'</a></div>'}
+    html+='<p style="margin:16px 0 0;color:var(--lapis)">'+USO[st.uso]+' Todos os 12 livros seguem os mesmos 40 versículos, então dá para juntar outros depois.</p>';
+    html+='<div class="qz-acoes"><button type="button" data-a="montar">Levar para o montador de pedido</button><button type="button" data-a="zap">Mandar a sugestão no WhatsApp</button><button type="button" data-a="refaz">Refazer</button></div>';
+    var r=qz.querySelector('.qz-res');r.innerHTML=html;
+    try{if(window.fbq)fbq('trackCustom','TesteFilhoMeu',{kit:kit||'avulsos'})}catch(e){}
+  }
+  qz.querySelector('.qz-res').addEventListener('click',function(e){var b=e.target.closest('button[data-a]');if(!b)return;var a=b.dataset.a;
+    if(a==='refaz'){st={p:1,idade:null,dores:[],uso:null};qz.querySelectorAll('.qz-op').forEach(function(x){x.setAttribute('aria-pressed','false')});mostra()}
+    if(a==='montar'&&window.__montador){window.__montador(st.dores);document.getElementById('montador').scrollIntoView({behavior:'smooth',block:'start'})}
+    if(a==='zap'){var nomes=st.dores.map(function(t){return D.livros[t].nome}).join(', ');
+      var txt='Olha o que encontrei para o estudo das crianças: coleção Filho meu, com Provérbios. Sugestão para começar: '+nomes+'. '+location.origin+location.pathname+'#comecar';
+      window.open('https://wa.me/?text='+encodeURIComponent(txt),'_blank','noopener')}});
+}
+/* ---------- montador ---------- */
+var mt=document.getElementById('montador');
+if(mt){
+  var gs=mt.querySelector('.mt-grupos');
+  ordem.forEach(function(k){var g=document.createElement('div');g.className='mt-g';g.style.setProperty('--k',D.kits[k].cor);g.innerHTML='<b>'+D.kits[k].nome+'</b>';
+    Object.keys(D.livros).forEach(function(t){var L=D.livros[t];if(L.kit!==k)return;
+      g.insertAdjacentHTML('beforeend','<label class="mt-l"><input type="checkbox" value="'+t+'"><span>'+L.nome+'</span><em>'+rs(L.preco)+'</em></label>')});gs.appendChild(g)});
+  var tot=mt.querySelector('.mt-tot'),btns=mt.querySelector('.mt-btns');
+  function calc(){var sel=[].map.call(mt.querySelectorAll('input:checked'),function(i){return i.value});
+    if(!sel.length){tot.innerHTML='R$ 0';btns.innerHTML='<span class="mt-vazio">Nenhum livro marcado.</span>';return}
+    var total=0,cheio=0,itens=[],dicas=[];
+    ordem.forEach(function(k){var ts=Object.keys(D.livros).filter(function(t){return D.livros[t].kit===k}),m=ts.filter(function(t){return sel.indexOf(t)>=0});
+      var soma=m.reduce(function(s,t){return s+D.livros[t].preco},0);cheio+=soma;
+      if(m.length===3){total+=precoKit(k);itens.push({n:D.kits[k].nome,l:D.kits[k].link,c:D.kits[k].cor})}
+      else{if(m.length===2&&precoKit(k)>soma)dicas.push('Com mais '+rs(precoKit(k)-soma)+', você leva o '+D.kits[k].nome+' completo, com o terceiro livro.');total+=soma;m.forEach(function(t){itens.push({n:D.livros[t].nome.split(' com ')[0].split(':')[0],l:D.livros[t].compra,c:D.kits[k].cor})})}});
+    tot.innerHTML=rs(total)+(cheio>total?'<small>Você economiza '+rs(cheio-total)+' com '+(itens.filter(function(i){return /^Kit/.test(i.n)}).length>1?'os kits':'o kit')+'</small>':'');
+    btns.innerHTML=(dicas.length?'<p class="mt-dica">'+dicas.join(' ')+'</p>':'')+itens.map(function(i){return '<a href="'+i.l+'" style="--k:'+i.c+'">Comprar '+i.n+'</a>'}).join('')}
+  mt.addEventListener('change',calc);calc();
+  window.__montador=function(lista){mt.querySelectorAll('input').forEach(function(i){i.checked=lista.indexOf(i.value)>=0});calc()};
+}
+/* ---------- entrada suave ---------- */
+if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+  document.documentElement.classList.add('js-rev');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('main .bloco').forEach(function(s){s.classList.add('rev');io.observe(s)});
+}
+})();
+</script>
 </body>
 </html>
