@@ -262,6 +262,27 @@ document.addEventListener('DOMContentLoaded',function(){
 });
 </script>
 <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=2146801305916148&ev=PageView&noscript=1"></noscript>
+<style>
+.estante12{display:grid;grid-template-columns:repeat(6,1fr);gap:10px 8px;width:100%}
+@media (min-width:900px){.estante12{grid-template-columns:repeat(4,1fr);gap:12px 10px;width:min(100%,520px)}}
+.estante12 a{display:block}
+.estante12 img{width:100%;height:auto;border-radius:2px 5px 5px 2px;box-shadow:inset 3px 0 0 rgba(255,255,255,.22),0 12px 16px -10px rgba(35,38,45,.45)}
+.kits4{display:grid;gap:18px;margin-top:26px}
+.k4{display:flex;flex-direction:column;background:#fff;border:1px solid var(--pauta);border-top:7px solid var(--k);border-radius:10px;padding:22px 22px 24px}
+.k4 h3{font-size:26px;color:var(--k)}
+.k4-res{color:var(--lapis);margin:4px 0 0;font-size:15.5px}
+.k4 ul{padding-left:20px;margin:14px 0 6px;display:grid;gap:4px;font-size:16px}
+.k4-nota{font-size:14.5px;color:var(--lapis);margin:6px 0 0}
+.k4 .valor{margin:auto 0 14px;padding-top:14px}
+.k4 .valor strong{font-size:40px}
+.k4 .btn{display:block;text-align:center;background:var(--k)}
+.avulsos-12{margin-top:34px}
+@media (min-width:700px){.kits4{grid-template-columns:1fr 1fr}.avulsos-12 .avulsos{columns:2;column-gap:40px}.avulsos-12 .avulsos li{break-inside:avoid}}
+@media (min-width:1100px){.kits4{grid-template-columns:repeat(4,1fr)}}
+.pos-fundador{display:none}
+.pos7 .ate-fundador{display:none}.pos7 .pos-fundador{display:revert}.pos7 .valor.pos-fundador{display:flex}
+</style>
+<script>if(new Date()>=new Date('2026-11-08T00:00:00-03:00'))document.documentElement.classList.add('pos7');</script>
 </head>
 <body>
 
@@ -294,18 +315,12 @@ document.addEventListener('DOMContentLoaded',function(){
       <p class="selo">Coleção Peregrininhos, de Gullit e Gislaine Belo</p>
       <h1>Filho meu</h1>
       <p class="sub">A família inteira à mesa com o mesmo versículo de Provérbios, e cada filho aprendendo no seu nível.</p>
-      <p class="txt">Hoje com 12 títulos, da caligrafia, da tabuada e da leitura à gramática, às ciências e às finanças. Comece pelo Kit Trio: três livros ilustrados, 40 semanas planejadas, um versículo por semana.</p>
-      <p class="abre-preco">Kit Trio por <mark>R$ 139</mark> até 7 de novembro (depois, R$ 179). A Semana 1 é grátis.</p>
-      <div class="acoes"><a class="btn" href="#oferta">Ver o Kit Trio</a><a class="link" href="#amostra">Baixar a Semana 1 grátis</a></div>
+      <p class="txt">São 12 livros ilustrados, de escrita, matemática, leitura, gramática, ciências, caráter, saúde e finanças, todos com os mesmos 40 versículos e as 40 semanas já planejadas. Escolha um livro, um kit de três ou comece pelo que seu filho mais precisa.</p>
+      <p class="abre-preco">Livros a partir de R$ 69 e kits de três livros por R$ 179.<span class="ate-fundador"> O Kit Trio sai por <mark>R$ 139</mark> até 7 de novembro.</span> A lição 1 de cada livro é grátis.</p>
+      <div class="acoes"><a class="btn" href="#oferta">Ver os kits</a><a class="link" href="#novos">Conhecer os 12 títulos</a></div>
       <p class="aviso" data-ate="2026-11-04T00:00:00-03:00">Lançamento oficial na terça, 3 de novembro, às 20h, com live no Instagram <a href="https://www.instagram.com/mentoriagb/">@mentoriagb</a>.</p>
     </div>
-    <div class="vitrine">
-      <div class="leque">
-        <img src="img/capas/caligrafia.webp" width="520" height="736" alt="Capa do livro Caligrafia cursiva com Provérbios" fetchpriority="high">
-        <img src="img/capas/tabuada.webp" width="520" height="736" alt="Capa do livro Tabuada com Provérbios">
-        <img src="img/capas/leitura.webp" width="520" height="736" alt="Capa do livro Leitura e interpretação com Provérbios">
-      </div>
-      <a class="mais9" href="#novos"><span class="mini" aria-hidden="true"><img src="img/capas/gramatica.webp" alt="" width="52" height="74"><img src="img/capas/ciencias.webp" alt="" width="52" height="74"><img src="img/capas/carater.webp" alt="" width="52" height="74"><img src="img/capas/financas.webp" alt="" width="52" height="74"></span><span>e mais 9 títulos da coleção</span></a>
+    <div class="vitrine"><div class="estante12"><a href="#livro-caligrafia"><img src="img/capas/caligrafia.webp" width="520" height="736" alt="Capa do livro Caligrafia cursiva com Provérbios" fetchpriority="high"></a><a href="#livro-tabuada"><img src="img/capas/tabuada.webp" width="520" height="736" alt="Capa do livro Tabuada com Provérbios" fetchpriority="high"></a><a href="#livro-leitura"><img src="img/capas/leitura.webp" width="520" height="736" alt="Capa do livro Leitura e interpretação com Provérbios" fetchpriority="high"></a><a href="#livro-gramatica"><img src="img/capas/gramatica.webp" width="520" height="736" alt="Capa do livro Gramática com Provérbios" fetchpriority="high"></a><a href="#livro-escrita"><img src="img/capas/escrita.webp" width="520" height="736" alt="Capa do livro Escrita e redação com Provérbios"></a><a href="#livro-palavras"><img src="img/capas/palavras.webp" width="520" height="736" alt="Capa do livro Palavras que edificam"></a><a href="#livro-ciencias"><img src="img/capas/ciencias.webp" width="520" height="736" alt="Capa do livro Pequenos e sábios: ciências da natureza"></a><a href="#livro-medidas"><img src="img/capas/medidas.webp" width="520" height="736" alt="Capa do livro Contas, medidas e pesos justos"></a><a href="#livro-logica"><img src="img/capas/logica.webp" width="520" height="736" alt="Capa do livro Pensar bem"></a><a href="#livro-carater"><img src="img/capas/carater.webp" width="520" height="736" alt="Capa do livro Caráter e domínio próprio"></a><a href="#livro-saude"><img src="img/capas/saude.webp" width="520" height="736" alt="Capa do livro Corpo, saúde e alegria"></a><a href="#livro-financas"><img src="img/capas/financas.webp" width="520" height="736" alt="Capa do livro Dinheiro, trabalho e generosidade"></a></div>
     </div>
   </div>
   <div class="pauta" id="pauta"><span class="cur">Filho meu, ouve a instrução de teu pai; e não abandones a doutrina de tua mãe.</span><small>Provérbios 1.8, Bíblia Livre, o versículo da lição 1 nos 12 livros</small></div>
@@ -334,7 +349,7 @@ document.addEventListener('DOMContentLoaded',function(){
     <div class="nao">
       <h3>Talvez não seja para você se</h3>
       <ul class="lista">
-        <li>procura um currículo de todas as disciplinas: a coleção cobre escrita, matemática e leitura;</li>
+        <li>procura um currículo pronto de todas as disciplinas, com história e geografia;</li>
         <li>precisa de material alinhado série a série com a escola;</li>
         <li>prefere letra de forma em vez da cursiva.</li>
       </ul>
@@ -343,7 +358,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
   <section class="bloco" id="mesa" aria-labelledby="t-mesa">
     <h2 id="t-mesa">Monte a sua mesa</h2>
-    <p class="lead">Toque na idade de cada filho e veja o que ele faz na primeira semana, nos três livros do Kit Trio.</p>
+    <p class="lead">Toque na idade de cada filho e veja o que ele faz na primeira semana, usando como exemplo caligrafia, tabuada e leitura.</p>
     <div class="idades" role="group" aria-label="Idade de cada filho">
       <button type="button" data-i="3">3 anos</button><button type="button" data-i="4">4</button><button type="button" data-i="5">5</button><button type="button" data-i="6">6</button><button type="button" data-i="7">7</button><button type="button" data-i="8">8</button><button type="button" data-i="9">9</button><button type="button" data-i="10">10 ou mais</button>
     </div>
@@ -351,7 +366,7 @@ document.addEventListener('DOMContentLoaded',function(){
     <ol class="lugares" aria-live="polite"></ol>
     <div class="mesa-fim" hidden>
       <p>Na segunda, todos juntos com Provérbios 1.8, em cerca de 10 minutos. De terça a quinta, cada um no seu nível, de 15 a 30 minutos por dia somando os três livros.</p>
-      <div class="acoes"><a class="btn" href="#oferta">Ver o Kit Trio</a><button type="button" class="link limpa">Começar de novo</button></div>
+      <div class="acoes"><a class="btn" href="#oferta">Ver os kits</a><button type="button" class="link limpa">Começar de novo</button></div>
     </div>
   </section>
 
@@ -360,119 +375,10 @@ document.addEventListener('DOMContentLoaded',function(){
     <p class="lead">O planejamento já vem pronto. É abrir o livro na lição da semana.</p>
     <div class="semana">
       <div class="dia" style="border-color:var(--mar)"><b>Segunda</b><span>abertura em família, 10 minutos</span><p>Todos juntos: a ilustração da semana, o versículo, uma conversa curta, perguntas para cada idade e oração.</p></div>
-      <div class="dia" style="border-color:var(--ocre)"><b>Terça a quinta</b><span>cada filho no seu nível, 15 a 30 minutos</span><p>A criança faz as páginas do seu nível nos três livros: caligrafia, tabuada e leitura.</p></div>
-      <div class="dia" style="border-color:var(--verde)"><b>Sexta</b><span>o fechamento</span><p>A família recita o versículo. O filho maior escreve de memória. Na tabuada, o “Lembra?” e o desafio; na leitura, o registro de fluência.</p></div>
+      <div class="dia" style="border-color:var(--ocre)"><b>Terça a quinta</b><span>cada filho no seu nível, 15 a 30 minutos</span><p>A criança faz as páginas do seu nível em cada livro que a família escolheu.</p></div>
+      <div class="dia" style="border-color:var(--verde)"><b>Sexta</b><span>o fechamento</span><p>A família recita o versículo e cada livro fecha a semana do seu jeito: o versículo de memória na caligrafia, o “Lembra?” na tabuada, o registro de fluência na leitura.</p></div>
     </div>
-    <p class="fecho">Em 40 semanas, a família terá decorado 40 versículos de Provérbios, e cada filho terá dado um ano de passos na escrita, na matemática e na leitura.</p>
-  </section>
-
-  <section class="bloco" aria-labelledby="t-livros">
-    <h2 id="t-livros">Os três livros do Kit Trio, 821 páginas</h2>
-    <p class="lead">Os três usam o mesmo versículo da semana, por isso conversam entre si.</p>
-    <div class="obra"><img src="img/mock-caligrafia.webp" width="700" height="933" alt="Livro Filho meu: caligrafia cursiva com Provérbios" loading="lazy"><div><span class="pg" style="color:var(--mar)">Livro 1, 257 páginas</span><h3>Caligrafia cursiva com Provérbios</h3><button type="button" class="cb-abre" data-painel="cb-caligrafia">O que o livro ensina</button><p>A letra cursiva do primeiro traço até a carta escrita à mão: traços, minúsculas, maiúsculas, números, palavras, frases, o versículo inteiro e, no fim, uma carta para o pai.</p><ul><li>Semente: traços, letra gigante e desenho.</li><li>Broto: letras cursivas, palavras e um trecho do versículo.</li><li>Árvore: o versículo inteiro, copiado de segunda a quinta e de memória na sexta.</li><li>Alfabeto de referência, pautas extras e certificados.</li></ul></div></div>
-    <div class="obra"><img src="img/mock-tabuada.webp" width="700" height="933" alt="Livro Filho meu: tabuada com Provérbios" loading="lazy"><div><span class="pg" style="color:var(--verde)">Livro 2, 256 páginas</span><h3>Tabuada com Provérbios</h3><button type="button" class="cb-abre" data-painel="cb-tabuada">O que o livro ensina</button><p>A multiplicação e a divisão entendidas antes de decoradas.</p><ul><li>Primeiro com objetos, depois com desenho, só então com números.</li><li>Estratégias que dão sentido às contas: o dobro, o “10 menos 1” da tabuada do 9.</li><li>“Lembra?”: revisão espaçada do que veio semanas antes.</li><li>Tabela pitagórica, gabarito, 45 cartões para recortar, desafios e certificados.</li></ul></div></div>
-    <div class="obra"><img src="img/mock-leitura.webp" width="700" height="933" alt="Livro Filho meu: leitura e interpretação com Provérbios" loading="lazy"><div><span class="pg" style="color:var(--terra)">Livro 3, 308 páginas</span><h3>Leitura e interpretação com Provérbios</h3><button type="button" class="cb-abre" data-painel="cb-leitura">O que o livro ensina</button><p>Oitenta textos originais para ler, reler e entender.</p><ul><li>Contos da família das ilustrações, relatos bíblicos recontados, fábulas nordestinas, poemas e cordel, cartas e textos informativos.</li><li>Broto lê um texto curto três vezes e registra o tempo.</li><li>Árvore mede as palavras por minuto, responde seis perguntas de três tipos e escreve.</li><li>Uma habilidade de leitura por semana e gráfico de fluência.</li></ul></div></div>
-  </section>
-
-  <section class="bloco" id="por-dentro" aria-labelledby="t-dentro">
-    <h2 id="t-dentro">Uma lição por dentro</h2>
-    <p class="lead">Páginas reais da lição 1, na versão atual dos livros. Escolha o livro e o nível; toque na página para ampliar.</p>
-    <div class="vw">
-      <div class="vw-ctrl">
-        <div class="vw-livros" role="group" aria-label="Livro">
-          <button type="button" data-l="caligrafia" aria-pressed="true">Caligrafia</button><button type="button" data-l="tabuada" aria-pressed="false">Tabuada</button><button type="button" data-l="leitura" aria-pressed="false">Leitura</button>
-        </div>
-        <div class="vw-niveis" role="group" aria-label="Parte da lição">
-          <button type="button" data-n="abertura">Abertura em família</button><button type="button" data-n="semente">Semente, 3 a 5</button><button type="button" data-n="broto">Broto, 5 a 7</button><button type="button" data-n="arvore">Árvore, 7 em diante</button>
-        </div>
-        <p class="vw-leg" aria-live="polite"></p>
-        <div class="vw-nav"><button type="button" class="vw-ant" aria-label="Página anterior">‹</button><span class="vw-pos"></span><button type="button" class="vw-prox" aria-label="Próxima página">›</button></div>
-        <p class="vw-nota">As idades são referência. Cada filho fica no nível em que está e pode mudar durante o ano.</p>
-      </div>
-      <button type="button" class="vw-folha" aria-label="Ampliar a página"><img alt="" width="600" height="849"></button>
-    </div>
-  </section>
-
-  <section class="bloco" aria-labelledby="t-metodo">
-    <h2 id="t-metodo">Por que o método funciona</h2>
-    <p class="lead">Juntamos práticas com boa base em pesquisa e as colocamos a serviço da casa.</p>
-    <div class="metodo">
-      <div><b>Revisão espaçada</b><p>Rever em intervalos crescentes guarda por mais tempo do que repetir tudo no mesmo dia.</p></div>
-      <div><b>Leitura repetida</b><p>Ler o mesmo texto algumas vezes melhora a fluência, e a fluência ajuda a compreensão.</p></div>
-      <div><b>Concreto, desenho, número</b><p>A sequência do ensino de matemática de Singapura faz a criança entender a conta antes de decorá-la.</p></div>
-      <div><b>Perguntas de três tipos</b><p>“Está no texto”, “pense e procure” e “com suas palavras” ensinam a voltar ao texto e a pensar sobre ele.</p></div>
-      <div><b>Escrita guiada</b><p>O modelo vem primeiro, depois a cópia, e por fim a escrita sozinha.</p></div>
-    </div>
-  </section>
-
-  <section class="bloco fe" aria-labelledby="t-fe">
-    <div>
-      <h2 id="t-fe" class="t">A fé que sustenta a coleção</h2>
-      <p class="lead">Provérbios não é um manual de boas maneiras. É a voz de um pai que ensina o filho a temer ao Senhor, e o temor do Senhor é o princípio da sabedoria.</p>
-      <p style="margin-top:14px">Por isso as conversas da semana apontam para Deus e para a graça, e não apenas para o comportamento. A coleção parte da fé reformada, com cuidado para não transformar cada lição numa lição de moral.</p>
-    </div>
-    <img src="img/c28.webp" width="1400" height="940" alt="Ilustração da coleção: criança lendo a Bíblia à luz de uma lamparina" loading="lazy">
-  </section>
-
-  <section class="bloco autores" aria-label="Autores e parceria">
-    <div><h3>Quem coordenou a coleção</h3><p><b style="color:var(--grafite)">Gullit Belo e Gislaine Belo</b> são casados e pais de quatro filhos. “Filho meu” nasceu na mesa da família, da necessidade de ensinar crianças de idades diferentes ao mesmo tempo sem deixar a Escritura de lado. Eles idealizaram e coordenaram o projeto da coleção.</p></div>
-    <div><h3>A parceria do Kit Trio</h3><p>Os três livros do Kit Trio (Caligrafia, Tabuada e Leitura) são publicados em parceria com a <b style="color:var(--grafite)">Editora Nadere Reformatie</b>, que publica obras de fé reformada. O nome remete à Reforma Posterior holandesa, que buscou levar a doutrina da Reforma para a vida diária, a família e a piedade. A parceria vale só para esses três títulos.</p><p style="margin-top:10px">@editoranaderereformatie, www.editoranaderereformatie.com.br</p></div>
-  </section>
-
-  <section class="bloco" id="bonus" aria-labelledby="t-bonus">
-    <h2 id="t-bonus">Três bônus no Kit Trio, sem custo</h2>
-    <p class="lead">Quem leva o Kit Trio recebe também, na mesma área de membros, três materiais feitos para o dia a dia de quem usa a coleção.</p>
-    <div class="bonus">
-      <div class="bn"><img src="img/bonus-1.webp" width="579" height="819" alt="Capa do bônus Planner do ano" loading="lazy"><span class="pg">Bônus 1, 16 páginas</span><h3>Planner do ano</h3><p>Quatro jeitos de usar o kit (ensino em casa, depois da escola, reforço e tempo das virtudes), o calendário das 40 semanas, as páginas exatas que cada filho imprime em cada semana e o material da Tabuada.</p></div>
-      <div class="bn"><img src="img/bonus-2.webp" alt="Cartões do bônus Os 40 versículos" loading="lazy"><span class="pg">Bônus 2, 12 páginas</span><h3>Os 40 versículos</h3><p>Quarenta cartões com a cena de cada lição e a caixa de memória para revisar os versículos o ano todo, com divisórias, pôster e o quadro “Já sei de cor”.</p></div>
-      <div class="bn"><img src="img/bonus-3.webp" alt="Capa do bônus Guia dos pais" loading="lazy"><span class="pg">Bônus 3, 9 páginas</span><h3>Guia dos pais</h3><p>Como ensinar Provérbios aos filhos: o que é um provérbio, Cristo como a sabedoria de Deus, a correção com graça, o exemplo dos pais e o culto doméstico.</p></div>
-    </div>
-  </section>
-
-  <section class="bloco" id="oferta" aria-labelledby="t-oferta">
-    <h2 id="t-oferta">Um ano inteiro de escrita, matemática e leitura</h2>
-    <p class="lead">Em PDF, para imprimir em casa só as páginas que cada filho vai usar.</p>
-    <div class="oferta">
-      <div class="kit">
-        <p class="prazo">Preço de fundador até 7 de novembro</p>
-        <h3>Kit Trio “Filho meu”</h3>
-        <p style="color:var(--lapis);margin:6px 0 0">Os três livros, 821 páginas, 40 semanas.</p>
-        <ul><li>Caligrafia cursiva com Provérbios</li><li>Tabuada com Provérbios</li><li>Leitura e interpretação com Provérbios</li><li>Cartões de tabuada, certificados, pautas extras, gabarito e respostas</li><li><b>3 bônus:</b> Planner do ano, Os 40 versículos e Guia dos pais</li></ul>
-        <div class="valor"><s>R$ 217 avulsos</s><strong><mark>R$ 139</mark></strong><span>depois, R$ 179</span></div>
-        <a class="btn" href="https://pay.kiwify.com.br/YK88Rgx">Comprar o Kit Trio por R$ 139</a>
-        <p class="seguro">Pagamento pela Kiwify, em PDF, com acesso por e-mail logo após a confirmação.</p>
-      </div>
-      <div>
-        <h3 style="font-size:21px;margin-bottom:10px">Ou um livro por vez</h3>
-        <ul class="avulsos">
-          <li><a href="https://pay.kiwify.com.br/BD0fOgB"><b>Caligrafia cursiva</b><span>R$ 69</span></a></li>
-          <li><a href="https://pay.kiwify.com.br/xC9i17r"><b>Tabuada</b><span>R$ 69</span></a></li>
-          <li><a href="https://pay.kiwify.com.br/6rBavjT"><b>Leitura e interpretação</b><span>R$ 79</span></a></li>
-        </ul>
-        <p class="miudo">A família compradora pode imprimir as páginas de atividade para os próprios filhos, quantas vezes precisar, inclusive para os mais novos nos anos seguintes.</p>
-        <p class="miudo"><b>Quer o livro impresso?</b> Mande uma mensagem no Instagram <a class="link" href="https://www.instagram.com/mentoriagb/">@mentoriagb</a>; se houver procura, abrimos uma pré-venda.</p>
-        <p class="miudo"><b>Escolas e igrejas:</b> há licença institucional. Fale conosco pelo mesmo Instagram.</p>
-      </div>
-    </div>
-    <p class="garantia"><b>Garantia de 7 dias.</b> Conheça o material com calma. Se não for o que sua família precisa, peça o reembolso integral.</p>
-  </section>
-
-  <section class="bloco" id="amostra" aria-labelledby="t-amostra">
-    <h2 id="t-amostra">Experimente antes</h2>
-    <p class="lead">Para conhecer na prática antes de comprar, a primeira semana completa dos três livros do Kit Trio é grátis.</p>
-    <div class="amostra">
-      <div><h3>Baixe grátis a Semana 1</h3><p>A lição 1 (Provérbios 1.8) dos três livros, nos três níveis. Imprima, use com seus filhos e decida com calma. Deixe seu nome e e-mail, e o PDF baixa na hora.</p></div>
-      <form class="cad" id="cadastro" novalidate>
-        <label>Seu nome<input type="text" name="nome" autocomplete="name" required></label>
-        <label>Seu e-mail<input type="email" name="email" autocomplete="email" inputmode="email" required></label>
-        <label><span>WhatsApp <span class="op">(opcional)</span></span><input type="tel" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="(DDD) 9 0000-0000"></label>
-        <label><span>Idades das crianças <span class="op">(opcional)</span></span><input type="text" name="idades" placeholder="ex.: 4 e 7 anos"></label>
-        <label class="ok full"><input type="checkbox" name="aceite" required><span>Aceito receber a Semana 1 e mensagens sobre a coleção "Filho meu". Posso sair da lista quando quiser. <a href="privacidade/">Política de privacidade</a>.</span></label>
-        <p class="msg full" role="alert" hidden></p>
-        <button class="btn full" type="submit">Baixar a Semana 1 (PDF)</button>
-      </form>
-      <div class="cad-fim" id="cadastro-fim" hidden><b>O download começou.</b><p>Se não abrir, <a href="amostra/filho-meu-amostra-gratis.pdf" download>clique aqui para baixar a Semana 1</a>. Comece na segunda-feira, com a abertura em família.</p></div>
-    </div>
+    <p class="fecho">Em 40 semanas, a família terá decorado 40 versículos de Provérbios, e cada filho terá dado um ano de passos em cada livro que usou.</p>
   </section>
 
 <!-- novos:inicio --><style>
@@ -503,16 +409,16 @@ document.addEventListener('DOMContentLoaded',function(){
 @media (prefers-reduced-motion:reduce){.tit-capa img{transition:none}}
 </style>
   <section class="bloco n12" id="novos" aria-labelledby="t-novos">
-    <h2 id="t-novos">A coleção, hoje com 12 títulos</h2>
+    <h2 id="t-novos">Os 12 títulos</h2>
     <p class="lead">Os 12 livros seguem os mesmos 40 versículos de Provérbios, na mesma ordem, com 40 lições e os três níveis. O que você acrescentar conversa com o que a família já usa.</p>
     <fieldset class="filtro"><legend>Ver:</legend><input type="radio" name="kit" id="f-todos" value="todos" checked><label for="f-todos">Todos os 12</label><input type="radio" name="kit" id="f-trio" value="trio"><label for="f-trio">Kit Trio</label><input type="radio" name="kit" id="f-kit-linguagem" value="kit-linguagem"><label for="f-kit-linguagem">Kit Linguagem</label><input type="radio" name="kit" id="f-kit-mundo" value="kit-mundo"><label for="f-kit-mundo">Kit Mundo</label><input type="radio" name="kit" id="f-kit-vida" value="kit-vida"><label for="f-kit-vida">Kit Vida</label></fieldset>
     <div aria-live="polite">
       <div class="of" data-of="todos">
-        <p><b>Comece pelo Kit Trio</b>, a base do ano, com os três bônus. Os outros nove títulos podem vir depois, um por vez (R$ 79 cada) ou em kits de três por R$ 179. Cada um deles tem uma <b>amostra grátis com a lição 1</b>, no botão abaixo da capa.</p>
-        <a class="btn" href="#oferta">Ver o Kit Trio</a>
+        <p>Cada livro funciona sozinho e também faz parte de um kit de três. Toque na capa para ver o que o livro ensina, e baixe grátis a <b>lição 1</b> antes de decidir.</p>
+        <a class="btn" href="#oferta">Ver os kits</a>
       </div>
       <div class="of" data-of="trio" hidden>
-        <p><b>Kit Trio:</b> caligrafia, tabuada e leitura, com os três bônus. <mark>R$ 139</mark> até 7 de novembro (depois, R$ 179).</p>
+        <p><b>Kit Trio:</b> caligrafia, tabuada e leitura, com os três bônus. <span class="ate-fundador"><mark>R$ 139</mark> até 7 de novembro (depois, R$ 179).</span><span class="pos-fundador">R$ 179 pelos três (R$ 217 separados).</span></p>
         <a class="btn" href="https://pay.kiwify.com.br/YK88Rgx">Comprar o Kit Trio</a>
       </div>
       <div class="of" data-of="kit-linguagem" hidden>
@@ -715,6 +621,96 @@ document.addEventListener('DOMContentLoaded',function(){
 </script>
 <!-- novos:fim -->
 
+  <section class="bloco" id="por-dentro" aria-labelledby="t-dentro">
+    <h2 id="t-dentro">Uma lição por dentro</h2>
+    <p class="lead">Páginas reais da lição 1 de três livros, na versão atual. Escolha o livro e o nível; toque na página para ampliar. Os outros nove títulos têm a lição 1 grátis no botão abaixo de cada capa.</p>
+    <div class="vw">
+      <div class="vw-ctrl">
+        <div class="vw-livros" role="group" aria-label="Livro">
+          <button type="button" data-l="caligrafia" aria-pressed="true">Caligrafia</button><button type="button" data-l="tabuada" aria-pressed="false">Tabuada</button><button type="button" data-l="leitura" aria-pressed="false">Leitura</button>
+        </div>
+        <div class="vw-niveis" role="group" aria-label="Parte da lição">
+          <button type="button" data-n="abertura">Abertura em família</button><button type="button" data-n="semente">Semente, 3 a 5</button><button type="button" data-n="broto">Broto, 5 a 7</button><button type="button" data-n="arvore">Árvore, 7 em diante</button>
+        </div>
+        <p class="vw-leg" aria-live="polite"></p>
+        <div class="vw-nav"><button type="button" class="vw-ant" aria-label="Página anterior">‹</button><span class="vw-pos"></span><button type="button" class="vw-prox" aria-label="Próxima página">›</button></div>
+        <p class="vw-nota">As idades são referência. Cada filho fica no nível em que está e pode mudar durante o ano.</p>
+      </div>
+      <button type="button" class="vw-folha" aria-label="Ampliar a página"><img alt="" width="600" height="849"></button>
+    </div>
+  </section>
+
+  <section class="bloco" aria-labelledby="t-metodo">
+    <h2 id="t-metodo">Por que o método funciona</h2>
+    <p class="lead">Juntamos práticas com boa base em pesquisa e as colocamos a serviço da casa.</p>
+    <div class="metodo">
+      <div><b>Revisão espaçada</b><p>Rever em intervalos crescentes guarda por mais tempo do que repetir tudo no mesmo dia.</p></div>
+      <div><b>Leitura repetida</b><p>Ler o mesmo texto algumas vezes melhora a fluência, e a fluência ajuda a compreensão.</p></div>
+      <div><b>Concreto, desenho, número</b><p>A sequência do ensino de matemática de Singapura faz a criança entender a conta antes de decorá-la.</p></div>
+      <div><b>Perguntas de três tipos</b><p>“Está no texto”, “pense e procure” e “com suas palavras” ensinam a voltar ao texto e a pensar sobre ele.</p></div>
+      <div><b>Escrita guiada</b><p>O modelo vem primeiro, depois a cópia, e por fim a escrita sozinha.</p></div>
+    </div>
+  </section>
+
+  <section class="bloco fe" aria-labelledby="t-fe">
+    <div>
+      <h2 id="t-fe" class="t">A fé que sustenta a coleção</h2>
+      <p class="lead">Provérbios não é um manual de boas maneiras. É a voz de um pai que ensina o filho a temer ao Senhor, e o temor do Senhor é o princípio da sabedoria.</p>
+      <p style="margin-top:14px">Por isso as conversas da semana apontam para Deus e para a graça, e não apenas para o comportamento. A coleção parte da fé reformada, com cuidado para não transformar cada lição numa lição de moral.</p>
+    </div>
+    <img src="img/c28.webp" width="1400" height="940" alt="Ilustração da coleção: criança lendo a Bíblia à luz de uma lamparina" loading="lazy">
+  </section>
+
+  <section class="bloco autores" aria-label="Autores e parceria">
+    <div><h3>Quem coordenou a coleção</h3><p><b style="color:var(--grafite)">Gullit Belo e Gislaine Belo</b> são casados e pais de quatro filhos. “Filho meu” nasceu na mesa da família, da necessidade de ensinar crianças de idades diferentes ao mesmo tempo sem deixar a Escritura de lado. Eles idealizaram e coordenaram o projeto da coleção.</p></div>
+    <div><h3>A parceria do Kit Trio</h3><p>Os três livros do Kit Trio (Caligrafia, Tabuada e Leitura) são publicados em parceria com a <b style="color:var(--grafite)">Editora Nadere Reformatie</b>, que publica obras de fé reformada. O nome remete à Reforma Posterior holandesa, que buscou levar a doutrina da Reforma para a vida diária, a família e a piedade. A parceria vale só para esses três títulos.</p><p style="margin-top:10px">@editoranaderereformatie, www.editoranaderereformatie.com.br</p></div>
+  </section>
+
+  <section class="bloco" id="oferta" aria-labelledby="t-oferta">
+    <h2 id="t-oferta">Escolha por onde começar</h2>
+    <p class="lead">Quatro kits de três livros, cada um com 40 semanas. Em PDF, para imprimir em casa só as páginas que cada filho vai usar.</p>
+    <div class="kits4"><div class="k4" style="--k:var(--mar)"><h3>Kit Trio</h3><p class="k4-res">caligrafia, tabuada e leitura</p><ul><li>Caligrafia cursiva com Provérbios</li><li>Tabuada com Provérbios</li><li>Leitura e interpretação com Provérbios</li></ul><p class="k4-nota">Com 3 bônus: Planner do ano, Os 40 versículos e Guia dos pais. Em parceria com a Editora Nadere Reformatie.</p><div class="valor ate-fundador"><s>R$ 217 separados</s><strong><mark>R$ 139</mark></strong><span>até 7/11; depois, R$ 179</span></div><div class="valor pos-fundador"><s>R$ 217 separados</s><strong>R$ 179</strong></div><a class="btn" href="https://pay.kiwify.com.br/YK88Rgx">Comprar o Kit Trio</a></div><div class="k4" style="--k:var(--terra)"><h3>Kit Linguagem</h3><p class="k4-res">gramática, escrita e vocabulário</p><ul><li>Gramática com Provérbios</li><li>Escrita e redação com Provérbios</li><li>Palavras que edificam</li></ul><div class="valor"><s>R$ 237 separados</s><strong>R$ 179</strong></div><a class="btn" href="https://pay.kiwify.com.br/ZsjOC7U">Comprar o Kit Linguagem</a></div><div class="k4" style="--k:var(--verde)"><h3>Kit Mundo</h3><p class="k4-res">ciências, medidas e raciocínio</p><ul><li>Pequenos e sábios: ciências da natureza</li><li>Contas, medidas e pesos justos</li><li>Pensar bem</li></ul><div class="valor"><s>R$ 237 separados</s><strong>R$ 179</strong></div><a class="btn" href="https://pay.kiwify.com.br/TVlx6tL">Comprar o Kit Mundo</a></div><div class="k4" style="--k:var(--ocre)"><h3>Kit Vida</h3><p class="k4-res">caráter, saúde e dinheiro</p><ul><li>Caráter e domínio próprio</li><li>Corpo, saúde e alegria</li><li>Dinheiro, trabalho e generosidade</li></ul><div class="valor"><s>R$ 237 separados</s><strong>R$ 179</strong></div><a class="btn" href="https://pay.kiwify.com.br/m7llBqF">Comprar o Kit Vida</a></div></div>
+    <p class="seguro">Pagamento pela Kiwify, em PDF, com acesso por e-mail logo após a confirmação.</p>
+    <div class="avulsos-12">
+      <h3 style="font-size:21px;margin-bottom:10px">Ou um livro por vez</h3>
+      <ul class="avulsos"><li><a href="https://pay.kiwify.com.br/BD0fOgB"><b>Caligrafia cursiva com Provérbios</b><span>R$ 69</span></a></li><li><a href="https://pay.kiwify.com.br/xC9i17r"><b>Tabuada com Provérbios</b><span>R$ 69</span></a></li><li><a href="https://pay.kiwify.com.br/6rBavjT"><b>Leitura e interpretação com Provérbios</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/3faJbim"><b>Gramática com Provérbios</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/uKHyoRU"><b>Escrita e redação com Provérbios</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/DHGddzP"><b>Palavras que edificam</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/UgvtUZl"><b>Pequenos e sábios: ciências da natureza</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/daNQgME"><b>Contas, medidas e pesos justos</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/K72EuTq"><b>Pensar bem</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/BAO9yDK"><b>Caráter e domínio próprio</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/nblvRkL"><b>Corpo, saúde e alegria</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/VREdqQ6"><b>Dinheiro, trabalho e generosidade</b><span>R$ 79</span></a></li></ul>
+    </div>
+    <p class="miudo">A família compradora pode imprimir as páginas de atividade para os próprios filhos, quantas vezes precisar, inclusive para os mais novos nos anos seguintes.</p>
+    <p class="miudo"><b>Quer o livro impresso?</b> Mande uma mensagem no Instagram <a class="link" href="https://www.instagram.com/mentoriagb/">@mentoriagb</a>; se houver procura, abrimos uma pré-venda.</p>
+    <p class="miudo"><b>Escolas e igrejas:</b> há licença institucional. Fale conosco pelo mesmo Instagram.</p>
+    <p class="garantia"><b>Garantia de 7 dias.</b> Conheça o material com calma. Se não for o que sua família precisa, peça o reembolso integral.</p>
+  </section>
+
+  <section class="bloco" id="bonus" aria-labelledby="t-bonus">
+    <h2 id="t-bonus">Os três bônus do Kit Trio</h2>
+    <p class="lead">Quem leva o Kit Trio recebe também, na mesma área de membros, três materiais feitos para o dia a dia de quem usa a coleção.</p>
+    <div class="bonus">
+      <div class="bn"><img src="img/bonus-1.webp" width="579" height="819" alt="Capa do bônus Planner do ano" loading="lazy"><span class="pg">Bônus 1, 16 páginas</span><h3>Planner do ano</h3><p>Quatro jeitos de usar o kit (ensino em casa, depois da escola, reforço e tempo das virtudes), o calendário das 40 semanas, as páginas exatas que cada filho imprime em cada semana e o material da Tabuada.</p></div>
+      <div class="bn"><img src="img/bonus-2.webp" alt="Cartões do bônus Os 40 versículos" loading="lazy"><span class="pg">Bônus 2, 12 páginas</span><h3>Os 40 versículos</h3><p>Quarenta cartões com a cena de cada lição e a caixa de memória para revisar os versículos o ano todo, com divisórias, pôster e o quadro “Já sei de cor”.</p></div>
+      <div class="bn"><img src="img/bonus-3.webp" alt="Capa do bônus Guia dos pais" loading="lazy"><span class="pg">Bônus 3, 9 páginas</span><h3>Guia dos pais</h3><p>Como ensinar Provérbios aos filhos: o que é um provérbio, Cristo como a sabedoria de Deus, a correção com graça, o exemplo dos pais e o culto doméstico.</p></div>
+    </div>
+  </section>
+
+  <section class="bloco" id="amostra" aria-labelledby="t-amostra">
+    <h2 id="t-amostra">Experimente antes</h2>
+    <p class="lead">Para conhecer na prática antes de comprar: a Semana 1 completa de caligrafia, tabuada e leitura, num PDF só. A lição 1 dos outros nove títulos fica no botão abaixo de cada capa, na estante dos 12 títulos.</p>
+    <div class="amostra">
+      <div><h3>Baixe grátis a Semana 1</h3><p>A lição 1 (Provérbios 1.8) dos três livros, nos três níveis. Imprima, use com seus filhos e decida com calma. Deixe seu nome e e-mail, e o PDF baixa na hora.</p></div>
+      <form class="cad" id="cadastro" novalidate>
+        <label>Seu nome<input type="text" name="nome" autocomplete="name" required></label>
+        <label>Seu e-mail<input type="email" name="email" autocomplete="email" inputmode="email" required></label>
+        <label><span>WhatsApp <span class="op">(opcional)</span></span><input type="tel" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="(DDD) 9 0000-0000"></label>
+        <label><span>Idades das crianças <span class="op">(opcional)</span></span><input type="text" name="idades" placeholder="ex.: 4 e 7 anos"></label>
+        <label class="ok full"><input type="checkbox" name="aceite" required><span>Aceito receber a Semana 1 e mensagens sobre a coleção "Filho meu". Posso sair da lista quando quiser. <a href="privacidade/">Política de privacidade</a>.</span></label>
+        <p class="msg full" role="alert" hidden></p>
+        <button class="btn full" type="submit">Baixar a Semana 1 (PDF)</button>
+      </form>
+      <div class="cad-fim" id="cadastro-fim" hidden><b>O download começou.</b><p>Se não abrir, <a href="amostra/filho-meu-amostra-gratis.pdf" download>clique aqui para baixar a Semana 1</a>. Comece na segunda-feira, com a abertura em família.</p></div>
+    </div>
+  </section>
+
+
+
   <section class="bloco" aria-labelledby="t-faq">
     <h2 id="t-faq">Perguntas frequentes</h2>
     <div class="faq">
@@ -726,8 +722,8 @@ document.addEventListener('DOMContentLoaded',function(){
       <details><summary>Meu filho tem 10 anos. Serve?</summary><p>Serve, se ele ainda precisa firmar a letra cursiva, a tabuada ou a fluência de leitura: o nível Árvore foi pensado para isso. Se ficar em dúvida, a Semana 1 grátis ajuda a decidir.</p></details>
       <details><summary>Preciso imprimir o livro inteiro?</summary><p>Não. Imprima só as páginas do nível de cada filho. As páginas de abertura podem ser lidas na tela, e o sumário mostra onde começa cada lição.</p></details>
       <details><summary>Quanto tempo leva por dia?</summary><p>A abertura de segunda-feira leva cerca de 10 minutos. As atividades diárias levam de 15 a 30 minutos por criança, somando os três livros.</p></details>
-      <details><summary>Por qual livro começo?</summary><p>Pelo Kit Trio, se a família está começando: escrita, matemática e leitura são a base do ano, e o kit traz os três bônus. Os outros nove títulos podem entrar depois, um por vez ou em kits de três, conforme o que cada filho precisa.</p></details>
-      <details><summary>Preciso comprar os três livros?</summary><p>Não. Cada livro funciona sozinho. O kit vale a pena porque os três usam o mesmo versículo e, juntos, formam o trio básico de um ano.</p></details>
+      <details><summary>Por qual livro começo?</summary><p>Pelo que seu filho mais precisa agora. Se a dificuldade é a letra, a tabuada ou a leitura, o Kit Trio cobre as três e traz os três bônus. Se a criança já lê e escreve, o Kit Linguagem leva para a gramática e a redação. O Kit Mundo trabalha ciências, medidas e raciocínio, e o Kit Vida trata de caráter, saúde e dinheiro. Na dúvida, baixe a lição 1 grátis dos livros que interessam e veja com seu filho.</p></details>
+      <details><summary>Preciso comprar os três livros?</summary><p>Não. Cada livro funciona sozinho. O kit sai mais em conta e reúne três livros que se completam, todos com o mesmo versículo da semana.</p></details>
       <details><summary>Dá para usar mais de um título ao mesmo tempo?</summary><p>Dá. Os 12 livros seguem os mesmos 40 versículos, na mesma ordem: na semana 1, todos partem de Provérbios 1.8. A família abre a semana com um só versículo, e cada livro trabalha a sua matéria a partir dele. Comece com poucos e acrescente aos poucos.</p></details>
       <details><summary>Serve para escola ou igreja?</summary><p>Sim. Para turmas, oferecemos uma licença institucional, porque a licença familiar vale só para os filhos de quem comprou. Fale conosco pelo Instagram @mentoriagb.</p></details>
       <details><summary>Como recebo o material?</summary><p>Assim que o pagamento é confirmado, você recebe por e-mail o acesso aos arquivos em PDF. No Pix, a confirmação costuma ser imediata.</p></details>
@@ -872,7 +868,7 @@ document.addEventListener('DOMContentLoaded',function(){
   if (vw) {
     var livro = 'caligrafia', idx = 0, folha = vw.querySelector('.vw-folha'), img = folha.querySelector('img');
     var cache = {};
-    var BASE = (document.querySelector('.leque img').getAttribute('src') || '').replace(/img\/.*$/, '');
+    var BASE = (document.querySelector('.estante12 img').getAttribute('src') || '').replace(/img\/.*$/, '');
     function src(l, n, g) { return BASE + 'img/licao1/' + l + '-p' + n + (g ? '' : '-600') + '.webp'; }
     function pre(l, i) { var a = PAG[l][i]; if (a && !cache[l + i]) { cache[l + i] = new Image(); cache[l + i].src = src(l, a[0]); } }
     function mostra() {
