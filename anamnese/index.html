@@ -52,6 +52,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:650;letter-spacing:-.012em;margin:
 .campo .ajuda{display:block;font-size:15px;color:var(--lapis);margin-top:4px;font-weight:400}
 input[type=text],input[type=number],textarea,select{width:100%;margin-top:10px;font:400 17px/1.4 var(--sans);color:var(--grafite);background:#fff;border:1px solid #C9BFAE;border-radius:8px;padding:12px 14px}
 textarea{min-height:110px;resize:vertical}
+textarea.grande{min-height:220px}
 input:focus,textarea:focus,select:focus{outline:3px solid rgba(31,58,95,.22);border-color:var(--caneta)}
 .opcoes{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .opcoes label{position:relative}
@@ -79,7 +80,7 @@ input:focus,textarea:focus,select:focus{outline:3px solid rgba(31,58,95,.22);bor
 .cartao h3{font-size:20px;color:var(--verde)}
 .cartao label{display:block;font-weight:600;font-size:15px;margin-top:12px}
 .cartao label input,.cartao label select,.cartao label textarea{margin-top:6px;font-weight:400}
-.cartao textarea{min-height:76px}
+.cartao textarea{min-height:96px}
 .mais{margin-top:10px;background:none;border:1px dashed #A99C86;border-radius:8px;padding:11px 14px;font:600 15px var(--sans);color:var(--caneta);cursor:pointer;width:100%}
 
 /* caixas */
@@ -128,7 +129,7 @@ input:focus,textarea:focus,select:focus{outline:3px solid rgba(31,58,95,.22);bor
 <script>
 /* Número de WhatsApp do acompanhamento, só dígitos com DDI e DDD (ex.: 5591999999999). */
 const WHATSAPP = '5584999196984';
-const VERSAO = '2026-10a';
+const VERSAO = '2026-10b';
 const CHAVE = 'anamnese-filho-meu-v1';
 
 /* ---------- Quem é quem: as respostas que mudam o caminho ---------- */
@@ -147,8 +148,8 @@ const TITULOS = ['Caligrafia cursiva com Provérbios', 'Tabuada com Provérbios'
    "se" decide se a etapa, a pergunta ou o item aparece; "controla" redesenha a etapa
    quando a resposta muda. */
 const ETAPAS = [
-  { id: 'inicio', titulo: 'Antes de começar', intro: 'Com estas respostas, preparamos um plano de estudo para a família de vocês: por onde cada filho começa, quantos dias por semana, quanto tempo por lição e quais materiais usar. Leva de 20 a 30 minutos. Vocês podem parar e voltar depois: tudo fica salvo neste aparelho.', campos: [
-    { tipo: 'aviso', html: '<p><b>Respondam pela rotina real da casa, e não pela ideal.</b> Não há resposta certa nem nota. O que não souberem, podem deixar em branco. Se pai e mãe puderem responder juntos, melhor.</p>' },
+  { id: 'inicio', titulo: 'Antes de começar', intro: 'Com estas respostas, preparamos um plano de estudo para a família de vocês: por onde cada filho começa, quantos dias por semana, quanto tempo por lição e quais materiais usar. Leva de 30 a 40 minutos. Vocês podem parar e voltar depois: tudo fica salvo neste aparelho.', campos: [
+    { tipo: 'aviso', html: '<p><b>Respondam pela rotina real da casa, e não pela ideal.</b> Não há resposta certa nem nota. O que não souberem, podem deixar em branco. Se pai e mãe puderem responder juntos, melhor.</p><p><b>Nas perguntas abertas, escrevam à vontade.</b> Quanto mais vocês contarem, mais o plano fica com a cara da família. No celular, dá para tocar no microfone do teclado e falar: o texto aparece sozinho.</p>' },
     { id: 'nome', tipo: 'texto', rotulo: 'Nome de quem está preenchendo' },
     { id: 'como_chamar', tipo: 'texto', rotulo: 'Como preferem ser chamados?', ajuda: 'Ex.: Irmã Ana e irmão Paulo; Família Souza.' },
     { id: 'consentimento', tipo: 'checks', rotulo: 'Autorizações', ajuda: 'Algumas perguntas tratam da saúde e do desenvolvimento das crianças e da fé da família. A lei de proteção de dados chama isso de dados sensíveis e pede uma autorização própria, dada pelos pais.', itens: [
@@ -193,7 +194,8 @@ const ETAPAS = [
       ['fortes', 'Em que vai bem', null, 'longo'],
       ['dificuldades', 'Em que tem dificuldade', null, 'longo'],
       ['interesses', 'Do que gosta (assuntos, brincadeiras, histórias)', null, 'longo'],
-      ['jeito', 'Como aprende melhor, e por quanto tempo consegue se concentrar', null, 'longo']
+      ['jeito', 'Como aprende melhor, e por quanto tempo consegue se concentrar', null, 'longo'],
+      ['personalidade', 'Como vocês descrevem o jeito de ser dele ou dela? Temperamento, como reage a um desafio, a uma correção, a uma frustração; como é com os irmãos e com outras crianças', null, 'longo']
     ] }
   ] },
   { id: 'tempo', titulo: 'O tempo da casa', intro: 'Quando a família consegue estudar. A semana vai de segunda a sábado: o domingo, Dia do Senhor, fica de fora.', campos: [
@@ -204,6 +206,14 @@ const ETAPAS = [
     { id: 'impressora', tipo: 'escolha', rotulo: 'Vocês têm impressora em casa?', ajuda: 'Os livros Filho meu são em PDF, para imprimir.', opcoes: ['Sim, colorida', 'Sim, só preto e branco', 'Não, imprimimos fora', 'Não'] },
     { id: 'telas', tipo: 'escolha', rotulo: 'Quanto tempo de tela (TV, celular, tablet) as crianças têm por dia, em média?', opcoes: ['Quase nenhum', 'Até 1 hora', '1 a 2 horas', 'Mais de 2 horas'] },
     { id: 'atividades', tipo: 'texto', rotulo: 'Atividades fora de casa durante a semana (esporte, música, igreja, terapias)', ajuda: 'Dias e horários, se souberem.' }
+  ] },
+  { id: 'palavras', titulo: 'Com as palavras de vocês', intro: 'Esta é a parte que mais nos ajuda. Não precisa de frase bonita nem de ordem: contem como contariam a um amigo. Quanto mais detalhes, melhor.', campos: [
+    { tipo: 'aviso', html: '<p>Se for mais fácil falar do que escrever, toquem no microfone do teclado do celular e contem em voz alta. Depois é só conferir o texto.</p>' },
+    { id: 'dia_real', tipo: 'longo', grande: true, rotulo: 'Descrevam um dia comum da casa, do acordar ao dormir', ajuda: 'Quem acorda primeiro, como é a manhã, quem sai e quem fica, onde as crianças estão em cada hora, as refeições, as tarefas da casa, o fim do dia. Vale contar também como é o sábado.' },
+    { id: 'percepcao', tipo: 'longo', grande: true, rotulo: 'Como vocês veem hoje a educação dos filhos?', ajuda: 'O que está indo bem, o que preocupa, o que vocês sentem quando pensam nos estudos deles. Pode ser sincero: não há julgamento.' },
+    { id: 'quem_faz', tipo: 'longo', grande: true, rotulo: 'Na prática, o que cada pessoa da casa consegue mesmo fazer?', ajuda: 'Pensem no que realmente vai acontecer, e não no ideal. Ex.: "Eu consigo sentar com eles três manhãs por semana, uma hora. O pai lê a história à noite. A avó ajuda com o caçula na terça." Incluam irmãos mais velhos, se ajudarem.' },
+    { id: 'expectativa_real', tipo: 'longo', grande: true, rotulo: 'O que vocês esperam, e o que acham que vai dar para cumprir?', ajuda: 'Às vezes o que queremos e o que cabe na rotina são diferentes. Contem as duas coisas: o desejo e a expectativa realista. Isso nos ajuda a montar um plano que vocês consigam manter.' },
+    { id: 'obstaculos', tipo: 'longo', rotulo: 'O que costuma atrapalhar quando vocês tentam manter uma rotina de estudo?', ajuda: 'Cansaço, imprevistos, birra, falta de material, falta de tempo, desânimo, discordância entre pai e mãe… o que for verdade para vocês.' }
   ] },
   { id: 'materiais', titulo: 'Materiais', intro: 'O que já está em casa, para o plano aproveitar o que vocês têm.', campos: [
     { id: 'filho_meu', tipo: 'varias', rotulo: 'Quais livros Filho meu vocês já têm?', opcoes: TITULOS },
@@ -285,7 +295,7 @@ function campoHtml(c) {
     case 'texto': case 'numero':
       return `<div class="campo"><label for="${c.id}">${esc(txt(c.rotulo))}${c.ajuda ? `<span class="ajuda">${esc(txt(c.ajuda))}</span>` : ''}</label><input type="${c.tipo === 'numero' ? 'number' : 'text'}" id="${c.id}" data-id="${c.id}" value="${esc(v)}" ${c.tipo === 'numero' ? 'inputmode="numeric" min="0"' : ''}></div>`;
     case 'longo':
-      return `<div class="campo"><label for="${c.id}">${esc(txt(c.rotulo))}${c.ajuda ? `<span class="ajuda">${esc(txt(c.ajuda))}</span>` : ''}</label><textarea id="${c.id}" data-id="${c.id}">${esc(v)}</textarea></div>`;
+      return `<div class="campo"><label for="${c.id}">${esc(txt(c.rotulo))}${c.ajuda ? `<span class="ajuda">${esc(txt(c.ajuda))}</span>` : ''}</label><textarea id="${c.id}" data-id="${c.id}"${c.grande ? ' class="grande"' : ''}>${esc(v)}</textarea></div>`;
     case 'escolha': case 'varias': {
       const multi = c.tipo === 'varias';
       return `<div class="campo" role="group" aria-labelledby="r-${c.id}">${rotuloHtml(c)}<div class="opcoes">${c.opcoes.map(o => {
