@@ -8,12 +8,12 @@
 <meta name="description" content="Apresentação da família para o acompanhamento educacional Filho meu Educacional.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,650&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=EB+Garamond:wght@600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --papel:#FBF7EE; --grafite:#26313B; --lapis:#5E6670; --caneta:#1F3A5F; --verde:#2B6A5C;
-  --pauta:#E6DCC8; --marca:#F1E8D6; --alerta:#A94A28; --alerta-fundo:#FBEDE6;
-  --serif:'Literata',Georgia,serif; --sans:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --papel:#FBF8F1; --grafite:#22303F; --lapis:#5E6670; --caneta:#1B3352; --verde:#2B6A5C; --ouro:#C9A35A; --ouro2:#E2C27A;
+  --pauta:#E8DFCC; --marca:#F3EBDB; --alerta:#A94A28; --alerta-fundo:#FBEDE6;
+  --serif:'Fraunces',Georgia,serif; --caps:'EB Garamond',Georgia,serif; --sans:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -25,17 +25,21 @@ h1,h2,h3{font-family:var(--serif);font-weight:650;letter-spacing:-.012em;margin:
 
 /* topo */
 .top{display:flex;align-items:center;gap:12px;padding-block:18px 6px}
-.gb{width:40px;height:40px;border-radius:10px;background:var(--caneta);color:var(--papel);display:grid;place-items:center;font:500 16px/1 var(--serif);flex:none}
+.gb{width:38px;height:auto;flex:none}
+.top b{font-family:var(--serif);font-weight:600;color:var(--caneta)}
+.top span{font-family:var(--caps);letter-spacing:.06em;text-transform:uppercase;font-size:12px}
+.abre{display:block;width:min(220px,60vw);margin:6px auto 0}
+.lema{text-align:center;font:600 13px/1 var(--caps);letter-spacing:.18em;color:var(--ouro);margin:10px 0 0}
 .top b{display:block;font-weight:600;font-size:16px;line-height:1.2}
 .top span{font-size:14px;color:var(--lapis)}
 .salvo{margin-left:auto;font-size:13px;color:var(--lapis);text-align:right}
 
 /* progresso */
-.prog{position:sticky;top:0;z-index:5;background:var(--papel);padding-block:12px 10px;border-bottom:1px solid var(--pauta)}
+.prog{position:sticky;top:0;z-index:5;background:var(--papel);padding-block:12px 10px;border-bottom:2px solid var(--ouro2)}
 .prog-linha{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:var(--lapis);margin-bottom:8px}
 .prog-linha b{color:var(--grafite);font-weight:600}
 .barra{height:7px;background:var(--pauta);border-radius:4px;overflow:hidden}
-.barra i{display:block;height:100%;width:0;background:var(--verde);transition:width .3s}
+.barra i{display:block;height:100%;width:0;background:var(--ouro);transition:width .3s}
 @media (prefers-reduced-motion:reduce){.barra i{transition:none}}
 
 /* etapa */
@@ -79,7 +83,7 @@ input:focus,textarea:focus,select:focus{outline:3px solid rgba(31,58,95,.22);bor
 .mais{margin-top:10px;background:none;border:1px dashed #A99C86;border-radius:8px;padding:11px 14px;font:600 15px var(--sans);color:var(--caneta);cursor:pointer;width:100%}
 
 /* caixas */
-.caixa{margin-top:24px;padding:16px 18px;border-left:5px solid var(--verde);background:#fff;border-radius:0 8px 8px 0}
+.caixa{margin-top:24px;padding:16px 18px;border-left:5px solid var(--ouro);background:#fff;border-radius:0 8px 8px 0}
 .caixa p{margin:0}
 .caixa p+p{margin-top:8px}
 .alerta{border-left-color:var(--alerta);background:var(--alerta-fundo)}
@@ -109,8 +113,8 @@ input:focus,textarea:focus,select:focus{outline:3px solid rgba(31,58,95,.22);bor
 <body>
 <div class="w">
   <header class="top">
-    <div class="gb" aria-hidden="true">FM</div>
-    <div><b>Filho meu Educacional</b><span>Acompanhamento da família</span></div>
+    <img class="gb" src="brasao-escudo.svg" alt="" aria-hidden="true">
+    <div><b>Filho meu Educacional</b><span>Acompanhamento</span></div>
     <div class="salvo" id="salvo" aria-live="polite"></div>
   </header>
 </div>
@@ -334,7 +338,8 @@ function render() {
   const botoes = `<nav class="mapa" aria-label="Etapas">${lista.map(x => { const i = ETAPAS.indexOf(x); return `<button type="button" data-ir="${i}" class="${i === atual ? 'atual' : (lista.indexOf(x) < pos ? 'feita' : '')}" ${i === atual ? 'aria-current="step"' : ''}>${esc(x.titulo)}</button>`; }).join('')}</nav>`;
   const mapa = atual === 0 ? '' : (e.id === 'envio' ? botoes : `<details class="etapas"><summary>Ver todas as etapas</summary>${botoes}</details>`);
   const intro = txt(e.intro);
-  app.innerHTML = `<section class="etapa"><h1 tabindex="-1" id="tit">${esc(e.titulo)}</h1>${intro ? `<p class="intro">${esc(intro)}</p>` : ''}${mapa}${corpo}</section>
+  const capa = atual === 0 ? '<img class="abre" src="brasao.png" alt="Brasão do Filho meu Educacional">' : '';
+  app.innerHTML = `<section class="etapa">${capa}<h1 tabindex="-1" id="tit">${esc(e.titulo)}</h1>${intro ? `<p class="intro">${esc(intro)}</p>` : ''}${mapa}${corpo}</section>
   <div class="nav">${pos > 0 ? '<button type="button" class="btn sec" id="voltar">Voltar</button>' : '<span></span>'}${e.id !== 'envio' ? `<button type="button" class="btn" id="seguir" ${atual === 0 && !geralOk() ? 'disabled' : ''}>${atual === 0 ? 'Começar' : 'Continuar'}</button>` : ''}</div>`;
 }
 function passo(dir) {
@@ -446,7 +451,7 @@ function fichaHtml() {
   const pacote = { tipo: 'anamnese-filho-meu-educacional', versao: VERSAO, enviado_em: new Date().toISOString(), sensivel_autorizado: sensivelOk(), dados: dadosVisiveis() };
   const json = JSON.stringify(pacote).replace(/</g, '\\u003c');
   return `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Anamnese da família · ${esc(dados.nome || '')}</title>
-<style>body{margin:0;background:#FBF7EE;color:#26313B;font:16px/1.55 system-ui,-apple-system,'Segoe UI',sans-serif}main{max-width:720px;margin:0 auto;padding:24px 16px 48px}h1{font:650 30px/1.15 Georgia,serif;margin:0;color:#1F3A5F}h3{font:650 19px/1.3 Georgia,serif;margin:28px 0 6px;padding-top:16px;border-top:1px solid #E6DCC8}dt{color:#5E6670;margin-top:8px}dd{margin:0;white-space:pre-wrap;text-align:justify;hyphens:auto}.meta{color:#5E6670;margin-top:6px}</style></head>
+<style>body{margin:0;background:#FBF8F1;color:#22303F;font:16px/1.55 system-ui,-apple-system,'Segoe UI',sans-serif}main{max-width:720px;margin:0 auto;padding:24px 16px 48px}h1{font:650 30px/1.15 Georgia,serif;margin:0;color:#1B3352}h3{font:650 19px/1.3 Georgia,serif;margin:28px 0 6px;padding-top:16px;border-top:1px solid #C9A35A}dt{color:#5E6670;margin-top:8px}dd{margin:0;white-space:pre-wrap;text-align:justify;hyphens:auto}.meta{color:#5E6670;margin-top:6px}</style></head>
 <body><main><p class="meta">Filho meu Educacional · Acompanhamento da família</p><h1>Anamnese da família de ${esc(dados.como_chamar || dados.nome || '')}</h1><p class="meta">Preenchida por ${esc(dados.nome || '')}. Enviada em ${new Date().toLocaleDateString('pt-BR')}. Documento pessoal e confidencial.</p>${resumoHtml()}</main>
 <script type="application/json" id="dados-anamnese">${json}<\/script></body></html>`;
 }
