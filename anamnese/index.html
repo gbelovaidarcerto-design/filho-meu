@@ -57,7 +57,7 @@ input:focus,textarea:focus,select:focus{outline:3px solid rgba(31,58,95,.22);bor
 .opcoes{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .opcoes label{position:relative}
 .opcoes input{position:absolute;opacity:0;pointer-events:none}
-.opcoes span{display:inline-block;font:500 15px/1.2 var(--sans);padding:10px 14px;border:1px solid #C9BFAE;border-radius:999px;background:#fff;cursor:pointer}
+.opcoes span{display:inline-block;font:500 15px/1.2 var(--sans);padding:11px 15px;transition:background .15s,border-color .15s;border:1px solid #C9BFAE;border-radius:999px;background:#fff;cursor:pointer}
 .opcoes input:checked+span{background:var(--caneta);border-color:var(--caneta);color:var(--papel)}
 .opcoes input:focus-visible+span{outline:3px solid var(--caneta);outline-offset:2px}
 .lista-checks{display:grid;gap:10px;margin-top:12px}
@@ -71,20 +71,51 @@ input:focus,textarea:focus,select:focus{outline:3px solid rgba(31,58,95,.22);bor
 .item p{margin:4px 0 0;font-size:15px;color:var(--lapis)}
 .item input[type=text]{margin-top:10px}
 
+/* visual interativo */
+@keyframes sobe{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.etapa{animation:sobe .35s ease both}
+@media (prefers-reduced-motion:reduce){.etapa{animation:none}}
+.cab{display:flex;align-items:center;gap:14px}
+.ico{width:52px;height:52px;border-radius:14px;background:var(--caneta);display:grid;place-items:center;flex:none;box-shadow:0 6px 16px rgba(27,51,82,.18)}
+.ico svg{width:28px;height:28px;stroke:var(--ouro2);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.estagio{display:flex;align-items:center;gap:6px;font:600 12px/1 var(--caps);letter-spacing:.12em;text-transform:uppercase;color:var(--verde)}
+.estagio svg{width:18px;height:18px;stroke:var(--verde);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.capa-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:22px}
+.capa-cards div{background:#fff;border:1px solid var(--pauta);border-radius:12px;padding:12px;display:flex;gap:10px;align-items:center;font:500 14px/1.25 var(--sans)}
+.capa-cards svg{width:22px;height:22px;stroke:var(--caneta);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;background:var(--caneta);color:var(--papel);padding:12px 18px;border-radius:999px;font:600 15px var(--sans);box-shadow:0 8px 24px rgba(0,0,0,.18);transition:.3s;z-index:20;max-width:90vw;text-align:center}
+.toast.ve{opacity:1;transform:translate(-50%,0)}
+.medidor{margin-top:8px;display:flex;align-items:center;gap:10px;font-size:13px;color:var(--lapis)}
+.medidor i{flex:1;height:6px;border-radius:3px;background:var(--pauta);overflow:hidden;position:relative}
+.medidor i b{position:absolute;inset:0 auto 0 0;background:var(--verde);border-radius:3px;transition:width .3s}
+.niv{display:grid;gap:6px;margin-top:8px}
+.niv button{display:flex;align-items:center;gap:10px;text-align:left;background:#fff;border:1px solid #D8CDB8;border-radius:10px;padding:9px 12px;font:500 15px/1.3 var(--sans);color:var(--grafite);cursor:pointer}
+.niv button i{width:12px;height:12px;border-radius:50%;border:2px solid #C9BFAE;flex:none}
+.niv button.on{border-color:var(--caneta);background:#EEF2F7}
+.niv button.on i,.niv button.antes i{background:var(--ouro);border-color:var(--ouro)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chips button{font:500 14px/1.2 var(--sans);padding:8px 12px;border:1px solid #D8CDB8;border-radius:999px;background:#fff;color:var(--grafite);cursor:pointer}
+.chips button.on{background:var(--verde);border-color:var(--verde);color:#fff}
+.avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font:600 17px/1 var(--serif);color:#fff;flex:none}
+.cartao .topo-c{display:flex;align-items:center;gap:10px}
+.fim{text-align:center;padding-top:6px}
+.fim img{width:min(200px,55vw)}
+
 /* listas repetíveis e fichas dos filhos */
 .rep{margin-top:12px;display:grid;gap:12px}
-.rep-linha{background:#fff;border:1px solid var(--pauta);border-radius:10px;padding:12px 14px;display:grid;gap:8px}
+.rep-linha{background:#fff;border:1px solid var(--pauta);border-radius:14px;box-shadow:0 4px 14px rgba(27,51,82,.06);padding:12px 14px;display:grid;gap:8px}
 .rep-linha input,.rep-linha select{margin-top:0}
 .rep-linha .tira{justify-self:end;background:none;border:0;color:var(--lapis);font:500 14px var(--sans);text-decoration:underline;cursor:pointer;padding:4px}
 .cartao{padding:16px 16px 10px;gap:4px}
 .cartao h3{font-size:20px;color:var(--verde)}
-.cartao label{display:block;font-weight:600;font-size:15px;margin-top:12px}
+.cartao label{display:block;font-weight:600;font-size:15px;margin-top:14px}
+.cartao .ajuda{display:block}
 .cartao label input,.cartao label select,.cartao label textarea{margin-top:6px;font-weight:400}
 .cartao textarea{min-height:96px}
 .mais{margin-top:10px;background:none;border:1px dashed #A99C86;border-radius:8px;padding:11px 14px;font:600 15px var(--sans);color:var(--caneta);cursor:pointer;width:100%}
 
 /* caixas */
-.caixa{margin-top:24px;padding:16px 18px;border-left:5px solid var(--ouro);background:#fff;border-radius:0 8px 8px 0}
+.caixa{margin-top:24px;padding:16px 18px;box-shadow:0 4px 14px rgba(27,51,82,.05);border-left:5px solid var(--ouro);background:#fff;border-radius:0 8px 8px 0}
 .caixa p{margin:0}
 .caixa p+p{margin-top:8px}
 .alerta{border-left-color:var(--alerta);background:var(--alerta-fundo)}
@@ -129,8 +160,30 @@ input:focus,textarea:focus,select:focus{outline:3px solid rgba(31,58,95,.22);bor
 <script>
 /* Número de WhatsApp do acompanhamento, só dígitos com DDI e DDD (ex.: 5591999999999). */
 const WHATSAPP = '5584999196984';
-const VERSAO = '2026-10b';
+const VERSAO = '2026-10c';
 const CHAVE = 'anamnese-filho-meu-v1';
+
+/* ---------- Ícones (traço simples, cores da marca) ---------- */
+const ICO = {
+  inicio: '<path d="M4 5.5C6.5 4 9.5 4 12 5.5 14.5 4 17.5 4 20 5.5V19c-2.5-1.5-5.5-1.5-8 0-2.5-1.5-5.5-1.5-8 0z"/><path d="M12 5.5V19"/>',
+  familia: '<path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-5h4v5"/>',
+  pais: '<circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="8.5" r="2.6"/><path d="M2.5 20c.6-3.6 2.8-5.5 5.5-5.5s4.9 1.9 5.5 5.5"/><path d="M14 15.2c.8-.5 1.6-.7 2.5-.7 2.3 0 4.2 1.7 4.8 5.5"/>',
+  modalidade: '<path d="M3 21h18"/><path d="M5 21V10l7-4 7 4v11"/><path d="M12 6V2.5l4 1.5-4 1.5"/><path d="M10 21v-5h4v5"/>',
+  criancas: '<path d="M12 21v-8"/><path d="M12 13c0-4 3-6.5 7-6.5 0 4-3 6.5-7 6.5z"/><path d="M12 15.5c0-3-2.4-5-5.5-5 0 3 2.4 5 5.5 5z"/>',
+  tempo: '<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>',
+  palavras: '<path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/>',
+  materiais: '<path d="M5 4h4v16H5zM10 4h4v16h-4z"/><path d="m15 5.2 3.8-1 3.2 15-3.8 1z"/>',
+  registros: '<path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M8 13h8M8 16h5"/>',
+  saude: '<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>',
+  fe: '<path d="M12 3v18M7.5 8h9"/>',
+  objetivos: '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/>',
+  envio: '<path d="M21 3 3 10.5l7 2.5 2.5 7z"/><path d="m10 13 4.5-4.5"/>'
+};
+const svg = (k, cls = '') => `<svg viewBox="0 0 24 24" aria-hidden="true" class="${cls}">${ICO[k] || ''}</svg>`;
+const ESTAGIOS = [['Semente', '<circle cx="12" cy="15" r="3.5"/><path d="M12 11.5V9"/>'], ['Broto', '<path d="M12 20v-7"/><path d="M12 13c0-3 2.2-5 5.5-5 0 3-2.2 5-5.5 5zM12 15c0-2.4-1.8-4-4.5-4 0 2.4 1.8 4 4.5 4z"/>'], ['Árvore', '<circle cx="12" cy="9" r="5.5"/><path d="M12 14.5V21"/>'], ['Fruto', '<circle cx="12" cy="9" r="5.5"/><path d="M12 14.5V21"/><circle cx="10" cy="8" r="1.1"/><circle cx="14" cy="10" r="1.1"/>']];
+const CORES = ['#2B6A5C', '#A94A28', '#1B3352', '#8C6212', '#5B4A8B', '#3C8A76'];
+const TRACOS_FILHO = ['Curioso(a)', 'Calmo(a)', 'Agitado(a)', 'Tímido(a)', 'Comunicativo(a)', 'Sensível', 'Determinado(a)', 'Distraído(a)', 'Criativo(a)', 'Perfeccionista', 'Competitivo(a)', 'Prestativo(a)', 'Teimoso(a)', 'Organizado(a)', 'Brincalhão(ona)', 'Medroso(a) diante do novo'];
+const TRACOS_PAIS = ['Paciente', 'Prático(a)', 'Organizado(a)', 'Criativo(a)', 'Exigente', 'Afetuoso(a)', 'Ansioso(a)', 'Disciplinado(a)', 'Flexível', 'Canso fácil', 'Gosto de ler', 'Gosto de matemática', 'Gosto de contar histórias', 'Perco a paciência fácil'];
 
 /* ---------- Quem é quem: as respostas que mudam o caminho ---------- */
 const ESCOLA = 'Os filhos estão na escola, e queremos complementar em casa';
@@ -161,12 +214,22 @@ const ETAPAS = [
   { id: 'familia', titulo: 'A família', intro: 'Quem está em casa e quem ensina.', campos: [
     { id: 'quem_preenche', tipo: 'escolha', rotulo: 'Quem está respondendo?', opcoes: ['A mãe', 'O pai', 'Pai e mãe juntos', 'Outro responsável'] },
     { id: 'quem_ensina', tipo: 'escolha', controla: true, rotulo: 'Quem acompanha os estudos das crianças no dia a dia?', opcoes: ['A mãe', 'O pai', 'Os dois, revezando', 'Avós ou outro familiar', 'Um professor ou tutor contratado'] },
-    { id: 'quem_ensina_trabalho', tipo: 'escolha', controla: true, rotulo: 'Quem acompanha os estudos trabalha fora de casa?', opcoes: ['Não trabalha fora', 'Meio período', 'Tempo integral', 'Trabalha de casa', 'Escala ou plantões'] },
-    { id: 'trabalho_horario', se: trabalhaFora, tipo: 'texto', rotulo: 'Em que horário?', ajuda: 'Ex.: 8h às 12h, de segunda a sexta.' },
-    { id: 'formacao_pais', tipo: 'escolha', rotulo: 'Escolaridade de quem mais ensina', ajuda: 'Ajuda a escolher o tipo de orientação para vocês.', opcoes: ['Ensino fundamental', 'Ensino médio', 'Curso técnico ou tecnológico', 'Ensino superior', 'Pós-graduação'] },
     { id: 'n_filhos', tipo: 'numero', rotulo: 'Quantos filhos vocês têm?' },
     { id: 'outros_casa', tipo: 'texto', rotulo: 'Mais alguém mora com vocês ou ajuda com as crianças? (opcional)', ajuda: 'Ex.: avó que fica com o caçula de manhã.' },
     { id: 'previsao', tipo: 'repetir', rotulo: 'Algo importante previsto para os próximos 12 meses?', ajuda: 'Mudança, bebê a caminho, viagem longa, troca de trabalho. Deixem em branco se não houver.', colunas: [['fato', 'O que vai acontecer'], ['quando', 'Quando']] }
+  ] },
+  { id: 'pais', titulo: 'Pai, mãe e quem ensina', intro: 'Cada pessoa ensina de um jeito. Uma ficha para cada adulto que participa dos estudos, para o plano respeitar a força e o limite de cada um.', campos: [
+    { id: 'adultos', tipo: 'repetir', cartao: 'Responsável', linhas: 2, mais: '+ Acrescentar outra pessoa', colunas: [
+      ['nome', 'Nome'],
+      ['papel', 'Quem é', ['Mãe', 'Pai', 'Avó ou avô', 'Outro familiar', 'Professor ou tutor'], 'nivel'],
+      ['formacao', 'Escolaridade', ['Ensino fundamental', 'Ensino médio', 'Curso técnico ou tecnológico', 'Ensino superior', 'Pós-graduação'], 'nivel'],
+      ['trabalho', 'Trabalho e horário', null, 'texto', 'Ex.: em casa; meio período, 8h às 12h; plantões.'],
+      ['tempo_real', 'Quanto tempo consegue, de verdade, sentar com as crianças para estudar?', ['Quase nenhum', 'Até 1 hora por semana', '2 a 4 horas por semana', '5 a 10 horas por semana', 'Mais de 10 horas por semana'], 'nivel'],
+      ['tracos', 'Como você é ao ensinar? Toque em tudo o que combina', TRACOS_PAIS, 'chips'],
+      ['forte', 'O que você faz bem com as crianças', null, 'longo'],
+      ['dificil', 'O que é difícil para você ao ensinar', null, 'longo'],
+      ['historia', 'Como foi a sua própria vida de estudante? Do que gostava, o que era difícil', null, 'longo']
+    ] }
   ] },
   { id: 'modalidade', titulo: 'Escola e casa', intro: 'Esta resposta decide quais perguntas aparecem para vocês.', campos: [
     { id: 'modalidade', tipo: 'escolha', controla: true, rotulo: 'Hoje, como os filhos estudam?', opcoes: [ESCOLA, CASA, MISTO, DECIDINDO] },
@@ -187,10 +250,11 @@ const ETAPAS = [
       ['idade', 'Idade (anos e meses, se for pequeno)'],
       ['ano', 'Ano escolar, ou o equivalente', ['Ainda não está em idade escolar', 'Educação infantil', '1º ano', '2º ano', '3º ano', '4º ano', '5º ano', '6º ano', '7º ano', '8º ano', '9º ano', 'Ensino médio']],
       ['onde', 'Onde estuda hoje', ['Na escola', 'Na escola e em casa', 'Só em casa', 'Ainda não estuda formalmente']],
-      ['leitura', 'Leitura', ['Ainda não conhece as letras', 'Conhece as letras', 'Lê sílabas e palavras simples', 'Lê frases curtas', 'Lê textos com fluência', 'Lê e entende textos longos']],
-      ['escrita', 'Escrita', ['Ainda não escreve', 'Escreve letras e o próprio nome', 'Escreve palavras', 'Escreve frases', 'Escreve pequenos textos', 'Escreve textos organizados']],
-      ['letra', 'Letra', ['Ainda não escreve', 'Letra de forma', 'Começando a cursiva', 'Cursiva com segurança']],
-      ['matematica', 'Matemática', ['Ainda conta com ajuda', 'Conta e reconhece números', 'Soma e subtrai', 'Começando a tabuada', 'Multiplica e divide', 'Frações e problemas']],
+      ['leitura', 'Leitura', ['Ainda não conhece as letras', 'Conhece as letras', 'Lê sílabas e palavras simples', 'Lê frases curtas', 'Lê textos com fluência', 'Lê e entende textos longos'], 'nivel'],
+      ['escrita', 'Escrita', ['Ainda não escreve', 'Escreve letras e o próprio nome', 'Escreve palavras', 'Escreve frases', 'Escreve pequenos textos', 'Escreve textos organizados'], 'nivel'],
+      ['letra', 'Letra', ['Ainda não escreve', 'Letra de forma', 'Começando a cursiva', 'Cursiva com segurança'], 'nivel'],
+      ['matematica', 'Matemática', ['Ainda conta com ajuda', 'Conta e reconhece números', 'Soma e subtrai', 'Começando a tabuada', 'Multiplica e divide', 'Frações e problemas'], 'nivel'],
+      ['tracos', 'Como ele ou ela é? Toquem em tudo o que combina', TRACOS_FILHO, 'chips'],
       ['fortes', 'Em que vai bem', null, 'longo'],
       ['dificuldades', 'Em que tem dificuldade', null, 'longo'],
       ['interesses', 'Do que gosta (assuntos, brincadeiras, histórias)', null, 'longo'],
@@ -295,7 +359,7 @@ function campoHtml(c) {
     case 'texto': case 'numero':
       return `<div class="campo"><label for="${c.id}">${esc(txt(c.rotulo))}${c.ajuda ? `<span class="ajuda">${esc(txt(c.ajuda))}</span>` : ''}</label><input type="${c.tipo === 'numero' ? 'number' : 'text'}" id="${c.id}" data-id="${c.id}" value="${esc(v)}" ${c.tipo === 'numero' ? 'inputmode="numeric" min="0"' : ''}></div>`;
     case 'longo':
-      return `<div class="campo"><label for="${c.id}">${esc(txt(c.rotulo))}${c.ajuda ? `<span class="ajuda">${esc(txt(c.ajuda))}</span>` : ''}</label><textarea id="${c.id}" data-id="${c.id}"${c.grande ? ' class="grande"' : ''}>${esc(v)}</textarea></div>`;
+      return `<div class="campo"><label for="${c.id}">${esc(txt(c.rotulo))}${c.ajuda ? `<span class="ajuda">${esc(txt(c.ajuda))}</span>` : ''}</label><textarea id="${c.id}" data-id="${c.id}"${c.grande ? ' class="grande"' : ''}>${esc(v)}</textarea>${c.grande ? medidor(v) : ''}</div>`;
     case 'escolha': case 'varias': {
       const multi = c.tipo === 'varias';
       return `<div class="campo" role="group" aria-labelledby="r-${c.id}">${rotuloHtml(c)}<div class="opcoes">${c.opcoes.map(o => {
@@ -317,13 +381,30 @@ function campoHtml(c) {
 function linhaRep(c, l, i) {
   const at = k => `data-rep="${c.id}" data-linha="${i}" data-col="${k}"`;
   if (c.cartao) {
-    return `<div class="rep-linha cartao"><h3>${esc(c.cartao)} ${i + 1}${l.nome ? `: ${esc(l.nome)}` : ''}</h3>${c.colunas.map(([k, nome, ops, tipo]) => `<label>${esc(nome)}${ops
+    const ini = (l.nome || '').trim().charAt(0).toUpperCase() || (i + 1);
+    return `<div class="rep-linha cartao"><div class="topo-c"><span class="avatar" style="background:${CORES[i % CORES.length]}">${esc(ini)}</span><h3>${esc(l.nome || `${c.cartao} ${i + 1}`)}</h3></div>${c.colunas.map(([k, nome, ops, tipo, ajuda]) => {
+      const rot = `<span>${esc(nome)}</span>${ajuda ? `<span class="ajuda" style="font-weight:400;font-size:14px;color:var(--lapis)">${esc(ajuda)}</span>` : ''}`;
+      if (tipo === 'nivel') { const idx = ops.indexOf(l[k]); return `<div class="campo-c"><label>${rot}</label><div class="niv"><input type="hidden" ${at(k)} value="${esc(l[k])}">${ops.map((o, j) => `<button type="button" data-niv="${j}" class="${j === idx ? 'on' : (idx > j && ops.length > 3 ? 'antes' : '')}"><i></i>${esc(o)}</button>`).join('')}</div></div>`; }
+      if (tipo === 'chips') { const sel = (l[k] || '').split('; ').filter(Boolean); return `<div class="campo-c"><label>${rot}</label><div class="chips"><input type="hidden" ${at(k)} value="${esc(l[k])}">${ops.map(o => `<button type="button" data-chip="${esc(o)}" class="${sel.includes(o) ? 'on' : ''}">${esc(o)}</button>`).join('')}</div></div>`; }
+      return `<label>${rot}${ops
       ? `<select ${at(k)}><option value="">Escolher</option>${ops.map(o => `<option ${l[k] === o ? 'selected' : ''}>${esc(o)}</option>`).join('')}</select>`
-      : tipo === 'longo' ? `<textarea ${at(k)}>${esc(l[k])}</textarea>` : `<input type="text" ${at(k)} value="${esc(l[k])}">`}</label>`).join('')}<button type="button" class="tira" data-tira="${c.id}" data-linha="${i}">tirar esta ficha</button></div>`;
+      : tipo === 'longo' ? `<textarea ${at(k)}>${esc(l[k])}</textarea>` : `<input type="text" ${at(k)} value="${esc(l[k])}">`}</label>`; }).join('')}<button type="button" class="tira" data-tira="${c.id}" data-linha="${i}">tirar esta ficha</button></div>`;
   }
   return `<div class="rep-linha">${c.colunas.map(([k, nome, ops]) => ops
     ? `<select aria-label="${esc(nome)}" ${at(k)}><option value="">${esc(nome)}</option>${ops.map(o => `<option ${l[k] === o ? 'selected' : ''}>${esc(o)}</option>`).join('')}</select>`
     : `<input type="text" aria-label="${esc(nome)}" placeholder="${esc(nome)}" ${at(k)} value="${esc(l[k])}">`).join('')}<button type="button" class="tira" data-tira="${c.id}" data-linha="${i}">tirar</button></div>`;
+}
+
+function medidor(v) {
+  const n = String(v || '').trim().split(/\s+/).filter(Boolean).length;
+  const pct = Math.min(100, Math.round(n / 1.2));
+  const msg = n === 0 ? 'Comecem quando quiserem' : n < 30 ? 'Bom começo' : n < 80 ? 'Muito bom, continuem' : n < 120 ? 'Ótimo: isso ajuda muito' : 'Excelente, obrigado pelos detalhes';
+  return `<div class="medidor" aria-live="polite"><i><b style="width:${pct}%"></b></i><span>${msg}</span></div>`;
+}
+function toast(t) {
+  let el = document.getElementById('toast');
+  if (!el) { el = document.createElement('div'); el.id = 'toast'; el.className = 'toast'; el.setAttribute('role', 'status'); document.body.appendChild(el); }
+  el.textContent = t; el.classList.add('ve'); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove('ve'), 2400);
 }
 
 /* ---------- Telas ---------- */
@@ -339,6 +420,9 @@ function render() {
   const barra = document.getElementById('barra');
   barra.querySelector('i').style.width = pct + '%';
   barra.setAttribute('aria-valuenow', pct);
+  const est = ESTAGIOS[Math.min(3, Math.floor(pct / 25.01))];
+  document.getElementById('prog-nome').innerHTML = `<span class="estagio"><svg viewBox="0 0 24 24">${est[1]}</svg>${est[0]}</span>`;
+  document.getElementById('prog-num').textContent = `${e.titulo} · ${pos + 1} de ${lista.length}`;
 
   let corpo;
   if (e.id === 'envio') corpo = telaEnvio();
@@ -349,13 +433,17 @@ function render() {
   const mapa = atual === 0 ? '' : (e.id === 'envio' ? botoes : `<details class="etapas"><summary>Ver todas as etapas</summary>${botoes}</details>`);
   const intro = txt(e.intro);
   const capa = atual === 0 ? '<img class="abre" src="brasao.png" alt="Brasão do Filho meu Educacional">' : '';
-  app.innerHTML = `<section class="etapa">${capa}<h1 tabindex="-1" id="tit">${esc(e.titulo)}</h1>${intro ? `<p class="intro">${esc(intro)}</p>` : ''}${mapa}${corpo}</section>
+  const cards = atual === 0 ? `<div class="capa-cards">${lista.filter(x => x.id !== 'inicio' && x.id !== 'envio').map(x => `<div>${svg(x.id)}${esc(x.titulo)}</div>`).join('')}</div>` : '';
+  const cab = atual === 0 ? `<h1 tabindex="-1" id="tit">${esc(e.titulo)}</h1>` : `<div class="cab"><span class="ico">${svg(e.id)}</span><h1 tabindex="-1" id="tit">${esc(e.titulo)}</h1></div>`;
+  app.innerHTML = `<section class="etapa">${capa}${cab}${intro ? `<p class="intro">${esc(intro)}</p>` : ''}${cards}${mapa}${corpo}</section>
   <div class="nav">${pos > 0 ? '<button type="button" class="btn sec" id="voltar">Voltar</button>' : '<span></span>'}${e.id !== 'envio' ? `<button type="button" class="btn" id="seguir" ${atual === 0 && !geralOk() ? 'disabled' : ''}>${atual === 0 ? 'Começar' : 'Continuar'}</button>` : ''}</div>`;
 }
+const INCENTIVO = ['Ótimo começo!', 'Muito bem!', 'Isso nos ajuda muito.', 'Vocês estão indo bem.', 'Mais uma parte pronta.', 'Seguimos juntos.'];
 function passo(dir) {
   const lista = visiveis();
   const pos = lista.indexOf(ETAPAS[atual]);
   const alvo = lista[Math.max(0, Math.min(lista.length - 1, pos + dir))];
+  if (dir > 0 && pos > 0) { const faltam = lista.length - 2 - pos; toast(faltam > 0 ? `${INCENTIVO[pos % INCENTIVO.length]} Faltam ${faltam} ${faltam === 1 ? 'parte' : 'partes'}.` : 'Tudo respondido! Agora é só revisar e enviar.'); }
   ir(ETAPAS.indexOf(alvo));
 }
 function ir(i) {
@@ -374,11 +462,11 @@ const app = document.getElementById('app');
 function aoMudar(ev) {
   const t = ev.target, d = t.dataset;
   if (!d) return;
-  if (d.rep) { const c = achaCampo(d.rep); dados[d.rep] = lerRep(c); }
+  if (d.rep) { const c = achaCampo(d.rep); dados[d.rep] = lerRep(c); if (d.col === 'nome' && c.cartao) { const h = t.closest('.cartao').querySelector('h3'); const av = t.closest('.cartao').querySelector('.avatar'); h.textContent = t.value || `${c.cartao} ${+d.linha + 1}`; av.textContent = (t.value.trim().charAt(0).toUpperCase()) || (+d.linha + 1); } }
   else if (d.dia !== undefined) { const a = dados[d.id] || []; a[+d.dia] = t.value; dados[d.id] = a; }
   else if (d.idx !== undefined) { const a = dados[d.id] || Array(+d.n).fill(false); a[+d.idx] = t.checked; dados[d.id] = a; }
   else if (d.multi === 'true') { const a = new Set(dados[d.id] || []); t.checked ? a.add(t.value) : a.delete(t.value); dados[d.id] = [...a]; }
-  else if (d.id) { dados[d.id] = t.type === 'number' ? (t.value === '' ? '' : +t.value) : t.value; }
+  else if (d.id) { dados[d.id] = t.type === 'number' ? (t.value === '' ? '' : +t.value) : t.value; if (t.classList.contains('grande')) { const m = t.parentElement.querySelector('.medidor'); if (m) m.outerHTML = medidor(t.value); } }
   if (atual === 0) { const b = document.getElementById('seguir'); if (b) b.disabled = !geralOk(); }
   salvar();
   if (ev.type === 'change' && d.controla) redesenhaMantendo();
@@ -387,6 +475,16 @@ app.addEventListener('input', aoMudar);
 app.addEventListener('change', aoMudar);
 app.addEventListener('click', ev => {
   const t = ev.target.closest('button'); if (!t) return;
+  if (t.dataset.niv !== undefined || t.dataset.chip !== undefined) {
+    const box = t.parentElement, inp = box.querySelector('input[type=hidden]');
+    if (t.dataset.niv !== undefined) {
+      const j = +t.dataset.niv, bts = [...box.querySelectorAll('button')], ja = t.classList.contains('on');
+      inp.value = ja ? '' : t.textContent; bts.forEach((b, k) => { b.classList.toggle('on', !ja && k === j); b.classList.toggle('antes', !ja && k < j && bts.length > 3); });
+    } else {
+      t.classList.toggle('on'); inp.value = [...box.querySelectorAll('button.on')].map(b => b.dataset.chip).join('; ');
+    }
+    inp.dispatchEvent(new Event('input', { bubbles: true })); return;
+  }
   if (t.id === 'seguir') passo(1);
   else if (t.id === 'voltar') passo(-1);
   else if (t.dataset.ir) ir(+t.dataset.ir);
@@ -441,7 +539,7 @@ function telaEnvio() {
   const partes = etapasRespondiveis().filter(e => e.id !== 'inicio');
   const respondidas = partes.filter(e => e.campos.some(c => c.id && ve(c) && valorTexto(c, dadosVisiveis()[c.id]))).length;
   const zap = WHATSAPP ? `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(`Olá, Gullit! Aqui é ${dados.nome || ''}. Terminamos a anamnese da família e vou enviar o arquivo agora.`)}` : '';
-  return `<p class="intro">Vocês responderam ${respondidas} de ${partes.length} partes. Confiram abaixo. Se quiserem mudar algo, toquem na etapa.</p>
+  return `<div class="fim"><img src="brasao.png" alt=""><p class="intro" style="text-align:center">Obrigado, ${esc(dados.como_chamar || dados.nome || '')}! Cada resposta vai virar uma orientação feita para a família de vocês.</p></div><p class="intro">Vocês responderam ${respondidas} de ${partes.length} partes. Confiram abaixo. Se quiserem mudar algo, toquem na etapa.</p>
   <div class="caixa"><p><b>Como enviar:</b> gerem o arquivo da anamnese (um arquivo só, que abre em qualquer celular) e enviem pelo WhatsApp, como documento.</p></div>
   <div class="acoes">
     <button type="button" class="btn" id="compartilhar">Gerar e enviar o arquivo</button>
