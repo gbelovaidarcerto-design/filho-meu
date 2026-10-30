@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Anamnese da família</title>
+<meta name="description" content="Apresentação da família para o acompanhamento educacional Filho meu Educacional.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,650&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papel:#FBF7EE; --grafite:#26313B; --lapis:#5E6670; --caneta:#1F3A5F; --verde:#2B6A5C;
+  --pauta:#E6DCC8; --marca:#F1E8D6; --alerta:#A94A28; --alerta-fundo:#FBEDE6;
+  --serif:'Literata',Georgia,serif; --sans:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--grafite);font:400 17px/1.55 var(--sans);overflow-x:hidden}
+a{color:var(--caneta);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--caneta);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--serif);font-weight:650;letter-spacing:-.012em;margin:0;text-wrap:balance}
+.w{max-width:720px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left))}
+
+/* topo */
+.top{display:flex;align-items:center;gap:12px;padding-block:18px 6px}
+.gb{width:40px;height:40px;border-radius:10px;background:var(--caneta);color:var(--papel);display:grid;place-items:center;font:500 16px/1 var(--serif);flex:none}
+.top b{display:block;font-weight:600;font-size:16px;line-height:1.2}
+.top span{font-size:14px;color:var(--lapis)}
+.salvo{margin-left:auto;font-size:13px;color:var(--lapis);text-align:right}
+
+/* progresso */
+.prog{position:sticky;top:0;z-index:5;background:var(--papel);padding-block:12px 10px;border-bottom:1px solid var(--pauta)}
+.prog-linha{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:var(--lapis);margin-bottom:8px}
+.prog-linha b{color:var(--grafite);font-weight:600}
+.barra{height:7px;background:var(--pauta);border-radius:4px;overflow:hidden}
+.barra i{display:block;height:100%;width:0;background:var(--verde);transition:width .3s}
+@media (prefers-reduced-motion:reduce){.barra i{transition:none}}
+
+/* etapa */
+.etapa{padding-block:28px 8px}
+.etapa h1{font-size:clamp(28px,7vw,40px);line-height:1.1;color:var(--caneta)}
+.etapa .intro{color:var(--lapis);margin:12px 0 0}
+.intro,.ajuda,.caixa p,.item p,.resumo dd,.rodape{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.campo{margin-top:28px}
+.campo>label,.campo>.rot{display:block;font-weight:600;line-height:1.35}
+.campo .ajuda{display:block;font-size:15px;color:var(--lapis);margin-top:4px;font-weight:400}
+input[type=text],input[type=number],textarea,select{width:100%;margin-top:10px;font:400 17px/1.4 var(--sans);color:var(--grafite);background:#fff;border:1px solid #C9BFAE;border-radius:8px;padding:12px 14px}
+textarea{min-height:110px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:3px solid rgba(31,58,95,.22);border-color:var(--caneta)}
+.opcoes{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.opcoes label{position:relative}
+.opcoes input{position:absolute;opacity:0;pointer-events:none}
+.opcoes span{display:inline-block;font:500 15px/1.2 var(--sans);padding:10px 14px;border:1px solid #C9BFAE;border-radius:999px;background:#fff;cursor:pointer}
+.opcoes input:checked+span{background:var(--caneta);border-color:var(--caneta);color:var(--papel)}
+.opcoes input:focus-visible+span{outline:3px solid var(--caneta);outline-offset:2px}
+.lista-checks{display:grid;gap:10px;margin-top:12px}
+.lista-checks label{display:flex;gap:12px;align-items:flex-start;line-height:1.4;cursor:pointer}
+.lista-checks input{width:22px;height:22px;margin:1px 0 0;flex:none;accent-color:var(--caneta)}
+
+/* grupos (dias) */
+.grupo{margin-top:22px;border-top:1px solid var(--pauta)}
+.item{padding:18px 0;border-bottom:1px solid var(--pauta)}
+.item h3{font-size:19px;line-height:1.3}
+.item p{margin:4px 0 0;font-size:15px;color:var(--lapis)}
+.item input[type=text]{margin-top:10px}
+
+/* listas repetíveis e fichas dos filhos */
+.rep{margin-top:12px;display:grid;gap:12px}
+.rep-linha{background:#fff;border:1px solid var(--pauta);border-radius:10px;padding:12px 14px;display:grid;gap:8px}
+.rep-linha input,.rep-linha select{margin-top:0}
+.rep-linha .tira{justify-self:end;background:none;border:0;color:var(--lapis);font:500 14px var(--sans);text-decoration:underline;cursor:pointer;padding:4px}
+.cartao{padding:16px 16px 10px;gap:4px}
+.cartao h3{font-size:20px;color:var(--verde)}
+.cartao label{display:block;font-weight:600;font-size:15px;margin-top:12px}
+.cartao label input,.cartao label select,.cartao label textarea{margin-top:6px;font-weight:400}
+.cartao textarea{min-height:76px}
+.mais{margin-top:10px;background:none;border:1px dashed #A99C86;border-radius:8px;padding:11px 14px;font:600 15px var(--sans);color:var(--caneta);cursor:pointer;width:100%}
+
+/* caixas */
+.caixa{margin-top:24px;padding:16px 18px;border-left:5px solid var(--verde);background:#fff;border-radius:0 8px 8px 0}
+.caixa p{margin:0}
+.caixa p+p{margin-top:8px}
+.alerta{border-left-color:var(--alerta);background:var(--alerta-fundo)}
+.oculto{display:none}
+
+/* navegação */
+.nav{display:flex;gap:12px;justify-content:space-between;align-items:center;padding-block:30px 40px}
+.btn{display:inline-block;background:var(--caneta);color:var(--papel);border:0;text-decoration:none;font:600 16px/1 var(--sans);padding:15px 22px;border-radius:8px;cursor:pointer}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.sec{background:#fff;color:var(--caneta);border:1px solid var(--caneta)}
+.btn.zap{background:#1F7A4D}
+.acoes{display:grid;gap:12px;margin-top:22px}
+.acoes .btn{text-align:center}
+.etapas{margin-top:14px}.etapas summary{cursor:pointer;color:var(--caneta);font:600 15px var(--sans)}
+.mapa{margin-top:16px;display:flex;flex-wrap:wrap;gap:6px}
+.mapa button{font:500 13px var(--sans);border:1px solid var(--pauta);background:#fff;border-radius:999px;padding:6px 10px;cursor:pointer;color:var(--lapis)}
+.mapa button.feita{border-color:var(--verde);color:var(--verde)}
+.mapa button.atual{background:var(--caneta);color:var(--papel);border-color:var(--caneta)}
+.resumo{margin-top:20px;font-size:15px}
+.resumo h3{font-size:18px;margin-top:22px}
+.resumo dl{margin:8px 0 0;display:grid;gap:6px}
+.resumo dt{color:var(--lapis)}
+.resumo dd{margin:0 0 6px;white-space:pre-wrap}
+.rodape{font-size:14px;color:var(--lapis);padding-block:20px 40px;border-top:1px solid var(--pauta)}
+</style>
+</head>
+<body>
+<div class="w">
+  <header class="top">
+    <div class="gb" aria-hidden="true">FM</div>
+    <div><b>Filho meu Educacional</b><span>Acompanhamento da família</span></div>
+    <div class="salvo" id="salvo" aria-live="polite"></div>
+  </header>
+</div>
+<div class="prog"><div class="w">
+  <div class="prog-linha"><span id="prog-nome"></span><b id="prog-num"></b></div>
+  <div class="barra" role="progressbar" aria-label="Progresso da anamnese" aria-valuemin="0" aria-valuemax="100" id="barra"><i></i></div>
+</div></div>
+<main class="w" id="app"></main>
+<div class="w"><p class="rodape">As respostas ficam guardadas só neste aparelho até vocês enviarem o arquivo. Nada é enviado pela internet enquanto vocês preenchem.</p></div>
+
+<script>
+/* Número de WhatsApp do acompanhamento, só dígitos com DDI e DDD (ex.: 5591999999999). */
+const WHATSAPP = '5584999196984';
+const VERSAO = '2026-10a';
+const CHAVE = 'anamnese-filho-meu-v1';
+
+/* ---------- Quem é quem: as respostas que mudam o caminho ---------- */
+const ESCOLA = 'Os filhos estão na escola, e queremos complementar em casa';
+const CASA = 'Os filhos estudam em casa';
+const MISTO = 'Uns estão na escola, outros estudam em casa';
+const DECIDINDO = 'Ainda estamos decidindo';
+const naEscola = d => d.modalidade === ESCOLA || d.modalidade === MISTO;
+const emCasa = d => d.modalidade === CASA || d.modalidade === MISTO;
+const trabalhaFora = d => d.quem_ensina_trabalho && d.quem_ensina_trabalho !== 'Não trabalha fora';
+const TITULOS = ['Caligrafia cursiva com Provérbios', 'Tabuada com Provérbios', 'Leitura e interpretação com Provérbios', 'Gramática com Provérbios', 'Escrita e redação com Provérbios', 'Palavras que edificam', 'Pequenos e sábios: ciências da natureza', 'Contas, medidas e pesos justos', 'Pensar bem', 'Caráter e domínio próprio', 'Corpo, saúde e alegria', 'Dinheiro, trabalho e generosidade', 'Cartazes de parede', 'Ainda nenhum'];
+
+/* ---------- As perguntas ----------
+   Tipos: texto, longo, numero, escolha (uma), varias (várias), checks (lista de caixas),
+   dias, repetir (lista que cresce; com "cartao", uma ficha com rótulos), aviso.
+   "se" decide se a etapa, a pergunta ou o item aparece; "controla" redesenha a etapa
+   quando a resposta muda. */
+const ETAPAS = [
+  { id: 'inicio', titulo: 'Antes de começar', intro: 'Com estas respostas, preparamos um plano de estudo para a família de vocês: por onde cada filho começa, quantos dias por semana, quanto tempo por lição e quais materiais usar. Leva de 20 a 30 minutos. Vocês podem parar e voltar depois: tudo fica salvo neste aparelho.', campos: [
+    { tipo: 'aviso', html: '<p><b>Respondam pela rotina real da casa, e não pela ideal.</b> Não há resposta certa nem nota. O que não souberem, podem deixar em branco. Se pai e mãe puderem responder juntos, melhor.</p>' },
+    { id: 'nome', tipo: 'texto', rotulo: 'Nome de quem está preenchendo' },
+    { id: 'como_chamar', tipo: 'texto', rotulo: 'Como preferem ser chamados?', ajuda: 'Ex.: Irmã Ana e irmão Paulo; Família Souza.' },
+    { id: 'consentimento', tipo: 'checks', rotulo: 'Autorizações', ajuda: 'Algumas perguntas tratam da saúde e do desenvolvimento das crianças e da fé da família. A lei de proteção de dados chama isso de dados sensíveis e pede uma autorização própria, dada pelos pais.', itens: [
+      'Somos os pais ou responsáveis pelas crianças e autorizamos o uso destas respostas só para preparar o acompanhamento educacional da nossa família com o Filho meu Educacional. Elas não serão compartilhadas, e podemos pedir a exclusão quando quisermos.',
+      'Autorizamos também as respostas sobre saúde, desenvolvimento e fé, para a mesma finalidade.'
+    ] },
+    { tipo: 'aviso', html: '<p>Sem a segunda autorização, as partes de saúde, desenvolvimento e fé ficam fechadas, e vocês respondem todo o resto.</p>' }
+  ] },
+  { id: 'familia', titulo: 'A família', intro: 'Quem está em casa e quem ensina.', campos: [
+    { id: 'quem_preenche', tipo: 'escolha', rotulo: 'Quem está respondendo?', opcoes: ['A mãe', 'O pai', 'Pai e mãe juntos', 'Outro responsável'] },
+    { id: 'quem_ensina', tipo: 'escolha', controla: true, rotulo: 'Quem acompanha os estudos das crianças no dia a dia?', opcoes: ['A mãe', 'O pai', 'Os dois, revezando', 'Avós ou outro familiar', 'Um professor ou tutor contratado'] },
+    { id: 'quem_ensina_trabalho', tipo: 'escolha', controla: true, rotulo: 'Quem acompanha os estudos trabalha fora de casa?', opcoes: ['Não trabalha fora', 'Meio período', 'Tempo integral', 'Trabalha de casa', 'Escala ou plantões'] },
+    { id: 'trabalho_horario', se: trabalhaFora, tipo: 'texto', rotulo: 'Em que horário?', ajuda: 'Ex.: 8h às 12h, de segunda a sexta.' },
+    { id: 'formacao_pais', tipo: 'escolha', rotulo: 'Escolaridade de quem mais ensina', ajuda: 'Ajuda a escolher o tipo de orientação para vocês.', opcoes: ['Ensino fundamental', 'Ensino médio', 'Curso técnico ou tecnológico', 'Ensino superior', 'Pós-graduação'] },
+    { id: 'n_filhos', tipo: 'numero', rotulo: 'Quantos filhos vocês têm?' },
+    { id: 'outros_casa', tipo: 'texto', rotulo: 'Mais alguém mora com vocês ou ajuda com as crianças? (opcional)', ajuda: 'Ex.: avó que fica com o caçula de manhã.' },
+    { id: 'previsao', tipo: 'repetir', rotulo: 'Algo importante previsto para os próximos 12 meses?', ajuda: 'Mudança, bebê a caminho, viagem longa, troca de trabalho. Deixem em branco se não houver.', colunas: [['fato', 'O que vai acontecer'], ['quando', 'Quando']] }
+  ] },
+  { id: 'modalidade', titulo: 'Escola e casa', intro: 'Esta resposta decide quais perguntas aparecem para vocês.', campos: [
+    { id: 'modalidade', tipo: 'escolha', controla: true, rotulo: 'Hoje, como os filhos estudam?', opcoes: [ESCOLA, CASA, MISTO, DECIDINDO] },
+    { id: 'escola_tipo', se: naEscola, tipo: 'escolha', rotulo: 'A escola é…', opcoes: ['Pública', 'Particular', 'Confessional cristã', 'Mais de uma escola'] },
+    { id: 'escola_turno', se: naEscola, tipo: 'escolha', rotulo: 'Turno da escola', opcoes: ['Manhã', 'Tarde', 'Integral', 'Turnos diferentes entre os filhos'] },
+    { id: 'escola_tarefas', se: naEscola, tipo: 'escolha', rotulo: 'A escola manda tarefa para casa?', opcoes: ['Quase todo dia', 'Algumas vezes por semana', 'Raramente'] },
+    { id: 'escola_preocupa', se: naEscola, tipo: 'longo', rotulo: 'O que mais preocupa vocês no que os filhos aprendem (ou deixam de aprender) na escola?' },
+    { id: 'casa_tempo', se: emCasa, tipo: 'escolha', rotulo: 'Há quanto tempo estudam em casa?', opcoes: ['Estamos começando', 'Menos de 1 ano', '1 a 3 anos', 'Mais de 3 anos'] },
+    { id: 'casa_curriculo', se: emCasa, tipo: 'texto', rotulo: 'Que currículo ou materiais usam hoje?', ajuda: 'Ex.: apostilas de uma editora, livros avulsos, plataforma on-line, material próprio.' },
+    { id: 'casa_registro', se: emCasa, tipo: 'escolha', rotulo: 'Vocês registram o que cada filho estudou (diário, portfólio, cadernos guardados)?', opcoes: ['Sim, com regularidade', 'Às vezes', 'Ainda não'] },
+    { id: 'casa_rede', se: emCasa, tipo: 'escolha', rotulo: 'Participam de algum grupo ou associação de famílias educadoras?', opcoes: ['Sim', 'Não', 'Gostaríamos'] },
+    { id: 'decidindo', se: d => d.modalidade === DECIDINDO, tipo: 'longo', rotulo: 'O que está em jogo na decisão? O que pesa de cada lado?' },
+    { id: 'porque', tipo: 'longo', rotulo: 'Por que vocês querem cuidar de perto dos estudos dos filhos? O que esperam que eles se tornem?' }
+  ] },
+  { id: 'criancas', titulo: 'Os filhos', intro: 'Uma ficha para cada filho. Não é prova: é uma primeira impressão de vocês, e é o que mais nos ajuda a montar o plano. Se um filho ainda é bebê, basta o nome e a idade.', campos: [
+    { id: 'filhos', tipo: 'repetir', cartao: 'Filho', linhas: 1, rotulo: 'Fichas dos filhos', ajuda: 'Toquem em "Acrescentar filho" para abrir uma ficha nova.', mais: '+ Acrescentar filho', colunas: [
+      ['nome', 'Nome ou apelido'],
+      ['idade', 'Idade (anos e meses, se for pequeno)'],
+      ['ano', 'Ano escolar, ou o equivalente', ['Ainda não está em idade escolar', 'Educação infantil', '1º ano', '2º ano', '3º ano', '4º ano', '5º ano', '6º ano', '7º ano', '8º ano', '9º ano', 'Ensino médio']],
+      ['onde', 'Onde estuda hoje', ['Na escola', 'Na escola e em casa', 'Só em casa', 'Ainda não estuda formalmente']],
+      ['leitura', 'Leitura', ['Ainda não conhece as letras', 'Conhece as letras', 'Lê sílabas e palavras simples', 'Lê frases curtas', 'Lê textos com fluência', 'Lê e entende textos longos']],
+      ['escrita', 'Escrita', ['Ainda não escreve', 'Escreve letras e o próprio nome', 'Escreve palavras', 'Escreve frases', 'Escreve pequenos textos', 'Escreve textos organizados']],
+      ['letra', 'Letra', ['Ainda não escreve', 'Letra de forma', 'Começando a cursiva', 'Cursiva com segurança']],
+      ['matematica', 'Matemática', ['Ainda conta com ajuda', 'Conta e reconhece números', 'Soma e subtrai', 'Começando a tabuada', 'Multiplica e divide', 'Frações e problemas']],
+      ['fortes', 'Em que vai bem', null, 'longo'],
+      ['dificuldades', 'Em que tem dificuldade', null, 'longo'],
+      ['interesses', 'Do que gosta (assuntos, brincadeiras, histórias)', null, 'longo'],
+      ['jeito', 'Como aprende melhor, e por quanto tempo consegue se concentrar', null, 'longo']
+    ] }
+  ] },
+  { id: 'tempo', titulo: 'O tempo da casa', intro: 'Quando a família consegue estudar. A semana vai de segunda a sábado: o domingo, Dia do Senhor, fica de fora.', campos: [
+    { id: 'janelas', tipo: 'dias', rotulo: 'Horários em que dá para estudar com as crianças, em cada dia', ajuda: d => naEscola(d) && !emCasa(d) ? 'Pensem no tempo depois da escola, sem contar as tarefas dela. Ex.: 16h30–17h10.' : 'Ex.: 8h–10h30 e 15h–16h.' },
+    { id: 'momento', tipo: 'varias', rotulo: 'Em que hora do dia as crianças rendem mais?', opcoes: ['Cedo, de manhã', 'Fim da manhã', 'Depois do almoço', 'Fim da tarde', 'À noite'] },
+    { id: 'culto_rotina', tipo: 'escolha', rotulo: 'A família já tem um momento fixo juntos no dia (refeição, leitura, oração)?', opcoes: ['Sim, todo dia', 'Alguns dias', 'Ainda não'] },
+    { id: 'lugar', tipo: 'texto', rotulo: 'Onde as crianças estudam?', ajuda: 'Ex.: mesa da cozinha; um cantinho com estante.' },
+    { id: 'impressora', tipo: 'escolha', rotulo: 'Vocês têm impressora em casa?', ajuda: 'Os livros Filho meu são em PDF, para imprimir.', opcoes: ['Sim, colorida', 'Sim, só preto e branco', 'Não, imprimimos fora', 'Não'] },
+    { id: 'telas', tipo: 'escolha', rotulo: 'Quanto tempo de tela (TV, celular, tablet) as crianças têm por dia, em média?', opcoes: ['Quase nenhum', 'Até 1 hora', '1 a 2 horas', 'Mais de 2 horas'] },
+    { id: 'atividades', tipo: 'texto', rotulo: 'Atividades fora de casa durante a semana (esporte, música, igreja, terapias)', ajuda: 'Dias e horários, se souberem.' }
+  ] },
+  { id: 'materiais', titulo: 'Materiais', intro: 'O que já está em casa, para o plano aproveitar o que vocês têm.', campos: [
+    { id: 'filho_meu', tipo: 'varias', rotulo: 'Quais livros Filho meu vocês já têm?', opcoes: TITULOS },
+    { id: 'filho_meu_uso', se: d => (d.filho_meu || []).some(t => t !== 'Ainda nenhum'), tipo: 'escolha', rotulo: 'Já começaram a usar?', opcoes: ['Sim, com regularidade', 'Começamos e paramos', 'Ainda não começamos'] },
+    { id: 'outros_materiais', tipo: 'texto', rotulo: 'Outros materiais, livros ou cursos que vocês usam e de que gostam' },
+    { id: 'biblioteca', tipo: 'escolha', rotulo: 'Há livros de leitura para as crianças em casa?', opcoes: ['Muitos', 'Alguns', 'Poucos'] },
+    { id: 'orcamento', tipo: 'texto', rotulo: 'Quanto a família pode investir por mês em materiais e impressão, sem apertar as contas? (opcional)' }
+  ] },
+  { id: 'registros', titulo: 'Registros e documentos', intro: 'Guardar o que cada filho estudou dá segurança à família e mostra o caminho percorrido. Feito do jeito certo, leva poucos minutos por semana. Aqui vemos de onde vocês partem, para montarmos juntos uma organização leve, sem peso a mais na rotina.', campos: [
+    { id: 'reg_guarda', tipo: 'varias', rotulo: 'O que vocês já guardam de cada filho?', opcoes: ['Cadernos e atividades feitas', 'Fotos de atividades e projetos', 'Lista dos livros lidos', 'Diário ou planner do que foi estudado', 'Boletins e históricos escolares', 'Relatórios ou avaliações', 'Certificados de cursos, olimpíadas ou eventos', 'Documentos pessoais das crianças (certidão, CPF, cartão de vacina)', 'Ainda não guardamos nada'] },
+    { id: 'reg_onde', tipo: 'escolha', rotulo: 'Onde ficam esses registros hoje?', opcoes: ['Numa pasta ou caixa por filho', 'Tudo junto, sem separação', 'No computador ou na nuvem', 'Espalhados', 'Não guardamos'] },
+    { id: 'reg_formato', tipo: 'escolha', rotulo: 'Como preferem registrar daqui em diante?', opcoes: ['No papel', 'No digital (Google Drive, planilha)', 'Os dois', 'Não sabemos ainda'] },
+    { id: 'reg_tempo', tipo: 'escolha', rotulo: 'Quanto tempo vocês podem dedicar aos registros?', opcoes: ['Cinco minutos por dia', 'Quinze minutos por semana', 'Meia hora por mês', 'Precisamos de algo bem simples'] },
+    { id: 'reg_sentem', tipo: 'escolha', rotulo: 'Quando pensam em comprovar o que os filhos estudaram, vocês se sentem…', opcoes: ['Tranquilos', 'Um pouco preocupados', 'Muito preocupados', 'Nunca pensamos nisso'] },
+    { id: 'reg_duvidas', tipo: 'longo', rotulo: 'Que dúvidas vocês têm sobre registros, documentos ou comprovação dos estudos?' }
+  ] },
+  { id: 'saude', titulo: 'Saúde e desenvolvimento', sensivel: true, intro: 'Para ajustar o ritmo e o tipo de atividade de cada filho, e não para dar diagnóstico. O acompanhamento não substitui pediatra, fonoaudiólogo ou psicólogo; ele ajuda a perceber quando procurar um.', campos: [
+    { id: 'sono_criancas', tipo: 'texto', rotulo: 'Que horas as crianças costumam dormir e acordar?', ajuda: 'Ex.: 20h30 às 6h30; o caçula ainda dorme à tarde.' },
+    { id: 'sinais', tipo: 'checks', rotulo: 'Algum filho tem…', itens: ['Diagnóstico ou suspeita de TDAH', 'Diagnóstico ou suspeita de dislexia ou outra dificuldade de leitura', 'Diagnóstico ou suspeita de autismo (TEA)', 'Atraso ou dificuldade na fala', 'Alguma deficiência (visual, auditiva, física ou intelectual)', 'Dificuldade para enxergar o quadro ou o livro, ou ainda não fez exame de vista', 'Altas habilidades, ou aprende muito à frente da idade'] },
+    { id: 'sinais_quem', se: d => (d.sinais || []).some(Boolean), tipo: 'longo', rotulo: 'Qual filho, e o que já foi feito?', ajuda: 'Ex.: Pedro, 7 anos, em avaliação com fonoaudióloga desde março.' },
+    { id: 'acompanhamento', tipo: 'escolha', rotulo: 'Algum filho faz acompanhamento com profissional (fono, psicopedagogo, terapeuta ocupacional, psicólogo)?', opcoes: ['Sim', 'Já fez', 'Não'] },
+    { id: 'saude_obs', tipo: 'texto', rotulo: 'Alguma questão de saúde, alergia ou remédio que influencie o estudo? (opcional)' }
+  ] },
+  { id: 'fe', titulo: 'Fé e formação', sensivel: true, intro: 'A coleção Filho meu nasce de uma fé cristã reformada, assumida abertamente. Aqui vocês dizem como ela está na rotina da casa. Tudo é opcional.', campos: [
+    { id: 'culto', tipo: 'escolha', rotulo: 'A família faz culto doméstico (leitura da Bíblia e oração juntos)?', opcoes: ['Todo dia', 'Algumas vezes por semana', 'De vez em quando', 'Ainda não'] },
+    { id: 'igreja', tipo: 'escolha', rotulo: 'A família participa de uma igreja local?', opcoes: ['Sim', 'Não no momento'] },
+    { id: 'catecismo', tipo: 'escolha', rotulo: 'As crianças aprendem um catecismo ou decoram versículos?', opcoes: ['Sim', 'Às vezes', 'Ainda não'] },
+    { id: 'fe_plano', tipo: 'escolha', rotulo: 'No plano de estudo, vocês querem que a fé apareça…', opcoes: ['Em tudo: versículo, oração e conversa em cada lição', 'Nos momentos em família', 'Só no conteúdo dos livros'] },
+    { id: 'carater', tipo: 'longo', rotulo: 'Que traço de caráter vocês mais querem cultivar nos filhos neste ano?', ajuda: 'Ex.: obediência alegre; paciência entre irmãos; diligência nas tarefas.' }
+  ] },
+  { id: 'objetivos', titulo: 'O que vocês esperam', intro: 'Para fechar: do que a família mais precisa agora.', campos: [
+    { id: 'prioridades', tipo: 'varias', rotulo: 'O que é prioridade neste ano?', ajuda: 'Escolham até quatro.', opcoes: ['Alfabetização', 'Letra e caligrafia', 'Leitura e interpretação', 'Escrita e redação', 'Gramática', 'Matemática e tabuada', 'Ciências', 'Lógica e raciocínio', 'Caráter e convivência', 'Formação na fé', 'Organizar a rotina da casa', 'Registrar e documentar o que foi estudado'] },
+    { id: 'dificuldade', tipo: 'longo', rotulo: 'Qual é a maior dificuldade da família hoje com os estudos?' },
+    { id: 'ja_tentou', tipo: 'texto', rotulo: 'O que já tentaram para resolver isso?' },
+    { id: 'espera', tipo: 'longo', rotulo: 'Daqui a três meses, o que precisa ter acontecido para vocês dizerem que o acompanhamento valeu a pena?' },
+    { id: 'encontros', tipo: 'texto', rotulo: 'Melhores dias e horários para conversarmos (segunda a sábado)' },
+    { id: 'formato', tipo: 'escolha', rotulo: 'Como preferem as conversas?', opcoes: ['Chamada de vídeo', 'Ligação', 'Mensagens e áudios'] },
+    { id: 'contato_dado', tipo: 'texto', rotulo: 'WhatsApp ou e-mail para contato' },
+    { id: 'mais', tipo: 'longo', rotulo: 'Algo mais que deveríamos saber?' }
+  ] },
+  { id: 'envio', titulo: 'Revisar e enviar', intro: '', campos: [] }
+];
+
+/* ---------- Estado ---------- */
+let dados = {};
+let atual = 0;
+try { const s = JSON.parse(localStorage.getItem(CHAVE) || 'null'); if (s) { dados = s.dados || {}; atual = Math.min(s.atual || 0, ETAPAS.length - 1); } } catch (e) {}
+let tSalvar;
+function salvar() {
+  clearTimeout(tSalvar);
+  tSalvar = setTimeout(() => {
+    try { localStorage.setItem(CHAVE, JSON.stringify({ dados, atual, em: new Date().toISOString() })); marcaSalvo('Salvo neste aparelho'); }
+    catch (e) { marcaSalvo('Não foi possível salvar aqui; não feche a página'); }
+  }, 300);
+}
+function marcaSalvo(t) { document.getElementById('salvo').textContent = t; }
+
+const sensivelOk = () => (dados.consentimento || [])[1] === true;
+const geralOk = () => (dados.consentimento || [])[0] === true && (dados.nome || '').trim().length > 1;
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const txt = v => typeof v === 'function' ? v(dados) : v;
+const ve = x => !x.se || x.se(dados);
+const etapaVisivel = e => ve(e) && !(e.sensivel && !sensivelOk());
+const visiveis = () => ETAPAS.filter(etapaVisivel);
+const itemTexto = it => typeof it === 'string' ? it : it.t;
+const itemVe = it => typeof it === 'string' || ve(it);
+const DIAS = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+
+/* ---------- Desenho dos campos ---------- */
+function rotuloHtml(c) {
+  return c.rotulo ? `<span class="rot" id="r-${c.id}">${esc(txt(c.rotulo))}${c.ajuda ? `<span class="ajuda">${esc(txt(c.ajuda))}</span>` : ''}</span>` : '';
+}
+function campoHtml(c) {
+  if (!ve(c)) return '';
+  const v = dados[c.id];
+  const ctl = c.controla ? ' data-controla="1"' : '';
+  switch (c.tipo) {
+    case 'aviso': return `<div class="caixa ${c.classe || ''}" ${c.id ? `id="${c.id}"` : ''}>${c.html}</div>`;
+    case 'texto': case 'numero':
+      return `<div class="campo"><label for="${c.id}">${esc(txt(c.rotulo))}${c.ajuda ? `<span class="ajuda">${esc(txt(c.ajuda))}</span>` : ''}</label><input type="${c.tipo === 'numero' ? 'number' : 'text'}" id="${c.id}" data-id="${c.id}" value="${esc(v)}" ${c.tipo === 'numero' ? 'inputmode="numeric" min="0"' : ''}></div>`;
+    case 'longo':
+      return `<div class="campo"><label for="${c.id}">${esc(txt(c.rotulo))}${c.ajuda ? `<span class="ajuda">${esc(txt(c.ajuda))}</span>` : ''}</label><textarea id="${c.id}" data-id="${c.id}">${esc(v)}</textarea></div>`;
+    case 'escolha': case 'varias': {
+      const multi = c.tipo === 'varias';
+      return `<div class="campo" role="group" aria-labelledby="r-${c.id}">${rotuloHtml(c)}<div class="opcoes">${c.opcoes.map(o => {
+        const marc = multi ? (v || []).includes(o) : v === o;
+        return `<label><input type="${multi ? 'checkbox' : 'radio'}" name="${c.id}" data-id="${c.id}" data-multi="${multi}"${ctl} value="${esc(o)}" ${marc ? 'checked' : ''}><span>${esc(o)}</span></label>`;
+      }).join('')}</div></div>`;
+    }
+    case 'checks':
+      return `<div class="campo" role="group" ${c.rotulo ? `aria-labelledby="r-${c.id}"` : ''}>${rotuloHtml(c)}<div class="lista-checks">${c.itens.map((it, i) => itemVe(it) ? `<label><input type="checkbox" data-id="${c.id}" data-idx="${i}" data-n="${c.itens.length}"${c.id === 'consentimento' || c.id === 'sinais' ? ' data-controla="1"' : ''} ${(v || [])[i] ? 'checked' : ''}><span>${esc(itemTexto(it))}</span></label>` : '').join('')}</div></div>`;
+    case 'dias':
+      return `<div class="campo">${rotuloHtml(c)}<div class="grupo">${DIAS.map((d, i) => `<div class="item"><label for="dia-${i}"><b>${d}</b></label><input type="text" id="dia-${i}" data-dia="${i}" data-id="${c.id}" value="${esc((v || [])[i])}" placeholder="Ex.: 8h–10h"></div>`).join('')}<div class="item"><b>Domingo</b><p>Dia do Senhor: fica fora do estudo.</p></div></div></div>`;
+    case 'repetir': {
+      const linhas = (v && v.length) ? v : Array.from({ length: c.linhas || 1 }, () => ({}));
+      return `<div class="campo">${rotuloHtml(c)}<div class="rep" id="rep-${c.id}">${linhas.map((l, i) => linhaRep(c, l, i)).join('')}</div><button type="button" class="mais" data-mais="${c.id}">${esc(c.mais || '+ Acrescentar linha')}</button></div>`;
+    }
+  }
+  return '';
+}
+function linhaRep(c, l, i) {
+  const at = k => `data-rep="${c.id}" data-linha="${i}" data-col="${k}"`;
+  if (c.cartao) {
+    return `<div class="rep-linha cartao"><h3>${esc(c.cartao)} ${i + 1}${l.nome ? `: ${esc(l.nome)}` : ''}</h3>${c.colunas.map(([k, nome, ops, tipo]) => `<label>${esc(nome)}${ops
+      ? `<select ${at(k)}><option value="">Escolher</option>${ops.map(o => `<option ${l[k] === o ? 'selected' : ''}>${esc(o)}</option>`).join('')}</select>`
+      : tipo === 'longo' ? `<textarea ${at(k)}>${esc(l[k])}</textarea>` : `<input type="text" ${at(k)} value="${esc(l[k])}">`}</label>`).join('')}<button type="button" class="tira" data-tira="${c.id}" data-linha="${i}">tirar esta ficha</button></div>`;
+  }
+  return `<div class="rep-linha">${c.colunas.map(([k, nome, ops]) => ops
+    ? `<select aria-label="${esc(nome)}" ${at(k)}><option value="">${esc(nome)}</option>${ops.map(o => `<option ${l[k] === o ? 'selected' : ''}>${esc(o)}</option>`).join('')}</select>`
+    : `<input type="text" aria-label="${esc(nome)}" placeholder="${esc(nome)}" ${at(k)} value="${esc(l[k])}">`).join('')}<button type="button" class="tira" data-tira="${c.id}" data-linha="${i}">tirar</button></div>`;
+}
+
+/* ---------- Telas ---------- */
+function render() {
+  const lista = visiveis();
+  if (!etapaVisivel(ETAPAS[atual])) atual = ETAPAS.indexOf(lista.find(x => ETAPAS.indexOf(x) > atual) || lista[lista.length - 1]);
+  const e = ETAPAS[atual];
+  const pos = lista.indexOf(e);
+  const app = document.getElementById('app');
+  document.getElementById('prog-nome').textContent = e.titulo;
+  document.getElementById('prog-num').textContent = `${pos + 1} de ${lista.length}`;
+  const pct = Math.round(100 * pos / (lista.length - 1));
+  const barra = document.getElementById('barra');
+  barra.querySelector('i').style.width = pct + '%';
+  barra.setAttribute('aria-valuenow', pct);
+
+  let corpo;
+  if (e.id === 'envio') corpo = telaEnvio();
+  else if (e.sensivel && !sensivelOk()) corpo = `<div class="caixa"><p>Esta parte fica fechada, porque a autorização de dados sensíveis não foi marcada. Se quiserem responder, voltem ao início e marquem a segunda autorização.</p></div>`;
+  else corpo = e.campos.map(campoHtml).join('');
+
+  const botoes = `<nav class="mapa" aria-label="Etapas">${lista.map(x => { const i = ETAPAS.indexOf(x); return `<button type="button" data-ir="${i}" class="${i === atual ? 'atual' : (lista.indexOf(x) < pos ? 'feita' : '')}" ${i === atual ? 'aria-current="step"' : ''}>${esc(x.titulo)}</button>`; }).join('')}</nav>`;
+  const mapa = atual === 0 ? '' : (e.id === 'envio' ? botoes : `<details class="etapas"><summary>Ver todas as etapas</summary>${botoes}</details>`);
+  const intro = txt(e.intro);
+  app.innerHTML = `<section class="etapa"><h1 tabindex="-1" id="tit">${esc(e.titulo)}</h1>${intro ? `<p class="intro">${esc(intro)}</p>` : ''}${mapa}${corpo}</section>
+  <div class="nav">${pos > 0 ? '<button type="button" class="btn sec" id="voltar">Voltar</button>' : '<span></span>'}${e.id !== 'envio' ? `<button type="button" class="btn" id="seguir" ${atual === 0 && !geralOk() ? 'disabled' : ''}>${atual === 0 ? 'Começar' : 'Continuar'}</button>` : ''}</div>`;
+}
+function passo(dir) {
+  const lista = visiveis();
+  const pos = lista.indexOf(ETAPAS[atual]);
+  const alvo = lista[Math.max(0, Math.min(lista.length - 1, pos + dir))];
+  ir(ETAPAS.indexOf(alvo));
+}
+function ir(i) {
+  if (i > 0 && !geralOk()) i = 0;
+  atual = Math.max(0, Math.min(ETAPAS.length - 1, i));
+  salvar(); render();
+  window.scrollTo({ top: 0 });
+  document.getElementById('tit')?.focus({ preventScroll: true });
+}
+function redesenhaMantendo() {
+  const y = window.scrollY; render(); window.scrollTo({ top: y });
+}
+
+/* ---------- Eventos ---------- */
+const app = document.getElementById('app');
+function aoMudar(ev) {
+  const t = ev.target, d = t.dataset;
+  if (!d) return;
+  if (d.rep) { const c = achaCampo(d.rep); dados[d.rep] = lerRep(c); }
+  else if (d.dia !== undefined) { const a = dados[d.id] || []; a[+d.dia] = t.value; dados[d.id] = a; }
+  else if (d.idx !== undefined) { const a = dados[d.id] || Array(+d.n).fill(false); a[+d.idx] = t.checked; dados[d.id] = a; }
+  else if (d.multi === 'true') { const a = new Set(dados[d.id] || []); t.checked ? a.add(t.value) : a.delete(t.value); dados[d.id] = [...a]; }
+  else if (d.id) { dados[d.id] = t.type === 'number' ? (t.value === '' ? '' : +t.value) : t.value; }
+  if (atual === 0) { const b = document.getElementById('seguir'); if (b) b.disabled = !geralOk(); }
+  salvar();
+  if (ev.type === 'change' && d.controla) redesenhaMantendo();
+}
+app.addEventListener('input', aoMudar);
+app.addEventListener('change', aoMudar);
+app.addEventListener('click', ev => {
+  const t = ev.target.closest('button'); if (!t) return;
+  if (t.id === 'seguir') passo(1);
+  else if (t.id === 'voltar') passo(-1);
+  else if (t.dataset.ir) ir(+t.dataset.ir);
+  else if (t.dataset.mais) { const c = achaCampo(t.dataset.mais); const arr = lerRep(c); arr.push({}); dados[c.id] = arr; salvar(); redesenhaRep(c); }
+  else if (t.dataset.tira) { const c = achaCampo(t.dataset.tira); const arr = lerRep(c); arr.splice(+t.dataset.linha, 1); dados[c.id] = arr; salvar(); redesenhaRep(c); }
+  else if (t.id === 'baixar') baixarFicha();
+  else if (t.id === 'compartilhar') compartilharFicha();
+  else if (t.id === 'apagar') { if (confirm('Apagar todas as respostas deste aparelho? Não há como desfazer.')) { dados = {}; try { localStorage.removeItem(CHAVE); } catch (e) {} ir(0); } }
+});
+function achaCampo(id) { for (const e of ETAPAS) for (const c of e.campos) if (c.id === id) return c; }
+function lerRep(c) {
+  const box = document.getElementById('rep-' + c.id);
+  return [...box.querySelectorAll('.rep-linha')].map(l => Object.fromEntries([...l.querySelectorAll('[data-col]')].map(x => [x.dataset.col, x.value])));
+}
+function redesenhaRep(c) { const box = document.getElementById('rep-' + c.id); const arr = dados[c.id]; box.innerHTML = (arr.length ? arr : [{}]).map((l, i) => linhaRep(c, l, i)).join(''); }
+
+/* ---------- Só o que está visível vai para o arquivo ---------- */
+function etapasRespondiveis() { return visiveis().filter(e => e.id !== 'envio' && !(e.sensivel && !sensivelOk())); }
+function dadosVisiveis() {
+  const out = { nome: dados.nome, como_chamar: dados.como_chamar, consentimento: dados.consentimento };
+  for (const e of etapasRespondiveis()) for (const c of e.campos) {
+    if (!c.id || c.tipo === 'aviso' || !ve(c) || dados[c.id] === undefined) continue;
+    let v = dados[c.id];
+    if (c.tipo === 'checks') v = c.itens.map((it, i) => itemVe(it) ? !!(v || [])[i] : false);
+    out[c.id] = v;
+  }
+  return out;
+}
+function valorTexto(c, v) {
+  if (v === undefined || v === '' || v === null) return '';
+  switch (c.tipo) {
+    case 'varias': return (v || []).join('; ');
+    case 'checks': return c.itens.filter((it, i) => v[i] && itemVe(it)).map(itemTexto).join('; ');
+    case 'dias': return DIAS.map((d, i) => v[i] ? `${d}: ${v[i]}` : '').filter(Boolean).join('\n');
+    case 'repetir':
+      if (c.cartao) return v.filter(l => Object.values(l).some(Boolean)).map((l, i) => `${c.cartao} ${i + 1}\n` + c.colunas.filter(([k]) => l[k]).map(([k, nome]) => `  ${nome}: ${l[k]}`).join('\n')).join('\n\n');
+      return v.filter(l => Object.values(l).some(Boolean)).map(l => c.colunas.map(([k]) => l[k]).filter(Boolean).join(' · ')).join('\n');
+    default: return String(v);
+  }
+}
+function resumoHtml() {
+  const dv = dadosVisiveis();
+  return etapasRespondiveis().filter(e => e.id !== 'inicio').map(e => {
+    const linhas = e.campos.filter(c => c.id && c.tipo !== 'aviso' && ve(c)).map(c => {
+      const t = valorTexto(c, dv[c.id]); if (!t) return '';
+      return `<dt>${esc(txt(c.rotulo) || e.titulo)}</dt><dd>${esc(t)}</dd>`;
+    }).join('');
+    return `<h3>${esc(e.titulo)}</h3>${linhas ? `<dl>${linhas}</dl>` : '<p>Sem respostas.</p>'}`;
+  }).join('');
+}
+function telaEnvio() {
+  const partes = etapasRespondiveis().filter(e => e.id !== 'inicio');
+  const respondidas = partes.filter(e => e.campos.some(c => c.id && ve(c) && valorTexto(c, dadosVisiveis()[c.id]))).length;
+  const zap = WHATSAPP ? `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(`Olá, Gullit! Aqui é ${dados.nome || ''}. Terminamos a anamnese da família e vou enviar o arquivo agora.`)}` : '';
+  return `<p class="intro">Vocês responderam ${respondidas} de ${partes.length} partes. Confiram abaixo. Se quiserem mudar algo, toquem na etapa.</p>
+  <div class="caixa"><p><b>Como enviar:</b> gerem o arquivo da anamnese (um arquivo só, que abre em qualquer celular) e enviem pelo WhatsApp, como documento.</p></div>
+  <div class="acoes">
+    <button type="button" class="btn" id="compartilhar">Gerar e enviar o arquivo</button>
+    <button type="button" class="btn sec" id="baixar">Só baixar o arquivo</button>
+    ${zap ? `<a class="btn zap" href="${zap}" target="_blank" rel="noopener">Abrir o WhatsApp</a>` : ''}
+  </div>
+  <div class="resumo">${resumoHtml()}</div>
+  <div class="caixa"><p>Depois de enviar, vocês podem apagar as respostas deste aparelho.</p><p><button type="button" class="btn sec" id="apagar">Apagar respostas deste aparelho</button></p></div>`;
+}
+
+/* O arquivo enviado: uma página legível que leva os dados completos embutidos. */
+function nomeArquivo() {
+  const n = (dados.nome || 'familia').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-zA-Z0-9]+/g, '-').replace(/^-|-$/g, '').toLowerCase();
+  return `anamnese-familia-${n}-${new Date().toISOString().slice(0, 10)}.html`;
+}
+function fichaHtml() {
+  const pacote = { tipo: 'anamnese-filho-meu-educacional', versao: VERSAO, enviado_em: new Date().toISOString(), sensivel_autorizado: sensivelOk(), dados: dadosVisiveis() };
+  const json = JSON.stringify(pacote).replace(/</g, '\\u003c');
+  return `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Anamnese da família · ${esc(dados.nome || '')}</title>
+<style>body{margin:0;background:#FBF7EE;color:#26313B;font:16px/1.55 system-ui,-apple-system,'Segoe UI',sans-serif}main{max-width:720px;margin:0 auto;padding:24px 16px 48px}h1{font:650 30px/1.15 Georgia,serif;margin:0;color:#1F3A5F}h3{font:650 19px/1.3 Georgia,serif;margin:28px 0 6px;padding-top:16px;border-top:1px solid #E6DCC8}dt{color:#5E6670;margin-top:8px}dd{margin:0;white-space:pre-wrap;text-align:justify;hyphens:auto}.meta{color:#5E6670;margin-top:6px}</style></head>
+<body><main><p class="meta">Filho meu Educacional · Acompanhamento da família</p><h1>Anamnese da família de ${esc(dados.como_chamar || dados.nome || '')}</h1><p class="meta">Preenchida por ${esc(dados.nome || '')}. Enviada em ${new Date().toLocaleDateString('pt-BR')}. Documento pessoal e confidencial.</p>${resumoHtml()}</main>
+<script type="application/json" id="dados-anamnese">${json}<\/script></body></html>`;
+}
+function baixarFicha() {
+  const blob = new Blob([fichaHtml()], { type: 'text/html' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = nomeArquivo();
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+}
+async function compartilharFicha() {
+  const arquivo = new File([fichaHtml()], nomeArquivo(), { type: 'text/html' });
+  if (navigator.canShare && navigator.canShare({ files: [arquivo] })) {
+    try { await navigator.share({ files: [arquivo], title: 'Anamnese da família', text: `Anamnese da família de ${dados.como_chamar || dados.nome || ''}` }); return; }
+    catch (e) { if (e && e.name === 'AbortError') return; }
+  }
+  baixarFicha();
+  alert('O arquivo foi baixado. Agora abram o WhatsApp e enviem esse arquivo como documento.');
+}
+
+render();
+if (Object.keys(dados).length) marcaSalvo('Respostas recuperadas');
+</script>
+</body>
+</html>
