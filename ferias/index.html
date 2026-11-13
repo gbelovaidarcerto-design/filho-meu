@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Férias com Filho meu · cadernos de férias de 3 a 12 anos</title>
+<meta name="description" content="Quatro cadernos de férias para imprimir, de 3 a 12 anos: seis semanas sobre o céu, o mar, os pequenos sábios, o pão, a família e um novo ano.">
+<meta property="og:title" content="Férias com Filho meu">
+<meta property="og:description" content="Seis semanas, seis maravilhas da criação. Um caderno para cada idade, de 3 a 12 anos.">
+<meta property="og:image" content="https://gbelovaidarcerto-design.github.io/filho-meu/ferias/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://gbelovaidarcerto-design.github.io/filho-meu/ferias/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="img/icone.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Public+Sans:wght@600;700&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --tinta:#1B3352;--ouro:#C9A35A;--creme:#FBF8F1;--suave:#4E5866;
+  --semente:#EE7B30;--broto:#E0567A;--arvore:#5E9C2F;--fruto:#6B3FA0;
+  --serif:'EB Garamond',Garamond,'Times New Roman',serif;--sans:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--tinta);font:400 20px/1.5 var(--serif);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--tinta);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;margin:0;letter-spacing:-.01em;text-wrap:balance}
+p{margin:0}
+.w{max-width:1120px;margin:0 auto;padding-inline:20px}
+.sc{font-weight:600;font-size:14px;letter-spacing:.2em;text-transform:uppercase}
+
+/* topo */
+.topo .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none}
+.marca img{width:26px;height:auto}
+.marca span{font-size:13px;letter-spacing:.18em}
+.topo nav a{font-family:var(--sans);font-size:13.5px;font-weight:600;text-decoration:none;border-bottom:1px solid var(--tinta)}
+.filete{height:4px;border-top:1px solid var(--ouro);border-bottom:1px solid var(--ouro)}
+
+/* botões e preços */
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--sans);font-weight:700;font-size:16px;text-decoration:none;background:var(--tinta);color:#fff;padding:15px 26px;border:2px solid var(--tinta);border-radius:0;cursor:pointer}
+.btn:hover{background:#0F2036;border-color:#0F2036}
+.btn.vazado{background:#fff;color:var(--tinta)}
+.btn.vazado:hover{background:var(--creme)}
+.btn.branco{background:#fff;color:var(--tinta);border-color:#fff}
+.btn.branco:hover{background:var(--creme);border-color:var(--creme)}
+.preco{font-family:var(--sans);font-weight:700;font-variant-numeric:tabular-nums}
+
+/* capa como objeto: moldura branca e sombra chapada */
+.capa{background:#fff;padding:6px;box-shadow:8px 8px 0 rgba(0,0,0,.22)}
+.capa img{width:100%;aspect-ratio:210/297;object-fit:cover}
+
+/* abertura */
+.abre{text-align:center;padding-block:40px 0}
+.abre .sc{color:var(--tinta)}
+.abre h1{font-size:clamp(46px,8vw,96px);line-height:1;margin-top:12px}
+.abre .dor{font-size:clamp(21px,2.4vw,27px);line-height:1.4;font-style:italic;max-width:720px;margin:20px auto 0}
+.assina{margin-top:12px;font-style:italic;font-size:19px;color:var(--suave)}
+.assina::before{content:"";display:inline-block;width:28px;height:1px;background:var(--ouro);vertical-align:middle;margin-right:10px}
+.quatro{display:grid;grid-template-columns:repeat(4,1fr);margin-top:40px}
+.quatro a{display:block;text-decoration:none;color:#fff;background:var(--c);padding:40px 34px 30px;text-align:center}
+.quatro .capa{max-width:220px;margin:0 auto}
+.quatro b{display:block;font-size:30px;font-weight:700;margin-top:22px;line-height:1}
+.quatro span{font-size:18px}
+.abre .acao{padding-block:34px 10px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.quando{font-size:18px;color:var(--suave);text-align:center}
+.discreto{margin-top:10px;font-family:var(--sans);font-size:13px;font-weight:600;color:var(--suave);text-align:center}
+
+/* páginas reais */
+.dentro{padding-block:76px 64px}
+.dentro h2,.cab h2{font-size:clamp(34px,4.6vw,52px);line-height:1.05}
+.dentro .frase{font-size:20px;color:var(--suave);margin-top:8px}
+.rolo{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:30px 20px 18px;margin-inline:-20px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.rolo figure{margin:0;flex:0 0 auto;width:400px;scroll-snap-align:center;background:var(--c);padding:18px 18px 14px;color:#fff}
+.rolo button{display:block;padding:0;border:0;background:#fff;cursor:zoom-in;width:100%}
+.rolo img{width:100%;aspect-ratio:210/297;object-fit:cover}
+.rolo figcaption{display:flex;gap:10px;align-items:baseline;margin-top:12px;font-size:19px;font-weight:600}
+.rolo figcaption span{margin-left:auto;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+.setas{display:flex;gap:8px;justify-content:flex-end}
+.setas button{width:46px;height:46px;border:2px solid var(--tinta);background:#fff;color:var(--tinta);font-size:18px;cursor:pointer;border-radius:0}
+dialog.zoom{border:0;padding:0;background:transparent;max-width:min(94vw,820px);max-height:94vh}
+dialog.zoom::backdrop{background:rgba(27,51,82,.94)}
+dialog.zoom img{max-height:90vh;width:auto;margin:0 auto}
+dialog.zoom .fechar{position:fixed;top:12px;right:14px;width:44px;height:44px;border:2px solid #fff;background:var(--tinta);color:#fff;font-size:22px;cursor:pointer}
+
+.ano{background:var(--creme);padding-block:48px;text-align:center}
+.ano p{font-size:clamp(22px,2.6vw,29px);font-style:italic;line-height:1.35;max-width:800px;margin:0 auto}
+
+/* cadernos: uma faixa de cor por caderno */
+.cab{padding-block:72px 32px;text-align:center}
+.cad{background:var(--c);color:#fff}
+.cad .w{display:grid;grid-template-columns:260px 1fr auto;gap:48px;align-items:center;padding-block:46px}
+.cad h3{font-size:clamp(48px,6vw,72px);line-height:.95;font-weight:700}
+.cad .faixa{font-size:24px;margin-top:8px}
+.cad .pg{font-size:18px;opacity:.95}
+.cad .direita{text-align:right}
+.cad .preco{font-size:34px;display:block}
+.cad .btn{margin-top:14px;min-width:200px}
+
+/* kit: as quatro cores lado a lado */
+.kit{padding-block:76px}
+.kit .sc{display:block;text-align:center}
+.kit h2{text-align:center;font-size:clamp(36px,5vw,56px);line-height:1.05;margin-top:8px}
+.listras{display:grid;grid-template-columns:repeat(4,1fr);margin-top:36px}
+.listras div{background:var(--c);padding:34px 26px}
+.listras .capa{max-width:180px;margin:0 auto}
+.kit .valor{display:flex;justify-content:center;align-items:baseline;gap:16px;flex-wrap:wrap;margin-top:30px}
+.kit .valor .preco{font-size:52px;line-height:1}
+.kit .valor s{font-family:var(--sans);color:var(--suave);font-size:18px}
+.kit .frase{text-align:center;color:var(--suave);font-size:20px;margin-top:10px}
+.kit .acao{display:flex;justify-content:center;margin-top:22px}
+.kit .btn{font-size:17px;padding:17px 34px}
+
+.fim{text-align:center;padding-block:70px 80px;border-top:1px solid #E6E0D3}
+.fim img{width:58px;margin:0 auto 18px}
+.fim h2{font-size:clamp(32px,4.6vw,50px);line-height:1.1}
+.fim p.nota{margin:14px auto 0;font-size:20px;color:var(--suave);max-width:640px}
+.fim .acao{margin-top:28px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+
+footer{background:var(--tinta);color:#D9DEE6;padding:24px 0 34px;font-size:15px}
+footer .w{display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap}
+
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;align-items:center;justify-content:space-between;gap:12px;background:#fff;border-top:2px solid var(--tinta);padding:10px 16px calc(10px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .2s}
+.barra.on{transform:none}
+.barra p{font-size:16px;line-height:1.2}
+.barra .preco{font-size:13.5px;display:block;color:var(--suave)}
+.barra .btn{padding:11px 18px;font-size:15px}
+.barra i{display:inline-block;width:10px;height:10px;margin-right:3px}
+
+@media (max-width:900px){
+  .quatro{grid-template-columns:repeat(2,1fr)}
+  .cad .w{grid-template-columns:200px 1fr;gap:28px}
+  .cad .direita{grid-column:1 / -1;text-align:left;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .cad .btn{margin-top:0}
+  .listras{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:760px){.barra{display:flex}footer{padding-bottom:90px}}
+@media (max-width:560px){
+  body{font-size:19px}
+  .w{padding-inline:16px}
+  .marca span{font-size:11.5px;letter-spacing:.14em}
+  .abre{padding-top:26px}
+  .abre .dor{font-size:20px}
+  .quatro{margin-top:28px}
+  .quatro a{padding:22px 18px 18px}
+  .quatro .capa{max-width:132px;padding:4px;box-shadow:5px 5px 0 rgba(0,0,0,.22)}
+  .quatro b{font-size:24px;margin-top:14px}
+  .quatro span{font-size:16px}
+  .abre .acao{padding-top:26px}
+  .abre .acao .btn{width:100%}
+  .dentro{padding-block:56px 48px}
+  .rolo{margin-inline:-16px;padding-inline:16px}
+  .rolo figure{width:84vw;padding:12px 12px 10px}
+  .setas{display:none}
+  .cab{padding-block:56px 24px}
+  .cad .w{grid-template-columns:42% 1fr;gap:20px;padding-block:30px}
+  .cad .capa{padding:4px;box-shadow:5px 5px 0 rgba(0,0,0,.22)}
+  .cad h3{font-size:46px}
+  .cad .faixa{font-size:20px}
+  .cad .preco{font-size:28px}
+  .cad .direita{display:block}
+  .cad .btn{width:100%;margin-top:12px}
+  .kit{padding-block:56px}
+  .listras div{padding:20px 16px}
+  .kit .btn{width:100%}
+  .fim .acao .btn{width:100%}
+}
+</style>
+<!-- Filho meu: Pixel da Meta + repasse de UTM para a Kiwify (mesmo código das outras páginas). -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2146801305916148');
+fbq('track','PageView');
+document.addEventListener('DOMContentLoaded',function(){
+  // Repassa utm_* e src da página para os botões da Kiwify, para a venda aparecer com a origem certa.
+  var q=new URLSearchParams(location.search),keep=new URLSearchParams();
+  q.forEach(function(v,k){if(/^utm_|^src$/.test(k))keep.set(k,v)});
+  document.querySelectorAll('a.comprar').forEach(function(a){
+    try{var u=new URL(a.href);if(/kiwify\.com\.br$/.test(u.hostname)){keep.forEach(function(v,k){u.searchParams.set(k,v)});a.href=u.toString();}}catch(e){}
+    a.addEventListener('click',function(){fbq('trackCustom','CliqueComprar',{content_name:a.getAttribute('data-produto')||'Férias com Filho meu'})});
+  });
+});
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=2146801305916148&ev=PageView&noscript=1"></noscript>
+</head>
+<body>
+
+<header class="topo"><div class="w">
+  <a class="marca" href="../"><img src="img/escudo.webp" alt="" width="26" height="37"><span class="sc">Filho meu Educacional</span></a>
+  <nav><a href="../">Coleção</a></nav>
+</div><div class="filete"></div></header>
+
+<main>
+<div class="abre">
+  <div class="w">
+    <span class="sc">Cadernos de férias · 3 a 12 anos</span>
+    <h1>Férias com Filho meu</h1>
+    <p class="dor">As férias chegam, a tela toma conta do dia e o que a criança aprendeu no ano vai ficando para trás. Fizemos estes cadernos para ocupar bem essas semanas, com a criança perto de vocês.</p>
+    <p class="assina">Gullit e Gislaine</p>
+  </div>
+  <div class="quatro">
+    <a href="#semente" style="--c:var(--semente)"><div class="capa"><img src="img/capa-semente.webp" alt="Capa do caderno Semente"></div><b>Semente</b><span>3 a 5 anos</span></a>
+    <a href="#broto" style="--c:var(--broto)"><div class="capa"><img src="img/capa-broto.webp" alt="Capa do caderno Broto"></div><b>Broto</b><span>5 a 7 anos</span></a>
+    <a href="#arvore" style="--c:var(--arvore)"><div class="capa"><img src="img/capa-arvore.webp" alt="Capa do caderno Árvore"></div><b>Árvore</b><span>7 a 9 anos</span></a>
+    <a href="#fruto" style="--c:var(--fruto)"><div class="capa"><img src="img/capa-fruto.webp" alt="Capa do caderno Fruto"></div><b>Fruto</b><span>10 a 12 anos</span></a>
+  </div>
+  <div class="w">
+    <div class="acao"><a class="btn" href="#cadernos" id="cta1">Escolher o caderno</a><a class="btn vazado" href="#kit">Os quatro por R$ 149</a></div>
+    <p class="quando">As férias começam em dezembro, e dá para começar no primeiro dia.</p>
+    <p class="discreto">PDF entregue na hora, para imprimir em casa</p>
+  </div>
+</div>
+
+<section class="dentro" id="dentro"><div class="w">
+  <h2>Por dentro</h2>
+  <p class="frase">Seis semanas: o céu, o mar, os pequenos sábios, o pão, a família e um novo ano.</p>
+  <div class="rolo" id="rolo">
+    <figure style="--c:var(--broto)"><button type="button"><img src="img/pag-broto-3.webp" alt="Abertura da semana 1"></button><figcaption>Abertura da semana<span>Broto</span></figcaption></figure>
+    <figure style="--c:var(--semente)"><button type="button"><img src="img/pag-semente-8.webp" alt="Página da história da família"></button><figcaption>História da família<span>Semente</span></figcaption></figure>
+    <figure style="--c:var(--fruto)"><button type="button"><img src="img/pag-fruto-13.webp" alt="Página Olhar a obra"></button><figcaption>Olhar a obra<span>Fruto</span></figcaption></figure>
+    <figure style="--c:var(--broto)"><button type="button"><img src="img/pag-broto-11.webp" alt="Foto da Terra vista da Lua" loading="lazy"></button><figcaption>Foto real<span>Broto</span></figcaption></figure>
+    <figure style="--c:var(--broto)"><button type="button"><img src="img/pag-broto-10.webp" alt="Página de investigação" loading="lazy"></button><figcaption>Experiência em casa<span>Broto</span></figcaption></figure>
+    <figure style="--c:var(--semente)"><button type="button"><img src="img/pag-semente-15.webp" alt="Matemática do Semente" loading="lazy"></button><figcaption>Contar e comparar<span>Semente</span></figcaption></figure>
+    <figure style="--c:var(--arvore)"><button type="button"><img src="img/pag-arvore-124.webp" alt="Matemática do Árvore" loading="lazy"></button><figcaption>Matemática<span>Árvore</span></figcaption></figure>
+    <figure style="--c:var(--fruto)"><button type="button"><img src="img/pag-fruto-14.webp" alt="Matemática do Fruto" loading="lazy"></button><figcaption>Frações e horas<span>Fruto</span></figcaption></figure>
+    <figure style="--c:var(--arvore)"><button type="button"><img src="img/pag-arvore-122.webp" alt="Tabela das formigas" loading="lazy"></button><figcaption>Dados reais<span>Árvore</span></figcaption></figure>
+    <figure style="--c:var(--semente)"><button type="button"><img src="img/pag-semente-13.webp" alt="Letra cursiva no Semente" loading="lazy"></button><figcaption>Letra cursiva<span>Semente</span></figcaption></figure>
+    <figure style="--c:var(--fruto)"><button type="button"><img src="img/pag-fruto-24.webp" alt="Leia, pense e escreva" loading="lazy"></button><figcaption>Pense e escreva<span>Fruto</span></figcaption></figure>
+    <figure style="--c:var(--broto)"><button type="button"><img src="img/pag-broto-33.webp" alt="Mapa antigo da Lua para colorir" loading="lazy"></button><figcaption>Para colorir<span>Broto</span></figcaption></figure>
+    <figure style="--c:var(--semente)"><button type="button"><img src="img/pag-semente-55.webp" alt="Roda das fases da Lua para montar" loading="lazy"></button><figcaption>Para montar<span>Semente</span></figcaption></figure>
+    <figure style="--c:var(--semente)"><button type="button"><img src="img/pag-semente-57.webp" alt="Cartaz da semana" loading="lazy"></button><figcaption>Cartaz da semana<span>Semente</span></figcaption></figure>
+    <figure style="--c:var(--arvore)"><button type="button"><img src="img/pag-arvore-112.webp" alt="Abertura da semana 3" loading="lazy"></button><figcaption>Os pequenos sábios<span>Árvore</span></figcaption></figure>
+    <figure style="--c:var(--broto)"><button type="button"><img src="img/pag-broto-272.webp" alt="Árvore da família para montar" loading="lazy"></button><figcaption>Árvore da família<span>Broto</span></figcaption></figure>
+    <figure style="--c:var(--broto)"><button type="button"><img src="img/pag-broto-342.webp" alt="Certificado" loading="lazy"></button><figcaption>Certificado<span>Broto</span></figcaption></figure>
+  </div>
+  <div class="setas"><button type="button" data-dir="-1" aria-label="Voltar">←</button><button type="button" data-dir="1" aria-label="Avançar">→</button></div>
+</div></section>
+
+<div class="ano"><div class="w"><p>Depois das férias, ele continua servindo: para revisar, reforçar um tema ou ocupar bem um feriado, um dia livre ou uma viagem.</p></div></div>
+
+<section id="cadernos">
+  <div class="cab"><div class="w"><h2>Um caderno para cada idade</h2></div></div>
+  <article class="cad" id="semente" style="--c:var(--semente)"><div class="w">
+    <div class="capa"><img src="img/capa-semente.webp" alt="Capa do caderno Semente" loading="lazy"></div>
+    <div><h3>Semente</h3><p class="faixa">3 a 5 anos</p><p class="pg">350 páginas para imprimir</p></div>
+    <div class="direita"><span class="preco">R$ 59,90</span><a class="btn branco comprar" href="https://pay.kiwify.com.br/BckGnTL" data-produto="Semente">Comprar o Semente</a></div>
+  </div></article>
+  <article class="cad" id="broto" style="--c:var(--broto)"><div class="w">
+    <div class="capa"><img src="img/capa-broto.webp" alt="Capa do caderno Broto" loading="lazy"></div>
+    <div><h3>Broto</h3><p class="faixa">5 a 7 anos</p><p class="pg">342 páginas para imprimir</p></div>
+    <div class="direita"><span class="preco">R$ 59,90</span><a class="btn branco comprar" href="https://pay.kiwify.com.br/zlSPsk4" data-produto="Broto">Comprar o Broto</a></div>
+  </div></article>
+  <article class="cad" id="arvore" style="--c:var(--arvore)"><div class="w">
+    <div class="capa"><img src="img/capa-arvore.webp" alt="Capa do caderno Árvore" loading="lazy"></div>
+    <div><h3>Árvore</h3><p class="faixa">7 a 9 anos</p><p class="pg">348 páginas para imprimir</p></div>
+    <div class="direita"><span class="preco">R$ 59,90</span><a class="btn branco comprar" href="https://pay.kiwify.com.br/S4xJE0T" data-produto="Árvore">Comprar o Árvore</a></div>
+  </div></article>
+  <article class="cad" id="fruto" style="--c:var(--fruto)"><div class="w">
+    <div class="capa"><img src="img/capa-fruto.webp" alt="Capa do caderno Fruto" loading="lazy"></div>
+    <div><h3>Fruto</h3><p class="faixa">10 a 12 anos</p><p class="pg">351 páginas para imprimir</p></div>
+    <div class="direita"><span class="preco">R$ 59,90</span><a class="btn branco comprar" href="https://pay.kiwify.com.br/M6hVn1p" data-produto="Fruto">Comprar o Fruto</a></div>
+  </div></article>
+</section>
+
+<section class="kit" id="kit"><div class="w">
+  <span class="sc">Kit dos quatro</span>
+  <h2>Os quatro cadernos juntos</h2>
+  <div class="listras" aria-hidden="true">
+    <div style="--c:var(--semente)"><div class="capa"><img src="img/capa-semente.webp" alt="" loading="lazy"></div></div>
+    <div style="--c:var(--broto)"><div class="capa"><img src="img/capa-broto.webp" alt="" loading="lazy"></div></div>
+    <div style="--c:var(--arvore)"><div class="capa"><img src="img/capa-arvore.webp" alt="" loading="lazy"></div></div>
+    <div style="--c:var(--fruto)"><div class="capa"><img src="img/capa-fruto.webp" alt="" loading="lazy"></div></div>
+  </div>
+  <div class="valor"><span class="preco">R$ 149</span><s>R$ 239,60</s></div>
+  <p class="frase">Para irmãos de idades diferentes, ou para as próximas férias.</p>
+  <div class="acao"><a class="btn comprar" href="https://pay.kiwify.com.br/zRgJZ82" data-produto="Kit dos 4">Comprar o kit dos quatro</a></div>
+</div></section>
+
+<section class="fim"><div class="w">
+  <img src="img/escudo.webp" alt="" loading="lazy">
+  <h2>Uma boa companhia para estas férias</h2>
+  <p class="nota">Fizemos cada página pensando nas crianças e nos pais que vão sentar ao lado delas. Que o caderno seja bem usado aí na sua casa.</p>
+  <p class="assina">Gullit e Gislaine · Filho meu Educacional</p>
+  <div class="acao"><a class="btn" href="#cadernos">Escolher o caderno</a><a class="btn vazado comprar" href="https://pay.kiwify.com.br/zRgJZ82" data-produto="Kit dos 4">Os quatro por R$ 149</a></div>
+  <p class="discreto">PDF entregue na hora, para imprimir em casa</p>
+</div></section>
+</main>
+
+<div class="barra" id="barra"><p><i style="background:var(--semente)"></i><i style="background:var(--broto)"></i><i style="background:var(--arvore)"></i><i style="background:var(--fruto)"></i> Férias com Filho meu<span class="preco">R$ 59,90 · kit R$ 149</span></p><a class="btn" href="#cadernos">Escolher</a></div>
+
+<footer><div class="w"><span>Férias com Filho meu · Filho meu Educacional · Gullit Belo e Gislaine Belo</span><span><a href="../">Coleção</a> · <a href="../privacidade/">Privacidade</a></span></div></footer>
+
+<dialog class="zoom" id="zoom"><button class="fechar" type="button" aria-label="Fechar">×</button><img alt=""></dialog>
+
+<script>
+(function(){
+  var rolo = document.getElementById('rolo'), dlg = document.getElementById('zoom');
+  document.querySelectorAll('.setas button').forEach(function(b){
+    b.addEventListener('click', function(){ rolo.scrollBy({left: (+b.getAttribute('data-dir')) * rolo.clientWidth * .8, behavior: 'smooth'}); });
+  });
+  rolo.querySelectorAll('figure button').forEach(function(b){
+    b.addEventListener('click', function(){ var i = b.querySelector('img'); dlg.querySelector('img').src = i.src; dlg.querySelector('img').alt = i.alt; if (dlg.showModal) dlg.showModal(); });
+  });
+  dlg.addEventListener('click', function(e){ if (e.target === dlg || e.target.classList.contains('fechar')) dlg.close(); });
+  var barra = document.getElementById('barra'), vis = {};
+  if ('IntersectionObserver' in window) {
+    var ob = new IntersectionObserver(function(es){ es.forEach(function(e){ vis[e.target.id] = e.isIntersecting; }); barra.classList.toggle('on', !vis.cta1 && !vis.cadernos); });
+    [document.getElementById('cta1'), document.getElementById('cadernos')].forEach(function(a){ ob.observe(a); });
+  }
+})();
+</script>
+</body>
+</html>
