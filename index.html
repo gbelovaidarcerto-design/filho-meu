@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded',function(){
 </div><div class="filete"></div></header>
 
 <main>
-<div class="abre">
+<div class="abre" id="abre">
   <div class="w">
     <span class="sc">Coleção Peregrininhos · 12 livros</span>
     <h1>Filho meu</h1>
@@ -825,8 +825,8 @@ document.addEventListener('DOMContentLoaded',function(){
 
   var barra = document.getElementById('barra'), vis = {};
   if ('IntersectionObserver' in window) {
-    var ob = new IntersectionObserver(function(es){ es.forEach(function(e){ vis[e.target.id] = e.isIntersecting; }); barra.classList.toggle('on', !vis.cta1 && !vis.oferta && !vis.amostra); });
-    ['cta1', 'oferta', 'amostra'].forEach(function(id){ ob.observe(document.getElementById(id)); });
+    var ob = new IntersectionObserver(function(es){ es.forEach(function(e){ vis[e.target.id] = e.isIntersecting; }); barra.classList.toggle('on', !vis.abre && !vis.oferta && !vis.amostra); });
+    ['abre', 'oferta', 'amostra'].forEach(function(id){ ob.observe(document.getElementById(id)); });
   }
 })();
 </script>
