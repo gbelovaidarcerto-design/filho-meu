@@ -57,7 +57,7 @@ mark{background:linear-gradient(transparent 55%,var(--ouro) 55%);color:inherit;p
 
 /* capa como objeto */
 .capa{background:#fff;padding:6px;box-shadow:8px 8px 0 rgba(0,0,0,.25)}
-.capa img{width:100%;aspect-ratio:210/297;object-fit:cover}
+.capa img{width:100%;height:auto;aspect-ratio:210/297;object-fit:cover}
 
 /* abertura */
 .abre{text-align:center;padding-block:40px 0}
@@ -88,7 +88,7 @@ mark{background:linear-gradient(transparent 55%,var(--ouro) 55%);color:inherit;p
 .rolo{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:34px 20px 18px;margin-inline:-20px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
 .rolo figure{margin:0;flex:0 0 auto;width:400px;scroll-snap-align:center;background:var(--c);padding:18px 18px 14px;color:#fff}
 .rolo button{display:block;padding:0;border:0;background:#fff;cursor:zoom-in;width:100%}
-.rolo img{width:100%;aspect-ratio:210/297;object-fit:cover}
+.rolo img{width:100%;height:auto;aspect-ratio:210/297;object-fit:cover}
 .rolo figcaption{display:flex;gap:10px;align-items:baseline;margin-top:12px;font-size:19px;font-weight:600}
 .rolo figcaption span{margin-left:auto;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
 .setas{display:flex;gap:8px;justify-content:flex-end}
@@ -118,7 +118,9 @@ dialog.zoom .fechar{position:fixed;top:12px;right:14px;width:44px;height:44px;bo
 
 /* receber: o formulário */
 .receber{background:var(--creme);padding-block:76px;border-top:1px solid var(--linha)}
-.receber .grade{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.receber .grade{display:grid;grid-template-columns:1fr 1fr;column-gap:56px;align-items:start}
+.receber .caixa{grid-column:2;grid-row:1 / span 2}
+.receber .lista{grid-column:1}
 .receber h2{font-size:clamp(36px,5vw,54px);line-height:1.05;margin-top:8px}
 .receber .frase{font-size:20px;color:var(--suave);margin-top:12px}
 .receber ul{margin:22px 0 0;padding:0;list-style:none}
@@ -163,7 +165,7 @@ input:focus{outline:3px solid rgba(4,81,43,.25);border-color:var(--tinta)}
 .mais p{color:var(--suave);font-size:18px;margin-top:6px;max-width:620px}
 
 .fim{text-align:center;padding-block:70px 80px}
-.fim img{width:58px;margin:0 auto 18px}
+.fim img{width:58px;height:auto;margin:0 auto 18px}
 .fim h2{font-size:clamp(32px,4.6vw,50px);line-height:1.1}
 .fim p.nota{margin:14px auto 0;font-size:20px;color:var(--suave);max-width:640px}
 .fim .acao{margin-top:28px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
@@ -182,17 +184,22 @@ footer .w{display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wra
   .dias{grid-template-columns:1fr 1fr}
   .dias li,.dias li+li{padding:16px 16px 12px 0;border-left:0;border-bottom:1px solid var(--linha)}
   .dias li:nth-child(even){padding-left:16px;border-left:1px solid var(--linha)}
+  .dias li:last-child{grid-column:1 / -1}
   .fontes{grid-template-columns:1fr;gap:18px}
   .cad .w{grid-template-columns:200px 1fr;gap:28px}
   .cad .direita{grid-column:1 / -1;text-align:left;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .cad .btn{margin-top:0}
-  .receber .grade{grid-template-columns:1fr;gap:36px}
+  .receber .grade{grid-template-columns:1fr;row-gap:28px}
+  .receber .caixa,.receber .lista{grid-column:1;grid-row:auto}
+  .receber .caixa{order:1}.receber .lista{order:2}
+  .receber .lista ul{margin-top:8px}
 }
 @media (max-width:760px){.barra{display:flex}footer{padding-bottom:90px}}
 @media (max-width:560px){
   body{font-size:19px}
   .w{padding-inline:16px}
   .marca span{font-size:11.5px;letter-spacing:.14em}
+  .abre .sc{font-size:12.5px;letter-spacing:.14em}
   .abre{padding-top:26px}
   .quatro{margin-top:28px}
   .quatro a{padding:22px 18px 18px}
@@ -316,6 +323,8 @@ footer .w{display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wra
     <span class="sc" id="kick-form">Gratuito</span>
     <h2 id="titulo-form">Escolha o caderno de cada filho</h2>
     <p class="frase" id="sub-form">Marque a idade de cada filho, preencha os dados e o link para baixar aparece na hora. Imprima e comece quando quiser.</p>
+  </div>
+  <div class="lista">
     <ul>
       <li>Um caderno em PDF para cada idade: Semente, Broto, Árvore e Fruto</li>
       <li>Tem filhos de idades diferentes? Marque mais de um</li>
