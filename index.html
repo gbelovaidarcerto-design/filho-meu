@@ -3,237 +3,297 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Filho meu · Coleção Peregrininhos</title>
 <meta name="description" content="Coleção Filho meu, hoje com 12 títulos: caligrafia, tabuada, leitura, gramática, ciências, finanças e outros, com Provérbios. 40 semanas, três níveis, o mesmo versículo para a família inteira.">
 <meta property="og:title" content="Filho meu · Coleção Peregrininhos">
 <meta property="og:description" content="12 livros com Provérbios: escrita, matemática, leitura, ciências, caráter e mais. Um versículo por semana, a família inteira à mesa.">
 <meta property="og:image" content="https://gbelovaidarcerto-design.github.io/filho-meu/og.jpg">
 <meta property="og:url" content="https://gbelovaidarcerto-design.github.io/filho-meu/">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#FCFCFA">
-<title>Filho meu · Coleção Peregrininhos</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F3F99'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='27' fill='%23FCFCFA' text-anchor='middle'%3EGB%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,650&family=Public+Sans:wght@400;500;600&family=Playwrite+BR:wght@300;400&display=swap">
-<!-- Estilo comum a todas as páginas do @mentoriagb: repositório gbelovaidarcerto-design.github.io, arquivo estilo.css. -->
-<link rel="stylesheet" href="https://gbelovaidarcerto-design.github.io/estilo.css">
+<meta name="theme-color" content="#7A5410">
+<link rel="icon" href="ferias/img/icone.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Public+Sans:wght@600;700&display=swap">
 <style>
-/* Filho meu: as cores dos três livros marcam os três níveis e os três livros. */
-:root{--mar:#1F3A5F;--verde:#2B6A5C;--terra:#A94A28;--ocre:#8C6212;--cur:'Playwrite BR','Brush Script MT',cursive}
-.selo{margin:0 0 10px;font-size:15px;color:var(--lapis)}
-.abre{display:grid;gap:30px;padding-block:22px 0}
-.abre h1{font-size:clamp(52px,13vw,96px);line-height:.95;color:var(--mar)}
-.abre .sub{font:500 clamp(21px,4.6vw,27px)/1.3 var(--serif);margin:16px 0 0;max-width:30ch}
-.abre .txt{color:var(--lapis);margin:14px 0 0;max-width:54ch}
-.acoes{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center;margin-top:24px}
-.acoes .link,.link{font-weight:600;color:var(--caneta);text-underline-offset:3px}
-/* o versículo na pauta do caderno de caligrafia: o elemento que marca a página */
-.pauta{margin-top:30px;max-width:560px}
-.pauta .cur{font-family:var(--cur);font-weight:300;font-size:clamp(17px,4.3vw,21px);line-height:2.6em;color:var(--grafite);
-  background-image:linear-gradient(to bottom,transparent calc(1.3em - 1px),#C9D6EA calc(1.3em - 1px),#C9D6EA 1.3em,transparent 1.3em,transparent calc(2.05em - 1px),#E6A7A0 calc(2.05em - 1px),#E6A7A0 2.05em,transparent 2.05em);
-  background-size:100% 2.6em;display:block;padding-top:.15em}
-.pauta small{display:block;margin-top:8px;font-size:14px;color:var(--lapis)}
-.trio{display:flex;gap:4px;align-items:flex-end;justify-content:center;border-bottom:7px solid var(--pauta);padding:0 10px}
-.trio img{width:33%;height:auto;mix-blend-mode:multiply;animation:sobe .7s cubic-bezier(.2,.75,.25,1) both}
-.trio img:nth-child(2){width:36%;animation-delay:70ms}.trio img:nth-child(3){animation-delay:140ms}
-.bloco{padding-block:64px 0}
-.bloco>h2,.bloco .t{font-size:clamp(28px,6vw,40px);line-height:1.12;max-width:24ch}
-.bloco .lead{font-size:18px;color:var(--lapis);max-width:58ch;margin:14px 0 0}
-.bloco p{max-width:62ch}
-.cena{display:grid;gap:26px}
-.cena img,.fe img{width:100%;height:auto;border-radius:6px}
-.lista{list-style:none;padding:0;margin:22px 0 0;border-top:1px solid var(--pauta)}
-.lista li{padding:12px 0;border-bottom:1px solid var(--pauta);max-width:70ch}
-.nao{margin-top:30px}
-.nao h3{font-size:21px}
-.nao .lista li{color:var(--lapis)}
-.semana{display:grid;gap:22px;margin-top:28px}
-.dia{border-top:5px solid;padding-top:12px}
-.dia b{font:650 23px/1.15 var(--serif);display:block}
-.dia span{display:block;font-size:14px;color:var(--lapis);margin:4px 0 8px}
-.fecho{font:500 21px/1.4 var(--serif);margin-top:30px;max-width:40ch}
-.obra{display:grid;gap:18px;padding-block:30px;border-bottom:1px solid var(--pauta)}
-.obra:last-child{border-bottom:0}
-.obra img{width:min(240px,62vw);height:auto;mix-blend-mode:multiply}
-.obra .pg{font-size:15px;font-weight:600}
-.obra h3{font-size:clamp(24px,5vw,30px);line-height:1.15;margin-top:4px}
-.obra p{color:var(--lapis);margin:8px 0 0}
-.obra ul{margin:12px 0 0;padding-left:20px;display:grid;gap:6px}
-.niveis{display:grid;gap:0;margin-top:24px;border-top:1px solid var(--pauta)}
-.nv{padding:16px 0;border-bottom:1px solid var(--pauta);display:grid;grid-template-columns:9ch 1fr;gap:2px 18px}
-.nv b{font:650 22px/1.2 var(--serif)}
-.nv em{font-style:normal;font-size:15px;color:var(--lapis);grid-column:1}
-.nv p{grid-column:2;grid-row:1/3;margin:0;font-size:16px}
-.galeria{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;margin:26px calc(-1 * max(20px,env(safe-area-inset-left))) 0;padding:0 max(20px,env(safe-area-inset-left)) 12px;scrollbar-width:thin}
-.galeria figure{margin:0;flex:0 0 66%;max-width:300px;scroll-snap-align:start}
-.galeria img{width:100%;height:auto;border-radius:2px;box-shadow:0 1px 1px rgba(35,38,45,.12),0 10px 16px -8px rgba(35,38,45,.3)}
-.galeria figcaption{font-size:14px;color:var(--lapis);margin-top:8px}
-.metodo{display:grid;gap:0;margin-top:22px;border-top:1px solid var(--pauta)}
-.metodo div{padding:14px 0;border-bottom:1px solid var(--pauta)}
-.metodo b{display:block;font:650 19px/1.3 var(--serif)}
-.metodo p{margin:4px 0 0;color:var(--lapis);font-size:16px}
-.fe{display:grid;gap:26px}
-.autores{display:grid;gap:30px}
-.autores h3{font-size:22px;margin-bottom:8px}
-.autores p{color:var(--lapis);margin:0}
-.bonus{display:grid;gap:26px;margin-top:26px}
-.bn{display:grid;grid-template-columns:96px 1fr;gap:4px 18px;align-items:start}
-.bn img{grid-row:1/4;width:96px;height:auto;border-radius:2px;box-shadow:0 1px 1px rgba(35,38,45,.12),0 8px 12px -6px rgba(35,38,45,.3)}
-.bn .pg{font-size:14px;color:var(--lapis)}
-.bn h3{font-size:20px}
-.bn p{margin:0;font-size:15.5px;color:var(--lapis)}
-.oferta{display:grid;gap:34px;margin-top:26px}
-.kit{border-top:7px solid var(--pauta);padding-top:22px}
-.kit .prazo{font-size:15px;color:var(--lapis)}
-.kit h3{font-size:clamp(26px,5.4vw,32px);margin-top:6px}
-.kit ul{padding-left:20px;margin:14px 0;display:grid;gap:4px}
-.valor{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 14px;margin:16px 0 18px}
-.valor s{color:var(--lapis)}
-.valor strong{font:650 46px/1 var(--serif);color:var(--grafite)}
-.valor strong mark{padding:0 .12em}
-.valor span{color:var(--lapis)}
-.kit .btn{display:block;text-align:center}
-.avulsos{list-style:none;padding:0;margin:0;border-top:1px solid var(--pauta)}
-.avulsos a{display:flex;justify-content:space-between;gap:14px;padding:15px 0;border-bottom:1px solid var(--pauta);color:var(--grafite);text-decoration:none}
-.avulsos a b{font:650 18px/1.3 var(--serif)}
-.avulsos a span{color:var(--caneta);font-weight:600;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
-.miudo{font-size:15px;color:var(--lapis);margin:16px 0 0}
-.garantia{margin-top:30px;padding:18px 0 0;border-top:1px solid var(--pauta)}
-.garantia b{font-weight:600}
-.amostra{margin-top:26px;display:grid;gap:22px;padding-top:24px;border-top:7px solid var(--pauta)}
-.amostra h3{font-size:24px}
-.amostra p{color:var(--lapis);margin:6px 0 0}
-.cad{display:grid;grid-template-columns:1fr;gap:12px 14px;max-width:560px}
-.cad label{display:flex;flex-direction:column;gap:5px;font-size:15px;font-weight:600}
-.cad input[type=text],.cad input[type=email],.cad input[type=tel]{font:400 16px/1.3 var(--sans);padding:12px 14px;border:1.5px solid #C5CFDC;border-radius:8px;background:#fff;color:var(--grafite)}
-.cad input:focus-visible{outline:3px solid var(--caneta);outline-offset:1px}
-.cad .op{font-weight:400;color:var(--lapis)}
-.cad .ok{flex-direction:row;align-items:flex-start;gap:10px;font-weight:400;font-size:14px;color:var(--lapis);line-height:1.45}
-.cad .ok input{width:20px;height:20px;margin-top:1px;flex:none;accent-color:var(--caneta)}
-.cad .btn{justify-self:start;border:0;cursor:pointer}
-.cad .msg{font-size:15px;color:var(--terra);margin:0}
-.cad-fim b{font:650 22px/1.3 var(--serif);display:block}
-.cad-fim p{margin-top:6px}
-.prox{display:grid;gap:18px;margin-top:6px}
-.prox .capas{display:flex}
-.prox .capas img{width:72px;height:auto;border-radius:3px;box-shadow:0 6px 12px -4px rgba(35,38,45,.3);margin-left:-16px;background:#fff}
-.prox .capas img:first-child{margin-left:0}
-.prox h3{font-size:24px}
-.prox p{color:var(--lapis);margin:6px 0 0}
-.faq{margin-top:22px;border-top:1px solid var(--pauta);max-width:780px}
-.faq details{border-bottom:1px solid var(--pauta)}
-.faq summary{cursor:pointer;font-weight:600;padding:16px 28px 16px 0;list-style:none;position:relative}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";position:absolute;right:0;top:12px;font:400 24px/1 var(--sans);color:var(--caneta)}
-.faq details[open] summary::after{content:"–"}
-.faq details p{margin:0 0 16px;color:var(--lapis)}
-.final{padding-block:72px 10px;max-width:660px}
-.final h2{font-size:clamp(30px,6.6vw,44px);line-height:1.1;color:var(--mar)}
-.final p{color:var(--lapis);margin:14px 0 0}
-.seguro{font-size:14px;color:var(--lapis);margin:10px 0 0;max-width:46ch}
-.abre-preco{margin:16px 0 0;font-weight:500}
-.rodape{padding-block:40px;font-size:15px;color:var(--lapis);display:flex;flex-wrap:wrap;gap:8px 22px}
-@media (min-width:900px){
-  .abre{grid-template-columns:1fr 1fr;align-items:end;gap:56px;padding-top:44px}
-  .cena,.fe{grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-  .semana{grid-template-columns:repeat(3,1fr)}
-  .obra{grid-template-columns:240px 1fr;gap:40px;align-items:center}
-  .metodo{grid-template-columns:1fr 1fr;column-gap:40px}
-  .autores{grid-template-columns:1fr 1fr;gap:56px}
-  .bonus{grid-template-columns:repeat(3,1fr)}
-  .bn{grid-template-columns:1fr}
-  .bn img{grid-row:auto;width:140px}
-  .oferta{grid-template-columns:1.2fr 1fr;gap:56px;align-items:start}
-  .amostra{grid-template-columns:1fr 1.1fr;gap:48px}
-  .cad{grid-template-columns:1fr 1fr}
-  .cad .full{grid-column:1/-1}
-  .galeria figure{flex-basis:23%}
-  .prox{grid-template-columns:auto 1fr auto;align-items:center;gap:28px}
+:root{
+  color-scheme:light;
+  --tinta:#7A5410;--escuro:#553A0B;--ouro:#C9A35A;--creme:#F7F1E4;--suave:#5A5145;--linha:#E6DCC8;
+  --serif:'EB Garamond',Garamond,'Times New Roman',serif;--sans:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
 }
-@media (prefers-reduced-motion:reduce){.trio img{animation:none}}
-/* --- reforma de 15/10/2026 --- */
-.abre{padding-bottom:6px}
-.aviso{margin:18px 0 0;font-size:15px;color:var(--lapis);padding-left:12px;border-left:3px solid var(--marca)}
-.aviso[hidden]{display:none}
-.vitrine{display:grid;gap:16px;justify-items:center}
-.leque{position:relative;width:min(100%,520px);aspect-ratio:1.18;margin-inline:auto}
-.leque img{position:absolute;bottom:0;width:46%;height:auto;border-radius:2px 6px 6px 2px;box-shadow:inset 4px 0 0 rgba(255,255,255,.22),0 2px 2px rgba(35,38,45,.12),0 26px 30px -14px rgba(35,38,45,.45);transform-origin:50% 100%;animation:abreLeque .9s cubic-bezier(.2,.75,.25,1) both}
-.leque img:nth-child(1){left:6%;--r:-9deg;--x:12%}
-.leque img:nth-child(2){left:27%;z-index:2;--r:0deg;--x:0%;bottom:4%}
-.leque img:nth-child(3){left:48%;--r:9deg;--x:-12%}
-.leque img{transform:translateX(0) rotate(var(--r))}
-@keyframes abreLeque{from{transform:translateX(var(--x)) rotate(0deg) translateY(14px);opacity:0}to{transform:translateX(0) rotate(var(--r));opacity:1}}
-.mais9{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--caneta);text-decoration:none}
-.mais9:hover span:last-child{text-decoration:underline}
-.mini{display:flex}
-.mini img{width:34px;height:auto;border-radius:2px;box-shadow:0 4px 8px -3px rgba(35,38,45,.4);margin-left:-12px;background:#fff}
-.mini img:first-child{margin-left:0}
-.pauta{max-width:none;margin-top:40px}
-.pauta .cur{font-size:clamp(18px,3.4vw,27px)}
-.pauta .cur .p{display:inline-block;clip-path:inset(-20% 100% -40% 0);animation:escreve var(--d,.4s) linear forwards paused;animation-delay:var(--t,0s)}
-.pauta .cur.vai .p{animation-play-state:running}
-@media (max-width:899px){.vw{gap:12px}.vw-ctrl{display:contents}.vw-livros{order:1}.vw-niveis{order:2;margin-top:0}.vw-folha{order:3;margin-top:8px}.vw-leg{order:4;margin-top:8px;min-height:0}.vw-nav{order:5;margin-top:0}.vw-nota{order:6;margin-top:4px}.vitrine{order:-1}.leque{width:min(88%,420px)}.abre{gap:18px;padding-top:6px}}
-@keyframes escreve{to{clip-path:inset(-20% 0 -40% 0)}}
-.idades{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
-.idades button{font:600 16px/1 var(--sans);padding:12px 16px;border:1.5px solid var(--pauta);border-radius:999px;background:#fff;color:var(--grafite);cursor:pointer;transition:border-color .15s,background-color .15s}
-.idades button:hover{border-color:var(--caneta)}
-.idades button:active{background:var(--caneta);color:var(--papel)}
-.mesa-dica{font-size:14px;color:var(--lapis);margin:10px 0 0}
-.lugares{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:16px}
-.lugar{position:relative;background:#fff;border:1px solid var(--pauta);border-top:6px solid var(--c);border-radius:8px;padding:16px 18px 18px;animation:senta .35s cubic-bezier(.2,.75,.25,1)}
-@keyframes senta{from{opacity:0;transform:translateY(8px)}}
-.lugar h3{font-size:20px}
-.lugar .nv{display:block;font:600 15px/1.3 var(--sans);color:var(--c);margin-top:2px;border:0;padding:0}
-.lugar .obs{font-size:14px;color:var(--lapis);margin:6px 0 0}
-.lugar ul{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:8px}
-.lugar li{display:grid;grid-template-columns:86px 1fr;gap:10px;font-size:15.5px;line-height:1.4}
-.lugar li b{font-weight:600;color:var(--lapis)}
-.lugar .tira{position:absolute;top:8px;right:8px;width:36px;height:36px;border:0;background:none;font-size:22px;line-height:1;color:var(--lapis);cursor:pointer;border-radius:50%}
-.lugar .tira:hover{background:#F0F3F8;color:var(--grafite)}
-.mesa-fim{margin-top:22px;padding-top:18px;border-top:1px solid var(--pauta)}
-.mesa-fim[hidden]{display:none}
-.mesa-fim p{margin:0;max-width:62ch}
-.mesa-fim .acoes{margin-top:16px}
-.link.limpa{background:none;border:0;padding:0;font:600 17px/1.2 var(--sans);text-decoration:underline;cursor:pointer}
-.vw{display:grid;gap:22px;margin-top:26px}
-.vw-livros,.vw-niveis{display:flex;flex-wrap:wrap;gap:8px}
-.vw-niveis{margin-top:10px}
-.vw-livros button,.vw-niveis button{font:600 15px/1 var(--sans);padding:11px 15px;border:1.5px solid var(--pauta);border-radius:999px;background:#fff;color:var(--grafite);cursor:pointer}
-.vw-livros button[aria-pressed=true]{background:var(--caneta);border-color:var(--caneta);color:var(--papel)}
-.vw-niveis button[aria-pressed=true]{border-color:var(--grafite);box-shadow:inset 0 0 0 1px var(--grafite)}
-.vw-leg{font:500 19px/1.4 var(--serif);margin:20px 0 0;min-height:3.6em;max-width:36ch}
-.vw-nav{display:flex;align-items:center;gap:14px;margin-top:14px}
-.vw-nav button,.lupa-nav button{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--pauta);background:#fff;font:400 26px/1 var(--serif);color:var(--grafite);cursor:pointer;padding:0 0 3px}
-.vw-nav button:disabled,.lupa-nav button:disabled{opacity:.35;cursor:default}
-.vw-pos{font-size:14px;color:var(--lapis);min-width:12ch;text-align:center}
-.vw-nota{font-size:14px;color:var(--lapis);margin:18px 0 0}
-.vw-folha{appearance:none;border:0;padding:0;margin:0;background:none;cursor:zoom-in;justify-self:center;width:min(100%,460px)}
-.vw-folha img{width:100%;height:auto;border-radius:2px;box-shadow:0 1px 1px rgba(35,38,45,.12),0 22px 32px -16px rgba(35,38,45,.45);transition:opacity .18s}
-.vw-folha.troca img{opacity:.25}
-.lupa{border:0;padding:0;width:min(96vw,900px);max-height:96vh;background:var(--papel);border-radius:10px;overflow:auto}
-.lupa::backdrop{background:rgba(20,24,32,.72)}
-.lupa-topo{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 20px;background:var(--papel);border-bottom:1px solid var(--pauta);z-index:1}
-.lupa-leg{margin:0;font-size:15px;color:var(--lapis)}
-.lupa-x{width:40px;height:40px;border:0;border-radius:50%;background:#EEF2F7;font-size:24px;cursor:pointer;flex:none}
-.lupa img{width:100%;height:auto;display:block}
-.lupa-nav{position:sticky;bottom:0;display:flex;justify-content:center;align-items:center;gap:16px;padding:10px;background:var(--papel);border-top:1px solid var(--pauta)}
-.barra{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(252,252,250,.96);backdrop-filter:blur(6px);border-top:1px solid var(--pauta);box-shadow:0 -8px 20px -14px rgba(35,38,45,.35);transform:translateY(110%);transition:transform .3s cubic-bezier(.2,.75,.25,1);padding-bottom:env(safe-area-inset-bottom)}
-.barra.ver{transform:none}
-.barra .w{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-block:10px}
-.barra p{margin:0;font-size:15px}
-.barra .btn{padding:12px 22px;flex:none}
-@media (min-width:900px){
-  .vitrine{justify-items:end}
-  .vw{grid-template-columns:minmax(0,1fr) minmax(0,460px);gap:56px;align-items:start}
-  .vw-folha{justify-self:end}
-  .lugares{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
-  .barra p{font-size:16px}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:#fff;color:#2B2116;font:400 20px/1.5 var(--serif);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--tinta);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;margin:0;letter-spacing:-.01em;text-wrap:balance;color:var(--tinta)}
+p{margin:0}
+.w{max-width:1120px;margin:0 auto;padding-inline:20px}
+.sc{font-weight:600;font-size:14px;letter-spacing:.2em;text-transform:uppercase}
+
+/* topo */
+.topo .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--tinta)}
+.marca img{width:26px;height:auto}
+.marca span{font-size:13px;letter-spacing:.18em}
+.topo nav a{font-family:var(--sans);font-size:13.5px;font-weight:600;text-decoration:none;border-bottom:1px solid var(--tinta);color:var(--tinta)}
+.filete{height:4px;border-top:1px solid var(--ouro);border-bottom:1px solid var(--ouro)}
+
+/* botões e preços */
+.btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;font-family:var(--sans);font-weight:700;font-size:16px;text-decoration:none;background:var(--tinta);color:#fff;padding:15px 26px;border:2px solid var(--tinta);border-radius:0;cursor:pointer}
+.btn:hover{background:var(--escuro);border-color:var(--escuro)}
+.btn.vazado{background:#fff;color:var(--tinta)}
+.btn.vazado:hover{background:var(--creme)}
+.btn.branco{background:#fff;color:var(--tinta);border-color:#fff}
+.btn.branco:hover{background:var(--creme);border-color:var(--creme)}
+.btn:focus-visible{outline-color:var(--ouro)}
+.preco{font-family:var(--sans);font-weight:700;font-variant-numeric:tabular-nums}
+
+/* capa como objeto: moldura branca e sombra chapada */
+.capa{display:block;background:#fff;padding:6px;box-shadow:8px 8px 0 rgba(0,0,0,.22)}
+.capa img{width:100%;height:auto;aspect-ratio:210/297;object-fit:cover}
+
+/* abertura */
+.abre{text-align:center;padding-block:40px 0}
+.abre .sc{color:var(--tinta)}
+.abre h1{font-size:clamp(56px,9vw,110px);line-height:1;margin-top:12px}
+.abre .sub{font-size:clamp(22px,2.6vw,28px);line-height:1.3;max-width:760px;margin:14px auto 0;color:var(--tinta)}
+.abre .dor{font-size:clamp(20px,2.2vw,24px);line-height:1.45;font-style:italic;max-width:720px;margin:18px auto 0}
+.assina{margin-top:12px;font-style:italic;font-size:19px;color:var(--suave)}
+.assina::before{content:"";display:inline-block;width:28px;height:1px;background:var(--ouro);vertical-align:middle;margin-right:10px}
+.quatro{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:40px}
+.quatro a{display:block;text-decoration:none;color:#fff;background:var(--c);padding:36px 22px 28px;text-align:center}
+.quatro a:focus-visible{outline:3px solid var(--ouro);outline-offset:-6px}
+.leque{display:flex;justify-content:center;align-items:flex-end;height:200px}
+.leque .capa{min-width:0}
+.leque .capa{width:110px;flex:0 0 auto;padding:4px;box-shadow:5px 5px 0 rgba(0,0,0,.28)}
+.leque .capa:nth-child(1){transform:rotate(-7deg);margin-right:-16px;margin-bottom:-6px}
+.leque .capa:nth-child(2){position:relative;z-index:2;transform:translateY(-8px)}
+.leque .capa:nth-child(3){transform:rotate(7deg);margin-left:-16px;margin-bottom:-6px}
+.quatro b{display:block;font-size:30px;font-weight:700;margin-top:22px;line-height:1}
+.quatro .kres{display:block;font-size:17px;margin-top:6px;line-height:1.3}
+.abre .acao{padding-block:34px 10px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.quando{font-size:18px;color:var(--suave);text-align:center}
+.discreto{margin-top:10px;font-family:var(--sans);font-size:13px;font-weight:600;color:var(--suave);text-align:center}
+
+/* faixas: férias e lista VIP */
+.faixas{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+.ferias-faixa{display:flex;gap:18px;align-items:center;padding:18px 20px;background:var(--creme);color:var(--tinta);text-decoration:none;border-top:4px solid var(--ouro)}
+.ff-capas{display:flex;gap:5px;flex:0 0 auto}
+.ff-capas img{width:44px;height:auto;padding:2px;box-shadow:3px 3px 0 rgba(0,0,0,.18)}
+.ff-txt{display:flex;flex-direction:column;gap:2px;text-align:left}
+.ff-txt small{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+.ff-txt strong{font-size:25px;line-height:1.1;font-weight:600}
+.ff-txt span{font-size:16.5px;line-height:1.35;color:var(--suave)}
+.ff-txt em{font-style:normal;font-family:var(--sans);font-weight:700;font-size:14px;margin-top:6px;text-decoration:underline;text-underline-offset:4px}
+.vip{display:flex;flex-direction:column;gap:12px;padding:18px 20px;background:var(--escuro);color:#fff;text-align:left;border-top:4px solid var(--ouro)}
+.vip-txt{display:flex;flex-direction:column;gap:2px}
+.vip-chip{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:#E8CF94}
+.vip-txt strong{font-size:25px;line-height:1.1;font-weight:600}
+.vip-txt span:last-child{font-size:16.5px;line-height:1.35;color:#F1E7D2}
+.vip-acoes{display:flex;gap:8px;flex-wrap:wrap}
+.vip-acoes a{font-family:var(--sans);font-weight:700;font-size:14px;text-decoration:none;padding:10px 14px;background:#fff;color:var(--escuro);border:2px solid #fff}
+.vip-acoes a+a{background:transparent;color:#fff}
+.vip-acoes a:focus-visible{outline-color:var(--ouro)}
+
+/* páginas reais */
+.dentro{padding-block:76px 64px}
+.dentro h2,.cab h2{font-size:clamp(34px,4.6vw,52px);line-height:1.05}
+.dentro .frase{font-size:20px;color:var(--suave);margin-top:8px;max-width:820px}
+.semana{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.semana li{border-top:2px solid var(--tinta);padding-top:10px;font-size:18px;line-height:1.4}
+.semana b{display:block;font-family:var(--sans);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--tinta)}
+.rolo{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:30px 20px 18px;margin-inline:-20px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.rolo figure{margin:0;flex:0 0 auto;width:360px;scroll-snap-align:center;background:var(--tinta);padding:16px 16px 12px;color:#fff}
+.rolo button{display:block;padding:0;border:0;background:#fff;cursor:zoom-in;width:100%}
+.rolo button:focus-visible{outline-color:var(--ouro)}
+.rolo img{width:100%;height:auto;aspect-ratio:600/849;object-fit:cover}
+.rolo figcaption{display:flex;gap:10px;align-items:baseline;margin-top:12px;font-size:18px;font-weight:600;line-height:1.25}
+.rolo figcaption span{margin-left:auto;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;white-space:nowrap;color:#F1E1BC}
+.setas{display:flex;gap:8px;justify-content:flex-end}
+.setas button{width:46px;height:46px;border:2px solid var(--tinta);background:#fff;color:var(--tinta);font-size:18px;cursor:pointer;border-radius:0}
+.dentro .nota{font-size:17px;color:var(--suave);margin-top:14px}
+dialog.zoom{border:0;padding:0;background:transparent;max-width:min(94vw,820px);max-height:94vh}
+dialog.zoom::backdrop{background:rgba(43,30,8,.94)}
+dialog.zoom img{max-height:90vh;width:auto;margin:0 auto}
+dialog.zoom .fechar{position:fixed;top:12px;right:14px;width:44px;height:44px;border:2px solid #fff;background:var(--tinta);color:#fff;font-size:22px;cursor:pointer}
+
+.ano{background:var(--creme);padding-block:48px;text-align:center}
+.ano p{font-size:clamp(23px,2.8vw,31px);font-style:italic;line-height:1.35;max-width:800px;margin:0 auto;color:var(--tinta)}
+.ano small{display:block;margin-top:12px;font-family:var(--sans);font-size:13px;font-weight:600;color:var(--suave)}
+
+/* ofertas: livros em faixas, kit no fim de cada grupo */
+.cab{padding-block:72px 28px;text-align:center}
+.cab p{font-size:20px;color:var(--suave);margin:10px auto 0;max-width:680px}
+.gcab{border-top:1px solid var(--ouro);border-bottom:1px solid var(--ouro);background:var(--creme)}
+.gcab .w{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;padding-block:12px}
+.gcab .sc{color:var(--tinta)}
+.gcab p{font-style:italic;font-size:18px;color:var(--suave)}
+.cad{border-bottom:1px solid var(--linha)}
+.cad .w{display:grid;grid-template-columns:150px 1fr auto;gap:36px;align-items:center;padding-block:30px}
+.cad .capa{padding:5px;border:0;cursor:zoom-in;box-shadow:6px 6px 0 rgba(0,0,0,.2)}
+.cad .sc{font-size:12.5px;color:var(--suave)}
+.cad h3{font-size:clamp(28px,3.2vw,38px);line-height:1.05;margin-top:6px;font-weight:700}
+.cad .linha{font-size:19px;margin-top:8px;max-width:600px;line-height:1.4}
+.mais{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:10px;font-family:var(--sans);font-size:14.5px;font-weight:600}
+.mais a,.cb-abre{color:var(--tinta);text-decoration:underline;text-underline-offset:4px}
+.cb-abre{font:inherit;background:none;border:0;padding:0;cursor:pointer}
+.cad .direita{text-align:right}
+.cad .preco{font-size:30px;display:block;color:var(--tinta)}
+.cad .btn{margin-top:12px;min-width:190px}
+
+.kit{background:var(--tinta);color:#fff;margin-bottom:56px}
+.kit .w{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;padding-block:48px}
+.tres{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tres .capa{box-shadow:6px 6px 0 rgba(0,0,0,.3);padding:5px}
+.kit .sc{color:#F1E1BC}
+.kit h3{color:#fff;font-size:clamp(36px,4.4vw,52px);line-height:1;margin-top:6px}
+.kit .frase{font-size:19px;margin-top:10px;line-height:1.4}
+.kit .valor{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-top:18px}
+.kit .valor .preco{font-size:52px;line-height:1}
+.kit .valor s{font-family:var(--sans);font-size:16px;color:#F1E1BC}
+.kit .bonus{margin-top:16px;font-size:18px;line-height:1.4;padding-top:14px;border-top:1px solid rgba(201,163,90,.7)}
+.bthumbs{display:flex;gap:10px;margin-top:12px}
+.bthumbs img{width:64px;height:auto;background:#fff;padding:3px;box-shadow:4px 4px 0 rgba(0,0,0,.28)}
+.parceria{font-size:16px;margin-top:12px;font-style:italic;color:#F1E1BC}
+.kit .acao{margin-top:22px}
+.kit .btn{font-size:17px;padding:17px 30px}
+.miudo{font-size:17px;color:var(--suave);text-align:center;max-width:760px;margin:0 auto;padding-bottom:20px}
+
+/* amostra grátis */
+.amostra{background:var(--creme);padding-block:72px;scroll-margin-top:0}
+.amostra .w{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.amostra h2{font-size:clamp(34px,4.6vw,52px);line-height:1.05}
+.amostra .frase{font-size:20px;margin-top:10px}
+.amostra h3{font-size:24px;margin-top:28px}
+.amlist{margin:10px 0 0;padding-left:20px;font-size:18px;line-height:1.5;columns:2;column-gap:28px}
+.amlist li{break-inside:avoid}
+.amlist a{color:var(--tinta)}
+form.form{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:#fff;padding:24px;border:2px solid var(--tinta)}
+form.form .full{grid-column:1 / -1}
+form.form label{display:flex;flex-direction:column;gap:5px;font-family:var(--sans);font-size:14px;font-weight:600;color:var(--tinta)}
+form.form .op{font-weight:600;color:var(--suave)}
+form.form input[type=text],form.form input[type=email],form.form input[type=tel]{font:400 18px/1.3 var(--serif);padding:11px 12px;border:1.5px solid #B9A57E;border-radius:0;background:#fff;color:#2B2116;width:100%}
+form.form input:focus-visible{outline:3px solid var(--tinta);outline-offset:1px}
+form.form label.ok{flex-direction:row;align-items:flex-start;gap:10px;font-family:var(--serif);font-weight:400;font-size:16px;line-height:1.4;color:#2B2116}
+form.form label.ok input{width:20px;height:20px;margin-top:2px;accent-color:var(--tinta);flex:0 0 auto}
+form.form .msg{color:#9A2A12;font-family:var(--sans);font-size:14px;font-weight:600}
+.cad-fim{background:#fff;padding:24px;border:2px solid var(--tinta);font-size:19px}
+.cad-fim b{display:block;font-size:24px;color:var(--tinta)}
+.cad-fim a{color:var(--tinta);font-weight:600}
+
+/* perguntas */
+.faq{padding-block:72px 40px}
+.faq h2{font-size:clamp(32px,4.2vw,46px);line-height:1.05}
+.faq dl{margin:22px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:26px 48px}
+.faq dt{font-weight:700;font-size:21px;color:var(--tinta);border-top:2px solid var(--tinta);padding-top:10px}
+.faq dd{margin:6px 0 0;font-size:18.5px;line-height:1.45}
+
+.fim{text-align:center;padding-block:70px 80px;border-top:1px solid var(--linha)}
+.fim img{width:58px;margin:0 auto 18px}
+.fim h2{font-size:clamp(32px,4.6vw,50px);line-height:1.1}
+.fim p.nota{margin:14px auto 0;font-size:20px;color:var(--suave);max-width:660px}
+.fim .acao{margin-top:28px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+
+footer{background:var(--tinta);color:#F4EBD8;padding:24px 0 34px;font-size:15px}
+footer .w{display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap}
+footer a{color:#fff}
+footer a:focus-visible{outline-color:#fff}
+
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;align-items:center;justify-content:space-between;gap:12px;background:#fff;border-top:2px solid var(--tinta);padding:10px 16px calc(10px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .2s}
+.barra.on{transform:none}
+.barra p{font-size:16px;line-height:1.2;color:var(--tinta);font-weight:600}
+.barra .preco{font-size:13.5px;display:block;color:var(--suave);font-weight:600}
+.barra .btn{padding:11px 18px;font-size:15px}
+
+/* painéis "O que o livro ensina" */
+.cb{border:0;padding:0;border-radius:0;max-width:min(760px,calc(100vw - 24px));width:100%;max-height:calc(100dvh - 24px);background:#fff;color:#2B2116;box-shadow:10px 10px 0 rgba(0,0,0,.25);border-top:6px solid var(--tinta)}
+.cb::backdrop{background:rgba(43,30,8,.7)}
+.cb-in{padding:26px clamp(18px,4vw,34px) 30px;position:relative;font-size:17.5px;line-height:1.5}
+.cb-x{position:sticky;top:0;float:right;margin:-8px -10px 0 0;width:42px;height:42px;border-radius:0;border:2px solid var(--tinta);background:#fff;font-size:24px;line-height:1;cursor:pointer;color:var(--tinta)}
+.cb-area{font-family:var(--sans);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--suave)}
+.cb h3{font-size:clamp(28px,4vw,36px);line-height:1.1;margin:4px 0 8px}
+.cb-res{margin:0 0 6px}
+.cb-s{font-size:22px;margin:24px 0 8px;padding-top:14px;border-top:1px solid var(--ouro)}
+.cb-g h4{font-size:18px;margin:12px 0 4px;color:var(--tinta)}
+.cb-g ul,.cb-et{margin:0;padding-left:20px;display:grid;gap:3px}
+.cb-nv{display:grid;gap:8px}.cb-nv b{display:block}.cb-nv p{margin:0;color:var(--suave)}
+.cb-l{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:10px}
+.cb-l li{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;align-items:start}
+.cb-l code{font:700 13px/1.6 ui-monospace,Menlo,monospace;background:var(--creme);color:var(--tinta);padding:1px 7px;white-space:nowrap}
+.cb-l span{font-size:16px}.cb-l small{grid-column:2;font-size:14px;color:var(--suave)}
+.cb-l a{color:var(--tinta)}
+.cb-mi{font-weight:700;font-size:16px;margin:18px 0 0}
+.cb-d{margin-top:16px;border-top:1px solid var(--linha)}
+.cb-d summary{cursor:pointer;font-weight:700;font-size:19px;padding:14px 30px 4px 0;list-style:none;position:relative;color:var(--tinta)}
+.cb-d summary::-webkit-details-marker{display:none}
+.cb-d summary::after{content:"+";position:absolute;right:4px;top:10px;font-size:24px}
+.cb-d[open] summary::after{content:"\2013"}
+.cb-d .cb-et{margin-top:8px}
+.cb-t{margin:8px 0 0;font-family:var(--sans);font-size:14.5px;font-weight:600}.cb-t a{color:var(--tinta);text-underline-offset:3px}
+.cb-c{display:grid;gap:10px;margin-top:22px;padding-top:18px;border-top:1px solid var(--ouro)}
+.cb-b{display:block;text-align:center;background:var(--tinta);color:#fff!important;font-family:var(--sans);font-weight:700;font-size:16px;padding:15px 18px;text-decoration:none}
+.cb-b:hover{background:var(--escuro)}
+.cb-k{color:var(--tinta);font-family:var(--sans);font-weight:600;font-size:14.5px;text-align:center;text-underline-offset:3px}
+.cb-nota{font-size:14px;color:var(--suave);margin:24px 0 0;padding-top:12px;border-top:1px solid var(--linha)}
+
+@media (max-width:900px){
+  .quatro{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .faixas{grid-template-columns:1fr}
+  .cad .w{grid-template-columns:150px 1fr;gap:28px}
+  .cad .direita{grid-column:1 / -1;text-align:left;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .cad .btn{margin-top:0}
+  .kit .w{grid-template-columns:1fr;gap:32px}
+  .tres{max-width:520px}
+  .amostra .w{grid-template-columns:1fr;gap:28px}
+  .faq dl{grid-template-columns:1fr}
 }
-@media (prefers-reduced-motion:reduce){
-  .leque img,.lugar{animation:none}
-  .pauta .cur .p{animation:none;clip-path:none}
-  .barra,.vw-folha img{transition:none}
+@media (max-width:760px){.barra{display:flex}footer{padding-bottom:90px}}
+@media (max-width:560px){
+  body{font-size:19px}
+  .w{padding-inline:16px}
+  .marca span{font-size:11.5px;letter-spacing:.14em}
+  .topo nav a{font-size:12.5px}
+  .abre{padding-top:26px}
+  .abre .dor{font-size:20px}
+  .quatro{margin-top:28px}
+  .quatro a{padding:22px 10px 18px}
+  .leque{height:118px}
+  .leque .capa{width:64px;padding:3px;box-shadow:3px 3px 0 rgba(0,0,0,.28)}
+  .leque .capa:nth-child(1){margin-right:-10px}
+  .leque .capa:nth-child(3){margin-left:-10px}
+  .quatro b{font-size:23px;margin-top:14px}
+  .quatro .kres{font-size:15px}
+  .abre .acao{padding-top:26px}
+  .abre .acao .btn{width:100%}
+  .faixas{margin-top:32px}
+  .ferias-faixa{flex-direction:column;align-items:flex-start;gap:12px}
+  .semana{grid-template-columns:1fr;gap:10px}
+  .dentro{padding-block:56px 48px}
+  .rolo{margin-inline:-16px;padding-inline:16px}
+  .rolo figure{width:80vw;padding:12px 12px 10px}
+  .setas{display:none}
+  .cab{padding-block:56px 22px}
+  .cad .w{grid-template-columns:34% 1fr;gap:18px;padding-block:24px;align-items:start}
+  .cad .capa{padding:4px;box-shadow:5px 5px 0 rgba(0,0,0,.2)}
+  .cad .sc{font-size:11.5px;letter-spacing:.12em}
+  .cad h3{font-size:25px}
+  .cad .linha{font-size:17px}
+  .cad .preco{font-size:26px}
+  .cad .direita{display:block}
+  .cad .btn{width:100%;margin-top:10px}
+  .kit .w{padding-block:36px}
+  .tres{gap:10px}
+  .tres .capa{padding:3px;box-shadow:4px 4px 0 rgba(0,0,0,.3)}
+  .kit .valor .preco{font-size:44px}
+  .kit .btn{width:100%}
+  .amostra{padding-block:56px}
+  .amlist{columns:1}
+  form.form{grid-template-columns:1fr;padding:18px}
+  .faq{padding-block:56px 32px}
+  .fim .acao .btn{width:100%}
 }
 </style>
 <!-- Filho meu: Pixel da Meta + repasse de UTM para a Kiwify. -->
@@ -250,8 +310,8 @@ document.addEventListener('DOMContentLoaded',function(){
   var q=new URLSearchParams(location.search),keep=new URLSearchParams();
   q.forEach(function(v,k){if(/^utm_|^src$/.test(k))keep.set(k,v)});
   document.querySelectorAll('a[href*="pay.kiwify.com.br"]').forEach(function(a){
-    var u=new URL(a.href);keep.forEach(function(v,k){u.searchParams.set(k,v)});a.href=u.toString();
-    a.addEventListener('click',function(){fbq('trackCustom','CliqueComprar')});
+    try{var u=new URL(a.href);keep.forEach(function(v,k){u.searchParams.set(k,v)});a.href=u.toString();}catch(e){}
+    a.addEventListener('click',function(){fbq('trackCustom','CliqueComprar',{content_name:a.getAttribute('data-produto')||'Filho meu'})});
   });
   // Conta como cadastro (Lead) quando o formulário da Semana 1 é concluído
   // (o aviso de download aparece só depois de um envio válido).
@@ -262,765 +322,252 @@ document.addEventListener('DOMContentLoaded',function(){
 });
 </script>
 <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=2146801305916148&ev=PageView&noscript=1"></noscript>
-<style>
-.estante12{display:grid;grid-template-columns:repeat(6,1fr);gap:10px 8px;width:100%}
-@media (min-width:900px){.estante12{grid-template-columns:repeat(4,1fr);gap:12px 10px;width:min(100%,520px)}}
-.estante12 a{display:block}
-.estante12 img{width:100%;height:auto;border-radius:2px 5px 5px 2px;box-shadow:inset 3px 0 0 rgba(255,255,255,.22),0 12px 16px -10px rgba(35,38,45,.45)}
-.kits4{display:grid;gap:18px;margin-top:26px}
-.k4{display:flex;flex-direction:column;background:#fff;border:1px solid var(--pauta);border-top:7px solid var(--k);border-radius:10px;padding:22px 22px 24px}
-.k4 h3{font-size:26px;color:var(--k)}
-.k4-res{color:var(--lapis);margin:4px 0 0;font-size:15.5px}
-.k4 ul{padding-left:20px;margin:14px 0 6px;display:grid;gap:4px;font-size:16px}
-.k4-nota{font-size:14.5px;color:var(--lapis);margin:6px 0 0}
-.k4 .valor{margin:auto 0 14px;padding-top:14px}
-.k4 .valor strong{font-size:40px}
-.k4 .btn{display:block;text-align:center;background:var(--k)}
-.avulsos-12{margin-top:34px}
-@media (min-width:700px){.kits4{grid-template-columns:1fr 1fr}.avulsos-12 .avulsos{columns:2;column-gap:40px}.avulsos-12 .avulsos li{break-inside:avoid}}
-@media (min-width:1100px){.kits4{grid-template-columns:repeat(4,1fr)}}
-.pos-fundador{display:none}
-.pos7 .ate-fundador{display:none}.pos7 .pos-fundador{display:revert}.pos7 .valor.pos-fundador{display:flex}
-</style>
-<script>if(new Date()>=new Date('2026-11-08T00:00:00-03:00'))document.documentElement.classList.add('pos7');</script>
 </head>
 <body>
 
-<header class="w top">
-  <span class="gb" aria-hidden="true">GB</span>
-  <div><b>Gullit Belo</b><a href="https://www.instagram.com/mentoriagb/">@mentoriagb</a></div>
-  <a class="voltar" href="https://gbelovaidarcerto-design.github.io/">Todos os materiais</a>
-</header>
+<header class="topo"><div class="w">
+  <a class="marca" href="./"><img src="ferias/img/escudo.webp" alt="" width="26" height="37"><span class="sc">Filho meu Educacional</span></a>
+  <nav><a href="https://gbelovaidarcerto-design.github.io/">Todos os materiais</a></nav>
+</div><div class="filete"></div></header>
 
-<main class="w">
-  <a class="ferias-faixa" href="ferias/?utm_source=site&amp;utm_campaign=ferias" aria-label="Férias com Filho meu: cadernos de férias de 3 a 12 anos">
-    <span class="ff-capas"><img src="ferias/img/capa-semente.webp" alt="" style="background:#EE7B30"><img src="ferias/img/capa-broto.webp" alt="" style="background:#E0567A"><img src="ferias/img/capa-arvore.webp" alt="" style="background:#5E9C2F"><img src="ferias/img/capa-fruto.webp" alt="" style="background:#6B3FA0"></span>
-    <span class="ff-txt"><small>Novo · cadernos de férias</small><strong>Férias com Filho meu</strong><span>Seis semanas para fazer junto, um caderno para cada idade, de 3 a 12 anos.</span><em>Ver os cadernos</em></span>
-  </a>
-  <style>
-  .ferias-faixa{display:flex;gap:22px;align-items:center;flex-wrap:wrap;margin:8px 0 18px;padding:18px;background:#1B3352;color:#fff;text-decoration:none;border-top:6px solid;border-image:linear-gradient(90deg,#EE7B30 0 25%,#E0567A 25% 50%,#5E9C2F 50% 75%,#6B3FA0 75%) 1}
-  .ff-capas{display:flex;gap:6px;flex:0 0 auto}
-  .ff-capas img{width:62px;height:auto;display:block;padding:3px}
-  .ff-txt{display:flex;flex-direction:column;gap:4px;flex:1 1 260px}
-  .ff-txt small{font-family:'EB Garamond',Georgia,serif;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#E2C27A}
-  .ff-txt strong{font-family:'EB Garamond',Georgia,serif;font-size:clamp(26px,5vw,34px);line-height:1.05}
-  .ff-txt span{font-size:15.5px;line-height:1.45;color:#E4E9F0}
-  .ff-txt em{font-style:normal;align-self:flex-start;margin-top:6px;background:#fff;color:#1B3352;font-weight:700;padding:9px 18px;font-size:15px}
-  </style>
-  <aside class="vip" id="lista-vip" aria-label="Lista VIP da Black Friday">
-    <div class="vip-txt"><span class="vip-chip">★ Black Friday Filho meu ★</span><strong>Entre na Lista VIP</strong><span>Quem estiver na lista recebe as condições especiais da Black Friday em primeira mão, no WhatsApp. Para entrar, pegue um dos materiais grátis:</span></div>
-    <div class="vip-acoes"><a href="#amostra">Amostra da Semana 1</a><a href="patriota/?utm_source=instagram&amp;utm_campaign=lista-vip">Filho Patriota</a></div>
-  </aside>
-  <style>
-  .vip{display:flex;gap:22px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:8px 0 26px;padding:22px 26px;border-radius:20px;background:radial-gradient(120% 140% at 20% 0%,#1C3557 0%,#0F1F35 70%);color:#FBF8F1;box-shadow:0 10px 30px rgba(15,31,53,.18)}
-  .vip-txt{display:flex;flex-direction:column;gap:6px;flex:1 1 380px}
-  .vip-chip{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#E2C27A;border:1.5px solid #C9A35A;border-radius:999px;padding:5px 14px}
-  .vip-txt strong{font-family:Literata,Georgia,serif;font-size:clamp(24px,4.6vw,32px);color:#E2C27A;line-height:1.1}
-  .vip-txt span:last-child{font-size:15.5px;line-height:1.5;color:#D5DEE8}
-  .vip-acoes{display:flex;gap:10px;flex-wrap:wrap}
-  .vip-acoes a{display:inline-block;text-decoration:none;font-weight:700;font-size:16px;padding:13px 20px;border-radius:12px;background:#E2C27A;color:#0F1F35}
-  .vip-acoes a+a{background:transparent;color:#E2C27A;border:1.5px solid #C9A35A}
-  </style>
-  <script>(function(){ if(new Date()<new Date('2026-11-28T00:00:00-03:00')) return; var v=document.getElementById('lista-vip'); if(!v) return;
-    v.querySelector('.vip-chip').textContent='★ Lista VIP Filho meu ★';
-    v.querySelector('.vip-txt span:last-child').textContent='Quem está na lista recebe primeiro os descontos, os presentes e as novidades da coleção, no WhatsApp. Para entrar, pegue um dos materiais grátis:'; })();</script>
-  <div class="abre">
-    <div>
-      <p class="selo">Coleção Peregrininhos, de Gullit e Gislaine Belo</p>
-      <h1>Filho meu</h1>
-      <p class="sub">A família inteira à mesa com o mesmo versículo de Provérbios, e cada filho aprendendo no seu nível.</p>
-      <p class="txt">12 livros ilustrados, de escrita, matemática, leitura, ciências, caráter, saúde e finanças, com as 40 semanas já planejadas.</p>
-      <p class="abre-preco">Livros a partir de R$ 69 e kits de três livros por R$ 179.<span class="ate-fundador"> O Kit Trio sai por <mark>R$ 139</mark> até 7 de novembro.</span> A lição 1 de cada livro é grátis.</p>
-      <div class="acoes"><a class="btn" href="#oferta">Ver os kits</a><a class="link" href="#novos">Conhecer os 12 títulos</a></div>
-    </div>
-    <div class="vitrine"><div class="estante12"><a href="#livro-caligrafia"><img src="img/capas/caligrafia.webp" width="520" height="736" alt="Capa do livro Caligrafia cursiva com Provérbios" fetchpriority="high"></a><a href="#livro-tabuada"><img src="img/capas/tabuada.webp" width="520" height="736" alt="Capa do livro Tabuada com Provérbios" fetchpriority="high"></a><a href="#livro-leitura"><img src="img/capas/leitura.webp" width="520" height="736" alt="Capa do livro Leitura e interpretação com Provérbios" fetchpriority="high"></a><a href="#livro-gramatica"><img src="img/capas/gramatica.webp" width="520" height="736" alt="Capa do livro Gramática com Provérbios" fetchpriority="high"></a><a href="#livro-escrita"><img src="img/capas/escrita.webp" width="520" height="736" alt="Capa do livro Escrita e redação com Provérbios"></a><a href="#livro-palavras"><img src="img/capas/palavras.webp" width="520" height="736" alt="Capa do livro Palavras que edificam"></a><a href="#livro-ciencias"><img src="img/capas/ciencias.webp" width="520" height="736" alt="Capa do livro Pequenos e sábios: ciências da natureza"></a><a href="#livro-medidas"><img src="img/capas/medidas.webp" width="520" height="736" alt="Capa do livro Contas, medidas e pesos justos"></a><a href="#livro-logica"><img src="img/capas/logica.webp" width="520" height="736" alt="Capa do livro Pensar bem"></a><a href="#livro-carater"><img src="img/capas/carater.webp" width="520" height="736" alt="Capa do livro Caráter e domínio próprio"></a><a href="#livro-saude"><img src="img/capas/saude.webp" width="520" height="736" alt="Capa do livro Corpo, saúde e alegria"></a><a href="#livro-financas"><img src="img/capas/financas.webp" width="520" height="736" alt="Capa do livro Dinheiro, trabalho e generosidade"></a></div>
+<main>
+<div class="abre" id="abre">
+  <div class="w">
+    <span class="sc">Coleção Peregrininhos · 12 livros</span>
+    <h1>Filho meu</h1>
+    <p class="sub">A família inteira à mesa com o mesmo versículo de Provérbios, e cada filho aprendendo no seu nível.</p>
+    <p class="dor">Para a família que quer ensinar os filhos com a Escritura no centro e não tem tempo de planejar a semana. Fizemos 12 livros ilustrados, de escrita, matemática, leitura, ciências, caráter, saúde e finanças, com as 40 semanas já prontas: é abrir na lição da semana e começar.</p>
+    <p class="assina">Gullit e Gislaine</p>
+  </div>
+  <div class="quatro" id="novos">
+    <a href="#kit-trio" style="--c:#7A5410"><span class="leque"><span class="capa"><img src="img/capas/caligrafia.webp" width="520" height="736" alt="Capa do livro Caligrafia cursiva com Provérbios" fetchpriority="high"></span><span class="capa"><img src="img/capas/tabuada.webp" width="520" height="736" alt="Capa do livro Tabuada com Provérbios" fetchpriority="high"></span><span class="capa"><img src="img/capas/leitura.webp" width="520" height="736" alt="Capa do livro Leitura e interpretação com Provérbios" fetchpriority="high"></span></span><b>Kit Trio</b><span class="kres">caligrafia, tabuada e leitura</span></a>
+    <a href="#kit-linguagem" style="--c:#5E4110"><span class="leque"><span class="capa"><img src="img/capas/gramatica.webp" width="520" height="736" alt="Capa do livro Gramática com Provérbios" fetchpriority="high"></span><span class="capa"><img src="img/capas/escrita.webp" width="520" height="736" alt="Capa do livro Escrita e redação com Provérbios" fetchpriority="high"></span><span class="capa"><img src="img/capas/palavras.webp" width="520" height="736" alt="Capa do livro Palavras que edificam" fetchpriority="high"></span></span><b>Kit Linguagem</b><span class="kres">gramática, escrita e vocabulário</span></a>
+    <a href="#kit-mundo" style="--c:#8A611A"><span class="leque"><span class="capa"><img src="img/capas/ciencias.webp" width="520" height="736" alt="Capa do livro Pequenos e sábios: ciências da natureza"></span><span class="capa"><img src="img/capas/medidas.webp" width="520" height="736" alt="Capa do livro Contas, medidas e pesos justos"></span><span class="capa"><img src="img/capas/logica.webp" width="520" height="736" alt="Capa do livro Pensar bem"></span></span><b>Kit Mundo</b><span class="kres">ciências, medidas e raciocínio</span></a>
+    <a href="#kit-vida" style="--c:#553A0B"><span class="leque"><span class="capa"><img src="img/capas/carater.webp" width="520" height="736" alt="Capa do livro Caráter e domínio próprio"></span><span class="capa"><img src="img/capas/saude.webp" width="520" height="736" alt="Capa do livro Corpo, saúde e alegria"></span><span class="capa"><img src="img/capas/financas.webp" width="520" height="736" alt="Capa do livro Dinheiro, trabalho e generosidade"></span></span><b>Kit Vida</b><span class="kres">caráter, saúde e dinheiro</span></a>
+  </div>
+  <div class="w">
+    <div class="acao"><a class="btn" href="#oferta" id="cta1">Ver os kits</a><a class="btn vazado" href="#amostra">Baixar a Semana 1 grátis</a></div>
+    <p class="quando">Livros a partir de R$ 69 e kits de três por R$ 179. A lição 1 de cada livro é grátis.</p>
+    <p class="discreto">PDF por e-mail logo após a confirmação, para imprimir em casa · garantia de 7 dias</p>
+    <div class="faixas">
+      <a class="ferias-faixa" href="ferias/?utm_source=site&amp;utm_campaign=ferias" aria-label="Férias com Filho meu: cadernos de férias de 3 a 12 anos">
+        <span class="ff-capas"><img src="ferias/img/capa-semente.webp" alt="" style="background:#EE7B30"><img src="ferias/img/capa-broto.webp" alt="" style="background:#E0567A"><img src="ferias/img/capa-arvore.webp" alt="" style="background:#5E9C2F"><img src="ferias/img/capa-fruto.webp" alt="" style="background:#6B3FA0"></span>
+        <span class="ff-txt"><small>Novo · cadernos de férias</small><strong>Férias com Filho meu</strong><span>Seis semanas para fazer junto, um caderno para cada idade, de 3 a 12 anos.</span><em>Ver os cadernos</em></span>
+      </a>
+      <aside class="vip" id="lista-vip" aria-label="Lista VIP da Black Friday">
+        <div class="vip-txt"><span class="vip-chip">★ Black Friday Filho meu ★</span><strong>Entre na Lista VIP</strong><span>Quem estiver na lista recebe as condições especiais da Black Friday em primeira mão, no WhatsApp. Para entrar, pegue um dos materiais grátis:</span></div>
+        <div class="vip-acoes"><a href="#amostra">Amostra da Semana 1</a><a href="patriota/?utm_source=instagram&amp;utm_campaign=lista-vip">Filho Patriota</a></div>
+      </aside>
+      <script>(function(){ if(new Date()<new Date('2026-11-28T00:00:00-03:00')) return; var v=document.getElementById('lista-vip'); if(!v) return;
+        v.querySelector('.vip-chip').textContent='★ Lista VIP Filho meu ★';
+        v.querySelector('.vip-txt span:last-child').textContent='Quem está na lista recebe primeiro os descontos, os presentes e as novidades da coleção, no WhatsApp. Para entrar, pegue um dos materiais grátis:'; })();</script>
     </div>
   </div>
-  <div class="pauta" id="pauta"><span class="cur">Filho meu, ouve a instrução de teu pai; e não abandones a doutrina de tua mãe.</span><small>Provérbios 1.8, Bíblia Livre, o versículo da lição 1 nos 12 livros</small></div>
+</div>
 
-<!-- novos:inicio --><style>
-/* Os 12 títulos: estante com filtro por kit */
-.n12 .filtro{margin-top:26px}
-.n12 .of{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin-top:22px;padding:18px 20px;background:#fff;border:1px solid var(--pauta);border-left:5px solid var(--caneta);border-radius:8px}
-.n12 .of[hidden]{display:none}
-.n12 .of p{margin:0;flex:1 1 320px;max-width:none}
-.n12 .of .btn{flex:none}
-.tits{list-style:none;padding:0;margin:30px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 18px}
-.tit{display:flex;flex-direction:column;align-items:flex-start;scroll-margin-top:90px}
-.tit[hidden]{display:none}
-.tit-capa{appearance:none;background:none;border:0;margin:0;font:inherit;cursor:pointer;display:block;width:100%;border-bottom:7px solid var(--pauta);padding:10px 8% 0}
-.tit-capa img{width:100%;height:auto;border-radius:2px 5px 5px 2px;box-shadow:inset 3px 0 0 rgba(255,255,255,.25),0 2px 2px rgba(35,38,45,.12),0 16px 20px -12px rgba(35,38,45,.45);transition:transform .25s cubic-bezier(.2,.75,.25,1)}
-.tit-capa:hover img,.tit-capa:focus-visible img{transform:translateY(-6px)}
-.tit-capa:focus-visible{outline:3px solid var(--caneta);outline-offset:4px}
-.tit-a{font-size:13.5px;color:var(--lapis);margin-top:14px}
-.tit h3{font-size:19px;line-height:1.22;margin-top:3px}
-.tit p{font-size:15px;color:var(--lapis);margin:6px 0 0;display:none}
-.tit-k{font-size:13px;font-weight:600;color:var(--verde);margin-top:6px}
-.tit-acoes{display:flex;flex-direction:column;align-items:flex-start;gap:2px;margin-top:8px;font-size:15px}
-.tit-acoes .cb-abre{margin:0;font-size:15px}
-.tit-acoes a{font-weight:600;color:var(--caneta);text-underline-offset:3px}
-.tit-acoes a.am{color:var(--grafite);font-weight:700}
-.n12 .miudo{margin-top:30px}
-@media (min-width:700px){.tits{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 28px}.tit p{display:block}}
-@media (min-width:1000px){.tits{grid-template-columns:repeat(4,minmax(0,1fr))}}
-@media (prefers-reduced-motion:reduce){.tit-capa img{transition:none}}
-</style>
-  <section class="bloco n12" id="novos" aria-labelledby="t-novos">
-    <h2 id="t-novos">Os 12 títulos</h2>
-    <p class="lead">Toque na capa para ver o que cada livro ensina. A lição 1 de cada um é grátis.</p>
-    <fieldset class="filtro"><legend>Ver:</legend><input type="radio" name="kit" id="f-todos" value="todos" checked><label for="f-todos">Todos os 12</label><input type="radio" name="kit" id="f-trio" value="trio"><label for="f-trio">Kit Trio</label><input type="radio" name="kit" id="f-kit-linguagem" value="kit-linguagem"><label for="f-kit-linguagem">Kit Linguagem</label><input type="radio" name="kit" id="f-kit-mundo" value="kit-mundo"><label for="f-kit-mundo">Kit Mundo</label><input type="radio" name="kit" id="f-kit-vida" value="kit-vida"><label for="f-kit-vida">Kit Vida</label></fieldset>
-    <div aria-live="polite">
-      <div class="of" data-of="todos">
-        <p>Cada livro funciona sozinho e também faz parte de um kit de três. <b>Não sabe qual escolher?</b> O teste indica em três perguntas.</p>
-        <a class="btn" href="#comecar">Fazer o teste</a><a class="link" href="#oferta">Ver os kits</a>
-      </div>
-      <div class="of" data-of="trio" hidden>
-        <p><b>Kit Trio:</b> caligrafia, tabuada e leitura, com os três bônus. <span class="ate-fundador"><mark>R$ 139</mark> até 7 de novembro (depois, R$ 179).</span><span class="pos-fundador">R$ 179 pelos três (R$ 217 separados).</span></p>
-        <a class="btn" href="https://pay.kiwify.com.br/YK88Rgx">Comprar o Kit Trio</a>
-      </div>
-      <div class="of" data-of="kit-linguagem" hidden>
-        <p><b>Kit Linguagem:</b> Gramática com Provérbios, Escrita e redação com Provérbios, Palavras que edificam. R$ 179 pelos três (R$ 237 separados).</p>
-        <a class="btn" href="https://pay.kiwify.com.br/ZsjOC7U">Comprar o Kit Linguagem</a>
-      </div>
-      <div class="of" data-of="kit-mundo" hidden>
-        <p><b>Kit Mundo:</b> Pequenos e sábios: ciências da natureza, Contas, medidas e pesos justos, Pensar bem. R$ 179 pelos três (R$ 237 separados).</p>
-        <a class="btn" href="https://pay.kiwify.com.br/TVlx6tL">Comprar o Kit Mundo</a>
-      </div>
-      <div class="of" data-of="kit-vida" hidden>
-        <p><b>Kit Vida:</b> Caráter e domínio próprio, Corpo, saúde e alegria, Dinheiro, trabalho e generosidade. R$ 179 pelos três (R$ 237 separados).</p>
-        <a class="btn" href="https://pay.kiwify.com.br/m7llBqF">Comprar o Kit Vida</a>
-      </div>
-    </div>
-    <ul class="tits">
-      <li class="tit" data-kit="trio" id="livro-caligrafia">
-        <button type="button" class="tit-capa" data-painel="cb-caligrafia" aria-label="Ver o que o livro Caligrafia cursiva com Provérbios ensina">
-          <img src="img/capas/caligrafia.webp" width="520" height="736" alt="Capa do livro Filho meu: Caligrafia cursiva com Provérbios" loading="lazy">
-        </button>
-        <span class="tit-a">Escrita, 257 páginas</span>
-        <h3>Caligrafia cursiva com Provérbios</h3>
-        <p>A letra cursiva do primeiro traço até a carta escrita à mão para o pai.</p>
-        <span class="tit-k">Kit Trio</span>
-        <div class="tit-acoes">
-          <button type="button" class="cb-abre" data-painel="cb-caligrafia">O que o livro ensina</button>
-          <a href="https://pay.kiwify.com.br/BD0fOgB">Comprar por R$ 69</a>
-        </div>
-      </li>
-      <li class="tit" data-kit="trio" id="livro-tabuada">
-        <button type="button" class="tit-capa" data-painel="cb-tabuada" aria-label="Ver o que o livro Tabuada com Provérbios ensina">
-          <img src="img/capas/tabuada.webp" width="520" height="736" alt="Capa do livro Filho meu: Tabuada com Provérbios" loading="lazy">
-        </button>
-        <span class="tit-a">Matemática, 256 páginas</span>
-        <h3>Tabuada com Provérbios</h3>
-        <p>A multiplicação e a divisão entendidas antes de decoradas: objeto, desenho e só então número.</p>
-        <span class="tit-k">Kit Trio</span>
-        <div class="tit-acoes">
-          <button type="button" class="cb-abre" data-painel="cb-tabuada">O que o livro ensina</button>
-          <a href="https://pay.kiwify.com.br/xC9i17r">Comprar por R$ 69</a>
-        </div>
-      </li>
-      <li class="tit" data-kit="trio" id="livro-leitura">
-        <button type="button" class="tit-capa" data-painel="cb-leitura" aria-label="Ver o que o livro Leitura e interpretação com Provérbios ensina">
-          <img src="img/capas/leitura.webp" width="520" height="736" alt="Capa do livro Filho meu: Leitura e interpretação com Provérbios" loading="lazy">
-        </button>
-        <span class="tit-a">Leitura, 308 páginas</span>
-        <h3>Leitura e interpretação com Provérbios</h3>
-        <p>Oitenta textos originais para ler, reler e entender, com registro de fluência.</p>
-        <span class="tit-k">Kit Trio</span>
-        <div class="tit-acoes">
-          <button type="button" class="cb-abre" data-painel="cb-leitura">O que o livro ensina</button>
-          <a href="https://pay.kiwify.com.br/6rBavjT">Comprar por R$ 79</a>
-        </div>
-      </li>
-      <li class="tit" data-kit="kit-linguagem" id="livro-gramatica">
-        <button type="button" class="tit-capa" data-painel="cb-gramatica" aria-label="Ver o que o livro Gramática com Provérbios ensina">
-          <img src="img/capas/gramatica.webp" width="520" height="736" alt="Capa do livro Filho meu: Gramática com Provérbios" loading="lazy">
-        </button>
-        <span class="tit-a">Língua portuguesa, 364 páginas</span>
-        <h3>Gramática com Provérbios</h3>
-        <p>A gramática estudada no próprio versículo da semana: classes de palavras, frase, pontuação, concordância e acentuação, do nome das coisas à análise da oração.</p>
-        <span class="tit-k">Kit Linguagem</span>
-        <div class="tit-acoes">
-          <button type="button" class="cb-abre" data-painel="cb-gramatica">O que o livro ensina</button>
-          <a class="am" href="amostra/titulos/filho-meu-gramatica-amostra.pdf" target="_blank" rel="noopener">Ver amostra grátis (lição 1)</a>
-          <a href="https://pay.kiwify.com.br/3faJbim">Comprar por R$ 79</a>
-        </div>
-      </li>
-      <li class="tit" data-kit="kit-linguagem" id="livro-escrita">
-        <button type="button" class="tit-capa" data-painel="cb-escrita" aria-label="Ver o que o livro Escrita e redação com Provérbios ensina">
-          <img src="img/capas/escrita.webp" width="520" height="736" alt="Capa do livro Filho meu: Escrita e redação com Provérbios" loading="lazy">
-        </button>
-        <span class="tit-a">Língua portuguesa, 311 páginas</span>
-        <h3>Escrita e redação com Provérbios</h3>
-        <p>Contar, planejar, escrever, revisar e ler para alguém: bilhetes, listas, relatos, instruções, cartas e textos de opinião, um gênero por semana.</p>
-        <span class="tit-k">Kit Linguagem</span>
-        <div class="tit-acoes">
-          <button type="button" class="cb-abre" data-painel="cb-escrita">O que o livro ensina</button>
-          <a class="am" href="amostra/titulos/filho-meu-escrita-amostra.pdf" target="_blank" rel="noopener">Ver amostra grátis (lição 1)</a>
-          <a href="https://pay.kiwify.com.br/uKHyoRU">Comprar por R$ 79</a>
-        </div>
-      </li>
-      <li class="tit" data-kit="kit-linguagem" id="livro-palavras">
-        <button type="button" class="tit-capa" data-painel="cb-palavras" aria-label="Ver o que o livro Palavras que edificam ensina">
-          <img src="img/capas/palavras.webp" width="520" height="736" alt="Capa do livro Filho meu: Palavras que edificam" loading="lazy">
-        </button>
-        <span class="tit-a">Vida em família, 368 páginas</span>
-        <h3>Palavras que edificam</h3>
-        <p>Ouvir antes de responder, responder com brandura, falar a verdade, pedir e dar perdão, encorajar: o falar e o ouvir em casa, com quadrinhos da família.</p>
-        <span class="tit-k">Kit Linguagem</span>
-        <div class="tit-acoes">
-          <button type="button" class="cb-abre" data-painel="cb-palavras">O que o livro ensina</button>
-          <a class="am" href="amostra/titulos/filho-meu-palavras-amostra.pdf" target="_blank" rel="noopener">Ver amostra grátis (lição 1)</a>
-          <a href="https://pay.kiwify.com.br/DHGddzP">Comprar por R$ 79</a>
-        </div>
-      </li>
-      <li class="tit" data-kit="kit-mundo" id="livro-ciencias">
-        <button type="button" class="tit-capa" data-painel="cb-ciencias" aria-label="Ver o que o livro Pequenos e sábios: ciências da natureza ensina">
-          <img src="img/capas/ciencias.webp" width="520" height="736" alt="Capa do livro Filho meu: Pequenos e sábios: ciências da natureza" loading="lazy">
-        </button>
-        <span class="tit-a">Ciências, 363 páginas</span>
-        <h3>Pequenos e sábios: ciências da natureza</h3>
-        <p>A família olha a criação: observa o quintal, a cozinha, a praia e o céu, faz uma pergunta, dá um palpite, testa, registra e agradece.</p>
-        <span class="tit-k">Kit Mundo</span>
-        <div class="tit-acoes">
-          <button type="button" class="cb-abre" data-painel="cb-ciencias">O que o livro ensina</button>
-          <a class="am" href="amostra/titulos/filho-meu-ciencias-amostra.pdf" target="_blank" rel="noopener">Ver amostra grátis (lição 1)</a>
-          <a href="https://pay.kiwify.com.br/UgvtUZl">Comprar por R$ 79</a>
-        </div>
-      </li>
-      <li class="tit" data-kit="kit-mundo" id="livro-medidas">
-        <button type="button" class="tit-capa" data-painel="cb-medidas" aria-label="Ver o que o livro Contas, medidas e pesos justos ensina">
-          <img src="img/capas/medidas.webp" width="520" height="736" alt="Capa do livro Filho meu: Contas, medidas e pesos justos" loading="lazy">
-        </button>
-        <span class="tit-a">Matemática, 363 páginas</span>
-        <h3>Contas, medidas e pesos justos</h3>
-        <p>As contas da Tabuada levadas para o mundo: medidas, frações, geometria e dados com a xícara, a balança, o canteiro e o relógio.</p>
-        <span class="tit-k">Kit Mundo</span>
-        <div class="tit-acoes">
-          <button type="button" class="cb-abre" data-painel="cb-medidas">O que o livro ensina</button>
-          <a class="am" href="amostra/titulos/filho-meu-medidas-amostra.pdf" target="_blank" rel="noopener">Ver amostra grátis (lição 1)</a>
-          <a href="https://pay.kiwify.com.br/daNQgME">Comprar por R$ 79</a>
-        </div>
-      </li>
-      <li class="tit" data-kit="kit-mundo" id="livro-logica">
-        <button type="button" class="tit-capa" data-painel="cb-logica" aria-label="Ver o que o livro Pensar bem ensina">
-          <img src="img/capas/logica.webp" width="520" height="736" alt="Capa do livro Filho meu: Pensar bem" loading="lazy">
-        </button>
-        <span class="tit-a">Lógica, 307 páginas</span>
-        <h3>Pensar bem</h3>
-        <p>Observar, comparar, classificar, achar padrões, ligar causa e consequência, separar fato de opinião e dar razões.</p>
-        <span class="tit-k">Kit Mundo</span>
-        <div class="tit-acoes">
-          <button type="button" class="cb-abre" data-painel="cb-logica">O que o livro ensina</button>
-          <a class="am" href="amostra/titulos/filho-meu-logica-amostra.pdf" target="_blank" rel="noopener">Ver amostra grátis (lição 1)</a>
-          <a href="https://pay.kiwify.com.br/K72EuTq">Comprar por R$ 79</a>
-        </div>
-      </li>
-      <li class="tit" data-kit="kit-vida" id="livro-carater">
-        <button type="button" class="tit-capa" data-painel="cb-carater" aria-label="Ver o que o livro Caráter e domínio próprio ensina">
-          <img src="img/capas/carater.webp" width="520" height="736" alt="Capa do livro Filho meu: Caráter e domínio próprio" loading="lazy">
-        </button>
-        <span class="tit-a">Virtudes, 347 páginas</span>
-        <h3>Caráter e domínio próprio</h3>
-        <p>O caráter do filho sábio de Provérbios (humildade, verdade, paciência, domínio próprio, diligência, coragem, gratidão e fidelidade), com histórias para ler em voz alta.</p>
-        <span class="tit-k">Kit Vida</span>
-        <div class="tit-acoes">
-          <button type="button" class="cb-abre" data-painel="cb-carater">O que o livro ensina</button>
-          <a class="am" href="amostra/titulos/filho-meu-carater-amostra.pdf" target="_blank" rel="noopener">Ver amostra grátis (lição 1)</a>
-          <a href="https://pay.kiwify.com.br/BAO9yDK">Comprar por R$ 79</a>
-        </div>
-      </li>
-      <li class="tit" data-kit="kit-vida" id="livro-saude">
-        <button type="button" class="tit-capa" data-painel="cb-saude" aria-label="Ver o que o livro Corpo, saúde e alegria ensina">
-          <img src="img/capas/saude.webp" width="520" height="736" alt="Capa do livro Filho meu: Corpo, saúde e alegria" loading="lazy">
-        </button>
-        <span class="tit-a">Saúde, 354 páginas</span>
-        <h3>Corpo, saúde e alegria</h3>
-        <p>Cuidar, junto, do corpo que Deus fez: dormir, comer, beber água, brincar lá fora, lavar as mãos, proteger-se e viver com alegria. Cada recomendação cita o documento oficial de onde vem.</p>
-        <span class="tit-k">Kit Vida</span>
-        <div class="tit-acoes">
-          <button type="button" class="cb-abre" data-painel="cb-saude">O que o livro ensina</button>
-          <a class="am" href="amostra/titulos/filho-meu-saude-amostra.pdf" target="_blank" rel="noopener">Ver amostra grátis (lição 1)</a>
-          <a href="https://pay.kiwify.com.br/nblvRkL">Comprar por R$ 79</a>
-        </div>
-      </li>
-      <li class="tit" data-kit="kit-vida" id="livro-financas">
-        <button type="button" class="tit-capa" data-painel="cb-financas" aria-label="Ver o que o livro Dinheiro, trabalho e generosidade ensina">
-          <img src="img/capas/financas.webp" width="520" height="736" alt="Capa do livro Filho meu: Dinheiro, trabalho e generosidade" loading="lazy">
-        </button>
-        <span class="tit-a">Finanças, 408 páginas</span>
-        <h3>Dinheiro, trabalho e generosidade</h3>
-        <p>Trabalhar, guardar, gastar com sabedoria e dar com alegria, como mordomos do que Deus confia.</p>
-        <span class="tit-k">Kit Vida</span>
-        <div class="tit-acoes">
-          <button type="button" class="cb-abre" data-painel="cb-financas">O que o livro ensina</button>
-          <a class="am" href="amostra/titulos/filho-meu-financas-amostra.pdf" target="_blank" rel="noopener">Ver amostra grátis (lição 1)</a>
-          <a href="https://pay.kiwify.com.br/VREdqQ6">Comprar por R$ 79</a>
-        </div>
-      </li>
-    </ul>
-    <p class="miudo">Todos em PDF, na mesma área de membros da Kiwify. Toda correção ou melhoria posterior chega de graça, e a garantia de 7 dias vale para cada livro.</p>
-  </section>
-<script>
-/* Estante: o filtro mostra os livros do kit escolhido e a oferta dele; a capa abre o painel do livro. */
-(function () {
-  var s = document.getElementById('novos'); if (!s) return;
-  function aplica(k) {
-    s.querySelectorAll('.tit').forEach(function (li) { li.hidden = !(k === 'todos' || li.dataset.kit === k); });
-    s.querySelectorAll('.of').forEach(function (o) { o.hidden = o.dataset.of !== k; });
-  }
-  s.querySelectorAll('input[name=kit]').forEach(function (r) { r.addEventListener('change', function () { aplica(r.value); }); });
-  s.querySelectorAll('.tit-capa').forEach(function (b) {
-    b.addEventListener('click', function () { var d = document.getElementById(b.dataset.painel); if (d && d.showModal) { d.showModal(); d.scrollTop = 0; } });
-  });
-  var m = location.hash.match(/^#kit-(trio|kit-[a-z]+)$/);
-  if (m) { var r = document.getElementById('f-' + m[1]); if (r) { r.checked = true; aplica(m[1]); } }
-})();
-</script>
-<!-- novos:fim -->
-
-<!-- interacao:inicio -->
-<style>
-/* Descubra por onde começar */
-.qz{margin-top:26px;background:#fff;border:1px solid var(--pauta);border-radius:18px;padding:22px 20px 24px;box-shadow:0 18px 40px -28px rgba(31,58,95,.45)}
-.qz-topo{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px;color:var(--lapis)}
-.qz-barra{flex:1;height:6px;border-radius:9px;background:var(--pauta);overflow:hidden;max-width:220px}
-.qz-barra i{display:block;height:100%;width:0;background:var(--mar);border-radius:9px;transition:width .35s ease}
-.qz-passo{display:none;animation:qzEntra .35s ease both}.qz-passo.on{display:block}
-@keyframes qzEntra{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.qz h3{font-size:clamp(21px,4.4vw,26px);margin:14px 0 4px}
-.qz .dica{font-size:15px;color:var(--lapis);margin:0 0 14px}
-.qz-ops{display:grid;gap:10px}
-@media (min-width:640px){.qz-ops.duas{grid-template-columns:1fr 1fr}.qz-ops.tres{grid-template-columns:repeat(3,1fr)}}
-.qz-op{appearance:none;text-align:left;font:inherit;cursor:pointer;background:#FBF8F1;border:1.5px solid var(--pauta);border-radius:12px;padding:13px 14px;color:var(--grafite);display:flex;gap:10px;align-items:flex-start;transition:border-color .2s,background .2s,transform .15s}
-.qz-op:hover{border-color:var(--mar);transform:translateY(-1px)}
-.qz-op:focus-visible{outline:3px solid var(--caneta);outline-offset:2px}
-.qz-op[aria-pressed=true]{border-color:var(--k,var(--mar));background:#fff;box-shadow:inset 0 0 0 1.5px var(--k,var(--mar))}
-.qz-op b{display:block;font-weight:600}.qz-op small{display:block;color:var(--lapis);font-size:13.5px;margin-top:2px}
-.qz-op .ck{flex:none;width:20px;height:20px;border-radius:6px;border:1.5px solid var(--pauta);margin-top:1px;display:grid;place-items:center;font-size:13px;color:#fff}
-.qz-op[aria-pressed=true] .ck{background:var(--k,var(--mar));border-color:var(--k,var(--mar))}
-.qz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;gap:12px}
-.qz-nav .btn[disabled]{opacity:.45;pointer-events:none}
-.qz-volta{background:none;border:0;font:inherit;font-weight:600;color:var(--caneta);cursor:pointer;padding:6px 0}
-.qz-res h3{margin-top:6px}
-.qz-nivel{display:inline-block;font-size:14px;font-weight:600;padding:5px 12px;border-radius:999px;background:#EEF2F8;color:var(--mar);margin-top:6px}
-.qz-livros{display:grid;gap:12px;margin-top:16px}
-.qz-livro{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;padding:12px;border:1px solid var(--pauta);border-left:5px solid var(--k);border-radius:12px;background:#fff}
-.qz-livro img{width:64px;height:auto;border-radius:2px 4px 4px 2px;box-shadow:0 8px 12px -8px rgba(0,0,0,.45)}
-.qz-livro .dor{font-size:13.5px;color:var(--lapis)}
-.qz-livro h4{font:650 17px/1.25 var(--serif);margin:2px 0 4px}
-.qz-livro p{font-size:15px;margin:0;color:var(--grafite)}
-.qz-livro .lk{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:8px;font-size:14.5px}
-.qz-livro .lk a{font-weight:600;color:var(--caneta)}
-.qz-kit{margin-top:16px;padding:16px;border-radius:14px;background:var(--k);color:#FBF8F1}
-.qz-kit b{font:650 20px/1.2 var(--serif)}.qz-kit p{margin:6px 0 12px;color:#F2EDE2;font-size:15px}
-.qz-kit .btn{background:#FBF8F1;color:var(--grafite)}
-.qz-acoes{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;margin-top:18px;font-size:15px}
-.qz-acoes button{background:none;border:0;font:inherit;font-weight:600;color:var(--caneta);cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:3px}
-/* Montador de pedido */
-.mt{margin-top:34px;border:1px solid var(--pauta);border-radius:18px;padding:20px;background:#fff}
-.mt h3{font-size:21px}
-.mt-grupos{display:grid;gap:16px;margin-top:14px}
-@media (min-width:760px){.mt-grupos{grid-template-columns:1fr 1fr}}
-.mt-g{border-top:5px solid var(--k);padding-top:8px}
-.mt-g>b{font:650 16px var(--serif);color:var(--k)}
-.mt-l{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--pauta);cursor:pointer;font-size:15.5px}
-.mt-l input{width:19px;height:19px;accent-color:var(--k)}
-.mt-l span{flex:1}.mt-l em{font-style:normal;color:var(--lapis);font-size:14px}
-.mt-res{margin:16px -20px -20px;padding:14px 20px;background:#FBF8F1;border-top:1px solid var(--pauta);border-radius:0 0 18px 18px;display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:space-between}
-.mt-tot{font:650 26px var(--serif)}.mt-tot small{display:block;font:500 13.5px var(--sans,inherit);color:var(--verde)}
-.mt-btns{display:flex;flex-wrap:wrap;gap:8px}
-.mt-btns a{font-size:14.5px;font-weight:600;padding:9px 14px;border-radius:10px;background:var(--k,var(--mar));color:#fff;text-decoration:none}
-.mt-vazio{color:var(--lapis);font-size:15px}
-.mt-dica{flex-basis:100%;margin:0 0 4px;font-size:14.5px;color:var(--verde);font-weight:600}
-/* entrada suave das seções */
-.js-rev .rev{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
-.js-rev .rev.vis{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.js-rev .rev{opacity:1;transform:none;transition:none}.qz-passo{animation:none}}
-</style>
-  <section class="bloco" id="comecar" aria-labelledby="t-comecar" hidden>
-    <h2 id="t-comecar">Descubra por onde começar</h2>
-    <p class="lead">Três perguntas. No fim, você vê o nível do seu filho e os livros indicados, com a lição 1 grátis de cada um.</p>
-    <div class="qz" id="qz">
-      <div class="qz-topo"><span class="qz-cont" aria-live="polite">Pergunta 1 de 3</span><span class="qz-barra" aria-hidden="true"><i></i></span></div>
-      <div class="qz-passo on" data-p="1">
-        <h3>Quantos anos tem a criança?</h3>
-        <p class="dica">Se forem vários filhos, escolha o que você quer ajudar primeiro.</p>
-        <div class="qz-ops tres" role="group" aria-label="Idade">
-          <button type="button" class="qz-op" data-v="semente" aria-pressed="false"><span class="ck">✓</span><span><b>3 a 5 anos</b><small>Nível Semente</small></span></button>
-          <button type="button" class="qz-op" data-v="broto" aria-pressed="false"><span class="ck">✓</span><span><b>5 a 7 anos</b><small>Nível Broto</small></span></button>
-          <button type="button" class="qz-op" data-v="arvore" aria-pressed="false"><span class="ck">✓</span><span><b>7 anos ou mais</b><small>Nível Árvore</small></span></button>
-        </div>
-      </div>
-      <div class="qz-passo" data-p="2">
-        <h3>O que mais preocupa você hoje?</h3>
-        <p class="dica">Marque até três.</p>
-        <div class="qz-ops duas" role="group" aria-label="O que preocupa" id="qz-dores"></div>
-      </div>
-      <div class="qz-passo" data-p="3">
-        <h3>Como vocês pretendem usar?</h3>
-        <p class="dica">Os livros servem aos três jeitos.</p>
-        <div class="qz-ops tres" role="group" aria-label="Uso">
-          <button type="button" class="qz-op" data-v="casa" aria-pressed="false"><span class="ck">✓</span><span><b>Como base do estudo em casa</b><small>40 semanas já planejadas</small></span></button>
-          <button type="button" class="qz-op" data-v="reforco" aria-pressed="false"><span class="ck">✓</span><span><b>Como reforço depois da escola</b><small>15 a 30 minutos por dia</small></span></button>
-          <button type="button" class="qz-op" data-v="virtudes" aria-pressed="false"><span class="ck">✓</span><span><b>Num tempo de virtudes em família</b><small>Com a Bíblia aberta</small></span></button>
-        </div>
-      </div>
-      <div class="qz-passo qz-res" data-p="4" aria-live="polite"></div>
-      <div class="qz-nav"><button type="button" class="qz-volta" hidden>‹ Voltar</button><button type="button" class="btn qz-seg" disabled>Continuar</button></div>
-    </div>
-  </section>
-<!-- interacao:fim -->
-
-
-  <section class="bloco" id="oferta" aria-labelledby="t-oferta">
-    <h2 id="t-oferta">Escolha por onde começar</h2>
-    <p class="lead">Quatro kits de três livros, em PDF, para imprimir em casa só o que cada filho usa.</p>
-    <div class="kits4"><div class="k4" style="--k:var(--mar)"><h3>Kit Trio</h3><p class="k4-res">caligrafia, tabuada e leitura</p><ul><li>Caligrafia cursiva com Provérbios</li><li>Tabuada com Provérbios</li><li>Leitura e interpretação com Provérbios</li></ul><p class="k4-nota">Com 3 bônus: Planner do ano, Os 40 versículos e Guia dos pais. Em parceria com a Editora Nadere Reformatie.</p><div class="valor ate-fundador"><s>R$ 217 separados</s><strong><mark>R$ 139</mark></strong><span>até 7/11; depois, R$ 179</span></div><div class="valor pos-fundador"><s>R$ 217 separados</s><strong>R$ 179</strong></div><a class="btn" href="https://pay.kiwify.com.br/YK88Rgx">Comprar o Kit Trio</a></div><div class="k4" style="--k:var(--terra)"><h3>Kit Linguagem</h3><p class="k4-res">gramática, escrita e vocabulário</p><ul><li>Gramática com Provérbios</li><li>Escrita e redação com Provérbios</li><li>Palavras que edificam</li></ul><div class="valor"><s>R$ 237 separados</s><strong>R$ 179</strong></div><a class="btn" href="https://pay.kiwify.com.br/ZsjOC7U">Comprar o Kit Linguagem</a></div><div class="k4" style="--k:var(--verde)"><h3>Kit Mundo</h3><p class="k4-res">ciências, medidas e raciocínio</p><ul><li>Pequenos e sábios: ciências da natureza</li><li>Contas, medidas e pesos justos</li><li>Pensar bem</li></ul><div class="valor"><s>R$ 237 separados</s><strong>R$ 179</strong></div><a class="btn" href="https://pay.kiwify.com.br/TVlx6tL">Comprar o Kit Mundo</a></div><div class="k4" style="--k:var(--ocre)"><h3>Kit Vida</h3><p class="k4-res">caráter, saúde e dinheiro</p><ul><li>Caráter e domínio próprio</li><li>Corpo, saúde e alegria</li><li>Dinheiro, trabalho e generosidade</li></ul><div class="valor"><s>R$ 237 separados</s><strong>R$ 179</strong></div><a class="btn" href="https://pay.kiwify.com.br/m7llBqF">Comprar o Kit Vida</a></div></div>
-    <p class="seguro">Pagamento pela Kiwify, em PDF, com acesso por e-mail logo após a confirmação.</p>
-    <div class="avulsos-12">
-      <h3 style="font-size:21px;margin-bottom:10px">Ou um livro por vez</h3>
-      <ul class="avulsos"><li><a href="https://pay.kiwify.com.br/BD0fOgB"><b>Caligrafia cursiva com Provérbios</b><span>R$ 69</span></a></li><li><a href="https://pay.kiwify.com.br/xC9i17r"><b>Tabuada com Provérbios</b><span>R$ 69</span></a></li><li><a href="https://pay.kiwify.com.br/6rBavjT"><b>Leitura e interpretação com Provérbios</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/3faJbim"><b>Gramática com Provérbios</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/uKHyoRU"><b>Escrita e redação com Provérbios</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/DHGddzP"><b>Palavras que edificam</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/UgvtUZl"><b>Pequenos e sábios: ciências da natureza</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/daNQgME"><b>Contas, medidas e pesos justos</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/K72EuTq"><b>Pensar bem</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/BAO9yDK"><b>Caráter e domínio próprio</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/nblvRkL"><b>Corpo, saúde e alegria</b><span>R$ 79</span></a></li><li><a href="https://pay.kiwify.com.br/VREdqQ6"><b>Dinheiro, trabalho e generosidade</b><span>R$ 79</span></a></li></ul>
-    </div>
-<!-- montador:inicio -->
-    <div class="mt" id="montador">
-      <h3>Monte o seu pedido</h3>
-      <p class="mt-vazio" style="margin:6px 0 0">Marque os livros que quer levar. Quando os três de um kit estão marcados, o preço do kit entra sozinho.</p>
-      <div class="mt-grupos"></div>
-      <div class="mt-res"><div class="mt-tot" aria-live="polite">R$ 0</div><div class="mt-btns"></div></div>
-    </div>
-<!-- montador:fim -->
-    <p class="garantia"><b>Garantia de 7 dias.</b> Conheça o material com calma. Se não for o que sua família precisa, peça o reembolso integral.</p>
-  </section>
-
-  <section class="bloco" id="bonus" aria-labelledby="t-bonus">
-    <h2 id="t-bonus">Os três bônus do Kit Trio</h2>
-    <p class="lead">Quem leva o Kit Trio recebe também:</p>
-    <div class="bonus">
-      <div class="bn"><img src="img/bonus-1.webp" width="579" height="819" alt="Capa do bônus Planner do ano" loading="lazy"><span class="pg">Bônus 1, 16 páginas</span><h3>Planner do ano</h3><p>O calendário das 40 semanas e as páginas que cada filho imprime em cada semana.</p></div>
-      <div class="bn"><img src="img/bonus-2.webp" alt="Cartões do bônus Os 40 versículos" loading="lazy"><span class="pg">Bônus 2, 12 páginas</span><h3>Os 40 versículos</h3><p>Quarenta cartões com a cena de cada lição, para revisar os versículos o ano todo.</p></div>
-      <div class="bn"><img src="img/bonus-3.webp" alt="Capa do bônus Guia dos pais" loading="lazy"><span class="pg">Bônus 3, 9 páginas</span><h3>Guia dos pais</h3><p>Como ensinar Provérbios aos filhos, da correção com graça ao culto doméstico.</p></div>
-    </div>
-  </section>
-
-  <section class="bloco" id="amostra" aria-labelledby="t-amostra">
-    <h2 id="t-amostra">Experimente antes</h2>
-    <p class="lead">A Semana 1 completa de caligrafia, tabuada e leitura, num PDF só. Os outros nove livros têm a lição 1 grátis abaixo de cada capa.</p>
-    <div class="amostra">
-      <div><h3>Baixe grátis a Semana 1</h3><p>Os três livros, nos três níveis. Deixe nome e e-mail, e o PDF baixa na hora.</p></div>
-      <form class="cad" id="cadastro" novalidate>
-        <label>Seu nome<input type="text" name="nome" autocomplete="name" required></label>
-        <label>Seu e-mail<input type="email" name="email" autocomplete="email" inputmode="email" required></label>
-        <label><span>WhatsApp <span class="op">(opcional)</span></span><input type="tel" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="(DDD) 9 0000-0000"></label>
-        <label><span>Idades das crianças <span class="op">(opcional)</span></span><input type="text" name="idades" placeholder="ex.: 4 e 7 anos"></label>
-        <label class="ok full"><input type="checkbox" name="aceite" required><span>Aceito receber a Semana 1 e mensagens sobre a coleção "Filho meu". Posso sair da lista quando quiser. <a href="privacidade/">Política de privacidade</a>.</span></label>
-        <p class="msg full" role="alert" hidden></p>
-        <button class="btn full" type="submit">Baixar a Semana 1 (PDF)</button>
-      </form>
-      <div class="cad-fim" id="cadastro-fim" hidden><b>O download começou.</b><p>Se não abrir, <a href="amostra/filho-meu-amostra-gratis.pdf" download>clique aqui para baixar a Semana 1</a>. Comece na segunda-feira, com a abertura em família.</p></div>
-    </div>
-  </section>
-
-  <section class="bloco cena" id="como-funciona" aria-labelledby="t-como">
-    <img src="img/c8.webp" width="1400" height="940" alt="Ilustração da coleção: a família reunida à mesa com a Bíblia aberta" loading="lazy">
-    <div>
-      <h2 id="t-como" class="t">Como funciona a semana</h2>
-      <p class="lead">Um versículo de Provérbios para a família inteira, e cada filho no seu nível.</p>
-      <ul class="lista">
-        <li><b>Segunda:</b> todos juntos, em 10 minutos, com a ilustração, o versículo, uma conversa e oração.</li>
-        <li><b>Terça a quinta:</b> cada filho faz as páginas do seu nível, de 15 a 30 minutos.</li>
-        <li><b>Sexta:</b> revisão e o versículo de cor.</li>
-      </ul>
-      <p style="margin-top:14px">Em 40 semanas, a família decora 40 versículos de Provérbios.</p>
-    </div>
-  </section>
-
-  <section class="bloco" id="por-dentro" aria-labelledby="t-dentro">
-    <h2 id="t-dentro">Uma lição por dentro</h2>
-    <p class="lead">Páginas reais da lição 1. Escolha o livro e o nível e toque na página para ampliar.</p>
-    <div class="vw">
-      <div class="vw-ctrl">
-        <div class="vw-livros" role="group" aria-label="Livro">
-          <button type="button" data-l="caligrafia" aria-pressed="true">Caligrafia</button><button type="button" data-l="tabuada" aria-pressed="false">Tabuada</button><button type="button" data-l="leitura" aria-pressed="false">Leitura</button>
-        </div>
-        <div class="vw-niveis" role="group" aria-label="Parte da lição">
-          <button type="button" data-n="abertura">Abertura em família</button><button type="button" data-n="semente">Semente, 3 a 5</button><button type="button" data-n="broto">Broto, 5 a 7</button><button type="button" data-n="arvore">Árvore, 7 em diante</button>
-        </div>
-        <p class="vw-leg" aria-live="polite"></p>
-        <div class="vw-nav"><button type="button" class="vw-ant" aria-label="Página anterior">‹</button><span class="vw-pos"></span><button type="button" class="vw-prox" aria-label="Próxima página">›</button></div>
-        <p class="vw-nota">As idades são referência. Cada filho fica no nível em que está e pode mudar durante o ano.</p>
-      </div>
-      <button type="button" class="vw-folha" aria-label="Ampliar a página"><img alt="" width="600" height="849"></button>
-    </div>
-  </section>
-
-  <section class="bloco fe" id="quem-fez" aria-labelledby="t-fe">
-    <div>
-      <h2 id="t-fe" class="t">Feito por pais, com a Escritura no centro</h2>
-      <p class="lead">Gullit e Gislaine Belo, pais de quatro filhos, coordenaram a coleção a partir da fé reformada. As conversas da semana apontam para Deus e para a graça, e não apenas para o comportamento.</p>
-      <p style="margin-top:14px">O método junta práticas com boa base em pesquisa: revisão espaçada, leitura repetida, a matemática do objeto ao desenho e ao número, como em Singapura, e a escrita guiada, do modelo à escrita sozinha.</p>
-      <p class="miudo" style="margin-top:14px">O Kit Trio é publicado em parceria com a Editora Nadere Reformatie, @editoranaderereformatie.</p>
-    </div>
-    <img src="img/c28.webp" width="1400" height="940" alt="Ilustração da coleção: criança lendo a Bíblia à luz de uma lamparina" loading="lazy">
-  </section>
-
-  <section class="bloco" aria-labelledby="t-quem">
-    <h2 id="t-quem">Para quem é</h2>
-    <ul class="lista">
-      <li>Para quem ensina os filhos em casa, como base do estudo ou como reforço depois da escola.</li>
-      <li>Para quem quer um tempo de virtudes em família, com Provérbios como guia.</li>
-      <li>Para quem não tem tempo de planejar e quer abrir o livro e começar.</li>
-    </ul>
-    <p class="miudo" style="margin-top:16px">Talvez não seja para você se procura um currículo de todas as matérias, alinhado série a série com a escola, ou se prefere letra de forma à cursiva.</p>
-  </section>
-
-  <section class="bloco" aria-labelledby="t-faq">
-    <h2 id="t-faq">Perguntas frequentes</h2>
-    <div class="faq">
-      <details name="faq"><summary>O material é impresso ou digital?</summary><p>Nesta primeira edição, os livros são em PDF. Você imprime em casa ou numa gráfica rápida, só as páginas que for usar. Se quiser o livro impresso, mande uma mensagem no Instagram @mentoriagb: havendo procura, abrimos uma pré-venda.</p></details>
-      <details name="faq"><summary>Posso imprimir as lições mais de uma vez?</summary><p>Pode, e recomendamos. A família que comprou pode imprimir as lições quantas vezes precisar: para cada filho, para refazer uma semana que ficou difícil ou para repetir uma lição depois de algum tempo e ver o quanto a criança avançou. Vale também para os mais novos, nos anos seguintes. Pedimos apenas que o arquivo não seja repassado nem impresso para outras famílias.</p></details>
-      <details name="faq"><summary>Tenho um filho só. Vale a pena?</summary><p>Vale. O mesmo material acompanha a criança por vários anos: ela começa no nível em que está hoje e, quando estiver pronta, passa para o seguinte, no mesmo livro. Uma criança de 4 anos pode fazer o Semente agora, o Broto depois e o Árvore mais adiante, sempre com os mesmos versículos.</p></details>
-      <details name="faq"><summary>Serve como reforço para quem já estuda numa escola?</summary><p>Serve. As lições são curtas e podem ser feitas em casa, em poucos minutos por dia, para firmar a letra cursiva, a tabuada e a leitura. Como não seguem um ano escolar específico, encaixam em qualquer época e acompanham o ritmo da criança.</p></details>
-      <details name="faq"><summary>Para que idade é?</summary><p>De 3 anos em diante, em três níveis: Semente (3 a 5), Broto (5 a 7) e Árvore (7 em diante). A idade é só uma referência: coloque cada filho no nível em que ele está, e ele pode mudar de nível durante o ano.</p></details>
-      <details name="faq"><summary>Meu filho tem 10 anos. Serve?</summary><p>Serve, se ele ainda precisa firmar a letra cursiva, a tabuada ou a fluência de leitura: o nível Árvore foi pensado para isso. Se ficar em dúvida, a Semana 1 grátis ajuda a decidir.</p></details>
-      <details name="faq"><summary>Preciso imprimir o livro inteiro?</summary><p>Não. Imprima só as páginas do nível de cada filho. As páginas de abertura podem ser lidas na tela, e o sumário mostra onde começa cada lição.</p></details>
-      <details name="faq"><summary>Quanto tempo leva por dia?</summary><p>A abertura de segunda-feira leva cerca de 10 minutos. As atividades diárias levam de 15 a 30 minutos por criança, somando os três livros.</p></details>
-      <details name="faq"><summary>Por qual livro começo?</summary><p>Pelo que seu filho mais precisa agora. Se a dificuldade é a letra, a tabuada ou a leitura, o Kit Trio cobre as três e traz os três bônus. Se a criança já lê e escreve, o Kit Linguagem leva para a gramática e a redação. O Kit Mundo trabalha ciências, medidas e raciocínio, e o Kit Vida trata de caráter, saúde e dinheiro. Na dúvida, baixe a lição 1 grátis dos livros que interessam e veja com seu filho.</p></details>
-      <details name="faq"><summary>Preciso comprar os três livros?</summary><p>Não. Cada livro funciona sozinho. O kit sai mais em conta e reúne três livros que se completam, todos com o mesmo versículo da semana.</p></details>
-      <details name="faq"><summary>Dá para usar mais de um título ao mesmo tempo?</summary><p>Dá. Os 12 livros seguem os mesmos 40 versículos, na mesma ordem: na semana 1, todos partem de Provérbios 1.8. A família abre a semana com um só versículo, e cada livro trabalha a sua matéria a partir dele. Comece com poucos e acrescente aos poucos.</p></details>
-      <details name="faq"><summary>Serve para escola ou igreja?</summary><p>Sim. Para turmas, oferecemos uma licença institucional, porque a licença familiar vale só para os filhos de quem comprou. Fale conosco pelo Instagram @mentoriagb.</p></details>
-      <details name="faq"><summary>Como recebo o material?</summary><p>Assim que o pagamento é confirmado, você recebe por e-mail o acesso aos arquivos em PDF. No Pix, a confirmação costuma ser imediata.</p></details>
-    </div>
-  </section>
-
-
-  <section class="final" aria-labelledby="t-final">
-    <h2 id="t-final">Quarenta semanas e quarenta versículos, com a família à mesa</h2>
-    <p>“Filho meu” foi feito para ajudar o pai e a mãe a fazer o que Provérbios descreve: ensinar os filhos, com paciência, a cada dia, no caminho da sabedoria.</p>
-    <div class="acoes"><a class="btn" href="#oferta">Ver os kits</a><a class="link" href="#amostra">Começar pela Semana 1 grátis</a></div>
-  </section>
-
-  <footer class="rodape"><span>Coleção Peregrininhos, de Gullit e Gislaine Belo, 1ª edição, 2026</span><span>Kit Trio em parceria com a Editora Nadere Reformatie, @editoranaderereformatie</span><a href="https://gbelovaidarcerto-design.github.io/">Todos os materiais</a><a href="privacidade/">Privacidade</a></footer>
-  <div class="barra" id="barra" aria-hidden="true">
-    <div class="w"><p><b>12 livros, 4 kits</b>, a partir de R$ 69</p><a class="btn" href="#comecar" tabindex="-1">Por onde começar?</a></div>
+<section class="dentro" id="por-dentro"><div class="w">
+  <h2>Por dentro</h2>
+  <p class="frase">Páginas reais da lição 1 do Kit Trio. Toque na página para ampliar.</p>
+  <ul class="semana" id="como-funciona">
+    <li><b>Segunda</b>Todos juntos, em 10 minutos: a ilustração, o versículo, uma conversa e oração.</li>
+    <li><b>Terça a quinta</b>Cada filho faz as páginas do seu nível, de 15 a 30 minutos.</li>
+    <li><b>Sexta</b>Revisão e o versículo de cor.</li>
+  </ul>
+  <div class="rolo" id="rolo">
+    <figure><button type="button" data-full="img/licao1/caligrafia-p8.webp"><img src="img/licao1/caligrafia-p8-600.webp" width="600" height="849" alt="Caligrafia, lição 1, página 8: Abertura em família"></button><figcaption>Abertura em família<span>Caligrafia</span></figcaption></figure>
+    <figure><button type="button" data-full="img/licao1/tabuada-p7.webp"><img src="img/licao1/tabuada-p7-600.webp" width="600" height="849" alt="Tabuada, lição 1, página 7: Abertura: grupos iguais"></button><figcaption>Abertura: grupos iguais<span>Tabuada</span></figcaption></figure>
+    <figure><button type="button" data-full="img/licao1/leitura-p8.webp"><img src="img/licao1/leitura-p8-600.webp" width="600" height="849" alt="Leitura, lição 1, página 8: Abertura: o livro da prateleira"></button><figcaption>Abertura: o livro da prateleira<span>Leitura</span></figcaption></figure>
+    <figure><button type="button" data-full="img/licao1/caligrafia-p9.webp"><img src="img/licao1/caligrafia-p9-600.webp" width="600" height="849" alt="Caligrafia, lição 1, página 9: Semente: voltinhas e a letra F" loading="lazy"></button><figcaption>Semente: voltinhas e a letra F<span>Caligrafia</span></figcaption></figure>
+    <figure><button type="button" data-full="img/licao1/tabuada-p8.webp"><img src="img/licao1/tabuada-p8-600.webp" width="600" height="849" alt="Tabuada, lição 1, página 8: A ideia com a mesa do café" loading="lazy"></button><figcaption>A ideia com a mesa do café<span>Tabuada</span></figcaption></figure>
+    <figure><button type="button" data-full="img/licao1/leitura-p9.webp"><img src="img/licao1/leitura-p9-600.webp" width="600" height="849" alt="Leitura, lição 1, página 9: Semente: ouvir e recontar" loading="lazy"></button><figcaption>Semente: ouvir e recontar<span>Leitura</span></figcaption></figure>
+    <figure><button type="button" data-full="img/licao1/caligrafia-p10.webp"><img src="img/licao1/caligrafia-p10-600.webp" width="600" height="849" alt="Caligrafia, lição 1, página 10: Broto: o versículo em cursiva" loading="lazy"></button><figcaption>Broto: o versículo em cursiva<span>Caligrafia</span></figcaption></figure>
+    <figure><button type="button" data-full="img/licao1/tabuada-p9.webp"><img src="img/licao1/tabuada-p9-600.webp" width="600" height="849" alt="Tabuada, lição 1, página 9: Semente: maçãs e estrelas" loading="lazy"></button><figcaption>Semente: maçãs e estrelas<span>Tabuada</span></figcaption></figure>
+    <figure><button type="button" data-full="img/licao1/leitura-p10.webp"><img src="img/licao1/leitura-p10-600.webp" width="600" height="849" alt="Leitura, lição 1, página 10: Broto: a hora da história" loading="lazy"></button><figcaption>Broto: a hora da história<span>Leitura</span></figcaption></figure>
+    <figure><button type="button" data-full="img/licao1/caligrafia-p11.webp"><img src="img/licao1/caligrafia-p11-600.webp" width="600" height="849" alt="Caligrafia, lição 1, página 11: Árvore: o versículo como modelo" loading="lazy"></button><figcaption>Árvore: o versículo como modelo<span>Caligrafia</span></figcaption></figure>
+    <figure><button type="button" data-full="img/licao1/tabuada-p10.webp"><img src="img/licao1/tabuada-p10-600.webp" width="600" height="849" alt="Tabuada, lição 1, página 10: Broto: o modelo de barras" loading="lazy"></button><figcaption>Broto: o modelo de barras<span>Tabuada</span></figcaption></figure>
+    <figure><button type="button" data-full="img/licao1/leitura-p11.webp"><img src="img/licao1/leitura-p11-600.webp" width="600" height="849" alt="Leitura, lição 1, página 11: Broto: perguntas sobre o texto" loading="lazy"></button><figcaption>Broto: perguntas sobre o texto<span>Leitura</span></figcaption></figure>
+    <figure><button type="button" data-full="img/licao1/caligrafia-p12.webp"><img src="img/licao1/caligrafia-p12-600.webp" width="600" height="849" alt="Caligrafia, lição 1, página 12: Árvore: de memória na sexta" loading="lazy"></button><figcaption>Árvore: de memória na sexta<span>Caligrafia</span></figcaption></figure>
+    <figure><button type="button" data-full="img/licao1/tabuada-p11.webp"><img src="img/licao1/tabuada-p11-600.webp" width="600" height="849" alt="Tabuada, lição 1, página 11: Árvore: as primeiras contas" loading="lazy"></button><figcaption>Árvore: as primeiras contas<span>Tabuada</span></figcaption></figure>
+    <figure><button type="button" data-full="img/licao1/leitura-p12.webp"><img src="img/licao1/leitura-p12-600.webp" width="600" height="849" alt="Leitura, lição 1, página 12: Árvore: um conto de 332 palavras" loading="lazy"></button><figcaption>Árvore: um conto de 332 palavras<span>Leitura</span></figcaption></figure>
+    <figure><button type="button" data-full="img/licao1/tabuada-p12.webp"><img src="img/licao1/tabuada-p12-600.webp" width="600" height="849" alt="Tabuada, lição 1, página 12: Árvore: problemas com barras" loading="lazy"></button><figcaption>Árvore: problemas com barras<span>Tabuada</span></figcaption></figure>
+    <figure><button type="button" data-full="img/licao1/leitura-p13.webp"><img src="img/licao1/leitura-p13-600.webp" width="600" height="849" alt="Leitura, lição 1, página 13: Árvore: vocabulário e registro" loading="lazy"></button><figcaption>Árvore: vocabulário e registro<span>Leitura</span></figcaption></figure>
+    <figure><button type="button" data-full="img/licao1/leitura-p14.webp"><img src="img/licao1/leitura-p14-600.webp" width="600" height="849" alt="Leitura, lição 1, página 14: Árvore: perguntas e escrita" loading="lazy"></button><figcaption>Árvore: perguntas e escrita<span>Leitura</span></figcaption></figure>
   </div>
-  <dialog class="lupa" id="lupa" aria-label="Página ampliada">
-    <div class="lupa-topo"><p class="lupa-leg"></p><button type="button" class="lupa-x" aria-label="Fechar">×</button></div>
-    <img alt="">
-    <div class="lupa-nav"><button type="button" class="vw-ant" aria-label="Página anterior">‹</button><span class="vw-pos"></span><button type="button" class="vw-prox" aria-label="Próxima página">›</button></div>
-  </dialog>
+  <div class="setas"><button type="button" data-dir="-1" aria-label="Voltar">←</button><button type="button" data-dir="1" aria-label="Avançar">→</button></div>
+  <p class="nota">Três níveis no mesmo livro: Semente (3 a 5 anos), Broto (5 a 7) e Árvore (7 em diante). A idade é referência, e cada filho pode mudar de nível durante o ano.</p>
+</div></section>
+
+<div class="ano"><div class="w"><p>“Filho meu, ouve a instrução de teu pai; e não abandones a doutrina de tua mãe.”</p><small>Provérbios 1.8, Bíblia Livre, o versículo da lição 1 nos 12 livros. Em 40 semanas, a família decora 40 versículos.</small></div></div>
+
+<section id="oferta">
+  <div class="cab" id="comecar"><div class="w"><h2>Escolha por onde começar</h2><p>Cada livro funciona sozinho. O kit reúne três que se completam, com o mesmo versículo da semana, e sai mais em conta.</p></div></div>
+<div class="grupo">
+  <div class="gcab"><div class="w"><span class="sc">Kit Trio</span><p>caligrafia, tabuada e leitura</p></div></div>
+  <article class="cad" id="livro-caligrafia"><div class="w">
+    <button type="button" class="capa cb-abre-capa" data-painel="cb-caligrafia" aria-label="Ver o que o livro Caligrafia cursiva com Provérbios ensina"><img src="img/capas/caligrafia.webp" width="520" height="736" alt="Capa do livro Filho meu: Caligrafia cursiva com Provérbios" loading="lazy"></button>
+    <div><span class="sc">Escrita · 257 páginas</span><h3>Caligrafia cursiva com Provérbios</h3><p class="linha">A letra cursiva do primeiro traço até a carta escrita à mão para o pai.</p><p class="mais"><button type="button" class="cb-abre" data-painel="cb-caligrafia">O que o livro ensina</button><a class="am" href="#amostra">Semana 1 grátis</a></p></div>
+    <div class="direita"><span class="preco">R$ 69</span><a class="btn comprar" href="https://pay.kiwify.com.br/BD0fOgB" data-produto="Caligrafia cursiva com Provérbios">Comprar o livro</a></div>
+  </div></article>
+  <article class="cad" id="livro-tabuada"><div class="w">
+    <button type="button" class="capa cb-abre-capa" data-painel="cb-tabuada" aria-label="Ver o que o livro Tabuada com Provérbios ensina"><img src="img/capas/tabuada.webp" width="520" height="736" alt="Capa do livro Filho meu: Tabuada com Provérbios" loading="lazy"></button>
+    <div><span class="sc">Matemática · 256 páginas</span><h3>Tabuada com Provérbios</h3><p class="linha">Multiplicação e divisão entendidas antes de decoradas: objeto, desenho e só então número.</p><p class="mais"><button type="button" class="cb-abre" data-painel="cb-tabuada">O que o livro ensina</button><a class="am" href="#amostra">Semana 1 grátis</a></p></div>
+    <div class="direita"><span class="preco">R$ 69</span><a class="btn comprar" href="https://pay.kiwify.com.br/xC9i17r" data-produto="Tabuada com Provérbios">Comprar o livro</a></div>
+  </div></article>
+  <article class="cad" id="livro-leitura"><div class="w">
+    <button type="button" class="capa cb-abre-capa" data-painel="cb-leitura" aria-label="Ver o que o livro Leitura e interpretação com Provérbios ensina"><img src="img/capas/leitura.webp" width="520" height="736" alt="Capa do livro Filho meu: Leitura e interpretação com Provérbios" loading="lazy"></button>
+    <div><span class="sc">Leitura · 308 páginas</span><h3>Leitura e interpretação com Provérbios</h3><p class="linha">Oitenta textos originais para ler, reler e entender, com registro de fluência.</p><p class="mais"><button type="button" class="cb-abre" data-painel="cb-leitura">O que o livro ensina</button><a class="am" href="#amostra">Semana 1 grátis</a></p></div>
+    <div class="direita"><span class="preco">R$ 79</span><a class="btn comprar" href="https://pay.kiwify.com.br/6rBavjT" data-produto="Leitura e interpretação com Provérbios">Comprar o livro</a></div>
+  </div></article>
+  <div class="kit" id="kit-trio"><div class="w">
+    <div class="tres" aria-hidden="true"><div class="capa"><img src="img/capas/caligrafia.webp" width="520" height="736" alt="" loading="lazy"></div><div class="capa"><img src="img/capas/tabuada.webp" width="520" height="736" alt="" loading="lazy"></div><div class="capa"><img src="img/capas/leitura.webp" width="520" height="736" alt="" loading="lazy"></div></div>
+    <div class="kinfo">
+    <span class="sc">Kit Trio</span>
+    <h3>Os três juntos</h3>
+    <p class="frase">Caligrafia cursiva com Provérbios, Tabuada com Provérbios e Leitura e interpretação com Provérbios.</p>
+    <div class="valor"><span class="preco">R$ 179</span><s>R$ 217 separados</s></div>
+    <p class="bonus" id="bonus"><b>Com três bônus:</b> Planner do ano (16 páginas, o calendário das 40 semanas), Os 40 versículos (40 cartões, um por lição) e Guia dos pais (9 páginas, como ensinar Provérbios aos filhos).</p>
+    <div class="bthumbs" aria-hidden="true"><img src="img/bonus-1.webp" alt="" width="579" height="819" loading="lazy"><img src="img/bonus-2.webp" alt="" width="579" height="819" loading="lazy"><img src="img/bonus-3.webp" alt="" width="579" height="819" loading="lazy"></div>
+    <p class="parceria">Em parceria com a Editora Nadere Reformatie.</p>
+    <div class="acao"><a class="btn branco comprar" href="https://pay.kiwify.com.br/YK88Rgx" data-produto="Kit Trio">Comprar o Kit Trio</a></div>
+    </div>
+  </div></div>
+</div>
+<div class="grupo">
+  <div class="gcab"><div class="w"><span class="sc">Kit Linguagem</span><p>gramática, escrita e vocabulário</p></div></div>
+  <article class="cad" id="livro-gramatica"><div class="w">
+    <button type="button" class="capa cb-abre-capa" data-painel="cb-gramatica" aria-label="Ver o que o livro Gramática com Provérbios ensina"><img src="img/capas/gramatica.webp" width="520" height="736" alt="Capa do livro Filho meu: Gramática com Provérbios" loading="lazy"></button>
+    <div><span class="sc">Língua portuguesa · 364 páginas</span><h3>Gramática com Provérbios</h3><p class="linha">Classes de palavras, frase, pontuação, concordância e acentuação, no próprio versículo da semana.</p><p class="mais"><button type="button" class="cb-abre" data-painel="cb-gramatica">O que o livro ensina</button><a class="am" href="amostra/titulos/filho-meu-gramatica-amostra.pdf" target="_blank" rel="noopener">Lição 1 grátis (PDF)</a></p></div>
+    <div class="direita"><span class="preco">R$ 79</span><a class="btn comprar" href="https://pay.kiwify.com.br/3faJbim" data-produto="Gramática com Provérbios">Comprar o livro</a></div>
+  </div></article>
+  <article class="cad" id="livro-escrita"><div class="w">
+    <button type="button" class="capa cb-abre-capa" data-painel="cb-escrita" aria-label="Ver o que o livro Escrita e redação com Provérbios ensina"><img src="img/capas/escrita.webp" width="520" height="736" alt="Capa do livro Filho meu: Escrita e redação com Provérbios" loading="lazy"></button>
+    <div><span class="sc">Língua portuguesa · 311 páginas</span><h3>Escrita e redação com Provérbios</h3><p class="linha">Contar, planejar, escrever, revisar e ler para alguém, um gênero por semana.</p><p class="mais"><button type="button" class="cb-abre" data-painel="cb-escrita">O que o livro ensina</button><a class="am" href="amostra/titulos/filho-meu-escrita-amostra.pdf" target="_blank" rel="noopener">Lição 1 grátis (PDF)</a></p></div>
+    <div class="direita"><span class="preco">R$ 79</span><a class="btn comprar" href="https://pay.kiwify.com.br/uKHyoRU" data-produto="Escrita e redação com Provérbios">Comprar o livro</a></div>
+  </div></article>
+  <article class="cad" id="livro-palavras"><div class="w">
+    <button type="button" class="capa cb-abre-capa" data-painel="cb-palavras" aria-label="Ver o que o livro Palavras que edificam ensina"><img src="img/capas/palavras.webp" width="520" height="736" alt="Capa do livro Filho meu: Palavras que edificam" loading="lazy"></button>
+    <div><span class="sc">Vida em família · 368 páginas</span><h3>Palavras que edificam</h3><p class="linha">Ouvir antes de responder, falar a verdade, pedir e dar perdão, com quadrinhos da família.</p><p class="mais"><button type="button" class="cb-abre" data-painel="cb-palavras">O que o livro ensina</button><a class="am" href="amostra/titulos/filho-meu-palavras-amostra.pdf" target="_blank" rel="noopener">Lição 1 grátis (PDF)</a></p></div>
+    <div class="direita"><span class="preco">R$ 79</span><a class="btn comprar" href="https://pay.kiwify.com.br/DHGddzP" data-produto="Palavras que edificam">Comprar o livro</a></div>
+  </div></article>
+  <div class="kit" id="kit-linguagem"><div class="w">
+    <div class="tres" aria-hidden="true"><div class="capa"><img src="img/capas/gramatica.webp" width="520" height="736" alt="" loading="lazy"></div><div class="capa"><img src="img/capas/escrita.webp" width="520" height="736" alt="" loading="lazy"></div><div class="capa"><img src="img/capas/palavras.webp" width="520" height="736" alt="" loading="lazy"></div></div>
+    <div class="kinfo">
+    <span class="sc">Kit Linguagem</span>
+    <h3>Os três juntos</h3>
+    <p class="frase">Gramática com Provérbios, Escrita e redação com Provérbios e Palavras que edificam.</p>
+    <div class="valor"><span class="preco">R$ 179</span><s>R$ 237 separados</s></div>
+    <div class="acao"><a class="btn branco comprar" href="https://pay.kiwify.com.br/ZsjOC7U" data-produto="Kit Linguagem">Comprar o Kit Linguagem</a></div>
+    </div>
+  </div></div>
+</div>
+<div class="grupo">
+  <div class="gcab"><div class="w"><span class="sc">Kit Mundo</span><p>ciências, medidas e raciocínio</p></div></div>
+  <article class="cad" id="livro-ciencias"><div class="w">
+    <button type="button" class="capa cb-abre-capa" data-painel="cb-ciencias" aria-label="Ver o que o livro Pequenos e sábios: ciências da natureza ensina"><img src="img/capas/ciencias.webp" width="520" height="736" alt="Capa do livro Filho meu: Pequenos e sábios: ciências da natureza" loading="lazy"></button>
+    <div><span class="sc">Ciências · 363 páginas</span><h3>Pequenos e sábios: ciências da natureza</h3><p class="linha">Observar a criação, perguntar, dar um palpite, testar, registrar e agradecer.</p><p class="mais"><button type="button" class="cb-abre" data-painel="cb-ciencias">O que o livro ensina</button><a class="am" href="amostra/titulos/filho-meu-ciencias-amostra.pdf" target="_blank" rel="noopener">Lição 1 grátis (PDF)</a></p></div>
+    <div class="direita"><span class="preco">R$ 79</span><a class="btn comprar" href="https://pay.kiwify.com.br/UgvtUZl" data-produto="Pequenos e sábios: ciências da natureza">Comprar o livro</a></div>
+  </div></article>
+  <article class="cad" id="livro-medidas"><div class="w">
+    <button type="button" class="capa cb-abre-capa" data-painel="cb-medidas" aria-label="Ver o que o livro Contas, medidas e pesos justos ensina"><img src="img/capas/medidas.webp" width="520" height="736" alt="Capa do livro Filho meu: Contas, medidas e pesos justos" loading="lazy"></button>
+    <div><span class="sc">Matemática · 363 páginas</span><h3>Contas, medidas e pesos justos</h3><p class="linha">Medidas, frações, geometria e dados com a xícara, a balança, o canteiro e o relógio.</p><p class="mais"><button type="button" class="cb-abre" data-painel="cb-medidas">O que o livro ensina</button><a class="am" href="amostra/titulos/filho-meu-medidas-amostra.pdf" target="_blank" rel="noopener">Lição 1 grátis (PDF)</a></p></div>
+    <div class="direita"><span class="preco">R$ 79</span><a class="btn comprar" href="https://pay.kiwify.com.br/daNQgME" data-produto="Contas, medidas e pesos justos">Comprar o livro</a></div>
+  </div></article>
+  <article class="cad" id="livro-logica"><div class="w">
+    <button type="button" class="capa cb-abre-capa" data-painel="cb-logica" aria-label="Ver o que o livro Pensar bem ensina"><img src="img/capas/logica.webp" width="520" height="736" alt="Capa do livro Filho meu: Pensar bem" loading="lazy"></button>
+    <div><span class="sc">Lógica · 307 páginas</span><h3>Pensar bem</h3><p class="linha">Comparar, classificar, achar padrões, separar fato de opinião e dar razões.</p><p class="mais"><button type="button" class="cb-abre" data-painel="cb-logica">O que o livro ensina</button><a class="am" href="amostra/titulos/filho-meu-logica-amostra.pdf" target="_blank" rel="noopener">Lição 1 grátis (PDF)</a></p></div>
+    <div class="direita"><span class="preco">R$ 79</span><a class="btn comprar" href="https://pay.kiwify.com.br/K72EuTq" data-produto="Pensar bem">Comprar o livro</a></div>
+  </div></article>
+  <div class="kit" id="kit-mundo"><div class="w">
+    <div class="tres" aria-hidden="true"><div class="capa"><img src="img/capas/ciencias.webp" width="520" height="736" alt="" loading="lazy"></div><div class="capa"><img src="img/capas/medidas.webp" width="520" height="736" alt="" loading="lazy"></div><div class="capa"><img src="img/capas/logica.webp" width="520" height="736" alt="" loading="lazy"></div></div>
+    <div class="kinfo">
+    <span class="sc">Kit Mundo</span>
+    <h3>Os três juntos</h3>
+    <p class="frase">Pequenos e sábios: ciências da natureza, Contas, medidas e pesos justos e Pensar bem.</p>
+    <div class="valor"><span class="preco">R$ 179</span><s>R$ 237 separados</s></div>
+    <div class="acao"><a class="btn branco comprar" href="https://pay.kiwify.com.br/TVlx6tL" data-produto="Kit Mundo">Comprar o Kit Mundo</a></div>
+    </div>
+  </div></div>
+</div>
+<div class="grupo">
+  <div class="gcab"><div class="w"><span class="sc">Kit Vida</span><p>caráter, saúde e dinheiro</p></div></div>
+  <article class="cad" id="livro-carater"><div class="w">
+    <button type="button" class="capa cb-abre-capa" data-painel="cb-carater" aria-label="Ver o que o livro Caráter e domínio próprio ensina"><img src="img/capas/carater.webp" width="520" height="736" alt="Capa do livro Filho meu: Caráter e domínio próprio" loading="lazy"></button>
+    <div><span class="sc">Virtudes · 347 páginas</span><h3>Caráter e domínio próprio</h3><p class="linha">O caráter do filho sábio de Provérbios, com histórias para ler em voz alta.</p><p class="mais"><button type="button" class="cb-abre" data-painel="cb-carater">O que o livro ensina</button><a class="am" href="amostra/titulos/filho-meu-carater-amostra.pdf" target="_blank" rel="noopener">Lição 1 grátis (PDF)</a></p></div>
+    <div class="direita"><span class="preco">R$ 79</span><a class="btn comprar" href="https://pay.kiwify.com.br/BAO9yDK" data-produto="Caráter e domínio próprio">Comprar o livro</a></div>
+  </div></article>
+  <article class="cad" id="livro-saude"><div class="w">
+    <button type="button" class="capa cb-abre-capa" data-painel="cb-saude" aria-label="Ver o que o livro Corpo, saúde e alegria ensina"><img src="img/capas/saude.webp" width="520" height="736" alt="Capa do livro Filho meu: Corpo, saúde e alegria" loading="lazy"></button>
+    <div><span class="sc">Saúde · 354 páginas</span><h3>Corpo, saúde e alegria</h3><p class="linha">Dormir, comer, beber água, brincar lá fora e se proteger, cada recomendação com a fonte oficial.</p><p class="mais"><button type="button" class="cb-abre" data-painel="cb-saude">O que o livro ensina</button><a class="am" href="amostra/titulos/filho-meu-saude-amostra.pdf" target="_blank" rel="noopener">Lição 1 grátis (PDF)</a></p></div>
+    <div class="direita"><span class="preco">R$ 79</span><a class="btn comprar" href="https://pay.kiwify.com.br/nblvRkL" data-produto="Corpo, saúde e alegria">Comprar o livro</a></div>
+  </div></article>
+  <article class="cad" id="livro-financas"><div class="w">
+    <button type="button" class="capa cb-abre-capa" data-painel="cb-financas" aria-label="Ver o que o livro Dinheiro, trabalho e generosidade ensina"><img src="img/capas/financas.webp" width="520" height="736" alt="Capa do livro Filho meu: Dinheiro, trabalho e generosidade" loading="lazy"></button>
+    <div><span class="sc">Finanças · 408 páginas</span><h3>Dinheiro, trabalho e generosidade</h3><p class="linha">Trabalhar, guardar, gastar com sabedoria e dar com alegria.</p><p class="mais"><button type="button" class="cb-abre" data-painel="cb-financas">O que o livro ensina</button><a class="am" href="amostra/titulos/filho-meu-financas-amostra.pdf" target="_blank" rel="noopener">Lição 1 grátis (PDF)</a></p></div>
+    <div class="direita"><span class="preco">R$ 79</span><a class="btn comprar" href="https://pay.kiwify.com.br/VREdqQ6" data-produto="Dinheiro, trabalho e generosidade">Comprar o livro</a></div>
+  </div></article>
+  <div class="kit" id="kit-vida"><div class="w">
+    <div class="tres" aria-hidden="true"><div class="capa"><img src="img/capas/carater.webp" width="520" height="736" alt="" loading="lazy"></div><div class="capa"><img src="img/capas/saude.webp" width="520" height="736" alt="" loading="lazy"></div><div class="capa"><img src="img/capas/financas.webp" width="520" height="736" alt="" loading="lazy"></div></div>
+    <div class="kinfo">
+    <span class="sc">Kit Vida</span>
+    <h3>Os três juntos</h3>
+    <p class="frase">Caráter e domínio próprio, Corpo, saúde e alegria e Dinheiro, trabalho e generosidade.</p>
+    <div class="valor"><span class="preco">R$ 179</span><s>R$ 237 separados</s></div>
+    <div class="acao"><a class="btn branco comprar" href="https://pay.kiwify.com.br/m7llBqF" data-produto="Kit Vida">Comprar o Kit Vida</a></div>
+    </div>
+  </div></div>
+</div>
+  <p class="miudo">Todos em PDF, na mesma área de membros da Kiwify. Toda correção ou melhoria posterior chega de graça, e a garantia de 7 dias vale para cada livro.</p>
+</section>
+
+<section class="amostra" id="amostra"><div class="w">
+  <div>
+    <h2>Experimente antes</h2>
+    <p class="frase">A Semana 1 completa de caligrafia, tabuada e leitura, nos três níveis, num PDF só. Deixe nome e e-mail, e o PDF baixa na hora.</p>
+    <h3>Lição 1 grátis dos outros nove</h3>
+    <ul class="amlist"><li><a href="amostra/titulos/filho-meu-gramatica-amostra.pdf" target="_blank" rel="noopener">Gramática com Provérbios</a></li><li><a href="amostra/titulos/filho-meu-escrita-amostra.pdf" target="_blank" rel="noopener">Escrita e redação com Provérbios</a></li><li><a href="amostra/titulos/filho-meu-palavras-amostra.pdf" target="_blank" rel="noopener">Palavras que edificam</a></li><li><a href="amostra/titulos/filho-meu-ciencias-amostra.pdf" target="_blank" rel="noopener">Pequenos e sábios: ciências da natureza</a></li><li><a href="amostra/titulos/filho-meu-medidas-amostra.pdf" target="_blank" rel="noopener">Contas, medidas e pesos justos</a></li><li><a href="amostra/titulos/filho-meu-logica-amostra.pdf" target="_blank" rel="noopener">Pensar bem</a></li><li><a href="amostra/titulos/filho-meu-carater-amostra.pdf" target="_blank" rel="noopener">Caráter e domínio próprio</a></li><li><a href="amostra/titulos/filho-meu-saude-amostra.pdf" target="_blank" rel="noopener">Corpo, saúde e alegria</a></li><li><a href="amostra/titulos/filho-meu-financas-amostra.pdf" target="_blank" rel="noopener">Dinheiro, trabalho e generosidade</a></li></ul>
+  </div>
+  <div>
+    <form class="form" id="cadastro" novalidate>
+      <label>Seu nome<input type="text" name="nome" autocomplete="name" required></label>
+      <label>Seu e-mail<input type="email" name="email" autocomplete="email" inputmode="email" required></label>
+      <label><span>WhatsApp <span class="op">(opcional)</span></span><input type="tel" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="(DDD) 9 0000-0000"></label>
+      <label><span>Idades das crianças <span class="op">(opcional)</span></span><input type="text" name="idades" placeholder="ex.: 4 e 7 anos"></label>
+      <label class="ok full"><input type="checkbox" name="aceite" required><span>Aceito receber a Semana 1 e mensagens sobre a coleção "Filho meu". Posso sair da lista quando quiser. <a href="privacidade/">Política de privacidade</a>.</span></label>
+      <p class="msg full" role="alert" hidden></p>
+      <button class="btn full" type="submit">Baixar a Semana 1 (PDF)</button>
+    </form>
+    <div class="cad-fim" id="cadastro-fim" hidden><b>O download começou.</b><p>Se não abrir, <a href="amostra/filho-meu-amostra-gratis.pdf" download>clique aqui para baixar a Semana 1</a>. Comece na segunda-feira, com a abertura em família.</p></div>
+  </div>
+</div></section>
+
+<section class="faq" id="perguntas"><div class="w">
+  <h2>Perguntas frequentes</h2>
+  <dl>
+    <div><dt>É impresso ou digital?</dt><dd>Nesta primeira edição, PDF. Você imprime em casa ou numa gráfica rápida, só as páginas do nível de cada filho. Quer o impresso? Mande uma mensagem no Instagram @mentoriagb.</dd></div>
+    <div><dt>Para que idade é?</dt><dd>De 3 anos em diante, em três níveis no mesmo livro. Uma criança de 4 anos faz o Semente agora e passa ao Broto e ao Árvore depois, com os mesmos versículos.</dd></div>
+    <div><dt>Quanto tempo leva por dia?</dt><dd>A abertura de segunda leva cerca de 10 minutos. As atividades levam de 15 a 30 minutos por criança. Serve como base do estudo em casa ou como reforço depois da escola.</dd></div>
+    <div><dt>Por qual livro começo?</dt><dd>Pelo que seu filho mais precisa agora. Letra, tabuada ou leitura: Kit Trio. Já lê e escreve: Kit Linguagem. Na dúvida, baixe a lição 1 grátis e veja com ele.</dd></div>
+    <div><dt>Posso imprimir mais de uma vez?</dt><dd>Pode, para cada filho e quantas vezes precisar. A licença é da família: não repasse o arquivo. Para escola ou igreja há licença institucional, pelo @mentoriagb.</dd></div>
+    <div><dt>Como recebo?</dt><dd>Assim que o pagamento é confirmado, o acesso chega por e-mail. No Pix, costuma ser imediato. Se não for o que sua família precisa, a garantia de 7 dias devolve tudo.</dd></div>
+  </dl>
+</div></section>
+
+<section class="fim"><div class="w">
+  <img src="ferias/img/escudo.webp" alt="" loading="lazy">
+  <h2>Quarenta semanas e quarenta versículos, com a família à mesa</h2>
+  <p class="nota">Somos pais de quatro filhos e fizemos a coleção a partir da fé reformada. As conversas da semana apontam para Deus e para a graça, não apenas para o comportamento. Que ela ajude vocês a ensinar os filhos, com paciência, a cada dia, no caminho da sabedoria.</p>
+  <p class="assina">Gullit e Gislaine Belo · Filho meu Educacional</p>
+  <div class="acao"><a class="btn" href="#oferta">Ver os kits</a><a class="btn vazado" href="#amostra">Baixar a Semana 1 grátis</a></div>
+  <p class="discreto">PDF por e-mail logo após a confirmação, para imprimir em casa · garantia de 7 dias</p>
+</div></section>
 </main>
 
-<script>
-/* Cadastro da amostra grátis: cada pedido vira uma linha na planilha
-   "Filho meu: cadastros da Semana 1 grátis (respostas)" no Google Drive do Gullit,
-   por meio do Formulário Google de mesmo nome. Depois do cadastro, o PDF baixa. */
-(function () {
-  var FORM = 'https://docs.google.com/forms/d/e/1FAIpQLSfH9DAaxE7QUQSgorxqGzl8G7BP3mnam1joI8TIOpOgDwP6Gg/formResponse';
-  var CAMPO = { nome: 'entry.38804056', email: 'entry.1545047068', whatsapp: 'entry.1891983561',
-                idades: 'entry.82013426', origem: 'entry.219645187', consentimento: 'entry.1350168687' };
-  var f = document.getElementById('cadastro'), fim = document.getElementById('cadastro-fim');
-  if (!f) return;
-  var msg = f.querySelector('.msg'), pdf = fim.querySelector('a').href;
-  function origem() {
-    var q = new URLSearchParams(location.search), partes = [window.ORIGEM_PAGINA || 'página principal'];
-    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'src'].forEach(function (k) { if (q.get(k)) partes.push(k + '=' + q.get(k)); });
-    if (document.referrer && document.referrer.indexOf(location.host) < 0) partes.push('veio de ' + document.referrer.split('?')[0]);
-    return partes.join(' · ');
-  }
-  function erro(t) { msg.textContent = t; msg.hidden = false; }
-  f.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var nome = f.nome.value.trim(), email = f.email.value.trim();
-    if (nome.length < 2) return erro('Escreva o seu nome.'), f.nome.focus();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return erro('Confira o e-mail: é por ele que vamos mandar as próximas mensagens.'), f.email.focus();
-    if (!f.aceite.checked) return erro('Para baixar, marque que aceita receber a Semana 1 e as mensagens.'), f.aceite.focus();
-    msg.hidden = true;
-    var b = f.querySelector('button'); b.disabled = true; b.textContent = 'Enviando…';
-    var d = new URLSearchParams();
-    d.append(CAMPO.nome, nome); d.append(CAMPO.email, email.toLowerCase());
-    d.append(CAMPO.whatsapp, f.whatsapp.value.trim()); d.append(CAMPO.idades, f.idades.value.trim());
-    d.append(CAMPO.origem, origem());
-    d.append(CAMPO.consentimento, 'Sim, marcado em ' + new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }));
-    function liberar() {
-      f.hidden = true; fim.hidden = false;
-      var a = document.createElement('a'); a.href = pdf; a.download = ''; document.body.appendChild(a); a.click(); a.remove();
-    }
-    fetch(FORM, { method: 'POST', mode: 'no-cors', body: d }).then(liberar, liberar);
-  });
-})();
-</script>
-<script>
-/* Reforma de 15/10/2026: versículo escrito na pauta, aviso da live, "Monte a sua mesa", "Uma lição por dentro",
-   ampliação das páginas e barra de compra fixa. */
-(function () {
-  var calma = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+<div class="barra" id="barra"><p>Filho meu, 12 livros<span class="preco">a partir de R$ 69 · kits R$ 179</span></p><a class="btn" href="#oferta">Ver os kits</a></div>
 
-  // O versículo se escreve na pauta, palavra por palavra, uma única vez.
-  var cur = document.querySelector('#pauta .cur');
-  if (cur && !calma) {
-    var t = 0.35;
-    cur.innerHTML = cur.textContent.split(' ').map(function (w) {
-      var d = Math.max(0.16, w.length * 0.055), s = '<span class="p" style="--t:' + t.toFixed(2) + 's;--d:' + d.toFixed(2) + 's">' + w + '</span>';
-      t += d + 0.06; return s;
-    }).join(' ');
-    if ('IntersectionObserver' in window) {
-      var obs = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { cur.classList.add('vai'); obs.disconnect(); } }, { threshold: 0.6 });
-      obs.observe(cur);
-    } else cur.classList.add('vai');
-  }
+<footer><div class="w"><span>Coleção Peregrininhos, de Gullit e Gislaine Belo, 1ª edição, 2026 · Kit Trio em parceria com a Editora Nadere Reformatie, @editoranaderereformatie</span><span><a href="https://www.instagram.com/mentoriagb/">@mentoriagb</a> · <a href="https://gbelovaidarcerto-design.github.io/">Todos os materiais</a> · <a href="privacidade/">Privacidade</a></span></div></footer>
 
-  // Aviso da live some depois da data.
-  document.querySelectorAll('.aviso[data-ate]').forEach(function (a) { if (new Date() >= new Date(a.dataset.ate)) a.hidden = true; });
+<dialog class="zoom" id="zoom"><button class="fechar" type="button" aria-label="Fechar">×</button><img alt=""></dialog>
 
-  // Monte a sua mesa
-  var NIVEL = {
-    semente: { nome: 'Semente', cor: 'var(--verde)', faz: ['voltinhas seguidas e a letra F gigante, para passar o dedo e o lápis; depois, o desenho da família', 'conta as maçãs de cada cesto, circula estrelas de 2 em 2 e desenha grupos iguais', 'ouve a história lida pelo adulto, reconta do jeito dela, conversa e desenha'] },
-    broto: { nome: 'Broto', cor: 'var(--ocre)', faz: ['escreve em cursiva as palavras do versículo e o trecho “Filho meu, ouve a instrução”', 'conta vasos e flores, monta grupos de 6 ovos e resolve o primeiro problema com o modelo de barras', 'lê “A hora da história” três vezes e responde às perguntas'] },
-    arvore: { nome: 'Árvore', cor: 'var(--mar)', faz: ['copia o versículo inteiro de terça a quinta e, na sexta, escreve de memória', 'escreve grupos e totais, completa as contas e resolve problemas desenhando as barras', 'lê um conto de 332 palavras, mede as palavras por minuto e responde a seis perguntas'] }
-  };
-  var LIVROS = ['Caligrafia', 'Tabuada', 'Leitura'];
-  function nivel(i) {
-    if (i <= 4) return ['semente', ''];
-    if (i === 5) return ['broto', 'Aos 5, se ainda não traça letras, comece pelo Semente.'];
-    if (i === 6) return ['broto', ''];
-    if (i === 7) return ['arvore', 'Aos 7, se ainda lê devagar, comece pelo Broto.'];
-    return ['arvore', i >= 10 ? 'Serve bem enquanto ainda precisa firmar a cursiva, a tabuada ou a fluência.' : ''];
-  }
-  var mesa = document.getElementById('mesa');
-  if (mesa) {
-    var lista = mesa.querySelector('.lugares'), fim = mesa.querySelector('.mesa-fim'), filhos = [];
-    function desenha() {
-      lista.innerHTML = filhos.map(function (i, k) {
-        var nv = nivel(i), n = NIVEL[nv[0]];
-        return '<li class="lugar" style="--c:' + n.cor + '"><h3>Filho de ' + (i >= 10 ? '10 anos ou mais' : i + ' anos') + '</h3>' +
-          '<span class="nv">' + n.nome + '</span>' + (nv[1] ? '<p class="obs">' + nv[1] + '</p>' : '') +
-          '<ul>' + n.faz.map(function (f, j) { return '<li><b>' + LIVROS[j] + '</b><span>' + f + '</span></li>'; }).join('') + '</ul>' +
-          '<button type="button" class="tira" data-k="' + k + '" aria-label="Tirar este filho da mesa">×</button></li>';
-      }).join('');
-      fim.hidden = !filhos.length;
-    }
-    mesa.querySelectorAll('.idades button').forEach(function (b) {
-      b.addEventListener('click', function () { if (filhos.length < 8) { filhos.push(+b.dataset.i); desenha(); } });
-    });
-    lista.addEventListener('click', function (ev) { var b = ev.target.closest('.tira'); if (b) { filhos.splice(+b.dataset.k, 1); desenha(); } });
-    mesa.querySelector('.limpa').addEventListener('click', function () { filhos = []; desenha(); });
-  }
-
-  // Uma lição por dentro
-  var PAG = {
-    caligrafia: [[8, 'abertura', 'A abertura da lição 1, para ler juntos na segunda: o versículo, a conversa em família e as perguntas para cada idade.'],
-      [9, 'semente', 'Semente: voltinhas seguidas sem tirar o lápis do papel, a letra F gigante e o desenho da família.'],
-      [10, 'broto', 'Broto: as palavras do versículo em cursiva e o trecho “Filho meu, ouve a instrução”.'],
-      [11, 'arvore', 'Árvore: o versículo inteiro como modelo, com a atenção da semana na pontuação.'],
-      [12, 'arvore', 'Árvore: de terça a quinta, cópia olhando o modelo; na sexta, de memória, com a lista para conferir.']],
-    tabuada: [[7, 'abertura', 'A abertura da lição 1: o versículo da semana e o tema, grupos iguais.'],
-      [8, 'abertura', 'A ideia da semana com a mesa do café: o que é multiplicar, antes de qualquer conta.'],
-      [9, 'semente', 'Semente: contar as maçãs de cada cesto, circular estrelas de 2 em 2 e desenhar grupos iguais.'],
-      [10, 'broto', 'Broto: vasos e flores, caixas de meia dúzia e o primeiro problema com o modelo de barras.'],
-      [11, 'arvore', 'Árvore: grupos, totais e as primeiras contas de multiplicação, com rascunho.'],
-      [12, 'arvore', 'Árvore: problemas para ler, desenhar as barras e escrever a conta e a resposta.']],
-    leitura: [[8, 'abertura', 'A abertura da lição 1, “O livro da prateleira de cima”, para a família ler junta na segunda.'],
-      [9, 'semente', 'Semente: o adulto lê a história em voz alta, e a criança reconta, conversa e desenha.'],
-      [10, 'broto', 'Broto: “A hora da história”, um conto curto com palavras novas, para ler três vezes.'],
-      [11, 'broto', 'Broto: perguntas sobre o texto, dos três tipos.'],
-      [12, 'arvore', 'Árvore: um conto de 332 palavras para ler e medir as palavras por minuto.'],
-      [13, 'arvore', 'Árvore: o vocabulário e o registro da leitura.'],
-      [14, 'arvore', 'Árvore: seis perguntas de três tipos e a escrita.']]
-  };
-  var vw = document.getElementById('por-dentro'), lupa = document.getElementById('lupa');
-  if (vw) {
-    var livro = 'caligrafia', idx = 0, folha = vw.querySelector('.vw-folha'), img = folha.querySelector('img');
-    var cache = {};
-    var BASE = (document.querySelector('.estante12 img').getAttribute('src') || '').replace(/img\/.*$/, '');
-    function src(l, n, g) { return BASE + 'img/licao1/' + l + '-p' + n + (g ? '' : '-600') + '.webp'; }
-    function pre(l, i) { var a = PAG[l][i]; if (a && !cache[l + i]) { cache[l + i] = new Image(); cache[l + i].src = src(l, a[0]); } }
-    function mostra() {
-      var a = PAG[livro][idx], tot = PAG[livro].length;
-      folha.classList.add('troca');
-      var novo = new Image(); novo.src = src(livro, a[0]);
-      novo.onload = novo.onerror = function () { img.src = novo.src; folha.classList.remove('troca'); };
-      img.alt = 'Página ' + a[0] + ' do livro ' + livro + ': ' + a[2];
-      vw.querySelector('.vw-leg').textContent = a[2];
-      vw.querySelectorAll('.vw-livros button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.l === livro); });
-      vw.querySelectorAll('.vw-niveis button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.n === a[1]); });
-      [vw, lupa].forEach(function (c) {
-        c.querySelector('.vw-pos').textContent = (idx + 1) + ' de ' + tot;
-        c.querySelector('.vw-ant').disabled = idx === 0; c.querySelector('.vw-prox').disabled = idx === tot - 1;
-      });
-      if (lupa.open) { lupa.querySelector('img').src = src(livro, a[0], 1); lupa.querySelector('img').alt = img.alt; lupa.querySelector('.lupa-leg').textContent = a[2]; }
-      pre(livro, idx + 1);
-    }
-    vw.querySelectorAll('.vw-livros button').forEach(function (b) { b.addEventListener('click', function () { livro = b.dataset.l; idx = 0; mostra(); }); });
-    vw.querySelectorAll('.vw-niveis button').forEach(function (b) {
-      b.addEventListener('click', function () { var i = PAG[livro].findIndex(function (a) { return a[1] === b.dataset.n; }); if (i >= 0) { idx = i; mostra(); } });
-    });
-    [vw, lupa].forEach(function (c) {
-      c.querySelector('.vw-ant').addEventListener('click', function () { if (idx > 0) { idx--; mostra(); } });
-      c.querySelector('.vw-prox').addEventListener('click', function () { if (idx < PAG[livro].length - 1) { idx++; mostra(); } });
-    });
-    folha.addEventListener('click', function () { if (lupa.showModal) { lupa.showModal(); mostra(); } });
-    lupa.querySelector('.lupa-x').addEventListener('click', function () { lupa.close(); });
-    lupa.addEventListener('click', function (ev) { if (ev.target === lupa) lupa.close(); });
-    lupa.addEventListener('keydown', function (ev) {
-      if (ev.key === 'ArrowLeft') lupa.querySelector('.vw-ant').click();
-      if (ev.key === 'ArrowRight') lupa.querySelector('.vw-prox').click();
-    });
-    var toque = null;
-    folha.addEventListener('touchstart', function (ev) { toque = ev.touches[0].clientX; }, { passive: true });
-    folha.addEventListener('touchend', function (ev) {
-      if (toque === null) return; var dx = ev.changedTouches[0].clientX - toque; toque = null;
-      if (Math.abs(dx) > 40) { ev.preventDefault(); vw.querySelector(dx < 0 ? '.vw-prox' : '.vw-ant').click(); }
-    });
-    mostra();
-  }
-
-  // Barra de compra fixa: aparece depois da abertura e some perto da oferta, do cadastro e do fim da página.
-  var barra = document.getElementById('barra');
-  if (barra && 'IntersectionObserver' in window) {
-    var vis = {}, alvos = ['.abre', '#comecar', '#oferta', '#amostra', '.final', '.n12 .of', '.mesa-fim'];
-    var io = new IntersectionObserver(function (es) {
-      es.forEach(function (x) { vis[x.target.dataset.alvo] = x.isIntersecting; });
-      var ver = !Object.keys(vis).some(function (k) { return vis[k]; }) && window.scrollY > 300;
-      barra.classList.toggle('ver', ver); barra.setAttribute('aria-hidden', !ver);
-      barra.querySelector('a').tabIndex = ver ? 0 : -1;
-    });
-    alvos.forEach(function (s, k) { document.querySelectorAll(s).forEach(function (el, j) { el.dataset.alvo = k + '-' + j; io.observe(el); }); });
-  }
-})();
-</script>
-<!-- conteudos:inicio --><style>
-.cb-abre{font:600 15px/1.2 inherit;font-family:inherit;color:var(--mar);background:none;border:0;padding:4px 0;margin:2px 0 6px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;align-self:flex-start}
-.cb-abre::after{content:" +"}
-.cb{border:0;padding:0;border-radius:14px;max-width:min(760px,calc(100vw - 24px));width:100%;max-height:calc(100dvh - 24px);background:#fff;color:#23262D;box-shadow:0 20px 50px -10px rgba(20,30,50,.45)}
-.cb::backdrop{background:rgba(20,28,40,.55)}
-.cb-in{padding:26px clamp(18px,4vw,34px) 30px;position:relative;font-size:16px;line-height:1.5}
-.cb-x{position:sticky;top:0;float:right;margin:-8px -10px 0 0;width:40px;height:40px;border-radius:50%;border:0;background:#EEF1F5;font-size:24px;line-height:1;cursor:pointer;color:#23262D}
-.cb-area{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--verde)}
-.cb h3{font-size:clamp(24px,4vw,30px);line-height:1.15;margin:4px 0 8px;color:var(--mar)}
-.cb-res{color:#4A5260;margin:0 0 6px}
-.cb-s{font-size:19px;margin:24px 0 8px;padding-top:14px;border-top:1px solid #E2E6EC;color:#23262D}
-.cb-g h4{font-size:15.5px;margin:12px 0 4px;color:var(--mar)}
-.cb-g ul,.cb-et{margin:0;padding-left:20px;display:grid;gap:3px}
-.cb-nv{display:grid;gap:8px}.cb-nv b{display:block;font-size:15.5px}.cb-nv p{margin:0;color:#4A5260}
-.cb-l{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:10px}
-.cb-l li{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;align-items:start}
-.cb-l code{font:700 13px/1.6 ui-monospace,Menlo,monospace;background:#EEF1F5;color:var(--mar);padding:1px 7px;border-radius:5px;white-space:nowrap}
-.cb-l span{font-size:15px}.cb-l small{grid-column:2;font-size:13px;color:#6A7280}
-.cb-l a{color:var(--mar)}
-.cb-mi{font-weight:700;font-size:15px;margin:18px 0 0}
-.cb-d{margin-top:16px;border-top:1px solid #E2E6EC}
-.cb-d summary{cursor:pointer;font-weight:700;font-size:18px;padding:14px 30px 4px 0;list-style:none;position:relative;color:#23262D}
-.cb-d summary::-webkit-details-marker{display:none}
-.cb-d summary::after{content:"+";position:absolute;right:4px;top:10px;font-size:24px;color:var(--mar)}
-.cb-d[open] summary::after{content:"–"}
-.cb-d .cb-et{margin-top:8px}
-.cb-t{margin:8px 0 0;font-size:15px}.cb-t a{color:var(--mar);font-weight:700;text-underline-offset:3px}
-.cb-c{display:grid;gap:10px;margin-top:22px;padding-top:18px;border-top:1px solid #E2E6EC}
-.cb-b{display:block;text-align:center;background:var(--mar);color:#fff!important;font-weight:700;font-size:17px;padding:14px 18px;border-radius:10px;text-decoration:none}
-.cb-k{color:var(--mar);font-weight:600;font-size:15px;text-align:center;text-underline-offset:3px}
-.cb-nota{font-size:13.5px;color:#6A7280;margin:24px 0 0;padding-top:12px;border-top:1px solid #E2E6EC}
-@media (max-width:520px){.cb-l li{grid-template-columns:1fr}.cb-l small{grid-column:1}}
-</style>
 <dialog class="cb" id="cb-caligrafia" aria-labelledby="cb-caligrafia-t">
   <div class="cb-in">
     <button type="button" class="cb-x" aria-label="Fechar">×</button>
@@ -1212,112 +759,75 @@ document.addEventListener('DOMContentLoaded',function(){
     <div class="cb-c"><a class="cb-b" href="https://pay.kiwify.com.br/VREdqQ6">Comprar este livro por R$ 79</a><a class="cb-k" href="https://pay.kiwify.com.br/m7llBqF">Ou o Kit Vida, com 3 livros, por R$ 179</a></div>
     <p class="cb-nota">Os códigos e os textos da BNCC são os oficiais do MEC; os referenciais internacionais aparecem resumidos em português, com o link para o texto original. Eles indicam com quais habilidades as lições dialogam. O livro é um material complementar, de 40 lições, e não pretende cobrir todo o currículo do ano.</p>
   </div>
-</dialog><script>
-/* Painéis "O que o livro ensina": abre pelo botão ou pelo endereço (#conteudos-<titulo>). */
+</dialog>
+
+
+<script>
+/* Cadastro da amostra grátis: cada pedido vira uma linha na planilha
+   "Filho meu: cadastros da Semana 1 grátis (respostas)" no Google Drive do Gullit,
+   por meio do Formulário Google de mesmo nome. Depois do cadastro, o PDF baixa. */
 (function () {
-  function abre(id) { var d = document.getElementById(id); if (d && d.showModal && !d.open) { d.showModal(); d.scrollTop = 0; } }
-  document.querySelectorAll('.cb-abre').forEach(function (b) {
-    b.addEventListener('click', function () { abre(b.getAttribute('data-painel')); });
+  var FORM = 'https://docs.google.com/forms/d/e/1FAIpQLSfH9DAaxE7QUQSgorxqGzl8G7BP3mnam1joI8TIOpOgDwP6Gg/formResponse';
+  var CAMPO = { nome: 'entry.38804056', email: 'entry.1545047068', whatsapp: 'entry.1891983561',
+                idades: 'entry.82013426', origem: 'entry.219645187', consentimento: 'entry.1350168687' };
+  var f = document.getElementById('cadastro'), fim = document.getElementById('cadastro-fim');
+  if (!f) return;
+  var msg = f.querySelector('.msg'), pdf = fim.querySelector('a').href;
+  function origem() {
+    var q = new URLSearchParams(location.search), partes = [window.ORIGEM_PAGINA || 'página principal'];
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'src'].forEach(function (k) { if (q.get(k)) partes.push(k + '=' + q.get(k)); });
+    if (document.referrer && document.referrer.indexOf(location.host) < 0) partes.push('veio de ' + document.referrer.split('?')[0]);
+    return partes.join(' · ');
+  }
+  function erro(t) { msg.textContent = t; msg.hidden = false; }
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var nome = f.nome.value.trim(), email = f.email.value.trim();
+    if (nome.length < 2) return erro('Escreva o seu nome.'), f.nome.focus();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return erro('Confira o e-mail: é por ele que vamos mandar as próximas mensagens.'), f.email.focus();
+    if (!f.aceite.checked) return erro('Para baixar, marque que aceita receber a Semana 1 e as mensagens.'), f.aceite.focus();
+    msg.hidden = true;
+    var b = f.querySelector('button'); b.disabled = true; b.textContent = 'Enviando…';
+    var d = new URLSearchParams();
+    d.append(CAMPO.nome, nome); d.append(CAMPO.email, email.toLowerCase());
+    d.append(CAMPO.whatsapp, f.whatsapp.value.trim()); d.append(CAMPO.idades, f.idades.value.trim());
+    d.append(CAMPO.origem, origem());
+    d.append(CAMPO.consentimento, 'Sim, marcado em ' + new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }));
+    function liberar() {
+      f.hidden = true; fim.hidden = false;
+      var a = document.createElement('a'); a.href = pdf; a.download = ''; document.body.appendChild(a); a.click(); a.remove();
+    }
+    fetch(FORM, { method: 'POST', mode: 'no-cors', body: d }).then(liberar, liberar);
   });
+})();
+</script>
+<script>
+/* Rolagem das páginas, ampliação, painéis "O que o livro ensina" e barra fixa no celular. */
+(function(){
+  var rolo = document.getElementById('rolo'), dlg = document.getElementById('zoom');
+  document.querySelectorAll('.setas button').forEach(function(b){
+    b.addEventListener('click', function(){ rolo.scrollBy({left: (+b.getAttribute('data-dir')) * rolo.clientWidth * .8, behavior: 'smooth'}); });
+  });
+  rolo.querySelectorAll('figure button').forEach(function(b){
+    b.addEventListener('click', function(){ var i = b.querySelector('img'), z = dlg.querySelector('img'); z.src = b.getAttribute('data-full') || i.src; z.alt = i.alt; if (dlg.showModal) dlg.showModal(); });
+  });
+  dlg.addEventListener('click', function(e){ if (e.target === dlg || e.target.classList.contains('fechar')) dlg.close(); });
+
+  // Painéis: abrem pelo botão, pela capa ou pelo endereço (#conteudos-<titulo>).
+  function abre(id) { var d = document.getElementById(id); if (d && d.showModal && !d.open) { d.showModal(); d.scrollTop = 0; } }
+  document.querySelectorAll('[data-painel]').forEach(function (b) { b.addEventListener('click', function () { abre(b.getAttribute('data-painel')); }); });
   document.querySelectorAll('dialog.cb').forEach(function (d) {
     d.querySelector('.cb-x').addEventListener('click', function () { d.close(); });
     var ir = d.querySelector('.cb-ir'); if (ir) ir.addEventListener('click', function (ev) { ev.preventDefault(); d.querySelector('.cb-c').scrollIntoView({ behavior: 'smooth' }); });
     d.addEventListener('click', function (ev) { if (ev.target === d) d.close(); });
   });
   var m = location.hash.match(/^#conteudos-([a-z]+)/); if (m) abre('cb-' + m[1]);
-})();
-</script><!-- conteudos:fim -->
-<script id="enxuto-js">
-(function(){
-  var q=document.getElementById('comecar'); if(!q) return;
-  function abre(e){ if(e) e.preventDefault(); q.hidden=false; q.classList.add('vis'); q.scrollIntoView({behavior:'smooth',block:'start'}); history.replaceState(null,'','#comecar'); }
-  document.querySelectorAll('a[href="#comecar"]').forEach(function(a){ a.addEventListener('click',abre); });
-  if(location.hash==='#comecar') setTimeout(abre,300);
-  document.querySelectorAll('details[name="faq"]').forEach(function(d,_,todos){ d.addEventListener('toggle',function(){ if(d.open) todos.forEach(function(o){ if(o!==d) o.open=false; }); }); });
-})();
-</script>
-<script id="interacao-js">
-(function(){
-var D={"livros": {"caligrafia": {"kit": "trio", "nome": "Caligrafia cursiva com Provérbios", "compra": "https://pay.kiwify.com.br/BD0fOgB", "preco": 69, "amostra": "#amostra"}, "tabuada": {"kit": "trio", "nome": "Tabuada com Provérbios", "compra": "https://pay.kiwify.com.br/xC9i17r", "preco": 69, "amostra": "#amostra"}, "leitura": {"kit": "trio", "nome": "Leitura e interpretação com Provérbios", "compra": "https://pay.kiwify.com.br/6rBavjT", "preco": 79, "amostra": "#amostra"}, "gramatica": {"kit": "kit-linguagem", "nome": "Gramática com Provérbios", "compra": "https://pay.kiwify.com.br/3faJbim", "preco": 79, "amostra": "amostra/titulos/filho-meu-gramatica-amostra.pdf"}, "escrita": {"kit": "kit-linguagem", "nome": "Escrita e redação com Provérbios", "compra": "https://pay.kiwify.com.br/uKHyoRU", "preco": 79, "amostra": "amostra/titulos/filho-meu-escrita-amostra.pdf"}, "palavras": {"kit": "kit-linguagem", "nome": "Palavras que edificam", "compra": "https://pay.kiwify.com.br/DHGddzP", "preco": 79, "amostra": "amostra/titulos/filho-meu-palavras-amostra.pdf"}, "ciencias": {"kit": "kit-mundo", "nome": "Pequenos e sábios: ciências da natureza", "compra": "https://pay.kiwify.com.br/UgvtUZl", "preco": 79, "amostra": "amostra/titulos/filho-meu-ciencias-amostra.pdf"}, "medidas": {"kit": "kit-mundo", "nome": "Contas, medidas e pesos justos", "compra": "https://pay.kiwify.com.br/daNQgME", "preco": 79, "amostra": "amostra/titulos/filho-meu-medidas-amostra.pdf"}, "logica": {"kit": "kit-mundo", "nome": "Pensar bem", "compra": "https://pay.kiwify.com.br/K72EuTq", "preco": 79, "amostra": "amostra/titulos/filho-meu-logica-amostra.pdf"}, "carater": {"kit": "kit-vida", "nome": "Caráter e domínio próprio", "compra": "https://pay.kiwify.com.br/BAO9yDK", "preco": 79, "amostra": "amostra/titulos/filho-meu-carater-amostra.pdf"}, "saude": {"kit": "kit-vida", "nome": "Corpo, saúde e alegria", "compra": "https://pay.kiwify.com.br/nblvRkL", "preco": 79, "amostra": "amostra/titulos/filho-meu-saude-amostra.pdf"}, "financas": {"kit": "kit-vida", "nome": "Dinheiro, trabalho e generosidade", "compra": "https://pay.kiwify.com.br/VREdqQ6", "preco": 79, "amostra": "amostra/titulos/filho-meu-financas-amostra.pdf"}}, "kits": {"trio": {"nome": "Kit Trio", "cor": "var(--mar)", "link": "https://pay.kiwify.com.br/YK88Rgx", "preco": 179, "fundador": 139, "extra": "com os três bônus (Planner do ano, Os 40 versículos e Guia dos pais)"}, "kit-linguagem": {"nome": "Kit Linguagem", "cor": "var(--terra)", "link": "https://pay.kiwify.com.br/ZsjOC7U", "preco": 179}, "kit-mundo": {"nome": "Kit Mundo", "cor": "var(--verde)", "link": "https://pay.kiwify.com.br/TVlx6tL", "preco": 179}, "kit-vida": {"nome": "Kit Vida", "cor": "var(--ocre)", "link": "https://pay.kiwify.com.br/m7llBqF", "preco": 179}}, "nec": [{"t": "caligrafia", "dor": "A letra ainda não sai legível", "ajuda": "Do primeiro traço à carta escrita à mão, com o versículo da semana como modelo."}, {"t": "tabuada", "dor": "Decora a tabuada e logo esquece", "ajuda": "Multiplicação e divisão entendidas antes de decoradas: objeto, desenho e só então número, com revisão espaçada."}, {"t": "leitura", "dor": "Lê, mas não entende o que leu", "ajuda": "Oitenta textos para ler, reler e entender, com perguntas de três tipos e registro de fluência."}, {"t": "gramatica", "dor": "Erra pontuação, acento e concordância", "ajuda": "A gramática estudada no próprio versículo: classes de palavras, frase, pontuação, concordância e acentuação."}, {"t": "escrita", "dor": "Trava na hora de escrever um texto", "ajuda": "Planejar, escrever o rascunho, revisar e ler para alguém, um gênero por semana."}, {"t": "palavras", "dor": "Responde mal ou briga com os irmãos", "ajuda": "Ouvir antes de responder, responder com brandura, falar a verdade, pedir e dar perdão."}, {"t": "ciencias", "dor": "Pergunta o porquê de tudo", "ajuda": "Um experimento por semana com coisas da casa: observar, dar um palpite, testar, registrar e agradecer."}, {"t": "medidas", "dor": "Não vê a matemática no dia a dia", "ajuda": "Medidas, frações, geometria e dados com a xícara, a balança, o canteiro e o relógio."}, {"t": "logica", "dor": "Tem dificuldade de organizar o raciocínio", "ajuda": "Observar, comparar, classificar, achar padrões, ligar causa e consequência e dar razões."}, {"t": "carater", "dor": "Precisa crescer em obediência e domínio próprio", "ajuda": "Dez virtudes no ano, com uma história da casa, um retrato bíblico e uma prática por semana."}, {"t": "saude", "dor": "Sono, comida e brincadeira andam bagunçados", "ajuda": "Dormir, comer, beber água, brincar lá fora e se proteger, cada recomendação com a fonte oficial."}, {"t": "financas", "dor": "Ainda não entende o valor do dinheiro", "ajuda": "Trabalhar, poupar, gastar com sabedoria e dar com alegria, com três potes de verdade."}]};
-var fund=new Date()<new Date('2026-11-08T00:00:00-03:00');
-function precoKit(k){return (k==='trio'&&fund)?D.kits.trio.fundador:D.kits[k].preco}
-function rs(v){return 'R$ '+v}
-function capa(t){return 'img/capas/'+t+'.webp'}
-var ordem=['trio','kit-linguagem','kit-mundo','kit-vida'];
-/* ---------- teste ---------- */
-var qz=document.getElementById('qz');
-if(qz){
-  var st={p:1,idade:null,dores:[],uso:null};
-  var caixa=document.getElementById('qz-dores');
-  D.nec.forEach(function(n){var L=D.livros[n.t];var b=document.createElement('button');b.type='button';b.className='qz-op';b.dataset.v=n.t;b.setAttribute('aria-pressed','false');
-    b.style.setProperty('--k',D.kits[L.kit].cor);b.innerHTML='<span class="ck">✓</span><span><b>'+n.dor+'</b><small>'+L.nome+'</small></span>';caixa.appendChild(b)});
-  var seg=qz.querySelector('.qz-seg'),volta=qz.querySelector('.qz-volta'),cont=qz.querySelector('.qz-cont'),barra=qz.querySelector('.qz-barra i');
-  function pode(){return st.p===1?!!st.idade:st.p===2?st.dores.length>0:st.p===3?!!st.uso:true}
-  function mostra(){qz.querySelectorAll('.qz-passo').forEach(function(e){e.classList.toggle('on',+e.dataset.p===st.p)});
-    cont.textContent=st.p<4?'Pergunta '+st.p+' de 3':'Sua sugestão';barra.style.width=(Math.min(st.p,4)-1)/3*100+'%';
-    volta.hidden=st.p===1;seg.style.display=st.p===4?'none':'';seg.disabled=!pode();seg.textContent=st.p===3?'Ver a sugestão':'Continuar';
-    if(st.p===4)resultado()}
-  qz.addEventListener('click',function(e){var b=e.target.closest('.qz-op');if(!b)return;var p=+b.closest('.qz-passo').dataset.p,v=b.dataset.v;
-    if(p===2){var i=st.dores.indexOf(v);if(i>=0)st.dores.splice(i,1);else{if(st.dores.length>=3)return;st.dores.push(v)}
-      b.setAttribute('aria-pressed',i<0)}
-    else{b.parentNode.querySelectorAll('.qz-op').forEach(function(x){x.setAttribute('aria-pressed',x===b)});if(p===1)st.idade=v;else st.uso=v;
-      setTimeout(function(){if(st.p===p){st.p++;mostra()}},250)}
-    seg.disabled=!pode()});
-  seg.addEventListener('click',function(){if(pode()){st.p++;mostra();qz.scrollIntoView({behavior:'smooth',block:'start'})}});
-  volta.addEventListener('click',function(){st.p--;mostra()});
-  var NIV={semente:'Semente (3 a 5 anos)',broto:'Broto (5 a 7 anos)',arvore:'Árvore (7 anos em diante)'};
-  var USO={casa:'Como base do estudo em casa, cada livro traz as 40 semanas já planejadas: é abrir na lição da semana.',
-           reforco:'Como reforço, as lições são curtas: de 15 a 30 minutos por dia, somando os livros, sem seguir um ano escolar.',
-           virtudes:'Para o tempo em família, a segunda-feira abre com o versículo, a conversa e a oração, todos juntos.'};
-  function resultado(){
-    var conta={};st.dores.forEach(function(t){var k=D.livros[t].kit;conta[k]=(conta[k]||0)+1});
-    var kit=null;ordem.forEach(function(k){if((conta[k]||0)>=2&&(!kit||conta[k]>conta[kit]))kit=k});
-    var html='<h3>Para o seu filho, sugerimos começar assim</h3><span class="qz-nivel">Nível '+NIV[st.idade]+'</span><div class="qz-livros">';
-    st.dores.forEach(function(t){var L=D.livros[t],n=D.nec.filter(function(x){return x.t===t})[0];
-      var am=L.amostra==='#amostra'?'<a href="#amostra">Baixar a Semana 1 grátis</a>':'<a href="'+L.amostra+'" target="_blank" rel="noopener">Ver a lição 1 grátis</a>';
-      html+='<div class="qz-livro" style="--k:'+D.kits[L.kit].cor+'"><img src="'+capa(t)+'" alt="" width="64" height="91"><div><span class="dor">'+n.dor+'</span><h4>'+L.nome+'</h4><p>'+n.ajuda+'</p><div class="lk">'+am+'<a href="'+L.compra+'">Comprar por '+rs(L.preco)+'</a></div></div></div>'});
-    html+='</div>';
-    if(kit){var K=D.kits[kit],sep=0;Object.keys(D.livros).forEach(function(t){if(D.livros[t].kit===kit)sep+=D.livros[t].preco});
-      var nomes=Object.keys(D.livros).filter(function(t){return D.livros[t].kit===kit}).map(function(t){return D.livros[t].nome});
-      html+='<div class="qz-kit" style="--k:'+K.cor+'"><b>O '+K.nome+' reúne '+nomes[0]+', '+nomes[1]+' e '+nomes[2]+(K.extra?', '+K.extra:'')+'.</b><p>'+rs(precoKit(kit))+' pelos três, '+rs(sep-precoKit(kit))+' a menos do que comprando separados'+(kit==='trio'&&fund?' (preço de fundador até 7/11)':'')+'.</p><a class="btn" href="'+K.link+'">Comprar o '+K.nome+'</a></div>'}
-    html+='<p style="margin:16px 0 0;color:var(--lapis)">'+USO[st.uso]+' Todos os 12 livros seguem os mesmos 40 versículos, então dá para juntar outros depois.</p>';
-    html+='<div class="qz-acoes"><button type="button" data-a="montar">Levar para o montador de pedido</button><button type="button" data-a="zap">Mandar a sugestão no WhatsApp</button><button type="button" data-a="refaz">Refazer</button></div>';
-    var r=qz.querySelector('.qz-res');r.innerHTML=html;
-    try{if(window.fbq)fbq('trackCustom','TesteFilhoMeu',{kit:kit||'avulsos'})}catch(e){}
+
+  var barra = document.getElementById('barra'), vis = {};
+  if ('IntersectionObserver' in window) {
+    var ob = new IntersectionObserver(function(es){ es.forEach(function(e){ vis[e.target.id] = e.isIntersecting; }); barra.classList.toggle('on', !vis.abre && !vis.oferta && !vis.amostra); });
+    ['abre', 'oferta', 'amostra'].forEach(function(id){ ob.observe(document.getElementById(id)); });
   }
-  qz.querySelector('.qz-res').addEventListener('click',function(e){var b=e.target.closest('button[data-a]');if(!b)return;var a=b.dataset.a;
-    if(a==='refaz'){st={p:1,idade:null,dores:[],uso:null};qz.querySelectorAll('.qz-op').forEach(function(x){x.setAttribute('aria-pressed','false')});mostra()}
-    if(a==='montar'&&window.__montador){window.__montador(st.dores);document.getElementById('montador').scrollIntoView({behavior:'smooth',block:'start'})}
-    if(a==='zap'){var nomes=st.dores.map(function(t){return D.livros[t].nome}).join(', ');
-      var txt='Olha o que encontrei para o estudo das crianças: coleção Filho meu, com Provérbios. Sugestão para começar: '+nomes+'. '+location.origin+location.pathname+'#comecar';
-      window.open('https://wa.me/?text='+encodeURIComponent(txt),'_blank','noopener')}});
-}
-/* ---------- montador ---------- */
-var mt=document.getElementById('montador');
-if(mt){
-  var gs=mt.querySelector('.mt-grupos');
-  ordem.forEach(function(k){var g=document.createElement('div');g.className='mt-g';g.style.setProperty('--k',D.kits[k].cor);g.innerHTML='<b>'+D.kits[k].nome+'</b>';
-    Object.keys(D.livros).forEach(function(t){var L=D.livros[t];if(L.kit!==k)return;
-      g.insertAdjacentHTML('beforeend','<label class="mt-l"><input type="checkbox" value="'+t+'"><span>'+L.nome+'</span><em>'+rs(L.preco)+'</em></label>')});gs.appendChild(g)});
-  var tot=mt.querySelector('.mt-tot'),btns=mt.querySelector('.mt-btns');
-  function calc(){var sel=[].map.call(mt.querySelectorAll('input:checked'),function(i){return i.value});
-    if(!sel.length){tot.innerHTML='R$ 0';btns.innerHTML='<span class="mt-vazio">Nenhum livro marcado.</span>';return}
-    var total=0,cheio=0,itens=[],dicas=[];
-    ordem.forEach(function(k){var ts=Object.keys(D.livros).filter(function(t){return D.livros[t].kit===k}),m=ts.filter(function(t){return sel.indexOf(t)>=0});
-      var soma=m.reduce(function(s,t){return s+D.livros[t].preco},0);cheio+=soma;
-      if(m.length===3){total+=precoKit(k);itens.push({n:D.kits[k].nome,l:D.kits[k].link,c:D.kits[k].cor})}
-      else{if(m.length===2&&precoKit(k)>soma)dicas.push('Com mais '+rs(precoKit(k)-soma)+', você leva o '+D.kits[k].nome+' completo, com o terceiro livro.');total+=soma;m.forEach(function(t){itens.push({n:D.livros[t].nome.split(' com ')[0].split(':')[0],l:D.livros[t].compra,c:D.kits[k].cor})})}});
-    tot.innerHTML=rs(total)+(cheio>total?'<small>Você economiza '+rs(cheio-total)+' com '+(itens.filter(function(i){return /^Kit/.test(i.n)}).length>1?'os kits':'o kit')+'</small>':'');
-    btns.innerHTML=(dicas.length?'<p class="mt-dica">'+dicas.join(' ')+'</p>':'')+itens.map(function(i){return '<a href="'+i.l+'" style="--k:'+i.c+'">Comprar '+i.n+'</a>'}).join('')}
-  mt.addEventListener('change',calc);calc();
-  window.__montador=function(lista){mt.querySelectorAll('input').forEach(function(i){i.checked=lista.indexOf(i.value)>=0});calc()};
-}
-/* ---------- entrada suave ---------- */
-if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
-  document.documentElement.classList.add('js-rev');
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
-  document.querySelectorAll('main .bloco').forEach(function(s){s.classList.add('rev');io.observe(s)});
-}
 })();
 </script>
 </body>

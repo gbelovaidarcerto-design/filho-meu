@@ -2,206 +2,242 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Filho meu · Novos títulos</title>
 <meta name="description" content="Coleção Filho meu: nove livros com Provérbios (gramática, escrita, palavras, ciências, medidas, lógica, caráter, saúde e finanças) e três kits temáticos, mais em conta no kit.">
 <meta property="og:title" content="Filho meu · Novos títulos">
 <meta property="og:description" content="Nove livros novos da coleção Filho meu, para estudar com o versículo de Provérbios da semana.">
 <meta property="og:image" content="https://gbelovaidarcerto-design.github.io/filho-meu/og.jpg">
-<title>Filho meu · Novos títulos</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Atkinson+Hyperlegible+Next:wght@400;600;700&family=Playwrite+BR:wght@300;400&display=swap">
+<meta name="theme-color" content="#2B6A5C">
+<link rel="icon" href="../ferias/img/icone.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Public+Sans:wght@400;600;700&display=swap">
 <style>
 :root{
   color-scheme:light;
-  --papel:#FBF8F1;--areia:#F2E9D8;--areia2:#E8DCC4;--tinta:#1B2B3A;--suave:#56616B;--fio:#DDD2BD;
-  --mar:#1F3A5F;--terra:#A94A28;--verde:#2B6A5C;--ocre:#8C6212;--branco:#FFFDF8;
-  --serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Atkinson Hyperlegible Next',system-ui,-apple-system,'Segoe UI',sans-serif;--cur:'Playwrite BR','Brush Script MT',cursive;
+  --tinta:#2B6A5C;--escuro:#1D4A40;--medio:#245A4E;--ouro:#C9A35A;--creme:#EEF4F1;--suave:#4E5866;--fio:#DCE6E1;
+  --serif:'EB Garamond',Garamond,'Times New Roman',serif;--sans:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
 }
-*{box-sizing:border-box}
-body{margin:0;background:var(--papel);color:var(--tinta);font-family:var(--sans);font-size:17px;line-height:1.6;padding-inline:16px}
-.w{max-width:1120px;margin:0 auto}
-h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;text-wrap:balance;margin:0;font-variation-settings:'SOFT' 50}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--escuro);font:400 20px/1.5 var(--serif);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--tinta);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;margin:0;letter-spacing:-.01em;text-wrap:balance}
 p{margin:0}
-a{color:var(--mar)}
-.aviso{background:var(--mar);color:#E9EEF4;font-size:13.5px;text-align:center;padding:8px 14px;margin-inline:-16px}
-.aviso b{color:#fff}
-.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--terra)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--mar);color:#fff;text-decoration:none;font-weight:700;padding:15px 26px;border-radius:999px;font-size:16.5px;border:0;cursor:pointer}
-.btn:hover{background:#15304F}
-.btn:focus-visible,.link:focus-visible{outline:3px solid var(--ocre);outline-offset:3px}
-.link{font-weight:600;color:var(--mar);text-underline-offset:4px}
-section{padding-block:72px;border-top:1px solid var(--fio)}
-.sec-t{font-size:clamp(30px,4.2vw,46px);line-height:1.08;max-width:760px}
-.lead{font-size:19px;color:var(--suave);max-width:660px;margin-top:16px}
+.w{max-width:1120px;margin:0 auto;padding-inline:20px}
+.sc{font-weight:600;font-size:14px;letter-spacing:.2em;text-transform:uppercase}
+
 /* topo */
-.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;padding-block:56px 40px}
-.hero h1{font-size:clamp(56px,9vw,112px);line-height:.9;color:var(--mar);margin-top:14px}
-.hero .sub{font-family:var(--serif);font-size:clamp(22px,2.6vw,29px);line-height:1.25;margin-top:18px;font-weight:500}
-.hero .txt{color:var(--suave);margin-top:18px;max-width:520px}
-.hero .ctas{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin-top:28px}
-.hero img{width:100%;height:auto;display:block}
-.verso{margin-top:34px;position:relative;padding:22px 0 10px}
-.verso .cur{font-family:var(--cur);font-size:clamp(17px,2.1vw,22px);line-height:2.1;color:var(--tinta);background:linear-gradient(transparent calc(100% - 13px),#EADFEA calc(100% - 13px),#EADFEA calc(100% - 4px),#8E6A88 calc(100% - 4px),#8E6A88 calc(100% - 3px),transparent calc(100% - 3px));background-size:100% 2.1em;display:inline}
-.verso small{display:block;margin-top:10px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ocre)}
-/* cena */
-.cena{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.cena img{width:100%;border-radius:14px;display:block}
-.cena p+p{margin-top:14px}
-/* para quem */
-.duas{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;margin-top:36px}
-.lista{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
-.lista li{display:grid;grid-template-columns:22px 1fr;gap:10px}
-.lista li:before{content:'';width:10px;height:10px;border-radius:10px;background:var(--verde);margin-top:9px}
-.lista.nao li:before{background:transparent;border:2px solid var(--suave)}
-.caixa{background:var(--areia);border-radius:14px;padding:26px 28px}
-.caixa h3{font-size:22px;margin-bottom:14px}
-/* semana */
-.semana{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:40px}
-.dia{border-top:5px solid;padding-top:16px}
-.dia b{font-family:var(--serif);font-size:26px;display:block;line-height:1.1}
-.dia span{display:block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--suave);margin:4px 0 10px}
-.fecho{font-family:var(--serif);font-size:23px;margin-top:40px;max-width:720px;line-height:1.35}
-/* livros */
-.livro{display:grid;grid-template-columns:320px 1fr;gap:44px;align-items:center;padding-block:38px;border-top:1px dashed var(--fio)}
-.livro:first-of-type{border-top:0}
-.livro img{width:100%;display:block}
-.livro h3{font-size:clamp(26px,3vw,34px);line-height:1.1}
-.livro .pg{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
-.livro p{margin-top:10px;color:var(--suave)}
-.livro ul{margin:16px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
-/* níveis */
-.tabela{overflow-x:auto;margin-top:34px}
-.niveis{display:grid;grid-template-columns:repeat(3,minmax(220px,1fr));gap:18px}
-.nv{background:var(--branco);border:1px solid var(--fio);border-radius:14px;padding:22px}
-.nv b{font-family:var(--serif);font-size:30px;display:block}
-.nv em{font-style:normal;font-size:14px;color:var(--suave)}
-.nv p{margin-top:10px;font-size:15.5px}
-/* por dentro */
-.galeria{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:36px}
-.galeria figure{margin:0}
-.galeria img{width:100%;display:block;border-radius:6px;box-shadow:0 18px 34px -20px rgba(40,30,20,.5)}
-.galeria figcaption{font-size:13px;color:var(--suave);margin-top:8px}
-.amostra{margin-top:44px;background:var(--areia);border-radius:16px;padding:30px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
-.amostra h3{font-size:26px}
-.amostra p{color:var(--suave);max-width:560px;margin-top:6px}
-.cad{flex:1 1 380px;display:grid;grid-template-columns:1fr 1fr;gap:12px 14px;max-width:560px}
-.cad label{display:flex;flex-direction:column;gap:4px;font-size:14px;font-weight:600;color:var(--tinta)}
-.cad label.full,.cad .full{grid-column:1 / -1}
-.cad input[type=text],.cad input[type=email],.cad input[type=tel]{font:inherit;font-size:16px;font-weight:400;padding:11px 14px;border:1.5px solid var(--areia2);border-radius:10px;background:var(--branco);color:var(--tinta)}
-.cad input:focus-visible{outline:3px solid var(--ocre);outline-offset:1px}
-.cad .op{font-weight:400;color:var(--suave)}
-.cad .ok{flex-direction:row;align-items:flex-start;gap:10px;font-weight:400;font-size:13.5px;color:var(--suave);line-height:1.45}
-.cad .ok input{width:18px;height:18px;margin-top:1px;flex:none;accent-color:var(--mar)}
-.cad .btn{justify-self:start}
-.cad .msg{font-size:14.5px;color:var(--terra);margin:0}
-.cad-fim{flex:1 1 380px;max-width:560px}
-.cad-fim b{font-family:var(--serif);font-size:22px;display:block}
-.cad-fim p{margin-top:6px}
-@media (max-width:560px){.cad{grid-template-columns:1fr}}
-/* método e fé */
-.metodo{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;margin-top:36px}
-.metodo div b{display:block;font-family:var(--serif);font-size:21px;margin-bottom:6px}
-.metodo div p{color:var(--suave);font-size:15.5px}
-.fe{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.fe img{width:100%;border-radius:14px;display:block}
-/* autores */
-.autores{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-.autores h3{font-size:26px;margin-bottom:10px}
-.autores p{color:var(--suave)}
-.dep{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:30px}
-.dep div{border:1.5px dashed var(--areia2);border-radius:14px;padding:22px;color:var(--suave);font-size:14.5px;min-height:130px}
-/* oferta */
-.oferta{display:grid;grid-template-columns:1.25fr 1fr;gap:26px;margin-top:36px;align-items:start}
-.kit{background:var(--branco);border:2px solid var(--mar);border-radius:18px;padding:30px}
-.kit h3{font-size:30px}
-.kit ul{padding-left:20px;margin:16px 0}
-.preco{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:10px 0 20px}
-.preco s{color:var(--suave)}
-.preco strong{font-family:var(--serif);font-size:52px;line-height:1;color:var(--mar)}
-.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#FBEFD9;color:var(--ocre);border-radius:999px;padding:4px 10px}
-.avulsos{display:flex;flex-direction:column;gap:14px}
-.av{color:inherit;text-decoration:none;display:flex;justify-content:space-between;gap:14px;border-bottom:1px solid var(--fio);padding-bottom:12px}
-.av b{font-family:var(--serif);font-weight:600}
-.garantia{margin-top:28px;display:flex;gap:16px;align-items:flex-start;background:var(--areia);border-radius:14px;padding:22px}
-/* faq */
-.faq{margin-top:30px;display:flex;flex-direction:column;gap:10px;max-width:820px}
-.faq details{background:var(--branco);border:1px solid var(--fio);border-radius:12px;padding:16px 20px}
-.faq summary{cursor:pointer;font-weight:700;font-size:17px}
-.faq summary:focus-visible{outline:3px solid var(--ocre);outline-offset:3px}
-.faq details p{margin-top:10px;color:var(--suave)}
-.final{text-align:center;padding-block:90px}
-.final h2{font-size:clamp(34px,5vw,58px);line-height:1.05;color:var(--mar)}
-.final p{max-width:620px;margin:18px auto 0;color:var(--suave);font-size:19px}
-.final .ctas{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;align-items:center;margin-top:30px}
-footer{border-top:1px solid var(--fio);padding-block:30px;font-size:14px;color:var(--suave);display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
-.msg{margin-top:12px;font-size:14px;color:var(--verde);min-height:20px}
-@media (max-width:820px){
-  .hero,.cena,.duas,.fe,.autores,.oferta{grid-template-columns:1fr}
-  .semana{grid-template-columns:1fr}
-  .livro{grid-template-columns:1fr;gap:18px}
-  .livro img{max-width:300px}
-  .galeria{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .dep{grid-template-columns:1fr}
-  section{padding-block:52px}
-}
-@media (prefers-reduced-motion:no-preference){.btn{transition:background .15s}}
-.bonus{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:24px}.bonus .bn{background:var(--branco);border:1px solid var(--fio);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px}.bonus .bn img{width:100%;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.12);display:block}.bonus .bn p{font-size:15px;color:var(--suave);margin:0}.bonus .pg{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}@media (max-width:820px){.bonus{grid-template-columns:1fr}.bonus .bn img{max-width:280px}}
-.prox{display:flex;flex-wrap:wrap;gap:22px;align-items:center;justify-content:space-between;background:var(--branco);border:1px solid var(--fio);border-radius:16px;padding:24px 28px}.prox h3{font-size:24px}.prox p{color:var(--suave);max-width:640px;margin-top:6px;font-size:15.5px}.prox .capas{display:flex}.prox .capas img{width:74px;height:auto;border-radius:6px;box-shadow:0 6px 16px rgba(0,0,0,.14);margin-left:-18px;background:#fff}.prox .capas img:first-child{margin-left:0}
-</style>
-<style>
-.btn.sec{background:var(--branco);color:var(--mar);border:2px solid var(--mar)}.btn.sec:hover{background:var(--areia)}
-.grade{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:34px}
-.tt,.kt{background:var(--branco);border:1px solid var(--fio);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;scroll-margin-top:20px}
-.tt img,.kt img{width:100%;height:auto;display:block;background:var(--areia)}
-.tx{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
-.tx h3{font-size:23px;line-height:1.15}.tx p{color:var(--suave);font-size:15px}
-.tx .btn{margin-top:auto}
-.area{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--verde)}
-.tag.ok{background:#E3F0EB;color:var(--verde)}
-.tx .tag{align-self:flex-start}
-.pr{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:6px 0 10px}
-.pr s{color:var(--suave);font-size:15px}.pr strong{font-family:var(--serif);font-size:32px;color:var(--mar);line-height:1}.pr span{font-size:13px;color:var(--suave)}
-.eco{font-size:14px!important;color:var(--tinta)!important}
-.kt{border:2px solid var(--mar)}
-.passos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:30px}
-.passos div{background:var(--areia);border-radius:14px;padding:22px}.passos b{font-family:var(--serif);font-size:20px;display:block;margin-bottom:6px}.passos p{color:var(--suave);font-size:15.5px}
-.cad .op{flex-direction:row;align-items:center;gap:8px;font-weight:400;font-size:14.5px}
-.cad .op input{width:17px;height:17px;accent-color:var(--mar)}
+.topo .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none}
+.marca img{width:26px;height:auto}
+.marca span{font-size:13px;letter-spacing:.18em}
+.topo nav a{font-family:var(--sans);font-size:13.5px;font-weight:600;text-decoration:none;border-bottom:1px solid var(--tinta)}
+.filete{height:4px;border-top:1px solid var(--ouro);border-bottom:1px solid var(--ouro)}
+
+/* botões e preços */
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--sans);font-weight:700;font-size:16px;text-decoration:none;background:var(--tinta);color:#fff;padding:15px 26px;border:2px solid var(--tinta);border-radius:0;cursor:pointer;text-align:center}
+.btn:hover{background:var(--escuro);border-color:var(--escuro)}
+.btn.vazado{background:#fff;color:var(--tinta)}
+.btn.vazado:hover{background:var(--creme)}
+.btn.branco{background:#fff;color:var(--escuro);border-color:#fff}
+.btn.branco:hover{background:var(--creme);border-color:var(--creme)}
+.preco{font-family:var(--sans);font-weight:700;font-variant-numeric:tabular-nums}
+.ver{font-family:var(--sans);font-size:14.5px;font-weight:600;background:none;border:0;padding:4px 0;color:inherit;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.ver::after{content:" +"}
+
+/* capa como objeto: moldura branca e sombra chapada */
+.capa{background:#fff;padding:6px;box-shadow:8px 8px 0 rgba(0,0,0,.22)}
+.capa img{width:100%;height:auto;aspect-ratio:520/736;object-fit:cover}
+
+/* abertura */
+.abre{text-align:center;padding-block:40px 0}
+.abre .sc{color:var(--tinta)}
+.abre h1{font-size:clamp(46px,8vw,96px);line-height:1;margin-top:12px;color:var(--escuro)}
+.abre .dor{font-size:clamp(21px,2.4vw,27px);line-height:1.4;font-style:italic;max-width:760px;margin:20px auto 0}
+.assina{margin-top:12px;font-style:italic;font-size:19px;color:var(--suave)}
+.assina::before{content:"";display:inline-block;width:28px;height:1px;background:var(--ouro);vertical-align:middle;margin-right:10px}
+.tres{display:grid;grid-template-columns:repeat(3,1fr);margin-top:40px}
+.tres a{display:block;text-decoration:none;color:#fff;background:var(--c);padding:40px 28px 30px;text-align:center}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:330px;margin:0 auto}
+.trio .capa{padding:4px;box-shadow:5px 5px 0 rgba(0,0,0,.25)}
+.tres b{display:block;font-size:30px;font-weight:700;margin-top:24px;line-height:1}
+.tres span{display:block;font-size:18px;margin-top:6px}
+.abre .acao{padding-block:34px 10px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.quando{font-size:18px;color:var(--suave);text-align:center}
+.discreto{margin-top:10px;font-family:var(--sans);font-size:13px;font-weight:600;color:var(--suave);text-align:center}
+
+/* o que cada livro ensina */
+.dentro{padding-block:76px 64px}
+.dentro h2,.cab h2{font-size:clamp(34px,4.6vw,52px);line-height:1.05}
+.dentro .frase,.cab .frase{font-size:20px;color:var(--suave);margin-top:8px}
+.rolo{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:30px 20px 18px;margin-inline:-20px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.rolo figure{margin:0;flex:0 0 auto;width:300px;scroll-snap-align:center;background:var(--c);padding:18px 18px 14px;color:#fff}
+.rolo button{display:block;padding:0;border:0;background:#fff;cursor:pointer;width:100%}
+.rolo img{width:100%;height:auto;aspect-ratio:520/736;object-fit:cover}
+.rolo figcaption{margin-top:12px;font-size:19px;font-weight:600;line-height:1.2}
+.rolo figcaption span{display:block;margin-top:6px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+.setas{display:flex;gap:8px;justify-content:flex-end}
+.setas button{width:46px;height:46px;border:2px solid var(--tinta);background:#fff;color:var(--tinta);font-size:18px;cursor:pointer;border-radius:0}
+
+.ano{background:var(--creme);padding-block:48px;text-align:center}
+.ano p{font-size:clamp(22px,2.6vw,29px);font-style:italic;line-height:1.35;max-width:800px;margin:0 auto}
+
+/* títulos: uma faixa por livro, em tons de verde */
+.cab{padding-block:72px 32px;text-align:center}
+.grupo{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--tinta);text-align:center;padding:30px 20px 14px}
+.grupo:first-of-type{padding-top:0}
+.cad{background:var(--c);color:#fff;border-top:1px solid rgba(255,255,255,.14)}
+.cad .w{display:grid;grid-template-columns:200px 1fr auto;gap:44px;align-items:center;padding-block:40px}
+.cad h3{font-size:clamp(32px,3.8vw,46px);line-height:1.02;font-weight:700}
+.cad .faixa{font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+.cad .linha{font-size:19px;line-height:1.4;margin-top:10px;max-width:560px}
+.cad .ver{margin-top:10px}
+.cad .direita{text-align:right}
+.cad .preco{font-size:34px;display:block}
+.cad .btn{margin-top:14px;min-width:200px}
+
+/* kits: três livros lado a lado */
+.kits{padding-block:76px}
+.kits>.w>.sc{display:block;text-align:center;color:var(--tinta)}
+.kits h2{text-align:center;font-size:clamp(36px,5vw,56px);line-height:1.05;margin-top:8px}
+.kits .sub{text-align:center;color:var(--suave);font-size:20px;margin-top:8px}
+.tresk{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:40px}
+.kit{border:2px solid var(--tinta);display:flex;flex-direction:column;scroll-margin-top:20px}
+.listras{background:var(--c);padding:28px 22px}
+.listras .trio{max-width:none}
+.kit .tx{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1;text-align:center}
+.kit h3{font-size:32px;line-height:1.05}
+.kit .itens{font-size:17px;color:var(--suave);margin-top:8px;line-height:1.35}
+.kit .valor{display:flex;justify-content:center;align-items:baseline;gap:14px;flex-wrap:wrap;margin-top:18px}
+.kit .valor .preco{font-size:44px;line-height:1;color:var(--escuro)}
+.kit .valor s{font-family:var(--sans);color:var(--suave);font-size:17px}
+.kit .eco{font-size:17px;color:var(--suave);margin-top:6px}
+.kit .btn{margin-top:auto;width:100%}
+.kit .tx>.btn{margin-top:18px}
+
+/* como funciona a compra */
+.compra{background:var(--creme);padding-block:64px}
+.compra h2{font-size:clamp(30px,4vw,44px);line-height:1.08;text-align:center}
+.passos{list-style:none;padding:0;margin:30px auto 0;max-width:820px;display:grid;gap:18px}
+.passos li{border-top:1px solid #CFDDD6;padding-top:16px}
+.passos b{display:block;font-size:23px;line-height:1.2}
+.passos p{color:var(--suave);font-size:19px;margin-top:4px}
+
+/* novidades */
+.avise{padding-block:64px}
+.avise .caixa{border:2px solid var(--tinta);padding:32px;display:grid;grid-template-columns:1fr 1.3fr;gap:32px;align-items:start}
+.avise h2{font-size:clamp(28px,3.4vw,38px);line-height:1.1}
+.avise .caixa>div>p{color:var(--suave);margin-top:10px;font-size:19px}
+form.cad{background:none;color:inherit;border:0;display:grid;grid-template-columns:1fr 1fr;gap:12px 14px;font-family:var(--sans)}
+form.cad label{display:flex;flex-direction:column;gap:4px;font-size:14px;font-weight:600;color:var(--escuro)}
+form.cad .full{grid-column:1 / -1}
+form.cad input[type=text],form.cad input[type=email],form.cad input[type=tel]{font:inherit;font-size:16px;font-weight:400;padding:11px 12px;border:1.5px solid #B9CCC4;border-radius:0;background:#fff;color:var(--escuro);width:100%}
+form.cad input:focus-visible{outline:3px solid var(--tinta);outline-offset:1px}
+form.cad .op{flex-direction:row;align-items:center;gap:8px;font-weight:400;font-size:14.5px;color:var(--escuro)}
+form.cad .op input{width:17px;height:17px;accent-color:var(--tinta);flex:none}
+form.cad span .op{color:var(--suave)}
+form.cad .ok{flex-direction:row;align-items:flex-start;gap:10px;font-weight:400;font-size:13.5px;color:var(--suave);line-height:1.45}
+form.cad .ok input{width:18px;height:18px;margin-top:1px;flex:none;accent-color:var(--tinta)}
+form.cad .btn{justify-self:start}
+form.cad .msg{font-size:14.5px;color:#9A3A1E;margin:0}
 .ops{grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;gap:6px 14px}
-@media (max-width:980px){.grade{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:640px){.grade,.passos,.ops{grid-template-columns:1fr}}
-</style>
-<style>
-.cb-abre{font:600 15px/1.2 inherit;font-family:inherit;color:var(--mar);background:none;border:0;padding:4px 0;margin:2px 0 6px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;align-self:flex-start}
-.cb-abre::after{content:" +"}
-.cb{border:0;padding:0;border-radius:14px;max-width:min(760px,calc(100vw - 24px));width:100%;max-height:calc(100dvh - 24px);background:#fff;color:#23262D;box-shadow:0 20px 50px -10px rgba(20,30,50,.45)}
-.cb::backdrop{background:rgba(20,28,40,.55)}
-.cb-in{padding:26px clamp(18px,4vw,34px) 30px;position:relative;font-size:16px;line-height:1.5}
-.cb-x{position:sticky;top:0;float:right;margin:-8px -10px 0 0;width:40px;height:40px;border-radius:50%;border:0;background:#EEF1F5;font-size:24px;line-height:1;cursor:pointer;color:#23262D}
-.cb-area{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--verde)}
-.cb h3{font-size:clamp(24px,4vw,30px);line-height:1.15;margin:4px 0 8px;color:var(--mar)}
-.cb-res{color:#4A5260;margin:0 0 6px}
-.cb-s{font-size:19px;margin:24px 0 8px;padding-top:14px;border-top:1px solid #E2E6EC;color:#23262D}
-.cb-g h4{font-size:15.5px;margin:12px 0 4px;color:var(--mar)}
+.cad-fim b{font-size:24px;display:block}
+.cad-fim p{margin-top:6px;color:var(--suave)}
+.garantia{margin-top:22px;text-align:center;font-size:19px;color:var(--suave);font-style:italic}
+
+.fim{text-align:center;padding-block:70px 80px;border-top:1px solid var(--fio)}
+.fim img{width:58px;margin:0 auto 18px}
+.fim h2{font-size:clamp(32px,4.6vw,50px);line-height:1.1}
+.fim p.nota{margin:14px auto 0;font-size:20px;color:var(--suave);max-width:640px}
+.fim .acao{margin-top:28px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+
+footer{background:var(--tinta);color:#E3EEEA;padding:24px 0 34px;font-size:15px}
+footer .w{display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap}
+
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;align-items:center;justify-content:space-between;gap:12px;background:#fff;border-top:2px solid var(--tinta);padding:10px 16px calc(10px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .2s}
+.barra.on{transform:none}
+.barra p{font-size:16px;line-height:1.2}
+.barra .preco{font-size:13.5px;display:block;color:var(--suave)}
+.barra .btn{padding:11px 18px;font-size:15px}
+
+/* painéis "O que o livro ensina" */
+.cb{border:0;padding:0;border-radius:0;max-width:min(760px,calc(100vw - 24px));width:100%;max-height:calc(100dvh - 24px);background:#fff;color:var(--escuro);box-shadow:10px 10px 0 rgba(0,0,0,.25);border-top:6px solid var(--tinta)}
+.cb::backdrop{background:rgba(29,74,64,.88)}
+.cb-in{padding:26px clamp(18px,4vw,34px) 30px;position:relative;font-size:18px;line-height:1.5}
+.cb-x{position:sticky;top:0;float:right;margin:-8px -10px 0 0;width:44px;height:44px;border:2px solid var(--tinta);background:#fff;font-size:24px;line-height:1;cursor:pointer;color:var(--tinta);border-radius:0}
+.cb-area{font-family:var(--sans);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--tinta)}
+.cb h3{font-size:clamp(28px,4vw,36px);line-height:1.1;margin:6px 0 8px}
+.cb-res{color:var(--suave);margin:0 0 6px;font-size:19px}
+.cb-s{font-family:var(--serif);font-size:23px;margin:24px 0 8px;padding-top:14px;border-top:1px solid var(--fio)}
+.cb-g h4{font-size:18px;margin:12px 0 4px;color:var(--tinta)}
 .cb-g ul,.cb-et{margin:0;padding-left:20px;display:grid;gap:3px}
-.cb-nv{display:grid;gap:8px}.cb-nv b{display:block;font-size:15.5px}.cb-nv p{margin:0;color:#4A5260}
+.cb-nv{display:grid;gap:8px}.cb-nv b{display:block;font-size:18px}.cb-nv p{margin:0;color:var(--suave)}
 .cb-l{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:10px}
 .cb-l li{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;align-items:start}
-.cb-l code{font:700 13px/1.6 ui-monospace,Menlo,monospace;background:#EEF1F5;color:var(--mar);padding:1px 7px;border-radius:5px;white-space:nowrap}
-.cb-l span{font-size:15px}.cb-l small{grid-column:2;font-size:13px;color:#6A7280}
-.cb-l a{color:var(--mar)}
-.cb-mi{font-weight:700;font-size:15px;margin:18px 0 0}
-.cb-d{margin-top:16px;border-top:1px solid #E2E6EC}
-.cb-d summary{cursor:pointer;font-weight:700;font-size:18px;padding:14px 30px 4px 0;list-style:none;position:relative;color:#23262D}
+.cb-l code{font:700 13px/1.6 ui-monospace,Menlo,monospace;background:var(--creme);color:var(--escuro);padding:1px 7px;white-space:nowrap}
+.cb-l span{font-size:16.5px}.cb-l small{grid-column:2;font-size:14px;color:var(--suave)}
+.cb-l a{color:var(--tinta)}
+.cb-mi{font-weight:700;font-size:16.5px;margin:18px 0 0}
+.cb-d{margin-top:16px;border-top:1px solid var(--fio)}
+.cb-d summary{cursor:pointer;font-weight:600;font-size:20px;padding:14px 30px 4px 0;list-style:none;position:relative}
 .cb-d summary::-webkit-details-marker{display:none}
-.cb-d summary::after{content:"+";position:absolute;right:4px;top:10px;font-size:24px;color:var(--mar)}
+.cb-d summary::after{content:"+";position:absolute;right:4px;top:10px;font-size:24px;color:var(--tinta)}
 .cb-d[open] summary::after{content:"–"}
 .cb-d .cb-et{margin-top:8px}
-.cb-t{margin:8px 0 0;font-size:15px}.cb-t a{color:var(--mar);font-weight:700;text-underline-offset:3px}
-.cb-c{display:grid;gap:10px;margin-top:22px;padding-top:18px;border-top:1px solid #E2E6EC}
-.cb-b{display:block;text-align:center;background:var(--mar);color:#fff!important;font-weight:700;font-size:17px;padding:14px 18px;border-radius:10px;text-decoration:none}
-.cb-k{color:var(--mar);font-weight:600;font-size:15px;text-align:center;text-underline-offset:3px}
-.cb-nota{font-size:13.5px;color:#6A7280;margin:24px 0 0;padding-top:12px;border-top:1px solid #E2E6EC}
-@media (max-width:520px){.cb-l li{grid-template-columns:1fr}.cb-l small{grid-column:1}}
+.cb-t{margin:8px 0 0;font-family:var(--sans);font-size:14.5px}.cb-t a{color:var(--tinta);font-weight:700;text-underline-offset:3px}
+.cb-c{display:grid;gap:12px;margin-top:22px;padding-top:18px;border-top:1px solid var(--fio)}
+.cb-b{display:block;text-align:center;background:var(--tinta);color:#fff!important;font-family:var(--sans);font-weight:700;font-size:16.5px;padding:15px 18px;text-decoration:none;border:2px solid var(--tinta)}
+.cb-b:hover{background:var(--escuro)}
+.cb-k{color:var(--tinta);font-family:var(--sans);font-weight:600;font-size:14.5px;text-align:center;text-underline-offset:3px}
+.cb-nota{font-size:15px;color:var(--suave);margin:24px 0 0;padding-top:12px;border-top:1px solid var(--fio)}
+
+@media (max-width:900px){
+  .cad .w{grid-template-columns:170px 1fr;gap:28px}
+  .cad .direita{grid-column:1 / -1;text-align:left;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .cad .btn{margin-top:0}
+  .tresk{grid-template-columns:1fr;max-width:560px;margin-inline:auto}
+  .avise .caixa{grid-template-columns:1fr}
+}
+@media (max-width:760px){.barra{display:flex}footer{padding-bottom:90px}}
+@media (max-width:560px){
+  body{font-size:19px}
+  .w{padding-inline:16px}
+  .marca span{font-size:11.5px;letter-spacing:.14em}
+  .abre{padding-top:26px}
+  .abre .dor{font-size:20px}
+  .tres{grid-template-columns:1fr;margin-top:28px}
+  .tres a{padding:22px 18px 20px;display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:center;text-align:left}
+  .tres .trio{gap:6px;max-width:none}
+  .tres .trio .capa{padding:2px;box-shadow:3px 3px 0 rgba(0,0,0,.25)}
+  .tres b{font-size:25px;margin-top:0}
+  .tres span{font-size:16px}
+  .abre .acao{padding-top:26px}
+  .abre .acao .btn{width:100%}
+  .dentro{padding-block:56px 48px}
+  .rolo{margin-inline:-16px;padding-inline:16px}
+  .rolo figure{width:70vw;padding:12px 12px 10px}
+  .setas{display:none}
+  .cab{padding-block:56px 24px}
+  .cad .w{grid-template-columns:34% 1fr;gap:16px;padding-block:28px;align-items:start}
+  .cad .capa{padding:4px;box-shadow:5px 5px 0 rgba(0,0,0,.22)}
+  .cad h3{font-size:27px}
+  .cad .faixa{font-size:11.5px;letter-spacing:.1em}
+  .cad .linha{font-size:18px}
+  .cad .preco{font-size:28px}
+  .cad .direita{display:block}
+  .cad .btn{width:100%;margin-top:12px}
+  .kits{padding-block:56px}
+  .listras{padding:20px 16px}
+  .compra,.avise{padding-block:48px}
+  .avise .caixa{padding:22px 16px}
+  form.cad,.ops{grid-template-columns:1fr}
+  .fim .acao .btn{width:100%}
+  .cb-l li{grid-template-columns:1fr}.cb-l small{grid-column:1}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.barra{transition:none}}
 </style>
 <!-- Filho meu: Pixel da Meta + repasse de UTM para a Kiwify. -->
 <script>
@@ -217,8 +253,8 @@ document.addEventListener('DOMContentLoaded',function(){
   var q=new URLSearchParams(location.search),keep=new URLSearchParams();
   q.forEach(function(v,k){if(/^utm_|^src$/.test(k))keep.set(k,v)});
   document.querySelectorAll('a[href*="pay.kiwify.com.br"]').forEach(function(a){
-    var u=new URL(a.href);keep.forEach(function(v,k){u.searchParams.set(k,v)});a.href=u.toString();
-    a.addEventListener('click',function(){fbq('trackCustom','CliqueComprar')});
+    try{var u=new URL(a.href);keep.forEach(function(v,k){u.searchParams.set(k,v)});a.href=u.toString();}catch(e){}
+    a.addEventListener('click',function(){fbq('trackCustom','CliqueComprar',{content_name:a.getAttribute('data-produto')||'Novos títulos'})});
   });
   // Conta como cadastro (Lead) quando o formulário da Semana 1 é concluído
   // (o aviso de download aparece só depois de um envio válido).
@@ -231,100 +267,146 @@ document.addEventListener('DOMContentLoaded',function(){
 <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=2146801305916148&ev=PageView&noscript=1"></noscript>
 </head>
 <body>
-<div class="w">
-  <header style="padding-block:46px 30px">
-    <a class="link" href="../">← Voltar ao Kit Trio</a>
-    <span class="eyebrow" style="display:block;margin-top:26px">Coleção Peregrininhos</span>
-    <h1 style="font-size:clamp(44px,7vw,84px);line-height:.95;color:var(--mar);margin-top:12px">Filho meu: os novos títulos</h1>
-    <p class="lead" style="max-width:760px">Nove livros novos, com o mesmo jeito do Kit Trio: o versículo de Provérbios da semana, 40 lições e três níveis (Semente, Broto e Árvore), para a família inteira estudar junta, cada filho no seu nível. Cada livro sai por R$ 79, e o kit de três, por R$ 179.</p>
-  </header>
 
-  <section style="padding-block:40px">
-    <h2 class="sec-t" style="font-size:clamp(26px,3.4vw,36px)">Como funciona a compra</h2>
-    <div class="passos">
-      <div><b>1. Já revisados</b><p>Cada livro passou por revisão de conteúdo, de segurança e teológica antes de abrir. O de saúde cita, em cada lição, o documento oficial de onde vem cada recomendação.</p></div>
-      <div><b>2. Mais em conta no kit</b><p>Cada livro sai por R$ 79. Os kits temáticos reúnem três livros que se completam por R$ 179, em vez de R$ 237.</p></div>
-      <div><b>3. Revisões chegam de graça</b><p>Os livros ficam na sua área de membros. Toda correção ou melhoria que fizermos depois aparece lá, sem custo, e avisamos por e-mail.</p></div>
-    </div>
-  </section>
+<header class="topo"><div class="w">
+  <a class="marca" href="../"><img src="../ferias/img/escudo.webp" alt="" width="26" height="37"><span class="sc">Filho meu Educacional</span></a>
+  <nav><a href="../">Kit Trio</a></nav>
+</div><div class="filete"></div></header>
 
-  <section style="padding-block:40px">
-    <span class="eyebrow">Kits temáticos</span>
-    <h2 class="sec-t" style="margin-top:10px;font-size:clamp(26px,3.4vw,36px)">Três livros que se completam</h2>
-    <div class="grade">
-      <article class="kt" id="kit-linguagem">
-        <img src="../img/colecao/kit-linguagem.webp" alt="Os três livros do Kit Linguagem" width="600" height="500" loading="lazy">
-        <div class="tx"><span class="tag ok">Disponível</span><h3>Kit Linguagem</h3><p>Gramática com Provérbios · Escrita e redação com Provérbios · Palavras que edificam</p>
-          <p class="eco">Três livros por R$ 179: R$ 58 a menos do que comprando separados.</p><div class="pr"><strong>R$ 179</strong></div><a class="btn" href="https://pay.kiwify.com.br/ZsjOC7U" style="width:100%">Comprar</a></div>
-      </article>
-      <article class="kt" id="kit-mundo">
-        <img src="../img/colecao/kit-mundo.webp" alt="Os três livros do Kit Mundo" width="600" height="500" loading="lazy">
-        <div class="tx"><span class="tag ok">Disponível</span><h3>Kit Mundo</h3><p>Pequenos e sábios: ciências da natureza · Contas, medidas e pesos justos · Pensar bem</p>
-          <p class="eco">Três livros por R$ 179: R$ 58 a menos do que comprando separados.</p><div class="pr"><strong>R$ 179</strong></div><a class="btn" href="https://pay.kiwify.com.br/TVlx6tL" style="width:100%">Comprar</a></div>
-      </article>
-      <article class="kt" id="kit-vida">
-        <img src="../img/colecao/kit-vida.webp" alt="Os três livros do Kit Vida" width="600" height="500" loading="lazy">
-        <div class="tx"><span class="tag ok">Disponível</span><h3>Kit Vida</h3><p>Caráter e domínio próprio · Corpo, saúde e alegria · Dinheiro, trabalho e generosidade</p>
-          <p class="eco">Três livros por R$ 179: R$ 58 a menos do que comprando separados.</p><div class="pr"><strong>R$ 179</strong></div><a class="btn" href="https://pay.kiwify.com.br/m7llBqF" style="width:100%">Comprar</a></div>
-      </article>
-    </div>
-  </section>
+<main>
+<div class="abre" id="abre">
+  <div class="w">
+    <span class="sc">Coleção Peregrininhos · nove livros novos</span>
+    <h1>Filho meu: os novos títulos</h1>
+    <p class="dor">Fizemos estes nove livros com o mesmo jeito do Kit Trio: o versículo de Provérbios da semana, 40 lições e três níveis (Semente, Broto e Árvore), para a família inteira estudar junta, cada filho no seu nível.</p>
+    <p class="assina">Gullit e Gislaine</p>
+  </div>
+  <div class="tres">
+    <a href="#kit-linguagem" style="--c:var(--tinta)"><div class="trio"><div class="capa"><img src="../img/capas/gramatica.webp" alt="Capa do livro Gramática com Provérbios" width="520" height="736"></div><div class="capa"><img src="../img/capas/escrita.webp" alt="Capa do livro Escrita e redação com Provérbios" width="520" height="736"></div><div class="capa"><img src="../img/capas/palavras.webp" alt="Capa do livro Palavras que edificam" width="520" height="736"></div></div><div><b>Linguagem</b><span>Gramática, escrita e palavras</span></div></a>
+    <a href="#kit-mundo" style="--c:var(--medio)"><div class="trio"><div class="capa"><img src="../img/capas/ciencias.webp" alt="Capa do livro Pequenos e sábios: ciências da natureza" width="520" height="736"></div><div class="capa"><img src="../img/capas/medidas.webp" alt="Capa do livro Contas, medidas e pesos justos" width="520" height="736"></div><div class="capa"><img src="../img/capas/logica.webp" alt="Capa do livro Pensar bem" width="520" height="736"></div></div><div><b>Mundo</b><span>Ciências, medidas e lógica</span></div></a>
+    <a href="#kit-vida" style="--c:var(--escuro)"><div class="trio"><div class="capa"><img src="../img/capas/carater.webp" alt="Capa do livro Caráter e domínio próprio" width="520" height="736"></div><div class="capa"><img src="../img/capas/saude.webp" alt="Capa do livro Corpo, saúde e alegria" width="520" height="736"></div><div class="capa"><img src="../img/capas/financas.webp" alt="Capa do livro Dinheiro, trabalho e generosidade" width="520" height="736"></div></div><div><b>Vida</b><span>Caráter, saúde e finanças</span></div></a>
+  </div>
+  <div class="w">
+    <div class="acao"><a class="btn" href="#titulos" id="cta1">Escolher o livro</a><a class="btn vazado" href="#kits">Três livros por R$ 179</a></div>
+    <p class="quando">Cada livro sai por R$ 79. São 40 lições, uma por semana.</p>
+    <p class="discreto">Na sua área de membros, com as revisões futuras de graça</p>
+  </div>
+</div>
 
-  <section style="padding-block:40px">
-    <span class="eyebrow">Os nove títulos</span>
-    <h2 class="sec-t" style="margin-top:10px;font-size:clamp(26px,3.4vw,36px)">Cada livro funciona sozinho</h2>
-    <div class="grade">
-      <article class="tt" id="gramatica">
-        <img src="../img/colecao/gramatica.webp" alt="Capa do livro Filho meu: Gramática com Provérbios" width="600" height="500" loading="lazy">
-        <div class="tx"><span class="tag ok">Disponível</span><span class="area">Língua portuguesa · 364 páginas</span>
-          <h3>Gramática com Provérbios</h3><p>A gramática estudada no próprio versículo da semana: classes de palavras, frase, pontuação, concordância e acentuação, do nome das coisas à análise da oração.</p><button type="button" class="cb-abre" data-painel="cb-gramatica">O que o livro ensina</button><div class="pr"><strong>R$ 79</strong></div><a class="btn" href="https://pay.kiwify.com.br/3faJbim" style="width:100%">Comprar</a></div>
-      </article>
-      <article class="tt" id="escrita">
-        <img src="../img/colecao/escrita.webp" alt="Capa do livro Filho meu: Escrita e redação com Provérbios" width="600" height="500" loading="lazy">
-        <div class="tx"><span class="tag ok">Disponível</span><span class="area">Língua portuguesa · 311 páginas</span>
-          <h3>Escrita e redação com Provérbios</h3><p>Contar, planejar, escrever, revisar e ler para alguém: bilhetes, listas, relatos, instruções, cartas e textos de opinião, um gênero por semana.</p><button type="button" class="cb-abre" data-painel="cb-escrita">O que o livro ensina</button><div class="pr"><strong>R$ 79</strong></div><a class="btn" href="https://pay.kiwify.com.br/uKHyoRU" style="width:100%">Comprar</a></div>
-      </article>
-      <article class="tt" id="palavras">
-        <img src="../img/colecao/palavras.webp" alt="Capa do livro Filho meu: Palavras que edificam" width="600" height="500" loading="lazy">
-        <div class="tx"><span class="tag ok">Disponível</span><span class="area">Vida em família · 368 páginas</span>
-          <h3>Palavras que edificam</h3><p>Ouvir antes de responder, responder com brandura, falar a verdade, pedir e dar perdão, encorajar: o falar e o ouvir em casa, com quadrinhos da família.</p><button type="button" class="cb-abre" data-painel="cb-palavras">O que o livro ensina</button><div class="pr"><strong>R$ 79</strong></div><a class="btn" href="https://pay.kiwify.com.br/DHGddzP" style="width:100%">Comprar</a></div>
-      </article>
-      <article class="tt" id="ciencias">
-        <img src="../img/colecao/ciencias.webp" alt="Capa do livro Filho meu: Pequenos e sábios: ciências da natureza" width="600" height="500" loading="lazy">
-        <div class="tx"><span class="tag ok">Disponível</span><span class="area">Ciências · 363 páginas</span>
-          <h3>Pequenos e sábios: ciências da natureza</h3><p>A família olha a criação: observa o quintal, a cozinha, a praia e o céu, faz uma pergunta, dá um palpite, testa, registra e agradece.</p><button type="button" class="cb-abre" data-painel="cb-ciencias">O que o livro ensina</button><div class="pr"><strong>R$ 79</strong></div><a class="btn" href="https://pay.kiwify.com.br/UgvtUZl" style="width:100%">Comprar</a></div>
-      </article>
-      <article class="tt" id="medidas">
-        <img src="../img/colecao/medidas.webp" alt="Capa do livro Filho meu: Contas, medidas e pesos justos" width="600" height="500" loading="lazy">
-        <div class="tx"><span class="tag ok">Disponível</span><span class="area">Matemática · 363 páginas</span>
-          <h3>Contas, medidas e pesos justos</h3><p>As contas da Tabuada levadas para o mundo: medidas, frações, geometria e dados com a xícara, a balança, o canteiro e o relógio.</p><button type="button" class="cb-abre" data-painel="cb-medidas">O que o livro ensina</button><div class="pr"><strong>R$ 79</strong></div><a class="btn" href="https://pay.kiwify.com.br/daNQgME" style="width:100%">Comprar</a></div>
-      </article>
-      <article class="tt" id="logica">
-        <img src="../img/colecao/logica.webp" alt="Capa do livro Filho meu: Pensar bem" width="600" height="500" loading="lazy">
-        <div class="tx"><span class="tag ok">Disponível</span><span class="area">Lógica · 307 páginas</span>
-          <h3>Pensar bem</h3><p>Observar, comparar, classificar, achar padrões, ligar causa e consequência, separar fato de opinião e dar razões.</p><button type="button" class="cb-abre" data-painel="cb-logica">O que o livro ensina</button><div class="pr"><strong>R$ 79</strong></div><a class="btn" href="https://pay.kiwify.com.br/K72EuTq" style="width:100%">Comprar</a></div>
-      </article>
-      <article class="tt" id="carater">
-        <img src="../img/colecao/carater.webp" alt="Capa do livro Filho meu: Caráter e domínio próprio" width="600" height="500" loading="lazy">
-        <div class="tx"><span class="tag ok">Disponível</span><span class="area">Virtudes · 347 páginas</span>
-          <h3>Caráter e domínio próprio</h3><p>O caráter do filho sábio de Provérbios (humildade, verdade, paciência, domínio próprio, diligência, coragem, gratidão e fidelidade), com histórias para ler em voz alta.</p><button type="button" class="cb-abre" data-painel="cb-carater">O que o livro ensina</button><div class="pr"><strong>R$ 79</strong></div><a class="btn" href="https://pay.kiwify.com.br/BAO9yDK" style="width:100%">Comprar</a></div>
-      </article>
-      <article class="tt" id="saude">
-        <img src="../img/colecao/saude.webp" alt="Capa do livro Filho meu: Corpo, saúde e alegria" width="600" height="500" loading="lazy">
-        <div class="tx"><span class="tag ok">Disponível</span><span class="area">Saúde · 354 páginas</span>
-          <h3>Corpo, saúde e alegria</h3><p>Cuidar, junto, do corpo que Deus fez: dormir, comer, beber água, brincar lá fora, lavar as mãos, proteger-se e viver com alegria. Cada recomendação cita o documento oficial de onde vem.</p><button type="button" class="cb-abre" data-painel="cb-saude">O que o livro ensina</button><div class="pr"><strong>R$ 79</strong></div><a class="btn" href="https://pay.kiwify.com.br/nblvRkL" style="width:100%">Comprar</a></div>
-      </article>
-      <article class="tt" id="financas">
-        <img src="../img/colecao/financas.webp" alt="Capa do livro Filho meu: Dinheiro, trabalho e generosidade" width="600" height="500" loading="lazy">
-        <div class="tx"><span class="tag ok">Disponível</span><span class="area">Finanças · 408 páginas</span>
-          <h3>Dinheiro, trabalho e generosidade</h3><p>Trabalhar, guardar, gastar com sabedoria e dar com alegria, como mordomos do que Deus confia.</p><button type="button" class="cb-abre" data-painel="cb-financas">O que o livro ensina</button><div class="pr"><strong>R$ 79</strong></div><a class="btn" href="https://pay.kiwify.com.br/VREdqQ6" style="width:100%">Comprar</a></div>
-      </article>
-    </div>
-  </section>
+<section class="dentro" id="dentro"><div class="w">
+  <h2>O que cada livro ensina</h2>
+  <p class="frase">Toque na capa para ver as lições, o que muda em cada nível e as habilidades da BNCC.</p>
+  <div class="rolo" id="rolo">
+    <figure style="--c:var(--tinta)"><button type="button" class="cb-abre" data-painel="cb-gramatica" aria-label="O que ensina Gramática com Provérbios"><img src="../img/capas/gramatica.webp" alt="Capa do livro Gramática com Provérbios" width="520" height="736" loading="lazy"></button><figcaption>Gramática com Provérbios<span>Língua portuguesa</span></figcaption></figure>
+    <figure style="--c:var(--tinta)"><button type="button" class="cb-abre" data-painel="cb-escrita" aria-label="O que ensina Escrita e redação com Provérbios"><img src="../img/capas/escrita.webp" alt="Capa do livro Escrita e redação com Provérbios" width="520" height="736" loading="lazy"></button><figcaption>Escrita e redação<span>Língua portuguesa</span></figcaption></figure>
+    <figure style="--c:var(--tinta)"><button type="button" class="cb-abre" data-painel="cb-palavras" aria-label="O que ensina Palavras que edificam"><img src="../img/capas/palavras.webp" alt="Capa do livro Palavras que edificam" width="520" height="736" loading="lazy"></button><figcaption>Palavras que edificam<span>Vida em família</span></figcaption></figure>
+    <figure style="--c:var(--medio)"><button type="button" class="cb-abre" data-painel="cb-ciencias" aria-label="O que ensina Pequenos e sábios: ciências da natureza"><img src="../img/capas/ciencias.webp" alt="Capa do livro Pequenos e sábios: ciências da natureza" width="520" height="736" loading="lazy"></button><figcaption>Pequenos e sábios<span>Ciências</span></figcaption></figure>
+    <figure style="--c:var(--medio)"><button type="button" class="cb-abre" data-painel="cb-medidas" aria-label="O que ensina Contas, medidas e pesos justos"><img src="../img/capas/medidas.webp" alt="Capa do livro Contas, medidas e pesos justos" width="520" height="736" loading="lazy"></button><figcaption>Contas, medidas e pesos justos<span>Matemática</span></figcaption></figure>
+    <figure style="--c:var(--medio)"><button type="button" class="cb-abre" data-painel="cb-logica" aria-label="O que ensina Pensar bem"><img src="../img/capas/logica.webp" alt="Capa do livro Pensar bem" width="520" height="736" loading="lazy"></button><figcaption>Pensar bem<span>Lógica</span></figcaption></figure>
+    <figure style="--c:var(--escuro)"><button type="button" class="cb-abre" data-painel="cb-carater" aria-label="O que ensina Caráter e domínio próprio"><img src="../img/capas/carater.webp" alt="Capa do livro Caráter e domínio próprio" width="520" height="736" loading="lazy"></button><figcaption>Caráter e domínio próprio<span>Virtudes</span></figcaption></figure>
+    <figure style="--c:var(--escuro)"><button type="button" class="cb-abre" data-painel="cb-saude" aria-label="O que ensina Corpo, saúde e alegria"><img src="../img/capas/saude.webp" alt="Capa do livro Corpo, saúde e alegria" width="520" height="736" loading="lazy"></button><figcaption>Corpo, saúde e alegria<span>Saúde</span></figcaption></figure>
+    <figure style="--c:var(--escuro)"><button type="button" class="cb-abre" data-painel="cb-financas" aria-label="O que ensina Dinheiro, trabalho e generosidade"><img src="../img/capas/financas.webp" alt="Capa do livro Dinheiro, trabalho e generosidade" width="520" height="736" loading="lazy"></button><figcaption>Dinheiro, trabalho e generosidade<span>Finanças</span></figcaption></figure>
+  </div>
+  <div class="setas"><button type="button" data-dir="-1" aria-label="Voltar">←</button><button type="button" data-dir="1" aria-label="Avançar">→</button></div>
+</div></section>
 
-  <section id="avise" style="padding-block:40px">
-    <div class="amostra">
-      <div><h3>Quer receber as novidades?</h3><p>Marque os títulos que interessam à sua família. Mandamos um e-mail com novidades da coleção e com as atualizações dos livros.</p></div>
+<div class="ano"><div class="w"><p>Cada livro funciona sozinho. Três a três, eles se completam.</p></div></div>
+
+<section id="titulos">
+  <div class="cab"><div class="w"><h2>Os nove títulos</h2><p class="frase">R$ 79 cada um.</p></div></div>
+
+  <p class="grupo">Kit Linguagem</p>
+  <article class="cad" id="gramatica" style="--c:var(--tinta)"><div class="w">
+    <div class="capa"><img src="../img/capas/gramatica.webp" alt="Capa do livro Filho meu: Gramática com Provérbios" width="520" height="736" loading="lazy"></div>
+    <div><p class="faixa">Língua portuguesa · 364 páginas</p><h3>Gramática com Provérbios</h3><p class="linha">A gramática estudada no próprio versículo da semana: classes de palavras, frase, pontuação, concordância e acentuação.</p><button type="button" class="ver cb-abre" data-painel="cb-gramatica">O que o livro ensina</button></div>
+    <div class="direita"><span class="preco">R$ 79</span><a class="btn branco" href="https://pay.kiwify.com.br/3faJbim" data-produto="Gramática com Provérbios">Comprar o livro</a></div>
+  </div></article>
+  <article class="cad" id="escrita" style="--c:var(--tinta)"><div class="w">
+    <div class="capa"><img src="../img/capas/escrita.webp" alt="Capa do livro Filho meu: Escrita e redação com Provérbios" width="520" height="736" loading="lazy"></div>
+    <div><p class="faixa">Língua portuguesa · 311 páginas</p><h3>Escrita e redação com Provérbios</h3><p class="linha">Contar, planejar, escrever, revisar e ler para alguém: bilhetes, listas, relatos, instruções, cartas e textos de opinião, um gênero por semana.</p><button type="button" class="ver cb-abre" data-painel="cb-escrita">O que o livro ensina</button></div>
+    <div class="direita"><span class="preco">R$ 79</span><a class="btn branco" href="https://pay.kiwify.com.br/uKHyoRU" data-produto="Escrita e redação com Provérbios">Comprar o livro</a></div>
+  </div></article>
+  <article class="cad" id="palavras" style="--c:var(--tinta)"><div class="w">
+    <div class="capa"><img src="../img/capas/palavras.webp" alt="Capa do livro Filho meu: Palavras que edificam" width="520" height="736" loading="lazy"></div>
+    <div><p class="faixa">Vida em família · 368 páginas</p><h3>Palavras que edificam</h3><p class="linha">Ouvir antes de responder, responder com brandura, falar a verdade, pedir e dar perdão, encorajar: o falar e o ouvir em casa, com quadrinhos da família.</p><button type="button" class="ver cb-abre" data-painel="cb-palavras">O que o livro ensina</button></div>
+    <div class="direita"><span class="preco">R$ 79</span><a class="btn branco" href="https://pay.kiwify.com.br/DHGddzP" data-produto="Palavras que edificam">Comprar o livro</a></div>
+  </div></article>
+
+  <p class="grupo">Kit Mundo</p>
+  <article class="cad" id="ciencias" style="--c:var(--medio)"><div class="w">
+    <div class="capa"><img src="../img/capas/ciencias.webp" alt="Capa do livro Filho meu: Pequenos e sábios: ciências da natureza" width="520" height="736" loading="lazy"></div>
+    <div><p class="faixa">Ciências · 363 páginas</p><h3>Pequenos e sábios: ciências da natureza</h3><p class="linha">A família olha a criação: observa o quintal, a cozinha, a praia e o céu, faz uma pergunta, dá um palpite, testa, registra e agradece.</p><button type="button" class="ver cb-abre" data-painel="cb-ciencias">O que o livro ensina</button></div>
+    <div class="direita"><span class="preco">R$ 79</span><a class="btn branco" href="https://pay.kiwify.com.br/UgvtUZl" data-produto="Pequenos e sábios">Comprar o livro</a></div>
+  </div></article>
+  <article class="cad" id="medidas" style="--c:var(--medio)"><div class="w">
+    <div class="capa"><img src="../img/capas/medidas.webp" alt="Capa do livro Filho meu: Contas, medidas e pesos justos" width="520" height="736" loading="lazy"></div>
+    <div><p class="faixa">Matemática · 363 páginas</p><h3>Contas, medidas e pesos justos</h3><p class="linha">As contas da Tabuada levadas para o mundo: medidas, frações, geometria e dados com a xícara, a balança, o canteiro e o relógio.</p><button type="button" class="ver cb-abre" data-painel="cb-medidas">O que o livro ensina</button></div>
+    <div class="direita"><span class="preco">R$ 79</span><a class="btn branco" href="https://pay.kiwify.com.br/daNQgME" data-produto="Contas, medidas e pesos justos">Comprar o livro</a></div>
+  </div></article>
+  <article class="cad" id="logica" style="--c:var(--medio)"><div class="w">
+    <div class="capa"><img src="../img/capas/logica.webp" alt="Capa do livro Filho meu: Pensar bem" width="520" height="736" loading="lazy"></div>
+    <div><p class="faixa">Lógica · 307 páginas</p><h3>Pensar bem</h3><p class="linha">Observar, comparar, classificar, achar padrões, ligar causa e consequência, separar fato de opinião e dar razões.</p><button type="button" class="ver cb-abre" data-painel="cb-logica">O que o livro ensina</button></div>
+    <div class="direita"><span class="preco">R$ 79</span><a class="btn branco" href="https://pay.kiwify.com.br/K72EuTq" data-produto="Pensar bem">Comprar o livro</a></div>
+  </div></article>
+
+  <p class="grupo">Kit Vida</p>
+  <article class="cad" id="carater" style="--c:var(--escuro)"><div class="w">
+    <div class="capa"><img src="../img/capas/carater.webp" alt="Capa do livro Filho meu: Caráter e domínio próprio" width="520" height="736" loading="lazy"></div>
+    <div><p class="faixa">Virtudes · 347 páginas</p><h3>Caráter e domínio próprio</h3><p class="linha">O caráter do filho sábio de Provérbios (humildade, verdade, paciência, domínio próprio, diligência, coragem, gratidão e fidelidade), com histórias para ler em voz alta.</p><button type="button" class="ver cb-abre" data-painel="cb-carater">O que o livro ensina</button></div>
+    <div class="direita"><span class="preco">R$ 79</span><a class="btn branco" href="https://pay.kiwify.com.br/BAO9yDK" data-produto="Caráter e domínio próprio">Comprar o livro</a></div>
+  </div></article>
+  <article class="cad" id="saude" style="--c:var(--escuro)"><div class="w">
+    <div class="capa"><img src="../img/capas/saude.webp" alt="Capa do livro Filho meu: Corpo, saúde e alegria" width="520" height="736" loading="lazy"></div>
+    <div><p class="faixa">Saúde · 354 páginas</p><h3>Corpo, saúde e alegria</h3><p class="linha">Dormir, comer, beber água, brincar lá fora, lavar as mãos, proteger-se e viver com alegria. Cada recomendação cita o documento oficial de onde vem.</p><button type="button" class="ver cb-abre" data-painel="cb-saude">O que o livro ensina</button></div>
+    <div class="direita"><span class="preco">R$ 79</span><a class="btn branco" href="https://pay.kiwify.com.br/nblvRkL" data-produto="Corpo, saúde e alegria">Comprar o livro</a></div>
+  </div></article>
+  <article class="cad" id="financas" style="--c:var(--escuro)"><div class="w">
+    <div class="capa"><img src="../img/capas/financas.webp" alt="Capa do livro Filho meu: Dinheiro, trabalho e generosidade" width="520" height="736" loading="lazy"></div>
+    <div><p class="faixa">Finanças · 408 páginas</p><h3>Dinheiro, trabalho e generosidade</h3><p class="linha">Trabalhar, guardar, gastar com sabedoria e dar com alegria, como mordomos do que Deus confia.</p><button type="button" class="ver cb-abre" data-painel="cb-financas">O que o livro ensina</button></div>
+    <div class="direita"><span class="preco">R$ 79</span><a class="btn branco" href="https://pay.kiwify.com.br/VREdqQ6" data-produto="Dinheiro, trabalho e generosidade">Comprar o livro</a></div>
+  </div></article>
+</section>
+
+<section class="kits" id="kits"><div class="w">
+  <span class="sc">Kits temáticos</span>
+  <h2>Três livros que se completam</h2>
+  <p class="sub">R$ 179 cada kit, em vez de R$ 237.</p>
+  <div class="tresk">
+    <article class="kit" id="kit-linguagem">
+      <div class="listras" style="--c:var(--tinta)" aria-hidden="true"><div class="trio"><div class="capa"><img src="../img/capas/gramatica.webp" alt="" loading="lazy"></div><div class="capa"><img src="../img/capas/escrita.webp" alt="" loading="lazy"></div><div class="capa"><img src="../img/capas/palavras.webp" alt="" loading="lazy"></div></div></div>
+      <div class="tx"><h3>Kit Linguagem</h3><p class="itens">Gramática com Provérbios · Escrita e redação com Provérbios · Palavras que edificam</p>
+        <div class="valor"><span class="preco">R$ 179</span><s>R$ 237</s></div><p class="eco">R$ 58 a menos do que comprando separados.</p>
+        <a class="btn" href="https://pay.kiwify.com.br/ZsjOC7U" data-produto="Kit Linguagem">Comprar o Kit Linguagem</a></div>
+    </article>
+    <article class="kit" id="kit-mundo">
+      <div class="listras" style="--c:var(--medio)" aria-hidden="true"><div class="trio"><div class="capa"><img src="../img/capas/ciencias.webp" alt="" loading="lazy"></div><div class="capa"><img src="../img/capas/medidas.webp" alt="" loading="lazy"></div><div class="capa"><img src="../img/capas/logica.webp" alt="" loading="lazy"></div></div></div>
+      <div class="tx"><h3>Kit Mundo</h3><p class="itens">Pequenos e sábios: ciências da natureza · Contas, medidas e pesos justos · Pensar bem</p>
+        <div class="valor"><span class="preco">R$ 179</span><s>R$ 237</s></div><p class="eco">R$ 58 a menos do que comprando separados.</p>
+        <a class="btn" href="https://pay.kiwify.com.br/TVlx6tL" data-produto="Kit Mundo">Comprar o Kit Mundo</a></div>
+    </article>
+    <article class="kit" id="kit-vida">
+      <div class="listras" style="--c:var(--escuro)" aria-hidden="true"><div class="trio"><div class="capa"><img src="../img/capas/carater.webp" alt="" loading="lazy"></div><div class="capa"><img src="../img/capas/saude.webp" alt="" loading="lazy"></div><div class="capa"><img src="../img/capas/financas.webp" alt="" loading="lazy"></div></div></div>
+      <div class="tx"><h3>Kit Vida</h3><p class="itens">Caráter e domínio próprio · Corpo, saúde e alegria · Dinheiro, trabalho e generosidade</p>
+        <div class="valor"><span class="preco">R$ 179</span><s>R$ 237</s></div><p class="eco">R$ 58 a menos do que comprando separados.</p>
+        <a class="btn" href="https://pay.kiwify.com.br/m7llBqF" data-produto="Kit Vida">Comprar o Kit Vida</a></div>
+    </article>
+  </div>
+</div></section>
+
+<section class="compra" id="compra"><div class="w">
+  <h2>Como funciona a compra</h2>
+  <ol class="passos">
+    <li><b>Já revisados</b><p>Cada livro passou por revisão de conteúdo, de segurança e teológica antes de abrir. O de saúde cita, em cada lição, o documento oficial de onde vem cada recomendação.</p></li>
+    <li><b>Mais em conta no kit</b><p>Cada livro sai por R$ 79. Os kits temáticos reúnem três livros que se completam por R$ 179, em vez de R$ 237.</p></li>
+    <li><b>Revisões chegam de graça</b><p>Os livros ficam na sua área de membros. Toda correção ou melhoria que fizermos depois aparece lá, sem custo, e avisamos por e-mail.</p></li>
+    <li><b>Garantia de 7 dias</b><p>Como no Kit Trio, você tem 7 dias para conhecer cada livro. Se não for o que sua família precisa, peça o reembolso integral.</p></li>
+  </ol>
+</div></section>
+
+<section class="avise" id="avise"><div class="w">
+  <div class="caixa">
+    <div><h2>Quer receber as novidades?</h2><p>Marque os títulos que interessam à sua família. Mandamos um e-mail com novidades da coleção e com as atualizações dos livros.</p></div>
+    <div>
       <form class="cad" id="cadastro" novalidate>
         <label>Seu nome<input type="text" name="nome" autocomplete="name" required></label>
         <label>Seu e-mail<input type="email" name="email" autocomplete="email" inputmode="email" required></label>
@@ -337,11 +419,22 @@ document.addEventListener('DOMContentLoaded',function(){
       </form>
       <div class="cad-fim" id="cadastro-fim" hidden><b>Pronto! Você está na lista.</b><p>Mandaremos as novidades por e-mail. Enquanto isso, conheça também o <a href="../">Kit Trio</a>: caligrafia, tabuada e leitura.</p></div>
     </div>
-    <div class="garantia"><span class="tag" style="flex-shrink:0">Garantia</span><p>Como no Kit Trio, você tem 7 dias para conhecer cada livro. Se não for o que sua família precisa, peça o reembolso integral.</p></div>
-  </section>
+  </div>
+</div></section>
 
-  <footer><span>Coleção Peregrininhos · Filho meu</span><span><a class="link" href="../">Kit Trio: caligrafia, tabuada e leitura</a></span></footer>
-</div>
+<section class="fim"><div class="w">
+  <img src="../ferias/img/escudo.webp" alt="" width="58" height="83" loading="lazy">
+  <h2>Para a família estudar junta</h2>
+  <p class="nota">Um versículo de Provérbios por semana, e cada filho no seu nível. Que estes livros sejam bem usados aí na sua casa.</p>
+  <p class="assina">Gullit e Gislaine · Filho meu Educacional</p>
+  <div class="acao"><a class="btn" href="#titulos">Escolher o livro</a><a class="btn vazado" href="#kits">Três livros por R$ 179</a></div>
+  <p class="discreto">Garantia de 7 dias em cada livro</p>
+</div></section>
+</main>
+
+<div class="barra" id="barra"><p>Filho meu: novos títulos<span class="preco">R$ 79 · kit de três R$ 179</span></p><a class="btn" href="#titulos">Escolher</a></div>
+
+<footer><div class="w"><span>Coleção Peregrininhos · Filho meu · Gullit Belo e Gislaine Belo</span><span><a href="../">Kit Trio: caligrafia, tabuada e leitura</a> · <a href="../privacidade/">Privacidade</a></span></div></footer>
 
 <dialog class="cb" id="cb-gramatica" aria-labelledby="cb-gramatica-t">
   <div class="cb-in">
@@ -538,6 +631,20 @@ document.addEventListener('DOMContentLoaded',function(){
     function pronto() { f.hidden = true; fim.hidden = false; }
     fetch(FORM, { method: 'POST', mode: 'no-cors', body: d }).then(pronto, pronto);
   });
+})();
+</script>
+<script>
+/* Rolagem das capas, barra fixa no celular. */
+(function(){
+  var rolo = document.getElementById('rolo');
+  document.querySelectorAll('.setas button').forEach(function(b){
+    b.addEventListener('click', function(){ rolo.scrollBy({left: (+b.getAttribute('data-dir')) * rolo.clientWidth * .8, behavior: 'smooth'}); });
+  });
+  var barra = document.getElementById('barra'), vis = {};
+  if ('IntersectionObserver' in window) {
+    var ob = new IntersectionObserver(function(es){ es.forEach(function(e){ vis[e.target.id] = e.isIntersecting; }); barra.classList.toggle('on', !vis.abre && !vis.titulos && !vis.kits && !vis.avise); });
+    ['abre','titulos','kits','avise'].forEach(function(id){ ob.observe(document.getElementById(id)); });
+  }
 })();
 </script>
 </body>
