@@ -127,6 +127,12 @@ dialog.zoom .fechar{position:fixed;top:12px;right:14px;width:44px;height:44px;bo
 /* ofertas: livros em faixas, kit no fim de cada grupo */
 .cab{padding-block:72px 28px;text-align:center}
 .cab p{font-size:20px;color:var(--suave);margin:10px auto 0;max-width:680px}
+/* cada kit com seu tom, na mesma família da coleção */
+.g-linguagem{--tinta:#7E2F22;--escuro:#5A2016;--creme:#F8EEEA}
+.g-mundo{--tinta:#3E5B2E;--escuro:#2B4020;--creme:#EFF3EA}
+.g-vida{--tinta:#2F4A66;--escuro:#203448;--creme:#EDF1F6}
+.grupo .cad{border-left:4px solid var(--tinta)}
+.grupo .cad .sc{color:var(--tinta)}
 .gcab{border-top:1px solid var(--ouro);border-bottom:1px solid var(--ouro);background:var(--creme)}
 .gcab .w{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;padding-block:12px}
 .gcab .sc{color:var(--tinta)}
@@ -401,7 +407,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
 <section id="oferta">
   <div class="cab" id="comecar"><div class="w"><h2>Escolha por onde começar</h2><p>Cada livro funciona sozinho. O kit reúne três que se completam, com o mesmo versículo da semana, e sai mais em conta.</p></div></div>
-<div class="grupo">
+<div class="grupo g-trio">
   <div class="gcab"><div class="w"><span class="sc">Kit Trio</span><p>caligrafia, tabuada e leitura</p></div></div>
   <article class="cad" id="livro-caligrafia"><div class="w">
     <button type="button" class="capa cb-abre-capa" data-painel="cb-caligrafia" aria-label="Ver o que o livro Caligrafia cursiva com Provérbios ensina"><img src="img/capas/caligrafia.webp" width="520" height="736" alt="Capa do livro Filho meu: Caligrafia cursiva com Provérbios" loading="lazy"></button>
@@ -432,7 +438,7 @@ document.addEventListener('DOMContentLoaded',function(){
     </div>
   </div></div>
 </div>
-<div class="grupo">
+<div class="grupo g-linguagem">
   <div class="gcab"><div class="w"><span class="sc">Kit Linguagem</span><p>gramática, escrita e vocabulário</p></div></div>
   <article class="cad" id="livro-gramatica"><div class="w">
     <button type="button" class="capa cb-abre-capa" data-painel="cb-gramatica" aria-label="Ver o que o livro Gramática com Provérbios ensina"><img src="img/capas/gramatica.webp" width="520" height="736" alt="Capa do livro Filho meu: Gramática com Provérbios" loading="lazy"></button>
@@ -460,7 +466,7 @@ document.addEventListener('DOMContentLoaded',function(){
     </div>
   </div></div>
 </div>
-<div class="grupo">
+<div class="grupo g-mundo">
   <div class="gcab"><div class="w"><span class="sc">Kit Mundo</span><p>ciências, medidas e raciocínio</p></div></div>
   <article class="cad" id="livro-ciencias"><div class="w">
     <button type="button" class="capa cb-abre-capa" data-painel="cb-ciencias" aria-label="Ver o que o livro Pequenos e sábios: ciências da natureza ensina"><img src="img/capas/ciencias.webp" width="520" height="736" alt="Capa do livro Filho meu: Pequenos e sábios: ciências da natureza" loading="lazy"></button>
@@ -488,7 +494,7 @@ document.addEventListener('DOMContentLoaded',function(){
     </div>
   </div></div>
 </div>
-<div class="grupo">
+<div class="grupo g-vida">
   <div class="gcab"><div class="w"><span class="sc">Kit Vida</span><p>caráter, saúde e dinheiro</p></div></div>
   <article class="cad" id="livro-carater"><div class="w">
     <button type="button" class="capa cb-abre-capa" data-painel="cb-carater" aria-label="Ver o que o livro Caráter e domínio próprio ensina"><img src="img/capas/carater.webp" width="520" height="736" alt="Capa do livro Filho meu: Caráter e domínio próprio" loading="lazy"></button>
