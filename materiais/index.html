@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Todos os materiais Filho meu · Gullit e Gislaine</title>
+<meta name="description" content="Todos os materiais Filho meu num lugar só: a Coleção Peregrininhos, os novos títulos, os cadernos Férias com Filho meu e o Filho Patriota grátis. Para a família estudar junta, com Provérbios.">
+<meta property="og:title" content="Todos os materiais Filho meu">
+<meta property="og:description" content="A coleção, os novos títulos, os cadernos de férias e o Filho Patriota grátis. Para a família estudar junta, com Provérbios.">
+<meta property="og:image" content="https://gbelovaidarcerto-design.github.io/filho-meu/og.jpg">
+<meta property="og:url" content="https://gbelovaidarcerto-design.github.io/filho-meu/materiais/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="theme-color" content="#1B3352">
+<link rel="icon" href="../ferias/img/icone.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Public+Sans:wght@600;700&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --tinta:#1B3352;--ouro:#C9A35A;--creme:#FBF8F1;--suave:#4E5866;
+  --ocre:#7A5410;--verde:#2B6A5C;--navy:#1B3352;--bandeira:#04512B;
+  --serif:'EB Garamond',Garamond,'Times New Roman',serif;--sans:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--tinta);font:400 20px/1.5 var(--serif);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--tinta);outline-offset:3px}
+.mat :focus-visible{outline-color:#fff}
+h1,h2,h3{font-family:var(--serif);font-weight:600;margin:0;letter-spacing:-.01em;text-wrap:balance}
+p{margin:0}
+.w{max-width:1120px;margin:0 auto;padding-inline:20px}
+.sc{font-weight:600;font-size:14px;letter-spacing:.2em;text-transform:uppercase}
+
+/* topo */
+.topo .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none}
+.marca img{width:26px;height:auto}
+.marca span{font-size:13px;letter-spacing:.18em}
+.topo nav a{font-family:var(--sans);font-size:13.5px;font-weight:600;text-decoration:none;border-bottom:1px solid var(--tinta);white-space:nowrap}
+.filete{height:4px;border-top:1px solid var(--ouro);border-bottom:1px solid var(--ouro)}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--sans);font-weight:700;font-size:16px;text-decoration:none;background:var(--tinta);color:#fff;padding:15px 26px;border:2px solid var(--tinta);border-radius:0;cursor:pointer;text-align:center}
+.btn:hover{background:#0F2036;border-color:#0F2036}
+.btn.vazado{background:#fff;color:var(--tinta)}
+.btn.vazado:hover{background:var(--creme)}
+.btn.branco{background:#fff;color:var(--c);border-color:#fff}
+.btn.branco:hover{background:var(--creme);border-color:var(--creme)}
+.preco{font-family:var(--sans);font-weight:700;font-variant-numeric:tabular-nums}
+
+/* capa como objeto: moldura branca e sombra chapada */
+.capa{background:#fff;padding:5px;box-shadow:7px 7px 0 rgba(0,0,0,.24)}
+.capa img{width:100%;height:auto;aspect-ratio:210/297;object-fit:cover}
+
+/* abertura */
+.abre{text-align:center;padding-block:48px 56px}
+.abre h1{font-size:clamp(46px,8vw,96px);line-height:1;margin-top:12px}
+.abre .dor{font-size:clamp(21px,2.4vw,27px);line-height:1.4;font-style:italic;max-width:720px;margin:20px auto 0}
+.assina{margin-top:14px;font-style:italic;font-size:19px;color:var(--suave)}
+.assina::before{content:"";display:inline-block;width:28px;height:1px;background:var(--ouro);vertical-align:middle;margin-right:10px}
+.indice{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 10px;margin-top:30px;padding:0;list-style:none}
+.indice a{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:14px;font-weight:600;text-decoration:none;border:1px solid #DCD5C6;padding:8px 13px}
+.indice a:hover{background:var(--creme)}
+.indice i{width:10px;height:10px;background:var(--c);display:inline-block}
+
+/* uma faixa por material, na cor da página dele */
+.mat{background:var(--c);color:#fff;scroll-margin-top:0}
+.mat .w{display:grid;grid-template-columns:360px 1fr auto;gap:48px;align-items:center;padding-block:52px}
+.capas{display:flex;align-items:flex-end;justify-content:center;padding-right:8px}
+.capas .capa{flex:0 1 150px;min-width:0;position:relative}
+.capas .capa+.capa{margin-left:-46px}
+.capas.q4 .capa{flex-basis:128px}
+.capas.q4 .capa+.capa{margin-left:-50px}
+.capas .capa:nth-child(2){margin-bottom:14px}
+.capas .capa:nth-child(3){margin-bottom:28px}
+.capas .capa:nth-child(4){margin-bottom:42px}
+.mat .sc{font-size:13px;opacity:.92}
+.mat h2{font-size:clamp(44px,5.4vw,66px);line-height:.98;font-weight:700;margin-top:8px}
+.mat .linha{font-size:21px;line-height:1.4;margin-top:12px;max-width:520px}
+.mat .idade{font-family:var(--sans);font-size:14px;font-weight:600;margin-top:14px;display:inline-block;border:1px solid rgba(255,255,255,.55);padding:5px 10px}
+.mat .direita{text-align:right;min-width:230px}
+.mat .apartir{display:block;font-size:17px;font-style:italic;opacity:.92}
+.mat .preco.grande{font-size:36px;line-height:1.1;display:block}
+.mat .extra{display:block;font-family:var(--sans);font-size:13.5px;font-weight:600;opacity:.92;margin-top:4px}
+.mat .btn{margin-top:16px;min-width:230px}
+.mat .amostra{display:block;margin-top:12px;font-family:var(--sans);font-size:14.5px;font-weight:600;color:#fff}
+
+.fim{text-align:center;padding-block:70px 80px}
+.fim img{width:58px;margin:0 auto 18px}
+.fim h2{font-size:clamp(32px,4.6vw,50px);line-height:1.1}
+.fim p.nota{margin:14px auto 0;font-size:20px;color:var(--suave);max-width:640px}
+.fim .acao{margin-top:28px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+
+footer{background:var(--navy);color:#D9DEE6;padding:24px 0 34px;font-size:15px}
+footer .w{display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap}
+
+@media (max-width:900px){
+  .mat .w{grid-template-columns:1fr;gap:26px;padding-block:40px}
+  .capas{justify-content:flex-start;max-width:420px}
+  .mat .direita{text-align:left;min-width:0}
+}
+@media (max-width:560px){
+  body{font-size:19px}
+  .w{padding-inline:16px}
+  .marca span{font-size:11.5px;letter-spacing:.14em}
+  .topo nav a{font-size:13px}
+  .abre{padding-block:30px 40px}
+  .abre .dor{font-size:20px}
+  .indice{margin-top:24px}
+  .indice a{font-size:13px;padding:7px 10px}
+  .mat .w{padding-block:34px 36px;gap:22px}
+  .capas{max-width:none;padding-right:6px}
+  .capas .capa{flex-basis:40%;padding:4px;box-shadow:5px 5px 0 rgba(0,0,0,.24)}
+  .capas .capa+.capa{margin-left:-12%}
+  .capas.q4 .capa{flex-basis:32%}
+  .capas.q4 .capa+.capa{margin-left:-9%}
+  .capas .capa:nth-child(2){margin-bottom:10px}
+  .capas .capa:nth-child(3){margin-bottom:20px}
+  .capas .capa:nth-child(4){margin-bottom:30px}
+  .mat h2{font-size:44px}
+  .mat .linha{font-size:19px}
+  .mat .preco.grande{font-size:30px}
+  .mat .btn{width:100%;min-width:0}
+  .mat .amostra{text-align:center;padding:4px 0}
+  .fim{padding-block:56px 64px}
+  .fim .acao .btn{width:100%}
+}
+</style>
+<!-- Filho meu: Pixel da Meta + repasse de UTM (mesmo código das outras páginas). -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2146801305916148');
+fbq('track','PageView');
+fbq('track','ViewContent',{content_name:'Todos os materiais Filho meu'});
+document.addEventListener('DOMContentLoaded',function(){
+  // Repassa utm_* e src desta página para os links dos materiais, para a origem da visita chegar até a venda.
+  var q=new URLSearchParams(location.search),keep=new URLSearchParams();
+  q.forEach(function(v,k){if(/^utm_|^src$/.test(k))keep.set(k,v)});
+  document.querySelectorAll('a.ir').forEach(function(a){
+    try{var u=new URL(a.href);keep.forEach(function(v,k){u.searchParams.set(k,v)});a.href=u.toString();}catch(e){}
+    a.addEventListener('click',function(){fbq('trackCustom','CliqueMaterial',{content_name:a.getAttribute('data-material')||'Todos os materiais'})});
+  });
+});
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=2146801305916148&ev=PageView&noscript=1"></noscript>
+</head>
+<body>
+
+<header class="topo"><div class="w">
+  <a class="marca" href="./"><img src="../ferias/img/escudo.webp" alt="" width="26" height="37"><span class="sc">Filho meu Educacional</span></a>
+  <nav><a class="ir" href="../?utm_source=materiais#amostra" data-material="Semana 1 grátis">Semana 1 grátis</a></nav>
+</div><div class="filete"></div></header>
+
+<main>
+<div class="abre"><div class="w">
+  <span class="sc">Todos os materiais</span>
+  <h1>Filho meu</h1>
+  <p class="dor">Tudo o que fizemos para a família estudar junta, com um versículo de Provérbios e cada filho no seu nível.</p>
+  <p class="assina">Gullit e Gislaine</p>
+  <ul class="indice">
+    <li><a href="#peregrininhos" style="--c:var(--ocre)"><i></i>Coleção</a></li>
+    <li><a href="#novos" style="--c:var(--verde)"><i></i>Novos títulos</a></li>
+    <li><a href="#ferias" style="--c:var(--navy)"><i></i>Férias</a></li>
+    <li><a href="#patriota" style="--c:var(--bandeira)"><i></i>Filho Patriota</a></li>
+  </ul>
+</div></div>
+
+<section class="mat" id="peregrininhos" style="--c:var(--ocre)"><div class="w">
+  <div class="capas">
+    <div class="capa"><img src="../img/capas/caligrafia.webp" alt="Capa do livro Caligrafia cursiva com Provérbios" width="520" height="736"></div>
+    <div class="capa"><img src="../img/capas/tabuada.webp" alt="Capa do livro Tabuada com Provérbios" width="520" height="736"></div>
+    <div class="capa"><img src="../img/capas/leitura.webp" alt="Capa do livro Leitura e interpretação com Provérbios" width="520" height="736"></div>
+  </div>
+  <div>
+    <span class="sc">12 livros · 40 semanas</span>
+    <h2>Coleção Peregrininhos</h2>
+    <p class="linha">O ano inteiro pronto, uma lição por semana. Comece pelo Kit Trio: caligrafia, tabuada e leitura.</p>
+    <span class="idade">A partir de 3 anos · três níveis</span>
+  </div>
+  <div class="direita">
+    <span class="apartir">a partir de</span>
+    <span class="preco grande">R$ 69</span>
+    <span class="extra">kits de três livros por R$ 179</span>
+    <a class="btn branco ir" href="../?utm_source=materiais" data-material="Coleção Peregrininhos">Ver os materiais</a>
+    <a class="amostra ir" href="../?utm_source=materiais#amostra" data-material="Semana 1 grátis">Baixar a Semana 1 grátis</a>
+  </div>
+</div></section>
+
+<section class="mat" id="novos" style="--c:var(--verde)"><div class="w">
+  <div class="capas">
+    <div class="capa"><img src="../img/capas/gramatica.webp" alt="Capa do livro Gramática com Provérbios" width="520" height="736" loading="lazy"></div>
+    <div class="capa"><img src="../img/capas/ciencias.webp" alt="Capa do livro Pequenos e sábios: ciências da natureza" width="520" height="736" loading="lazy"></div>
+    <div class="capa"><img src="../img/capas/financas.webp" alt="Capa do livro Dinheiro, trabalho e generosidade" width="520" height="736" loading="lazy"></div>
+  </div>
+  <div>
+    <span class="sc">Nove livros novos</span>
+    <h2>Novos títulos</h2>
+    <p class="linha">Gramática, escrita, palavras, ciências, medidas, lógica, caráter, saúde e finanças, em três kits.</p>
+    <span class="idade">A partir de 3 anos · três níveis</span>
+  </div>
+  <div class="direita">
+    <span class="apartir">a partir de</span>
+    <span class="preco grande">R$ 79</span>
+    <span class="extra">kits de três livros por R$ 179</span>
+    <a class="btn branco ir" href="../colecao/?utm_source=materiais" data-material="Novos títulos">Ver os materiais</a>
+    <a class="amostra ir" href="../?utm_source=materiais#amostra" data-material="Lição 1 grátis">Baixar a lição 1 grátis</a>
+  </div>
+</div></section>
+
+<section class="mat" id="ferias" style="--c:var(--navy)"><div class="w">
+  <div class="capas q4">
+    <div class="capa"><img src="../ferias/img/capa-semente.webp" alt="Capa do caderno de férias Semente" width="900" height="1271" loading="lazy"></div>
+    <div class="capa"><img src="../ferias/img/capa-broto.webp" alt="Capa do caderno de férias Broto" width="900" height="1271" loading="lazy"></div>
+    <div class="capa"><img src="../ferias/img/capa-arvore.webp" alt="Capa do caderno de férias Árvore" width="900" height="1271" loading="lazy"></div>
+    <div class="capa"><img src="../ferias/img/capa-fruto.webp" alt="Capa do caderno de férias Fruto" width="900" height="1271" loading="lazy"></div>
+  </div>
+  <div>
+    <span class="sc">Cadernos de férias</span>
+    <h2>Férias com Filho meu</h2>
+    <p class="linha">Seis semanas para fazer junto, um caderno para cada idade.</p>
+    <span class="idade">3 a 12 anos · quatro cadernos</span>
+  </div>
+  <div class="direita">
+    <span class="apartir">a partir de</span>
+    <span class="preco grande">R$ 59,90</span>
+    <span class="extra">os quatro por R$ 149</span>
+    <a class="btn branco ir" href="../ferias/?utm_source=materiais" data-material="Férias com Filho meu">Ver os materiais</a>
+  </div>
+</div></section>
+
+<section class="mat" id="patriota" style="--c:var(--bandeira)"><div class="w">
+  <div class="capas q4">
+    <div class="capa"><img src="../patriota/img/capa-semente.jpg" alt="Capa do caderno Filho Patriota Semente" width="600" height="849" loading="lazy"></div>
+    <div class="capa"><img src="../patriota/img/capa-broto.jpg" alt="Capa do caderno Filho Patriota Broto" width="600" height="849" loading="lazy"></div>
+    <div class="capa"><img src="../patriota/img/capa-arvore.jpg" alt="Capa do caderno Filho Patriota Árvore" width="600" height="849" loading="lazy"></div>
+    <div class="capa"><img src="../patriota/img/capa-fruto.jpg" alt="Capa do caderno Filho Patriota Fruto" width="600" height="849" loading="lazy"></div>
+  </div>
+  <div>
+    <span class="sc">Gratuito · 5 dias</span>
+    <h2>Filho Patriota</h2>
+    <p class="linha">A Bandeira e o Brasil em cinco dias, de 20 a 30 minutos por dia.</p>
+    <span class="idade">3 a 12 anos · quatro cadernos</span>
+  </div>
+  <div class="direita">
+    <span class="preco grande">Grátis</span>
+    <span class="extra">PDF para imprimir em casa</span>
+    <a class="btn branco ir" href="../patriota/?utm_source=materiais#receber" data-material="Filho Patriota">Baixar grátis</a>
+  </div>
+</div></section>
+
+<section class="fim"><div class="w">
+  <img src="../ferias/img/escudo.webp" alt="" width="58" height="83" loading="lazy">
+  <h2>Na dúvida, fale com a gente</h2>
+  <p class="nota">Somos pais de quatro filhos e fizemos cada página pensando nas crianças e nos pais que sentam ao lado delas. Se não souber por onde começar, mande uma mensagem e a gente ajuda a escolher.</p>
+  <p class="assina">Gullit e Gislaine · Filho meu Educacional</p>
+  <div class="acao"><a class="btn" href="https://www.instagram.com/mentoriagb/" data-material="Instagram">Falar no Instagram @mentoriagb</a></div>
+</div></section>
+</main>
+
+<footer><div class="w"><span>Filho meu Educacional · Gullit Belo e Gislaine Belo</span><span><a href="https://www.instagram.com/mentoriagb/">@mentoriagb</a> · <a href="../privacidade/">Privacidade</a></span></div></footer>
+
+</body>
+</html>
